@@ -28,6 +28,10 @@ interface Props {
   subtitle?: string;
   contentPosition?: "left" | "right";
   imgUrl?: string;
+  /** Optional classes for the absolutely-positioned bottom slot */
+  bottomClass?: string;
+  /** Optional Tailwind margin classes applied to the root section (e.g., "my-8 mt-12") */
+  margin?: string;
 }
 
 const {
@@ -42,6 +46,8 @@ const {
   subtitle,
   contentPosition = "right",
   imgUrl,
+  bottomClass,
+  margin = "",
 } = Astro.props as Props;
 
 const pads = {
@@ -70,8 +76,9 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses}`} style={sectionStyle}>
-  <Container width={width}>
+<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset bg-transparent z-0 ${margin}`} style={sectionStyle}>
+  <div class="relative z-10">
+    <Container width={width}>
     {layout === "default" && (
       <div class={`${textAlign}`}>
         <div class="flex flex-col gap-2 items-center mb-8">
@@ -122,5 +129,11 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
         </div>
       </div>
     )}
-  </Container>
+  
+    </Container>
+    
+  </div>
+  <div class={`pointer-events-none absolute inset-x-0 top-150 z-20 ${bottomClass ?? ''}`}>
+    <slot name="bottom" />
+  </div>
 </section>

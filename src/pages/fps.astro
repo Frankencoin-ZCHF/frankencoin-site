@@ -5,7 +5,9 @@ import Base from "../layouts/Base.astro";
 import fps from "../content/fps.json";
 import Button from "../components/Button/Button.astro";
 import FlexStack from "../components/Layout/FlexStack.astro";
-import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
+import BadgeContainer, {
+  type Option,
+} from "../components/BadgeContainer/BadgeContainer.astro";
 import StatsContainer from "../components/StatsContainer/StatsContainer.astro";
 
 async function getFpsInfo() {
@@ -23,7 +25,7 @@ async function getFpsInfo() {
 const fpsInfo = await getFpsInfo();
 
 function findStat(id: string) {
-  return ((fps.caps ?? []).find((s: any) => s.id === id) || {}) as StatMeta;
+  return ((fps.caps ?? []).find((s: any) => s.id === id) || {}) as Option;
 }
 
 function formatAmount(n: number) {

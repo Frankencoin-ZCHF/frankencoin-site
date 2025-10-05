@@ -78,6 +78,7 @@ const stats: Option[] = frankencoinInfo
     pad="lg"
     id="ecosystem-header"
     imgUrl={index.hero.image}
+    margin="lg:my-0 my-64"
   >
     <FlexStack direction="col" gap="40px" align="start" marginY={"150px"}>
       <SectionHeader
@@ -91,13 +92,14 @@ const stats: Option[] = frankencoinInfo
 
       <SocialLinksBar theme={"dark"} />
     </FlexStack>
+    <Section slot="bottom" id="stats" pad="sm" align="center">
+      <BadgeContainer options={stats} />
+    </Section>
   </Section>
-  <Section id="stats" pad="sm" align="center">
-    <BadgeContainer options={stats} />
-  </Section>
+
   <Section
     id="core-features"
-    eyebrow={index.core_features.title}
+    eyebrow={index.core_features.eyebrow}
     title={index.core_features.title}
   >
     <FeaturesContainer features={index.core_features.features} />
