@@ -25,7 +25,7 @@ import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
     pad="lg"
     id="ecosystem-header"
   >
-    <FlexStack direction="col" gap="40px" align="center">
+    <FlexStack direction="col" gap="40px" align="start">
       <img
         src={index.hero.image}
         alt={index.hero.imageAlt}
@@ -36,13 +36,12 @@ import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
-        maxWidth="6xl"
+        maxWidth="lg"
         size="display"
-        align="center"
+        align="left"
+        padding="xxl"
       />
-      <Button variant="secondary" href={index.hero.cta.href} rounded="sm"
-        >{index.hero.cta.label}</Button
-      >
+
       <SocialLinksBar theme={"dark"} />
     </FlexStack>
   </Section>

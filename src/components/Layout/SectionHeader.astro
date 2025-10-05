@@ -7,6 +7,7 @@
      - subtitle?: string
      - size?: "display" | "title1" | "title2" | "title3" | "title4" (default "title1")
      - align?: "left" | "center" (default "left")
+     - padding?: "none" | "sm" | "md" | "lg" | "xl" (default "md")
      - maxWidth?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" (default "3xl")
 */
 
@@ -15,6 +16,7 @@ interface Props {
   subtitle?: string;
   size?: "display" | "title1" | "title2" | "title3" | "title4";
   align?: "left" | "center";
+  padding?: "none" | "sm" | "md" | "lg" | "xl" | "xxl";
   maxWidth?:
     | "none"
     | "sm"
@@ -34,6 +36,7 @@ const {
   subtitle,
   size = "title1",
   align = "left",
+  padding = "md",
   maxWidth = "3xl",
 } = Astro.props;
 
@@ -45,18 +48,29 @@ const titleSizes = {
   title4: "ty-title-4",
 }[size];
 
-const alignCls = align === "center" ? "mx-auto" : "";
+const spacing = {
+  sm: "gap-[var(--spacing-s)]",
+  md: "gap-[var(--spacing-m)]",
+  lg: "gap-[var(--spacing-l)]",
+  xl: "gap-[var(--spacing-xl)]",
+  xxl: "gap-[var(--spacing-xxl)]",
+  none: "",
+}[padding];
 
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
 ---
 
-<header class={`space-y-[var(--spacing-s)] ${maxWidthCls} ${alignCls}`}>
-  <h1 class={` text-[color:var(--color-brand-deep-blue)] ${titleSizes}`}>
+<header class={` flex flex-col  w-full ${spacing}`}>
+  <h1
+    class={` text-[color:var(--color-brand-deep-blue)] m-0 ${titleSizes} text-${align} `}
+  >
     {title}
   </h1>
   {
     subtitle && (
-      <p class="ty-body-1 text-center text-[color:var(--color-neutral-650)]">
+      <p
+        class={`ty-body-1 text-${align} text-[color:var(--color-neutral-650)]  ${maxWidthCls}`}
+      >
         {subtitle}
       </p>
     )
