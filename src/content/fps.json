@@ -11,18 +11,21 @@
   },
   "caps": [
     {
+      "id": "fpsPrice",
       "label": "FPS Price",
       "value": "1'162.13",
       "unit": "ZCHF",
       "href": "https://app.frankencoin.com/equity"
     },
     {
+      "id": "fpsSupply",
       "label": "FPS Supply",
       "value": "8'887.69",
       "unit": "FPS",
       "href": "https://app.frankencoin.com/equity"
     },
     {
+      "id": "fpsMarketCap",
       "label": "FPS Market Cap",
       "value": "10'328'609.12",
       "unit": "ZCHF",
