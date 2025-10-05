@@ -3,10 +3,10 @@ import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import index from "../content/index.json";
-import Button from "../components/Button/Button.astro";
 import FlexStack from "../components/Layout/FlexStack.astro";
 import SocialLinksBar from "../components/SocialLinksBar.astro";
 import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
+import type { Option } from "../components/BadgeContainer/BadgeContainer.astro";
 import FeaturesContainer from "../components/FeaturesContainer/FeaturesContainer.astro";
 import ChainContainer from "../components/ChainContainer/ChainContainer.astro";
 import TabMenu from "../components/TabsMenu/TabMenu.astro";
@@ -15,6 +15,59 @@ import EcosystemPartners from "../components/EcosystemContainer/EcosystemPartner
 import FoundationContainer from "../components/FoundationContainer/FoundationContainer.astro";
 import AuditsContainer from "../components/AuditsContainer/AuditsContainer.astro";
 import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
+
+async function getFrankencoinInfo() {
+  try {
+    let response = await fetch(
+      "https://api.frankencoin.com/ecosystem/frankencoin/info"
+    );
+    if (!response.ok) throw new Error("Failed to fetch quote");
+    return response.json();
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return null;
+  }
+}
+
+const frankencoinInfo = await getFrankencoinInfo();
+
+type StatMeta = { label?: string; unit?: string; href?: string };
+
+function findStat(id: string): StatMeta {
+  return ((index.stats ?? []).find((s: any) => s.id === id) || {}) as StatMeta;
+}
+
+function formatAmount(n: number) {
+  if (typeof n !== "number" || Number.isNaN(n)) return "0.00";
+  return n.toFixed(2).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'");
+}
+
+const s1 = findStat("totalValueLocked");
+const s2 = findStat("totalSupply");
+const s3 = findStat("fpsMarketCap");
+
+const stats: Option[] = frankencoinInfo
+  ? [
+      {
+        label: s1.label ?? "Total value locked",
+        value: formatAmount(frankencoinInfo.tvl?.chf ?? 0),
+        unit: s1.unit,
+        href: s1.href,
+      },
+      {
+        label: s2.label ?? "Total supply",
+        value: formatAmount(frankencoinInfo.token?.supply ?? 0),
+        unit: s2.unit,
+        href: s2.href,
+      },
+      {
+        label: s3.label ?? "fps market cap",
+        value: formatAmount(frankencoinInfo.fps?.marketCap ?? 0),
+        unit: s3.unit,
+        href: s3.href,
+      },
+    ]
+  : [];
 ---
 
 <Base>
@@ -24,15 +77,9 @@ import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
     align="center"
     pad="lg"
     id="ecosystem-header"
+    imgUrl={index.hero.image}
   >
-    <FlexStack direction="col" gap="40px" align="start">
-      <img
-        src={index.hero.image}
-        alt={index.hero.imageAlt}
-        width="128"
-        height="128"
-        loading="lazy"
-      />
+    <FlexStack direction="col" gap="40px" align="start" marginY={"150px"}>
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
@@ -46,7 +93,7 @@ import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
     </FlexStack>
   </Section>
   <Section id="stats" pad="sm" align="center">
-    <BadgeContainer options={index.stats} />
+    <BadgeContainer options={stats} />
   </Section>
   <Section
     id="core-features"

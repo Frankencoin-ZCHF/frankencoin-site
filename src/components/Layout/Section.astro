@@ -8,6 +8,7 @@
      - pad?: "sm" | "md" | "lg" (default "md")
      - layout?: "default" | "split" | "feature" (default "default")
      - contentPosition?: "left" | "right" (default "right")
+     - imgUrl?: string (optional background image for the whole section)
    
    Slots:
      - default: Main content
@@ -26,6 +27,7 @@ interface Props {
   title?: string;
   subtitle?: string;
   contentPosition?: "left" | "right";
+  imgUrl?: string;
 }
 
 const {
@@ -39,6 +41,7 @@ const {
   title,
   subtitle,
   contentPosition = "right",
+  imgUrl,
 } = Astro.props as Props;
 
 const pads = {
@@ -52,6 +55,11 @@ const bg =
     ? "bg-[var(--color-neutral-100)]"
     : "bg-[var(--color-white)]";
 
+// Optional background image support
+const hasBgImage = typeof imgUrl === "string" && imgUrl.length > 0;
+const bgImageClasses = hasBgImage ? "bg-cover bg-center bg-no-repeat" : "";
+const sectionStyle = hasBgImage ? `background-image: url('${imgUrl}')` : undefined;
+
 const textAlign = align === "center" ? "text-center" : "text-left";
 
 // Layout classes
@@ -62,7 +70,7 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg}`}>
+<section id={id} class={`${pads} ${bg} ${bgImageClasses}`} style={sectionStyle}>
   <Container width={width}>
     {layout === "default" && (
       <div class={`${textAlign}`}>

@@ -9,20 +9,20 @@
 
   "stats": [
     {
-      "label": "Total value locked ",
-      "value": "28'299'272.79",
+      "id": "totalValueLocked",
+      "label": "Total value locked",
       "unit": "ZCHF",
       "href": "https://defillama.com/protocol/frankencoin#information"
     },
     {
+      "id": "totalSupply",
       "label": "Total supply",
-      "value": "12'452'881.67",
       "unit": "ZCHF",
       "href": "https://coinmarketcap.com/currencies/frankencoin/"
     },
     {
+      "id": "fpsMarketCap",
       "label": "fps market cap",
-      "value": "10'328'609.12",
       "unit": "ZCHF",
       "href": "https://app.frankencoin.com/equity"
     }
