@@ -32,6 +32,12 @@ interface Props {
   bottomClass?: string;
   /** Optional Tailwind margin classes applied to the root section (e.g., "my-8 mt-12") */
   margin?: string;
+  /** How the bottom slot is positioned: absolute (overlays) or static (flows after content). Default: "absolute" */
+  bottomPosition?: "absolute" | "static";
+  /** Tailwind classes to reserve space at the bottom (e.g., "pb-24") when bottomPosition is "absolute" */
+  bottomSpacing?: string;
+  /** Additional classes applied directly to the root <section> (escape hatch) */
+  className?: string;
 }
 
 const {
@@ -48,6 +54,9 @@ const {
   imgUrl,
   bottomClass,
   margin = "",
+  bottomPosition = "absolute",
+  bottomSpacing = "",
+  className = "",
 } = Astro.props as Props;
 
 const pads = {
@@ -76,7 +85,7 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin}`} style={sectionStyle}>
+<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className}`} style={sectionStyle}>
   <div class="relative z-10">
     <Container width={width}>
     {layout === "default" && (
@@ -133,7 +142,13 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     </Container>
     
   </div>
-  <div class={`pointer-events-none absolute inset-x-0 top-150 z-20 ${bottomClass ?? ''}`}>
-    <slot name="bottom" />
-  </div>
+  {bottomPosition === 'absolute' ? (
+    <div class={`pointer-events-none absolute inset-x-0 top-150 z-20 ${bottomClass ?? ''}`}>
+      <slot name="bottom" />
+    </div>
+  ) : (
+    <div class={`${bottomClass ?? ''}`}>
+      <slot name="bottom" />
+    </div>
+  )}
 </section>

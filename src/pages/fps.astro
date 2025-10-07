@@ -126,18 +126,17 @@ console.log({ fpsInfo });
         >{fps.header.cta.label}</Button
       >
     </FlexStack>
-    <!-- bug en absolute de stats -->
-    <div slot="bottom">
+    <FlexStack
+      direction="col"
+      align="center"
+      className="max-w-4xl mx-auto h-64"
+      slot="bottom"
+    >
       <BadgeContainer options={caps} />
-    </div>
-  </Section>
-
-  <Section pad="sm">
-    <FlexStack direction="col" gap="40px" align="center">
       <StatsContainer options={stats} />
     </FlexStack>
   </Section>
-  <Section>
+  <Section className="mt-96 ">
     <FlexStack direction="col" gap="40px" align="center">
       {
         fps.introduction.map((feature) => (
