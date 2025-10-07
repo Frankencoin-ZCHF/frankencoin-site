@@ -56,7 +56,7 @@ const pads = {
   lg: "py-[calc(var(--spacing-l)*6)]", // ~96px
 }[pad];
 
-const bg =
+const bg =imgUrl?.length   ? "bg-transparent" : 
   variant === "accent"
     ? "bg-[var(--color-neutral-100)]"
     : "bg-[var(--color-white)]";
@@ -76,7 +76,7 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset bg-transparent z-0 ${margin}`} style={sectionStyle}>
+<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin}`} style={sectionStyle}>
   <div class="relative z-10">
     <Container width={width}>
     {layout === "default" && (

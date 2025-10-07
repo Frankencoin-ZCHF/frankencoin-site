@@ -8,6 +8,7 @@
      - size?: "display" | "title1" | "title2" | "title3" | "title4" (default "title1")
      - align?: "left" | "center" (default "left")
      - padding?: "none" | "sm" | "md" | "lg" | "xl" (default "md")
+     - margin?: string
      - maxWidth?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" (default "3xl")
 */
 
@@ -17,6 +18,7 @@ interface Props {
   size?: "display" | "title1" | "title2" | "title3" | "title4";
   align?: "left" | "center";
   padding?: "none" | "sm" | "md" | "lg" | "xl" | "xxl";
+  margin?: string;
   maxWidth?:
     | "none"
     | "sm"
@@ -38,6 +40,7 @@ const {
   align = "left",
   padding = "md",
   maxWidth = "3xl",
+  margin = "",
 } = Astro.props;
 
 const titleSizes = {
@@ -47,6 +50,15 @@ const titleSizes = {
   title3: "ty-title-3",
   title4: "ty-title-4",
 }[size];
+
+const marginCls = {
+  none: "",
+  sm: "my-8",
+  md: "my-12",
+  lg: "my-16",
+  xl: "my-20",
+  xxl: "my-24",
+}[margin];
 
 const spacing = {
   sm: "gap-[var(--spacing-s)]",
@@ -58,9 +70,11 @@ const spacing = {
 }[padding];
 
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
+
+console.log({ maxWidth, margin });
 ---
 
-<header class={` flex flex-col  w-full ${spacing}`}>
+<header class={` flex flex-col  w-full ${spacing} ${marginCls}`}>
   <h1
     class={` text-[color:var(--color-brand-deep-blue)] m-0 ${titleSizes} text-${align} `}
   >

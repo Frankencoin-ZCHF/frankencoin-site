@@ -105,6 +105,7 @@ console.log({ fpsInfo });
     align="center"
     pad="lg"
     id="ecosystem-header"
+    margin="lg:my-0 my-64"
   >
     <FlexStack direction="col" gap="40px" align="center">
       <img
@@ -125,10 +126,14 @@ console.log({ fpsInfo });
         >{fps.header.cta.label}</Button
       >
     </FlexStack>
+    <!-- bug en absolute de stats -->
+    <div slot="bottom">
+      <BadgeContainer options={caps} />
+    </div>
   </Section>
+
   <Section pad="sm">
     <FlexStack direction="col" gap="40px" align="center">
-      <BadgeContainer options={caps} />
       <StatsContainer options={stats} />
     </FlexStack>
   </Section>
