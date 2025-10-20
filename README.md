@@ -14,6 +14,11 @@ Frankencoin brings the strength of the Swiss franc on-chain as an ERC-20 token. 
 - **Deployment**: [Vercel](https://vercel.com/) - Serverless deployment platform
 - **Language**: TypeScript for type safety
 
+## Development Environments
+
+- **Main**: [main](https://github.com/DinaRocio/frankencoin-site/tree/main)
+- **Sandbox**: [sandbox](https://github.com/DinaRocio/frankencoin-site/tree/sandbox) (for testing new features)
+
 ## 📁 Project Structure
 
 ```text

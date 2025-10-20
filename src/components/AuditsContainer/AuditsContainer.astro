@@ -5,11 +5,12 @@ import LogoBlock from "../Layout/LogoBlock.astro";
 
 <LogoBlock>
   <div
-    class="grid grid-cols-[200px_200px] auto-rows-1fr gap-5 place-content-center"
+    class="flex flex-wrap md:flex-col justify-center content-center gap-10 h-[200px]"
   >
     {
       index.audits.partners.map((partner) => (
         <img
+          class="w-[150px] md:w-[200px] hover:scale-120 transition"
           src={partner.image}
           alt={partner.altText}
           height="40"

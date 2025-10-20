@@ -1,6 +1,8 @@
 {
   "site": {
     "name": "Frankencoin",
-    "url": "https://frankencoin.com"
+    "url": "https://frankencoin.com",
+    "description": "Frankencoin is a decentralized platform for creating and trading tokens on the blockchain.",
+    "image": "https://frankencoin.com"
   }
 }

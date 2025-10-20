@@ -15,6 +15,7 @@ import EcosystemPartners from "../components/EcosystemContainer/EcosystemPartner
 import FoundationContainer from "../components/FoundationContainer/FoundationContainer.astro";
 import AuditsContainer from "../components/AuditsContainer/AuditsContainer.astro";
 import FAQContainer from "../components/FAQContainer/FAQContainer.astro";
+import AssetsContainer from "../components/AssetsContainer/AssetsContainer.astro";
 
 async function getFrankencoinInfo() {
   try {
@@ -78,9 +79,9 @@ const stats: Option[] = frankencoinInfo
     pad="lg"
     id="main-page-header"
     imgUrl={index.hero.image}
-    margin="lg:my-0 my-64"
+    margin="lg:my-0"
   >
-    <FlexStack direction="col" gap="40px" align="start" marginY={"150px"}>
+    <FlexStack direction="col" gap="40px" align="start" marginY="150px">
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
@@ -92,9 +93,9 @@ const stats: Option[] = frankencoinInfo
 
       <SocialLinksBar theme={"dark"} />
     </FlexStack>
-    <Section slot="bottom" id="stats" pad="sm" align="center">
-      <BadgeContainer options={stats} />
-    </Section>
+  </Section>
+  <Section id="stats" pad="sm" align="center">
+    <BadgeContainer options={stats} />
   </Section>
 
   <Section
@@ -193,32 +194,12 @@ const stats: Option[] = frankencoinInfo
     <Section id="faq" title={index.faq.title}>
       <FAQContainer faqs={index.faq.questions} />
     </Section>
-    <Section id="brand-assets" variant="accent">
-      <div class="flex md:flex-row flex-col gap-40px items-center gap-8">
-        <div class="w-full md:w-1/2">
-          <h3 class="ty-title-1 ty-black">{index.brand_assets.title}</h3>
-        </div>
-        <div class="flex md:flex-row flex-col w-full gap-6">
-          {
-            index.brand_assets.assets.map((asset) => (
-              <div class="w-full md:w-1/2 flex flex-col gap-6">
-                <h4 class="ty-body-1">{asset.description}</h4>
-                <div class="flex items-center gap-2">
-                  <span class="text-[var(--color-brand-swiss)] hover:underline font-bold">
-                    {asset.cta.label}
-                  </span>
-                  <img
-                    src="images/arrow_outward_2.svg"
-                    loading="lazy"
-                    alt=""
-                    class="w-4 h-4"
-                  />
-                </div>
-              </div>
-            ))
-          }
-        </div>
-      </div>
-    </Section>
+  </Section>
+  <Section id="brand-assets" variant="accent" width="content">
+    <div
+      class="mx-auto max-w-6xl px-[var(--spacing-l)] flex flex-col items-center gap-[var(--spacing-l)]"
+    >
+      <AssetsContainer assets={index.brand_assets.assets} />
+    </div>
   </Section>
 </Base>

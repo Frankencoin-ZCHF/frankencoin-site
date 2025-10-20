@@ -12,10 +12,19 @@ import site from "../content/shared/site.json";
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/svg+xml" href="/favicon.png" />
     <meta name="generator" content={Astro.generator} />
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content={site.site.name} />
+    <meta property="og:description" content={site.site.description} />
+    <meta property="og:image" content={site.site.image} />
+    <meta property="og:url" content={site.site.url} />
     <title>{site.site.name}</title>
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer
     ></script>
-  </head>
+    <script
+      async=""
+      src="https://www.googletagmanager.com/gtag/js?id=G-RNM9S018ES"
+    ></script></head
+  >
   <body
     class="min-h-dvh flex flex-col bg-[var(--color-white)] text-[var(--color-neutral-800)]"
   >
