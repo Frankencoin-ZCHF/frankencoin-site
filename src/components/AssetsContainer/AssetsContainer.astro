@@ -1,0 +1,37 @@
+---
+import index from "../../content/index.json";
+
+interface Props {
+  assets: any[];
+}
+---
+
+<div class="grid grid-cols-1 md:grid-cols-[30%_70%] items-start gap-40px gap-8">
+  <div class="w-full">
+    <h3 class="ty-title-1 ty-black">{index.brand_assets.title}</h3>
+  </div>
+  <div class="flex md:flex-row flex-col w-full gap-6">
+    {
+      index.brand_assets.assets.map((asset) => (
+        <div class=" w-full flex flex-col gap-6 ">
+          <h4 class="ty-body-1">{asset.description}</h4>
+          <div class="flex items-center gap-2">
+            <a
+              href={asset.cta.href}
+              class="text-[var(--color-brand-swiss)] hover:underline font-bold cursor-pointer"
+              target="_blank"
+            >
+              {asset.cta.label}
+            </a>
+            <img
+              src="images/arrow_outward_2.svg"
+              loading="lazy"
+              alt=""
+              class="w-4 h-4"
+            />
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
