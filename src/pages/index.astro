@@ -76,7 +76,7 @@ const stats: Option[] = frankencoinInfo
     width="content"
     align="center"
     pad="lg"
-    id="ecosystem-header"
+    id="main-page-header"
     imgUrl={index.hero.image}
     margin="lg:my-0 my-64"
   >
@@ -117,7 +117,11 @@ const stats: Option[] = frankencoinInfo
       <ChainContainer tokens={[index.fps.chain]} />
     </div>
   </Section>
-  <Section id="svzchf" title={index.svzchf.title} subtitle={index.svzchf.subtitle}>
+  <Section
+    id="svzchf"
+    title={index.svzchf.title}
+    subtitle={index.svzchf.subtitle}
+  >
     <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
       <ChainContainer tokens={[index.svzchf.chain]} />
     </div>
@@ -131,6 +135,7 @@ const stats: Option[] = frankencoinInfo
       <TabMenu tabs={index.system.steps} />
     </div>
     <Section
+      id="ecosystem"
       layout="split"
       eyebrow={index.ecosystem.eyebrow}
       title={index.ecosystem.title}
@@ -142,6 +147,7 @@ const stats: Option[] = frankencoinInfo
     </Section>
 
     <Section
+      id="foundation"
       layout="split"
       title={index.foundation.title}
       subtitle={index.foundation.description}
@@ -156,6 +162,7 @@ const stats: Option[] = frankencoinInfo
       <FoundationContainer />
     </Section>
     <Section
+      id="audits"
       layout="split"
       eyebrow={index.audits.eyebrow}
       title={index.audits.title}
@@ -164,6 +171,7 @@ const stats: Option[] = frankencoinInfo
       <AuditsContainer slot="aside" />
     </Section>
     <Section
+      id="classification"
       layout="split"
       contentPosition="left"
       title={index.classification.title}
@@ -182,10 +190,10 @@ const stats: Option[] = frankencoinInfo
         />
       </div>
     </Section>
-    <Section title={index.faq.title}>
+    <Section id="faq" title={index.faq.title}>
       <FAQContainer faqs={index.faq.questions} />
     </Section>
-    <Section variant="accent">
+    <Section id="brand-assets" variant="accent">
       <div class="flex md:flex-row flex-col gap-40px items-center gap-8">
         <div class="w-full md:w-1/2">
           <h3 class="ty-title-1 ty-black">{index.brand_assets.title}</h3>

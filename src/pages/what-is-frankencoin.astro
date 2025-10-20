@@ -13,7 +13,7 @@ import FlexStack from "../components/Layout/FlexStack.astro";
     width="content"
     align="center"
     pad="lg"
-    id="ecosystem-header"
+    id="what-is-frankencoin-header"
   >
     <FlexStack direction="col" gap="40px" align="center">
       <img
@@ -37,7 +37,12 @@ import FlexStack from "../components/Layout/FlexStack.astro";
       >
     </FlexStack>
   </Section>
-  <Section width="content" align="center" pad="sm">
+  <Section
+    width="content"
+    align="center"
+    pad="sm"
+    id="what-is-frankencoin-features"
+  >
     <div class="flex md:flex-row justify-center items-center flex-col gap-20">
       {
         whatIsFrankencoin.features.map((feature) => (
@@ -54,7 +59,7 @@ import FlexStack from "../components/Layout/FlexStack.astro";
       }
     </div>
   </Section>
-  <Section>
+  <Section id="what-is-frankencoin-introduction">
     <FlexStack direction="col" gap="40px" align="center">
       {
         whatIsFrankencoin.introduction.map((feature) => (
