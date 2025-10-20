@@ -27,7 +27,7 @@ const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class={` bg-[var(--color-brand-deep-blue)] w-full  mx-auto flex lg:flex-row flex-col justify-between items-center rounded-xl`}
+  class={` bg-[var(--color-brand-deep-blue)] w-[400px] lg:w-full mx-auto flex lg:flex-row flex-col justify-between items-center rounded-xl`}
 >
   {
     options?.map((option, index) => (
@@ -36,10 +36,10 @@ const variantClass = variants[variant ?? "primary"];
         href={option.href}
         class={`${variantClass} 
           flex items-center 
-          w-full 
+          w-full
           h-full 
           flex-1 
-          ${index === 0 ? "rounded-l-xl" : ""} ${index === options.length - 1 ? "rounded-r-xl" : "border-r md:border-white "} cursor-pointer`}
+          ${index === 0 ? "md:rounded-l-xl" : ""} ${index === options.length - 1 ? "md:rounded-r-xl" : "md:border-r md:border-white "} cursor-pointer`}
         target="_blank"
       >
         <Badge {...option} />

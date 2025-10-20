@@ -81,7 +81,7 @@ const stats: Option[] = frankencoinInfo
     imgUrl={index.hero.image}
     margin="lg:my-0"
   >
-    <FlexStack direction="col" gap="40px" align="start" marginY={"150px"}>
+    <FlexStack direction="col" gap="40px" align="start" marginY="150px">
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
@@ -93,9 +93,9 @@ const stats: Option[] = frankencoinInfo
 
       <SocialLinksBar theme={"dark"} />
     </FlexStack>
-    <Section slot="bottom" id="stats" pad="sm" align="center">
-      <BadgeContainer options={stats} />
-    </Section>
+  </Section>
+  <Section id="stats" pad="sm" align="center">
+    <BadgeContainer options={stats} />
   </Section>
 
   <Section
