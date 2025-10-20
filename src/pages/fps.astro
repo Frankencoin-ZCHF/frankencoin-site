@@ -104,7 +104,7 @@ console.log({ fpsInfo });
     width="content"
     align="center"
     pad="lg"
-    id="ecosystem-header"
+    id="fps-header"
     margin="lg:my-0 my-64"
   >
     <FlexStack direction="col" gap="40px" align="center">
@@ -136,7 +136,7 @@ console.log({ fpsInfo });
       <StatsContainer options={stats} />
     </FlexStack>
   </Section>
-  <Section className="mt-96 ">
+  <Section id="fps-introduction" className="mt-96 ">
     <FlexStack direction="col" gap="40px" align="center">
       {
         fps.introduction.map((feature) => (

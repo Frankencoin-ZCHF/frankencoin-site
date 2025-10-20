@@ -47,7 +47,7 @@ import NavLink from "../components/Button/NavLink.astro";
 
 
   <div x-data="{ active: 0, activeCategory: 'Show All' }">
-    <Section pad="sm">
+    <Section id="ecosystem-tabs-menu" pad="sm">
       <div class="tabs-menu flex flex-wrap gap-2">
         {["Show All", ...ecosystem.categories].map((label, i) => (
           <button
@@ -67,7 +67,7 @@ import NavLink from "../components/Button/NavLink.astro";
       variant="plain"
       width="content"
       align="left"
-      id="ecosystem-tabs"
+id="ecosystem-tabs"
       pad="sm"
     >
       <FlexStack direction="col" gap="40px">
