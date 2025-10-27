@@ -4,7 +4,9 @@ import LogoBlock from "../Layout/LogoBlock.astro";
 ---
 
 <LogoBlock>
-  <div class="flex flex-wrap justify-center content-center gap-8">
+  <div
+    class="grid grid-cols-[minmax(200px,1fr)_minmax(200px,1fr)] grid-rows-[auto_auto_auto] auto-rows-auto grid-flow-row gap-x-[10px] gap-y-[10px] md:gap-x-[30px] md:gap-y-[30px] place-content-center place-items-center w-[90%] h-auto mx-auto pt-0 text-center"
+  >
     {
       index.ecosystem.partners.map((partner) => (
         <div class="flex items-center justify-center w-[160px] sm:w-[180px] md:w-[200px]">

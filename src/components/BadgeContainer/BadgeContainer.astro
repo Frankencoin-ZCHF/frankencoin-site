@@ -27,7 +27,7 @@ const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class={` bg-[var(--color-brand-deep-blue)] w-[400px] lg:w-full mx-auto flex lg:flex-row flex-col justify-between items-center rounded-xl`}
+  class={` bg-[var(--color-brand-deep-blue)] flex items-center justify-center md:flex-row flex-col gap-40px  rounded-xl`}
 >
   {
     options?.map((option, index) => (
@@ -39,7 +39,8 @@ const variantClass = variants[variant ?? "primary"];
           w-full
           h-full 
           flex-1 
-          ${index === 0 ? "md:rounded-l-xl" : ""} ${index === options.length - 1 ? "md:rounded-r-xl" : "md:border-r md:border-white "} cursor-pointer`}
+          bg-transparent
+          p-[var(--spacing-l)]`}
         target="_blank"
       >
         <Badge {...option} />
