@@ -106,25 +106,17 @@ console.log({ fpsInfo });
     pad="lg"
     id="fps-header"
   >
-    <FlexStack direction="col" gap="40px" align="center">
-      <img
-        src={fps.header.image}
-        alt={fps.header.imageAlt}
-        width="128"
-        height="128"
-        loading="lazy"
-      />
-      <SectionHeader
-        title={fps.header.title}
-        subtitle={fps.header.subtitle}
-        maxWidth="6xl"
-        size="display"
-        align="center"
-      />
-      <Button variant="secondary" href={fps.header.cta.href} rounded="sm"
-        >{fps.header.cta.label}</Button
-      >
-    </FlexStack>
+    <SectionHeader
+      title={fps.header.title}
+      subtitle={fps.header.subtitle}
+      image={fps.header.image}
+      imageAlt={fps.header.imageAlt}
+      cta={fps.header.cta}
+      padding="xl"
+      maxWidth="6xl"
+      size="display"
+      align="center"
+    />
     <FlexStack
       direction="col"
       align="center"

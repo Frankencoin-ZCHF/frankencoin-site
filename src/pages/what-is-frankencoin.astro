@@ -15,28 +15,17 @@ import FlexStack from "../components/Layout/FlexStack.astro";
     pad="lg"
     id="what-is-frankencoin-header"
   >
-    <FlexStack direction="col" gap="40px" align="center">
-      <img
-        src={whatIsFrankencoin.header.image}
-        alt={whatIsFrankencoin.header.imageAlt}
-        width="128"
-        height="128"
-        loading="lazy"
-      />
-      <SectionHeader
-        title={whatIsFrankencoin.header.title}
-        subtitle={whatIsFrankencoin.header.subtitle}
-        maxWidth="6xl"
-        size="display"
-        align="center"
-      />
-      <Button
-        variant="secondary"
-        href={whatIsFrankencoin.header.cta.href}
-        size="md"
-        rounded="sm">{whatIsFrankencoin.header.cta.label}</Button
-      >
-    </FlexStack>
+    <SectionHeader
+      title={whatIsFrankencoin.header.title}
+      subtitle={whatIsFrankencoin.header.subtitle}
+      cta={whatIsFrankencoin.header.cta}
+      image={whatIsFrankencoin.header.image}
+      imageAlt={whatIsFrankencoin.header.imageAlt}
+      maxWidth="6xl"
+      size="display"
+      align="center"
+      padding="xl"
+    />
   </Section>
   <Section
     width="content"
