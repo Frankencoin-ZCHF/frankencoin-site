@@ -145,9 +145,14 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     
   </div>
   {bottomPosition === 'absolute' ? (
-    <div class={`pointer-events-none absolute inset-x-0 top-150 z-20 ${bottomClass ?? ''}`}>
-      <slot name="bottom" />
-    </div>
+    <>
+      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] z-20 w-full`}>
+        <slot name="bottom" />
+      </div>
+      <div class={`pointer-events-none hidden md:block absolute inset-x-0 top-[90%] z-20 ${bottomClass ?? ''}`}>
+        <slot name="bottom" />
+      </div>
+    </>
   ) : (
     <div class={`${bottomClass ?? ''}`}>
       <slot name="bottom" />
