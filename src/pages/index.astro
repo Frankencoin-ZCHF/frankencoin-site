@@ -93,9 +93,15 @@ const stats: Option[] = frankencoinInfo
 
       <SocialLinksBar theme={"dark"} />
     </FlexStack>
-  </Section>
-  <Section id="stats" pad="sm" align="center">
-    <BadgeContainer options={stats} />
+    <FlexStack
+      direction="col"
+      align="center"
+      className="max-w-4xl mx-auto h-64"
+      slot="bottom"
+      align="center"
+    >
+      <BadgeContainer options={stats} />
+    </FlexStack>
   </Section>
 
   <Section
@@ -103,6 +109,7 @@ const stats: Option[] = frankencoinInfo
     eyebrow={index.core_features.eyebrow}
     title={index.core_features.title}
     width="wide"
+    margin="mt-10"
   >
     <FeaturesContainer features={index.core_features.features} />
   </Section>
