@@ -3,8 +3,16 @@
   /* Display & Titles */
   .ty-display {
     font-family: var(--font-sans);
-    font-size: var(--font-size-display);
-    line-height: var(--line-height-display);
+    font-size: clamp(
+      var(--font-size-display-mobile),
+      6vw,
+      var(--font-size-display)
+    );
+    line-height: clamp(
+      var(--line-height-display-mobile),
+      6vw,
+      var(--line-height-display)
+    );
     font-weight: 1000;
   }
 
@@ -17,16 +25,18 @@
 
   .ty-large-title {
     font-family: var(--font-sans);
-    font-size: var(--font-size-large-title);
+    font-size: clamp(
+      var(--font-size-large-title-mobile),
+      4.5vw,
+      var(--font-size-large-title)
+    );
+    line-height: clamp(
+      var(--line-height-large-title-mobile),
+      4.5vw,
+      var(--line-height-large-title)
+    );
     font-weight: 1000;
     color: var(--color-brand-deep-blue);
-    @media (max-width: 768px) {
-      color: var(--color-brand-deep-blue);
-      font-family: var(--font-sans);
-      font-size: var(--font-size-large-title-mobile);
-      line-height: var(--line-height-large-title-mobile);
-      font-weight: 1000;
-    }
   }
 
   .ty-large-title-mobile {
