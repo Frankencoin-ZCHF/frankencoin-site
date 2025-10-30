@@ -120,17 +120,29 @@
 
   .ty-big {
     font-family: var(--font-sans);
-    font-size: var(--font-size--title-1-desktop);
+    font-size: clamp(
+      var(--font-size-body-1-mobile),
+      4vw,
+      var(--font-size--title-1-desktop)
+    );
     font-weight: 1000;
   }
   .ty-big-2 {
     font-family: var(--font-sans);
-    font-size: var(--font-size--title-2-desktop);
+    font-size: clamp(
+      var(--font-size-title-2),
+      3.5vw,
+      var(--font-size--title-2-desktop)
+    );
     font-weight: 1000;
   }
   .ty-big-3 {
     font-family: var(--font-sans);
-    font-size: var(--font-size--title-3-desktop);
+    font-size: clamp(
+      var(--font-size-title-3),
+      3vw,
+      var(--font-size--title-3-desktop)
+    );
     font-weight: 1000;
   }
 

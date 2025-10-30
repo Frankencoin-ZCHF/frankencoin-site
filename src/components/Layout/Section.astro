@@ -111,7 +111,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
           <slot />
         </div>
         
-        <div class={`${asideBasis}`}>
+        <div class={`${asideBasis} w-full`}>
           <slot name="aside" />
         </div>
       </div>
@@ -134,7 +134,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
           </div>
           
           <!-- Contenido secundario -->
-          <div class={`${asideBasis}`}>
+          <div class={` ${asideBasis}`}>
             <slot name="aside" />
           </div>
         </div>

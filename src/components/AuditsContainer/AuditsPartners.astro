@@ -5,7 +5,7 @@ import LogoBlock from "../Layout/LogoBlock.astro";
 
 <LogoBlock>
   <div
-    class="grid grid-cols-[200px_200px] auto-rows-1fr gap-5 place-content-center"
+    class="grid grid-cols-[repeat(auto-fit,minmax(160px,1fr))] sm:grid-cols-[repeat(auto-fit,minmax(180px,1fr))] md:grid-cols-[repeat(auto-fit,minmax(200px,1fr))] auto-rows-auto grid-flow-row gap-[12px] md:gap-[24px] place-content-center place-items-center w-full max-w-[clamp(320px,90vw,1200px)] mx-auto px-[clamp(8px,3vw,24px)]"
   >
     {
       index.audits.partners.map((partner) => (
