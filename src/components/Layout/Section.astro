@@ -27,6 +27,7 @@ interface Props {
   title?: string;
   subtitle?: string;
   contentPosition?: "left" | "right";
+  headerPosition?: "items-center" | "items-start";
   imgUrl?: string;
   /** Optional classes for the absolutely-positioned bottom slot */
   bottomClass?: string;
@@ -45,6 +46,7 @@ const {
   variant = "plain",
   width = "content",
   align = "left",
+  headerPosition = "items-center",
   pad = "md",
   layout = "default",
   eyebrow,
@@ -67,7 +69,7 @@ const pads = {
 
 const bg =imgUrl?.length   ? "bg-transparent" : 
   variant === "accent"
-    ? "bg-[var(--color-neutral-100)]"
+    ? "bg-[var(--color-gray-10)]"
     : "bg-[var(--color-white)]";
 
 // Optional background image support
@@ -85,14 +87,14 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className}`} style={sectionStyle}>
+<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className} w-[100%]` } style={sectionStyle}>
   <div class="relative z-10">
-    <Container width={width}>
+    <Container width={width} id={id}>
     {layout === "default" && (
       <div class={`${textAlign}`}>
         <div class="flex flex-col gap-2 items-center mb-8">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title text-[var(--color-brand-deep-blue)]">{title}</h1>}
+          {title && <h1 class="ty-large-title ">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
         </div>
         <slot />
@@ -100,10 +102,10 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     )}
 
     {layout === "split" && (
-      <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 items-center`}>
+      <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 ${headerPosition}`}>
         <!-- Contenido principal -->
         <div class={`${mainBasis} space-y-6`}>
-          {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
+          {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
           <slot />

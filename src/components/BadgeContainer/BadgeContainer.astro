@@ -19,15 +19,15 @@ const { variant, options } = Astro.props as Props;
 
 const variants = {
   primary:
-    "bg-[var(--color-brand-deep-blue)] text-[var(--color-white)] hover:bg-[var(--color-brand-swiss)]",
+    "bg-[var(--color-brand-deep-blue)] text-[var(--color-white)] hover:bg-[var(--color-brand-swiss)] rounded-xl",
   secondary:
-    "bg-[var(--color-neutral-300)] text-[var(--color-brand-deep-blue)]",
+    "bg-[var(--color-neutral-300)] text-[var(--color-brand-deep-blue)] ",
 };
 const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class={` bg-[var(--color-brand-deep-blue)] flex items-center justify-center md:flex-row flex-col gap-40px  rounded-xl`}
+  class={` bg-[var(--color-brand-deep-blue)] flex items-center justify-center md:flex-row flex-col gap-40px rounded-xl`}
 >
   {
     options?.map((option, index) => (

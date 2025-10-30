@@ -73,11 +73,11 @@ const stats: Option[] = frankencoinInfo
 
 <Base>
   <Section
+    id="main-page-header"
     variant="accent"
     width="content"
     align="center"
     pad="lg"
-    id="main-page-header"
     imgUrl={index.hero.image}
     margin="lg:my-0"
   >
@@ -136,65 +136,73 @@ const stats: Option[] = frankencoinInfo
     <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
       <TabMenu tabs={index.system.steps} />
     </div>
-    <Section
-      id="ecosystem"
-      layout="split"
-      eyebrow={index.ecosystem.eyebrow}
-      title={index.ecosystem.title}
-      subtitle={index.ecosystem.description}
-      contentPosition="right"
-    >
-      <EcosystemContainer />
-      <EcosystemPartners slot="aside" />
-    </Section>
+  </Section>
+  <Section
+    id="ecosystem"
+    layout="split"
+    eyebrow={index.ecosystem.eyebrow}
+    title={index.ecosystem.title}
+    subtitle={index.ecosystem.description}
+    contentPosition="right"
+  >
+    <EcosystemContainer />
+    <EcosystemPartners slot="aside" />
+  </Section>
 
-    <Section
-      id="foundation"
-      layout="split"
-      title={index.foundation.title}
-      subtitle={index.foundation.description}
-      contentPosition="left"
+  <Section
+    id="foundation"
+    layout="split"
+    title={index.foundation.title}
+    subtitle={index.foundation.description}
+    contentPosition="left"
+    variant="accent"
+  >
+    <div
+      class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
+      slot="aside"
     >
-      <div
-        class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
-        slot="aside"
-      >
-        <img src={index.foundation.image} alt={index.foundation.imageAlt} />
-      </div>
-      <FoundationContainer />
-    </Section>
-    <Section
-      id="audits"
-      layout="split"
-      eyebrow={index.audits.eyebrow}
-      title={index.audits.title}
-      subtitle={index.audits.subtitle}
+      <img src={index.foundation.image} alt={index.foundation.imageAlt} />
+    </div>
+    <FoundationContainer />
+  </Section>
+  <Section
+    id="audits"
+    layout="split"
+    eyebrow={index.audits.eyebrow}
+    title={index.audits.title}
+    subtitle={index.audits.subtitle}
+  >
+    <AuditsContainer slot="aside" />
+  </Section>
+  <Section
+    id="classification"
+    layout="split"
+    contentPosition="left"
+    title={index.classification.title}
+    subtitle={index.classification.summary}
+    variant="accent"
+    width="full"
+  >
+    <div
+      class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
+      slot="aside"
     >
-      <AuditsContainer slot="aside" />
-    </Section>
-    <Section
-      id="classification"
-      layout="split"
-      contentPosition="left"
-      title={index.classification.title}
-      subtitle={index.classification.summary}
-    >
-      <div
-        class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
-        slot="aside"
-      >
-        <img
-          src={index.classification.image}
-          alt={index.classification.imageAlt}
-          loading="lazy"
-          width="175"
-          height="175"
-        />
-      </div>
-    </Section>
-    <Section id="faq" title={index.faq.title}>
-      <FAQContainer faqs={index.faq.questions} />
-    </Section>
+      <img
+        src={index.classification.image}
+        alt={index.classification.imageAlt}
+        loading="lazy"
+        width="175"
+        height="175"
+      />
+    </div>
+  </Section>
+  <Section
+    id="faq"
+    title={index.faq.title}
+    layout="split"
+    headerPosition="items-start"
+  >
+    <FAQContainer faqs={index.faq.questions} slot="aside" />
   </Section>
   <Section id="brand-assets" variant="accent" width="content">
     <div

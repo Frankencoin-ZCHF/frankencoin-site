@@ -6,10 +6,6 @@
     font-size: var(--font-size-display);
     line-height: var(--line-height-display);
     font-weight: 1000;
-    @media (max-width: 768px) {
-      font-size: var(--font-size-display-mobile);
-      line-height: var(--line-height-display-mobile);
-    }
   }
 
   .ty-display-mobile {
@@ -22,7 +18,15 @@
   .ty-large-title {
     font-family: var(--font-sans);
     font-size: var(--font-size-large-title);
-    font-weight: 800;
+    font-weight: 1000;
+    color: var(--color-brand-deep-blue);
+    @media (max-width: 768px) {
+      color: var(--color-brand-deep-blue);
+      font-family: var(--font-sans);
+      font-size: var(--font-size-large-title-mobile);
+      line-height: var(--line-height-large-title-mobile);
+      font-weight: 1000;
+    }
   }
 
   .ty-large-title-mobile {
@@ -33,6 +37,7 @@
   }
 
   .ty-title-1 {
+    color: var(--color-brand-deep-blue);
     font-family: var(--font-sans);
     font-size: var(--font-size-title-1);
     line-height: var(--line-height-title-1);
@@ -102,11 +107,6 @@
     font-weight: 400;
   }
   /* Big Text */
-  .ty-large-title {
-    font-family: var(--font-sans);
-    font-size: var(--font-size--large-title);
-    font-weight: 1000;
-  }
 
   .ty-big {
     font-family: var(--font-sans);
@@ -161,6 +161,9 @@
   }
   .ty-extrabold {
     font-weight: 800;
+  }
+  .ty-semiblack {
+    font-weight: 900;
   }
   .ty-black {
     font-weight: 1000;
