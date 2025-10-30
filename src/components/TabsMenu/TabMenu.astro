@@ -13,13 +13,13 @@ const { tabs } = Astro.props;
 
 ---
 
-<div x-data="{ tab: 0 }" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div x-data="{ tab: 0 }" class="grid grid-cols-1 md:grid-cols-2 gap-10">
   <!-- Tabs -->
   <div class="flex flex-col space-y-2">
     {
       tabs.map((t, i) => (
         <button
-          class="bg-white rounded-lg px-6 py-4 text-left cursor-pointer hover:border-[var(--color-gray-20)]"
+          class="bg-white rounded-lg px-6 py-4 text-left cursor-pointer hover:border-[var(--color-gray-20)] "
           x-on:click={`tab=${i}`}
           x-bind:class={`{
             'border border-[var(--color-brand-titan-gray)]': tab === ${i},

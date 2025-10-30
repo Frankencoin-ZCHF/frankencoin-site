@@ -70,8 +70,6 @@ const spacing = {
 }[padding];
 
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
-
-console.log({ maxWidth, margin });
 ---
 
 <header class={` flex flex-col  w-full ${spacing} ${marginCls}`}>
@@ -83,7 +81,7 @@ console.log({ maxWidth, margin });
   {
     subtitle && (
       <p
-        class={`ty-body-1 text-${align} text-[color:var(--color-neutral-650)]  ${maxWidthCls}`}
+        class={`ty-body-1 text-${align} text-[color:var(--color-neutral-650)] ${maxWidthCls}`}
       >
         {subtitle}
       </p>

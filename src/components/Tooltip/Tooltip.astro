@@ -22,11 +22,7 @@ const { text = index.tokens.actions.copyTextTooltip, toCopy } = Astro.props;
   }"
   data-to-copy={toCopy}
 >
-  <button
-    class="p-1 rounded cursor-pointer"
-    @click="copyText()"
-    aria-label="Copy address"
-  >
+  <button class="p-1 rounded" @click="copyText()" aria-label="Copy address">
     <img
       :src="copied ? '/images/copy-icon-Compressify.io.webp' : '/images/copy-icon-1.svg'"
       alt="Copy"
@@ -38,7 +34,7 @@ const { text = index.tokens.actions.copyTextTooltip, toCopy } = Astro.props;
   <div
     class="absolute -top-7 left-1/2 -translate-x-1/2 whitespace-nowrap
            bg-gray-800 text-white text-xs rounded-md px-2 py-1
-           opacity-0 group-hover:opacity-100
+           opacity-0 group-hover:opacity-100 cursor-pointer
            pointer-events-none transition-opacity"
     x-show="!copied"
   >

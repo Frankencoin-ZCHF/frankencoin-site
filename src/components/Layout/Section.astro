@@ -92,7 +92,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
       <div class={`${textAlign}`}>
         <div class="flex flex-col gap-2 items-center mb-8">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title">{title}</h1>}
+          {title && <h1 class="ty-large-title text-[var(--color-brand-deep-blue)]">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
         </div>
         <slot />
