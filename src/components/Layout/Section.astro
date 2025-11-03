@@ -28,7 +28,10 @@ interface Props {
   subtitle?: string;
   contentPosition?: "left" | "right";
   headerPosition?: "items-center" | "items-start";
-  imgUrl?: string;
+  imgUrl?: {
+    desktop: string;
+    mobile: string;
+  };
   /** Optional classes for the absolutely-positioned bottom slot */
   bottomClass?: string;
   /** Optional Tailwind margin classes applied to the root section (e.g., "my-8 mt-12") */
@@ -70,15 +73,16 @@ const pads = {
   lg: "py-[calc(var(--spacing-l)*10)]", // ~96px
 }[pad];
 
-const bg =imgUrl?.length   ? "bg-transparent" : 
-  variant === "accent"
+// Optional background image support
+const hasBgImage = typeof imgUrl === "object" && imgUrl?.desktop?.length > 0;
+// Background color: ensure gray on mobile if there's an image, transparent only on desktop
+const bg = hasBgImage
+  ? "bg-[var(--color-gray-10)] md:bg-transparent"
+  : variant === "accent"
     ? "bg-[var(--color-gray-10)]"
     : "bg-[var(--color-white)]";
-
-// Optional background image support
-const hasBgImage = typeof imgUrl === "string" && imgUrl.length > 0;
-const bgImageClasses = hasBgImage ? "bg-cover bg-center bg-no-repeat" : "";
-const sectionStyle = hasBgImage ? `background-image: url('${imgUrl}')` : undefined;
+const bgImageClasses = hasBgImage ? "md:bg-cover md:bg-center md:bg-no-repeat" : "";
+const sectionStyle = hasBgImage ? `--section-bg: url('${imgUrl?.desktop}')` : undefined;
 
 const textAlign = align === "center" ? "text-center" : "text-left";
 
@@ -90,11 +94,14 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className} w-[100%]` } style={sectionStyle}>
+<section id={id} data-has-bg={hasBgImage ? 'true' : 'false'} class={`${pads} ${bg} ${bgImageClasses} section-bg relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className} w-[100%]` } style={sectionStyle}>
   <div class="relative z-10">
+{hasBgImage && <img src={imgUrl?.mobile} class="md:hidden block " alt="image" />}
+
     <Container width={width} id={id}>
     {layout === "default" && (
       <div class={`${textAlign}`}>
+
         <div class="flex flex-col gap-2 items-center mb-8">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title ">{title}</h1>}
@@ -108,6 +115,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
       <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 ${headerPosition}`}>
         <!-- Contenido principal -->
         <div class={`${mainBasis} space-y-6`}>
+
           {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
@@ -162,3 +170,11 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     </div>
   )}
 </section>
+
+<style>
+  @media (min-width: 768px) {
+    .section-bg[data-has-bg="true"] {
+      background-image: var(--section-bg);
+    }
+  }
+</style>

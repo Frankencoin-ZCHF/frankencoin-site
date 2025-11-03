@@ -1,6 +1,9 @@
 {
   "hero": {
-    "image": "images/Hero-pic.webp",
+    "image": {
+      "desktop": "images/Hero-pic.webp",
+      "mobile": "images/Hero-pic.webp"
+    },
     "imageAlt": "Frankencoin logo",
     "title": "Frankencoin",
     "subtitle": "In the last 50 years, the Swiss franc climbed more than 240% against the dollar. Frankencoin (ZCHF) brings this strength on chain as a collateralized, oracle-free stablecoin that tracks the Swiss franc.",

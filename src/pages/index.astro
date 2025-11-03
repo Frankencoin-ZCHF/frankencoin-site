@@ -81,18 +81,18 @@ const stats: Option[] = frankencoinInfo
     imgUrl={index.hero.image}
     margin="lg:my-0"
   >
-    <FlexStack direction="col" gap="4px" align="start" marginY="150px">
+    <div class="flex flex-col gap-8 items-start md:my-36 my-0">
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
-        margin="sm"
+        margin="none"
         size="display"
         align="left"
-        padding="xxl"
+        padding="xl"
       />
 
       <SocialLinksBar theme={"dark"} />
-    </FlexStack>
+    </div>
     <FlexStack
       direction="col"
       align="center"
@@ -109,7 +109,7 @@ const stats: Option[] = frankencoinInfo
     eyebrow={index.core_features.eyebrow}
     title={index.core_features.title}
     width="wide"
-    pad="xxs"
+    pad="xs"
     margin="md:mt-10 mt-50"
   >
     <FeaturesContainer features={index.core_features.features} />
