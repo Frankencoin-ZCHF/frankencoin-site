@@ -30,6 +30,7 @@ interface Props {
   cta?: {
     label: string;
     href: string;
+    variant?: "primary" | "secondary";
   };
   padding?: "none" | "sm" | "md" | "lg" | "xl" | "xxl";
   margin?: string;
@@ -113,7 +114,11 @@ const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
   }
   {
     cta && (
-      <Button variant="secondary" href={cta.href} rounded="sm">
+      <Button
+        variant={cta.variant || "secondary"}
+        href={cta.href}
+        rounded={cta.variant === "primary" ? "full" : "sm"}
+      >
         {cta.label}
       </Button>
     )
