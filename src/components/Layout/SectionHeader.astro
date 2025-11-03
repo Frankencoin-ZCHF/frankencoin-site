@@ -114,13 +114,15 @@ const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
   }
   {
     cta && (
-      <Button
-        variant={cta.variant || "secondary"}
-        href={cta.href}
-        rounded={cta.variant === "primary" ? "full" : "sm"}
-      >
-        {cta.label}
-      </Button>
+      <div class={cta.variant === "primary" ? "md:hidden" : " md:block"}>
+        <Button
+          variant={cta.variant || "secondary"}
+          href={cta.href}
+          rounded={cta.variant === "primary" ? "full" : "sm"}
+        >
+          {cta.label}
+        </Button>
+      </div>
     )
   }
 </header>
