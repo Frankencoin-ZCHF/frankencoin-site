@@ -3,7 +3,6 @@ import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import fps from "../content/fps.json";
-import Button from "../components/Button/Button.astro";
 import FlexStack from "../components/Layout/FlexStack.astro";
 import BadgeContainer, {
   type Option,
@@ -127,7 +126,7 @@ console.log({ fpsInfo });
       <StatsContainer options={stats} />
     </FlexStack>
   </Section>
-  <Section id="fps-introduction" className="md:mt-[300px] mt-[650px] ">
+  <Section id="fps-introduction" className="md:mt-35 mt-155" pad="xxs">
     <FlexStack direction="col" gap="40px" align="center">
       {
         fps.introduction.map((feature) => (

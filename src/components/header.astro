@@ -18,7 +18,7 @@ const { brand, links, cta } = nav;
       >
         <img
           src="/images/Frankencoin-Logo-Compressify.io.webp"
-          alt={nav.brand.name}
+          alt={`${nav.brand.name}'s logo`}
           class="h-8 w-auto"
           loading="lazy"
         />
@@ -30,7 +30,7 @@ const { brand, links, cta } = nav;
     <nav
       role="navigation"
       aria-label="Main"
-      class="hidden md:flex items-centergap-[var(--spacing-l)]"
+      class="hidden md:flex items-center gap-[var(--spacing-l)]"
     >
       {nav.links.map((l) => <NavLink href={l.href}>{l.label}</NavLink>)}
     </nav>

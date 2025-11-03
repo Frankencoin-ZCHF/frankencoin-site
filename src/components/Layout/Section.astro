@@ -21,7 +21,7 @@ interface Props {
   variant?: "plain" | "accent";
   width?: "narrow" | "content" | "wide" | "full";
   align?: "left" | "center";
-  pad?: "sm" | "md" | "lg";
+  pad?: "none"| "xxs" | "xs" | "sm" | "md" | "lg";
   layout?: "default" | "split" | "feature";
   eyebrow?: string;
   title?: string;
@@ -62,9 +62,12 @@ const {
 } = Astro.props as Props;
 
 const pads = {
-  sm: "py-[calc(var(--spacing-l)*2)]", // ~32px si --spacing-l=16px
-  md: "py-[calc(var(--spacing-l)*4)]", // ~64px
-  lg: "py-[calc(var(--spacing-l)*6)]", // ~96px
+  none: "",
+  xxs: "py-[calc(var(--spacing-l)*2)]", // ~32px si --spacing-l=16px
+  xs: "py-[calc(var(--spacing-l)*4)]", // ~32px si --spacing-l=16px
+  sm: "py-[calc(var(--spacing-l)*6)]", // ~32px si --spacing-l=16px
+  md: "py-[calc(var(--spacing-l)*8)]", // ~64px
+  lg: "py-[calc(var(--spacing-l)*10)]", // ~96px
 }[pad];
 
 const bg =imgUrl?.length   ? "bg-transparent" : 
@@ -146,7 +149,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
   </div>
   {bottomPosition === 'absolute' ? (
     <>
-      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] z-20 w-full`}>
+      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] md:px-0 px-8 z-20 w-full`}>
         <slot name="bottom" />
       </div>
       <div class={` hidden md:block absolute inset-x-0 top-[90%] z-20 ${bottomClass ?? ''}`}>

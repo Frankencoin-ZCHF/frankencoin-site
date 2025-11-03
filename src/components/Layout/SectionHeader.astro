@@ -89,7 +89,9 @@ const spacing = {
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
 ---
 
-<header class={` flex flex-col  w-full ${spacing} ${marginCls} items-center `}>
+<header
+  class={` flex flex-col   w-full ${spacing} ${marginCls} ${align === "center" ? "items-center" : "items-start"} `}
+>
   {
     image && (
       <img src={image} alt={imageAlt} width="128" height="128" loading="lazy" />

@@ -1,470 +1,470 @@
 {
-	"hero": {
-		"image": "images/Hero_pic_mobile_2.webp",
-		"imageAlt": "Frankencoin logo",
-		"title": "Frankencoin",
-		"subtitle": "In the last 50 years, the Swiss franc climbed more than 240% against the dollar. Frankencoin (ZCHF) brings this strength on chain as a collateralized, oracle-free stablecoin that tracks the Swiss franc.",
-		"cta": {
-			"label": "Launch Web App",
-			"href": "https://app.frankencoin.com/"
-		}
-	},
+  "hero": {
+    "image": "images/Hero-pic.webp",
+    "imageAlt": "Frankencoin logo",
+    "title": "Frankencoin",
+    "subtitle": "In the last 50 years, the Swiss franc climbed more than 240% against the dollar. Frankencoin (ZCHF) brings this strength on chain as a collateralized, oracle-free stablecoin that tracks the Swiss franc.",
+    "cta": {
+      "label": "Launch Web App",
+      "href": "https://app.frankencoin.com/"
+    }
+  },
 
-	"stats": [
-		{
-			"id": "totalValueLocked",
-			"label": "Total value locked",
-			"unit": "ZCHF",
-			"href": "https://defillama.com/protocol/frankencoin#information"
-		},
-		{
-			"id": "totalSupply",
-			"label": "Total supply",
-			"unit": "ZCHF",
-			"href": "https://coinmarketcap.com/currencies/frankencoin/"
-		},
-		{
-			"id": "fpsMarketCap",
-			"label": "fps market cap",
-			"unit": "ZCHF",
-			"href": "https://app.frankencoin.com/equity"
-		}
-	],
-	"core_features": {
-		"eyebrow": "Choose Your Use Case",
-		"title": "The Three Core Functions",
-		"features": [
-			{
-				"title": "Pay",
-				"image": "images/Icon-Payments.svg",
-				"description": "Pay with Frankencoin (ZCHF) at stores, settle your bills and receive your salary.",
-				"cta": {
-					"label": "Visit Mt Pelerin",
-					"href": "https://www.mtpelerin.com/?bdc=ZCHF"
-				}
-			},
-			{
-				"title": "Borrow",
-				"image": "images/Icon-Mint.svg",
-				"description": "Use your crypto to borrow Frankencoin at attractive terms.",
-				"cta": {
-					"label": "Launch Mint",
-					"href": "https://app.frankencoin.com/mint"
-				}
-			},
-			{
-				"title": "Earn",
-				"image": "images/Icon-Invest.svg",
-				"description": "Get a yield on your Swiss franc stablecoin. ",
-				"cta": {
-					"label": "Launch Savings",
-					"href": "https://app.frankencoin.com/equity"
-				}
-			}
-		]
-	},
-	"tokens": {
-		"title": "The Frankencoin Token",
-		"subtitle": "The Frankencoin (ZCHF) Swiss franc stablecoin is an ERC-20 token on Ethereum mainnet and fully available cross-chain.",
-		"header": {
-			"label": "Chain",
-			"title": "Token Contract"
-		},
-		"actions": {
-			"copyTextTooltip": "Copy address",
-			"copiedLabel": "Copied!"
-		},
-		"chains": [
-			{
-				"name": "Ethereum",
-				"image": "images/Frame-427322444-Compressify.io.webp",
-				"contract": "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
-				"actions": [
-					{
-						"label": "Buy with fiat",
-						"fiatProviders": [
-							{
-								"href": "https://services.dfx.swiss/",
-								"image": "images/DFX-Logos.svg",
-								"name": "DFX"
-							},
-							{
-								"href": "https://www.mtpelerin.com/buy-zchf-frankencoin",
-								"image": "images/Mt-Pelerin-Logo.svg",
-								"name": "Mt Pelerin"
-							}
-						]
-					},
-					{
-						"label": "Swap onchain",
-						"href": "https://app.frankencoin.com/",
-						"image": "images/Cow-Swap-logo.svg"
-					}
-				]
-			},
-			{
-				"name": "Polygon",
-				"image": "images/coin-icons-Compressify.io_1.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-poly.webp"
-					}
-				]
-			},
-			{
-				"name": "Arbitrum",
-				"image": "images/coin-icons-Compressify.io.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-arb.webp"
-					}
-				]
-			},
-			{
-				"name": "Optimism",
-				"image": "images/coin-icons-Compressify.io_1_1.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-opt.webp"
-					}
-				]
-			},
-			{
-				"name": "Base",
-				"image": "images/coin-icons-Compressify.io_1_1_1.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-base.webp"
-					}
-				]
-			},
-			{
-				"name": "Avalanche",
-				"image": "images/Frankencoin-on-Avalanche.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-avax.webp"
-					}
-				]
-			},
-			{
-				"name": "Gnosis",
-				"image": "images/coin-icons-Compressify.io_1_1_1.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-on-Gnosis.webp"
-					}
-				]
-			},
-			{
-				"name": "Sonic",
-				"image": "images/Frankencoin-on-Sonic.webp",
-				"contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
-				"actions": [
-					{
-						"label": "Bridge",
-						"href": "https://app.frankencoin.com/bridge",
-						"image": "images/Frankencoin-eth-sonic.webp"
-					}
-				]
-			}
-		]
-	},
+  "stats": [
+    {
+      "id": "totalValueLocked",
+      "label": "Total value locked",
+      "unit": "ZCHF",
+      "href": "https://defillama.com/protocol/frankencoin#information"
+    },
+    {
+      "id": "totalSupply",
+      "label": "Total supply",
+      "unit": "ZCHF",
+      "href": "https://coinmarketcap.com/currencies/frankencoin/"
+    },
+    {
+      "id": "fpsMarketCap",
+      "label": "fps market cap",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    }
+  ],
+  "core_features": {
+    "eyebrow": "Choose Your Use Case",
+    "title": "The Three Core Functions",
+    "features": [
+      {
+        "title": "Pay",
+        "image": "images/Icon-Payments.svg",
+        "description": "Pay with Frankencoin (ZCHF) at stores, settle your bills and receive your salary.",
+        "cta": {
+          "label": "Visit Mt Pelerin",
+          "href": "https://www.mtpelerin.com/?bdc=ZCHF"
+        }
+      },
+      {
+        "title": "Borrow",
+        "image": "images/Icon-Mint.svg",
+        "description": "Use your crypto to borrow Frankencoin at attractive terms.",
+        "cta": {
+          "label": "Launch Mint",
+          "href": "https://app.frankencoin.com/mint"
+        }
+      },
+      {
+        "title": "Earn",
+        "image": "images/Icon-Invest.svg",
+        "description": "Get a yield on your Swiss franc stablecoin. ",
+        "cta": {
+          "label": "Launch Savings",
+          "href": "https://app.frankencoin.com/equity"
+        }
+      }
+    ]
+  },
+  "tokens": {
+    "title": "The Frankencoin Token",
+    "subtitle": "The Frankencoin (ZCHF) Swiss franc stablecoin is an ERC-20 token on Ethereum mainnet and fully available cross-chain.",
+    "header": {
+      "label": "Chain",
+      "title": "Token Contract"
+    },
+    "actions": {
+      "copyTextTooltip": "Copy address",
+      "copiedLabel": "Copied!"
+    },
+    "chains": [
+      {
+        "name": "Ethereum",
+        "image": "images/Frame-427322444-Compressify.io.webp",
+        "contract": "0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+        "actions": [
+          {
+            "label": "Buy with fiat",
+            "fiatProviders": [
+              {
+                "href": "https://services.dfx.swiss/",
+                "image": "images/DFX-Logos.svg",
+                "name": "DFX"
+              },
+              {
+                "href": "https://www.mtpelerin.com/buy-zchf-frankencoin",
+                "image": "images/Mt-Pelerin-Logo.svg",
+                "name": "Mt Pelerin"
+              }
+            ]
+          },
+          {
+            "label": "Swap onchain",
+            "href": "https://app.frankencoin.com/",
+            "image": "images/Cow-Swap-logo.svg"
+          }
+        ]
+      },
+      {
+        "name": "Polygon",
+        "image": "images/coin-icons-Compressify.io_1.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-poly.webp"
+          }
+        ]
+      },
+      {
+        "name": "Arbitrum",
+        "image": "images/coin-icons-Compressify.io.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-arb.webp"
+          }
+        ]
+      },
+      {
+        "name": "Optimism",
+        "image": "images/coin-icons-Compressify.io_1_1.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-opt.webp"
+          }
+        ]
+      },
+      {
+        "name": "Base",
+        "image": "images/coin-icons-Compressify.io_1_1_1.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-base.webp"
+          }
+        ]
+      },
+      {
+        "name": "Avalanche",
+        "image": "images/Frankencoin-on-Avalanche.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-avax.webp"
+          }
+        ]
+      },
+      {
+        "name": "Gnosis",
+        "image": "images/coin-icons-Compressify.io_1_1_1.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-on-Gnosis.webp"
+          }
+        ]
+      },
+      {
+        "name": "Sonic",
+        "image": "images/Frankencoin-on-Sonic.webp",
+        "contract": "0xD4dD9e2F021BB459D5A5f6c24C12fE09c5D45553",
+        "actions": [
+          {
+            "label": "Bridge",
+            "href": "https://app.frankencoin.com/bridge",
+            "image": "images/Frankencoin-eth-sonic.webp"
+          }
+        ]
+      }
+    ]
+  },
 
-	"fps": {
-		"title": "The Frankencoin Pool Shares Token",
-		"subtitle": "The Frankencoin Pool Shares (FPS) is an ERC-20 token on Ethereum mainnet.",
-		"chain": {
-			"name": "Ethereum",
-			"image": "images/coin-icons-Compressify.io.webp",
-			"contract": "0x1bA26788dfDe592fec8bcB0Eaff472a42BE341B2",
-			"actions": [
-				{
-					"label": "Invest via the App",
-					"image": "images/Frankencoin-Logo-Compressify.io.webp",
-					"href": "https://app.frankencoin.com/equity"
-				},
-				{
-					"label": "Invest directly onchain",
-					"image": "images/logo-etherscan.svg",
-					"href": "https://etherscan.io/token/0x1bA26788dfDe592fec8bcB0Eaff472a42BE341B2"
-				}
-			]
-		}
-	},
+  "fps": {
+    "title": "The Frankencoin Pool Shares Token",
+    "subtitle": "The Frankencoin Pool Shares (FPS) is an ERC-20 token on Ethereum mainnet.",
+    "chain": {
+      "name": "Ethereum",
+      "image": "images/coin-icons-Compressify.io.webp",
+      "contract": "0x1bA26788dfDe592fec8bcB0Eaff472a42BE341B2",
+      "actions": [
+        {
+          "label": "Invest via the App",
+          "image": "images/Frankencoin-Logo-Compressify.io.webp",
+          "href": "https://app.frankencoin.com/equity"
+        },
+        {
+          "label": "Invest directly onchain",
+          "image": "images/logo-etherscan.svg",
+          "href": "https://etherscan.io/token/0x1bA26788dfDe592fec8bcB0Eaff472a42BE341B2"
+        }
+      ]
+    }
+  },
 
-	"svzchf": {
-		"title": "The Frankencoin Savings Vaults",
-		"subtitle": "The Savings Vault is an ERC-20 token and an ERC-4626 vault standard implementation of the Frankencoin savings module.",
-		"chain": {
-			"name": "Gnosis",
-			"image": "images/Coin_Logo_Frankencoin_saved.svg",
-			"contract": "0x6165946250dd04740ab1409217e95a4f38374fe9",
-			"actions": [
-				{
-					"label": "Use Bungee Swap UI",
-					"image": "images/Bungee Full Logo Black.svg",
-					"href": "https://www.bungee.exchange/?fromChainId=100&fromTokenAddress=0x6165946250dd04740ab1409217e95a4f38374fe9&toChainId=100&toTokenAddress=0xd4dd9e2f021bb459d5a5f6c24c12fe09c5d45553"
-				},
-				{
-					"label": "Use directly onchain",
-					"image": "images/logo-gnosis.svg",
-					"href": "https://gnosisscan.io/address/0x6165946250dd04740ab1409217e95a4f38374fe9#writeContract"
-				}
-			]
-		}
-	},
+  "svzchf": {
+    "title": "The Frankencoin Savings Vaults",
+    "subtitle": "The Savings Vault is an ERC-20 token and an ERC-4626 vault standard implementation of the Frankencoin savings module.",
+    "chain": {
+      "name": "Gnosis",
+      "image": "images/Coin_Logo_Frankencoin_saved.svg",
+      "contract": "0x6165946250dd04740ab1409217e95a4f38374fe9",
+      "actions": [
+        {
+          "label": "Use Bungee Swap UI",
+          "image": "images/Bungee Full Logo Black.svg",
+          "href": "https://www.bungee.exchange/?fromChainId=100&fromTokenAddress=0x6165946250dd04740ab1409217e95a4f38374fe9&toChainId=100&toTokenAddress=0xd4dd9e2f021bb459d5a5f6c24c12fe09c5d45553"
+        },
+        {
+          "label": "Use directly onchain",
+          "image": "images/logo-gnosis.svg",
+          "href": "https://gnosisscan.io/address/0x6165946250dd04740ab1409217e95a4f38374fe9#writeContract"
+        }
+      ]
+    }
+  },
 
-	"system": {
-		"title": "Frankencoin System Explained",
-		"subtitle": "Discover the possibilities of the protocol for yourself, either as a saver, user or investor.",
-		"steps": [
-			{
-				"title": "Mint",
-				"image": "images/Grafik_Mint.svg",
-				"description": [
-					{
-						"step": "1. Mint",
-						"content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
-					},
-					{
-						"step": "2. Fees.",
-						"content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
-					}
-				]
-			},
-			{
-				"title": "Sell",
-				"image": "images/Grafik_Sell.svg",
-				"description": [
-					{
-						"step": "3. Sell.",
-						"content": "The minter sells the Frankencoins for 1 CHF each in the market."
-					}
-				]
-			},
-			{
-				"title": "Spend",
-				"image": "images/Grafik_Spend.svg",
-				"description": [
-					{
-						"step": "4. Buy.",
-						"content": "Someone else buys some Frankencoins from Uniswap or other market places."
-					},
-					{
-						"step": "5. Pay.",
-						"content": "Frankencoins can be used to make Swiss franc payments in DeFi or elsewhere."
-					},
-					{
-						"step": "6. Sell.",
-						"content": "Recipients can sell their Frankencoins again on the market."
-					}
-				]
-			},
-			{
-				"title": "Save",
-				"image": "images/Grafik_Save.svg",
-				"description": [
-					{
-						"step": "7. Buy.",
-						"content": "Someone who is interested in saving Swiss francs might buy some Frankencoins."
-					},
-					{
-						"step": "8. Save.",
-						"content": "And then commit to lock them up in the system for a chosen period of time."
-					},
-					{
-						"step": "9. Interest.",
-						"content": "The saver receives interest on their Frankencoins."
-					}
-				]
-			},
-			{
-				"title": "Invest",
-				"image": "images/Grafik_Invest.svg",
-				"description": [
-					{
-						"step": "10. Buy FPS.",
-						"content": "Investors might want to buy FPS in order to speculate on the success of the whole system."
-					},
-					{
-						"step": "11. Add capital.",
-						"content": "When adding capital to the equity reserve pool, you get freshly minted Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant 'Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool', minus 0.3% issuance fee."
-					},
-					{
-						"step": "12. FPS appreciation or depreciation.",
-						"content": "After a minimum holding duration of three months, the FPS can be returned to the system at the current price, minus 0.3% redemption fee."
-					}
-				]
-			}
-		]
-	},
+  "system": {
+    "title": "Frankencoin System Explained",
+    "subtitle": "Discover the possibilities of the protocol for yourself, either as a saver, user or investor.",
+    "steps": [
+      {
+        "title": "Mint",
+        "image": "images/Grafik_Mint.svg",
+        "description": [
+          {
+            "step": "1. Mint",
+            "content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
+          },
+          {
+            "step": "2. Fees.",
+            "content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
+          }
+        ]
+      },
+      {
+        "title": "Sell",
+        "image": "images/Grafik_Sell.svg",
+        "description": [
+          {
+            "step": "3. Sell.",
+            "content": "The minter sells the Frankencoins for 1 CHF each in the market."
+          }
+        ]
+      },
+      {
+        "title": "Spend",
+        "image": "images/Grafik_Spend.svg",
+        "description": [
+          {
+            "step": "4. Buy.",
+            "content": "Someone else buys some Frankencoins from Uniswap or other market places."
+          },
+          {
+            "step": "5. Pay.",
+            "content": "Frankencoins can be used to make Swiss franc payments in DeFi or elsewhere."
+          },
+          {
+            "step": "6. Sell.",
+            "content": "Recipients can sell their Frankencoins again on the market."
+          }
+        ]
+      },
+      {
+        "title": "Save",
+        "image": "images/Grafik_Save.svg",
+        "description": [
+          {
+            "step": "7. Buy.",
+            "content": "Someone who is interested in saving Swiss francs might buy some Frankencoins."
+          },
+          {
+            "step": "8. Save.",
+            "content": "And then commit to lock them up in the system for a chosen period of time."
+          },
+          {
+            "step": "9. Interest.",
+            "content": "The saver receives interest on their Frankencoins."
+          }
+        ]
+      },
+      {
+        "title": "Invest",
+        "image": "images/Grafik_Invest.svg",
+        "description": [
+          {
+            "step": "10. Buy FPS.",
+            "content": "Investors might want to buy FPS in order to speculate on the success of the whole system."
+          },
+          {
+            "step": "11. Add capital.",
+            "content": "When adding capital to the equity reserve pool, you get freshly minted Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant 'Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool', minus 0.3% issuance fee."
+          },
+          {
+            "step": "12. FPS appreciation or depreciation.",
+            "content": "After a minimum holding duration of three months, the FPS can be returned to the system at the current price, minus 0.3% redemption fee."
+          }
+        ]
+      }
+    ]
+  },
 
-	"ecosystem": {
-		"eyebrow": "Wallets, Exchanges, Companies",
-		"title": "Ecosystem",
-		"description": "On- and off-ramps, Apps, Tokenization providers, Bridges, and Merchants bring Frankencoin to life.",
-		"partners": [
-			{
-				"altText": "Aktionariat",
-				"image": "images/aktionariat-Compressify.io.webp"
-			},
-			{
-				"altText": "DFX",
-				"image": "images/DFX-Logos-Compressify.io.webp"
-			},
-			{
-				"altText": "MT Pelerin",
-				"image": "images/mt-pelerin-logo.png"
-			},
-			{
-				"altText": "Ammer Pay",
-				"image": "images/ammer-pay-Compressify.io.webp"
-			},
-			{
-				"altText": "Frankencoin Wallet",
-				"image": "images/Frankencoin-App-Logo.svg"
-			},
-			{
-				"altText": "Stay Liquid",
-				"image": "images/stayliquid.svg"
-			},
-			{
-				"altText": "Frankencoin Merch",
-				"image": "images/frankencoin-merch.png"
-			},
-			{
-				"altText": "Operal",
-				"image": "images/OperalLogo-1.png"
-			}
-		],
-		"actions": [
-			{
-				"label": "Learn More",
-				"href": "/ecosystem"
-			}
-		]
-	},
+  "ecosystem": {
+    "eyebrow": "Wallets, Exchanges, Companies",
+    "title": "Ecosystem",
+    "description": "On- and off-ramps, Apps, Tokenization providers, Bridges, and Merchants bring Frankencoin to life.",
+    "partners": [
+      {
+        "altText": "Aktionariat",
+        "image": "images/aktionariat-Compressify.io.webp"
+      },
+      {
+        "altText": "DFX",
+        "image": "images/DFX-Logos-Compressify.io.webp"
+      },
+      {
+        "altText": "MT Pelerin",
+        "image": "images/mt-pelerin-logo.png"
+      },
+      {
+        "altText": "Ammer Pay",
+        "image": "images/ammer-pay-Compressify.io.webp"
+      },
+      {
+        "altText": "Frankencoin Wallet",
+        "image": "images/Frankencoin-App-Logo.svg"
+      },
+      {
+        "altText": "Stay Liquid",
+        "image": "images/stayliquid.svg"
+      },
+      {
+        "altText": "Frankencoin Merch",
+        "image": "images/frankencoin-merch.png"
+      },
+      {
+        "altText": "Operal",
+        "image": "images/OperalLogo-1.png"
+      }
+    ],
+    "actions": [
+      {
+        "label": "Learn More",
+        "href": "/ecosystem"
+      }
+    ]
+  },
 
-	"foundation": {
-		"title": "Theoretical Foundation",
-		"description": "Conceived as part of a PhD thesis at the University of Zurich, covering game theory of liquidation, Bitcoin collateral risk, and veto-based governance. Seen as a Continuous Capital Corporation.",
-		"image": "images/frankencoin-foundation.webp",
-		"imageAlt": "Frankencoin Foundation",
-		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
-	},
+  "foundation": {
+    "title": "Theoretical Foundation",
+    "description": "Conceived as part of a PhD thesis at the University of Zurich, covering game theory of liquidation, Bitcoin collateral risk, and veto-based governance. Seen as a Continuous Capital Corporation.",
+    "image": "images/frankencoin-foundation.webp",
+    "imageAlt": "Frankencoin Foundation",
+    "href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
+  },
 
-	"audits": {
-		"eyebrow": "Publicly Verifiable",
-		"title": "Code Audits",
-		"subtitle": "Audited by the leading security firms, security of Frankencoin is the highest priority.",
-		"partners": [
-			{
-				"altText": "c4",
-				"image": "images/c4-logo-1-Compressify.io.webp"
-			},
-			{
-				"altText": "decurity",
-				"image": "images/Decurity_Logo.png"
-			},
-			{
-				"altText": "chainsec",
-				"image": "images/chainsec_logo.svg"
-			},
-			{
-				"altText": "blockbyte",
-				"image": "images/blockbyte-logo-black-1-Compressify.io.webp"
-			}
-		]
-	},
+  "audits": {
+    "eyebrow": "Publicly Verifiable",
+    "title": "Code Audits",
+    "subtitle": "Audited by the leading security firms, security of Frankencoin is the highest priority.",
+    "partners": [
+      {
+        "altText": "c4",
+        "image": "images/c4-logo-1-Compressify.io.webp"
+      },
+      {
+        "altText": "decurity",
+        "image": "images/Decurity_Logo.png"
+      },
+      {
+        "altText": "chainsec",
+        "image": "images/chainsec_logo.svg"
+      },
+      {
+        "altText": "blockbyte",
+        "image": "images/blockbyte-logo-black-1-Compressify.io.webp"
+      }
+    ]
+  },
 
-	"classification": {
-		"title": "Token Classification",
-		"image": "images/frame_427322438.webp",
-		"imageAlt": "Frankencoin Classification",
-		"summary": "Frankencoins (ZCHF) have been classified as a payment tokens under Swiss law, and Frankencoin Pool Shares (FPS) as governance tokens in a memorandum by the Swiss law firm LEXR. In the European Union, the Frankencoin qualifies as a crypto-asset under MiCA. However, the duties and obligations set out in Title II, III, and IV of MiCA do not apply due to its decentralized nature and the absence of an identifiable issuer. This was concluded by the same law firm in a separate MiCA memorandum."
-	},
+  "classification": {
+    "title": "Token Classification",
+    "image": "images/frame_427322438.webp",
+    "imageAlt": "Frankencoin Classification",
+    "summary": "Frankencoins (ZCHF) have been classified as a payment tokens under Swiss law, and Frankencoin Pool Shares (FPS) as governance tokens in a memorandum by the Swiss law firm LEXR. In the European Union, the Frankencoin qualifies as a crypto-asset under MiCA. However, the duties and obligations set out in Title II, III, and IV of MiCA do not apply due to its decentralized nature and the absence of an identifiable issuer. This was concluded by the same law firm in a separate MiCA memorandum."
+  },
 
-	"faq": {
-		"title": "Q&A",
-		"questions": [
-			{
-				"question": "What is the Frankencoin about?",
-				"answer": "From a bird's eye perspective, the Frankencoin system resembles a bank that creates money against collateral. In the traditional banking system, a bank might accept a house as collateral, and prints some money in the form of a mortgage into the account of the owner. When doing so, banks need to observe some reserve and other legal requirements to ensure the mortgage is well-secured. The Frankencoin system essentially enables users to do the same, printing some money against a collateral. Also, like a bank, the Frankencoin system has a reserve pool that resembles the equity capital of a bank and serves as a buffer to absorb risks. However, in contrast to a bank, there is nothing that qualifies as lending as the users print their money themselves, processes are largely automated and fully transparent, and there is no explicit governance besides a veto mechanism that is open for everyone with enough pool shares."
-			},
-			{
-				"question": "Is the Frankencoin useful?",
-				"answer": "If used with the necessary care, most definitely. Most of the usefulness of the Frankencoin comes from its decentralized nature. It is open, fully transparent, and freely interactible by humans and software alike. Thanks to its transparency, anyone can analyze its solvency at any moment. If it is in imbalance, it can be expected to be attacked by speculators who know exactly at which market prices the Frankencoin is not fully backed any more. The goal is not to imitate traditional banking, the goal is to create something immanently better."
-			},
-			{
-				"question": "How does Frankencoin differ from other stablecoins?",
-				"answer": "Frankencoin employs a novel liquidation mechanism that uses auctions for two purposes at once: price discovery and liquidation. Thanks to that, Frankencoin does not depend on external price sources (oracles), making it more versatile and decentralized than other stablecoins."
-			},
-			{
-				"question": "What are Frankencoin Pool Shares (FPS)?",
-				"answer": "FPS is the governance token of the Frankencoin system. Each FPS represents a share in the reserve pool of the Frankencoin system. Anyone can mint additional FPS by contributing to the reserve pool. Also, after a holding period of 90 days, it is possible to redeem FPS again, getting some funds from the reserve pool in return. Depending on how the reserve pool changed in the meantim, the system might return more or less than initially contributed. Holding FPS also gives the owner voting rights in the system, whereas the number of votes is both proportional to the number of FPS held and the holding duration. Anyone with at least two percent of the votes gains veto rights."
-			},
-			{
-				"question": "What role do governance token holders play in the Frankencoin ecosystem?",
-				"answer": "FPS token holders can gain veto rights if they hold enough FPS for a long enough time. All governance in the Frankencoin system is based on these veto rights. The low entry barrier of two percent as well as the possibility for smaller holders to team up makes the governance process very decentralized, as even small holders have the ability to veto decisions. In case of disputes between FPS holders, there is a special function that allows holders to cancel each others' votes. That way, one can expect the moderate voices to prevail."
-			},
-			{
-				"question": "How are Frankencoins kept stable?",
-				"answer": "The Frankencoin is softly pegged to the Swiss franc through a combination of technical constraints and economic incentives. Most importantly, each  Frankencoin ZCHF are backed by collateral worth at least one Swiss franc. Furthermore, the governance token holders have a strong interest in the Frankencoin tracking the value of the Swiss franc and at the same time are equipped with the tools to keep it that way, namely the system's interest rate policy. In finance theory, two assets of non-zero value with identical risk-adjusted returns also have the same market price. Therefore, it is possible to ensure that the long-term value of the Frankencoin is one Swiss franc. The rest is arbitrage."
-			},
-			{
-				"question": "How risky is the Frankencoin system?",
-				"answer": "The Frankencoin is not risk-free. There are technical, governance, and economic risks. The technical risks include the possibility of the smart contracts having an exploitable weakness or the frontend being hacked, amont others. The governance risks includes the risk of FPS tokens holders not carefully monitoring the system despite their economic interest. Furthermore, there is a significant economic risk of the Frankencoin losing its peg to the Swiss franc due to a crash in the value of the collateral assets. An additional economic risk is that of a failure of the market to do intertemporal arbitrage between the long-term and the short-term value of the Frankencoin, leading to temporary depegs in case of strong market pressure."
-			},
-			{
-				"question": "What happens in a market crash?",
-				"answer": "In case the market crashes and the collateral assets lose value faster than they can be liquidated, the system incurs a loss. This loss is in first priority covered by the reserve provided by the individual collateral owners. For example, if someone has borrowed 100'000 ZCHF from a position that has a reserve requirement of 20%, only 20'000 ZCHF are held back. So if the collateral is liquidated at a price between 80'000 ZCHF and 100'000 ZCHF, the loss can be covered by that reserve. Only if the individual reserve does not suffice, the system starts to access the reserve pool provided by the FPS holders. If the reserve pool does not suffice either, the reserves provided by all other collateral owners is tapped into. In effect, this means that large borrowers should care about the system's stability and maybe buy some FPS to take part in the governance process. If this reserve does not suffice either, there is not sufficient collateral left and the fundamental value of a Frankencoin falls below one Swiss franc. This risk is hard to quantify. We believe it to be small, but not zero. In such a worst case scenario, some FPS holders might try to leave the sinking ship and redeem their pool shares before the losses materialize. Attentive FPS holders that have borrowed against sound collateral are advised to prevent that from happening by cancelling the votes of those they suspect to be tempted to flee. Cancelling another FPS holders votes has the side effect of also resetting their holding clock, preventing them from redeeming their FPS againt the reserve pool for ninety days and ensuring that they stay in the ship with the other FPS holders."
-			},
-			{
-				"question": "Is the Frankencoin a security?",
-				"answer": "No, it neither qualifies formally nor functionally as a security. It does not qualify formally as a security under Swiss law as it does not represent a claim towards an issuer. Also, it does not qualify functionally as a security as it does not serve a financing purpose."
-			},
-			{
-				"question": "Is Frankencoin a political coin?",
-				"answer": "Yes, to some extent. The Frankencoin addresses issues within the current system of money creation, highlighting how it distorts capital allocation. For example, regulatory constraints may incentivize investments that aren't optimal for society. Traditional capital requirements tend to favor certain sectors like real estate and government bonds over others. By leveraging blockchain technology, Frankencoin offers an alternative outside the traditional financial system. It empowers individuals by allowing them to create their own money, potentially leading to a stronger economy and more growth if used responsibly."
-			}
-		]
-	},
-	"brand_assets": {
-		"title": "Brand Assets",
-		"assets": [
-			{
-				"description": "Check out our Github repository for brand assets, including Frankencoin and FPS logos.",
-				"cta": {
-					"label": "Logo Assets",
-					"href": "https://github.com/Frankencoin-ZCHF/www/tree/main/media_kit"
-				}
-			},
-			{
-				"description": "Download our Brand Guidelines to learn more about how to use the logo, as well as important details such as brand colors and typography.",
-				"cta": {
-					"label": "Download Brand Guidelines",
-					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/media_kit/frankencoin_brand_guidelines.pdf"
-				}
-			}
-		]
-	}
+  "faq": {
+    "title": "Q&A",
+    "questions": [
+      {
+        "question": "What is the Frankencoin about?",
+        "answer": "From a bird's eye perspective, the Frankencoin system resembles a bank that creates money against collateral. In the traditional banking system, a bank might accept a house as collateral, and prints some money in the form of a mortgage into the account of the owner. When doing so, banks need to observe some reserve and other legal requirements to ensure the mortgage is well-secured. The Frankencoin system essentially enables users to do the same, printing some money against a collateral. Also, like a bank, the Frankencoin system has a reserve pool that resembles the equity capital of a bank and serves as a buffer to absorb risks. However, in contrast to a bank, there is nothing that qualifies as lending as the users print their money themselves, processes are largely automated and fully transparent, and there is no explicit governance besides a veto mechanism that is open for everyone with enough pool shares."
+      },
+      {
+        "question": "Is the Frankencoin useful?",
+        "answer": "If used with the necessary care, most definitely. Most of the usefulness of the Frankencoin comes from its decentralized nature. It is open, fully transparent, and freely interactible by humans and software alike. Thanks to its transparency, anyone can analyze its solvency at any moment. If it is in imbalance, it can be expected to be attacked by speculators who know exactly at which market prices the Frankencoin is not fully backed any more. The goal is not to imitate traditional banking, the goal is to create something immanently better."
+      },
+      {
+        "question": "How does Frankencoin differ from other stablecoins?",
+        "answer": "Frankencoin employs a novel liquidation mechanism that uses auctions for two purposes at once: price discovery and liquidation. Thanks to that, Frankencoin does not depend on external price sources (oracles), making it more versatile and decentralized than other stablecoins."
+      },
+      {
+        "question": "What are Frankencoin Pool Shares (FPS)?",
+        "answer": "FPS is the governance token of the Frankencoin system. Each FPS represents a share in the reserve pool of the Frankencoin system. Anyone can mint additional FPS by contributing to the reserve pool. Also, after a holding period of 90 days, it is possible to redeem FPS again, getting some funds from the reserve pool in return. Depending on how the reserve pool changed in the meantim, the system might return more or less than initially contributed. Holding FPS also gives the owner voting rights in the system, whereas the number of votes is both proportional to the number of FPS held and the holding duration. Anyone with at least two percent of the votes gains veto rights."
+      },
+      {
+        "question": "What role do governance token holders play in the Frankencoin ecosystem?",
+        "answer": "FPS token holders can gain veto rights if they hold enough FPS for a long enough time. All governance in the Frankencoin system is based on these veto rights. The low entry barrier of two percent as well as the possibility for smaller holders to team up makes the governance process very decentralized, as even small holders have the ability to veto decisions. In case of disputes between FPS holders, there is a special function that allows holders to cancel each others' votes. That way, one can expect the moderate voices to prevail."
+      },
+      {
+        "question": "How are Frankencoins kept stable?",
+        "answer": "The Frankencoin is softly pegged to the Swiss franc through a combination of technical constraints and economic incentives. Most importantly, each  Frankencoin ZCHF are backed by collateral worth at least one Swiss franc. Furthermore, the governance token holders have a strong interest in the Frankencoin tracking the value of the Swiss franc and at the same time are equipped with the tools to keep it that way, namely the system's interest rate policy. In finance theory, two assets of non-zero value with identical risk-adjusted returns also have the same market price. Therefore, it is possible to ensure that the long-term value of the Frankencoin is one Swiss franc. The rest is arbitrage."
+      },
+      {
+        "question": "How risky is the Frankencoin system?",
+        "answer": "The Frankencoin is not risk-free. There are technical, governance, and economic risks. The technical risks include the possibility of the smart contracts having an exploitable weakness or the frontend being hacked, amont others. The governance risks includes the risk of FPS tokens holders not carefully monitoring the system despite their economic interest. Furthermore, there is a significant economic risk of the Frankencoin losing its peg to the Swiss franc due to a crash in the value of the collateral assets. An additional economic risk is that of a failure of the market to do intertemporal arbitrage between the long-term and the short-term value of the Frankencoin, leading to temporary depegs in case of strong market pressure."
+      },
+      {
+        "question": "What happens in a market crash?",
+        "answer": "In case the market crashes and the collateral assets lose value faster than they can be liquidated, the system incurs a loss. This loss is in first priority covered by the reserve provided by the individual collateral owners. For example, if someone has borrowed 100'000 ZCHF from a position that has a reserve requirement of 20%, only 20'000 ZCHF are held back. So if the collateral is liquidated at a price between 80'000 ZCHF and 100'000 ZCHF, the loss can be covered by that reserve. Only if the individual reserve does not suffice, the system starts to access the reserve pool provided by the FPS holders. If the reserve pool does not suffice either, the reserves provided by all other collateral owners is tapped into. In effect, this means that large borrowers should care about the system's stability and maybe buy some FPS to take part in the governance process. If this reserve does not suffice either, there is not sufficient collateral left and the fundamental value of a Frankencoin falls below one Swiss franc. This risk is hard to quantify. We believe it to be small, but not zero. In such a worst case scenario, some FPS holders might try to leave the sinking ship and redeem their pool shares before the losses materialize. Attentive FPS holders that have borrowed against sound collateral are advised to prevent that from happening by cancelling the votes of those they suspect to be tempted to flee. Cancelling another FPS holders votes has the side effect of also resetting their holding clock, preventing them from redeeming their FPS againt the reserve pool for ninety days and ensuring that they stay in the ship with the other FPS holders."
+      },
+      {
+        "question": "Is the Frankencoin a security?",
+        "answer": "No, it neither qualifies formally nor functionally as a security. It does not qualify formally as a security under Swiss law as it does not represent a claim towards an issuer. Also, it does not qualify functionally as a security as it does not serve a financing purpose."
+      },
+      {
+        "question": "Is Frankencoin a political coin?",
+        "answer": "Yes, to some extent. The Frankencoin addresses issues within the current system of money creation, highlighting how it distorts capital allocation. For example, regulatory constraints may incentivize investments that aren't optimal for society. Traditional capital requirements tend to favor certain sectors like real estate and government bonds over others. By leveraging blockchain technology, Frankencoin offers an alternative outside the traditional financial system. It empowers individuals by allowing them to create their own money, potentially leading to a stronger economy and more growth if used responsibly."
+      }
+    ]
+  },
+  "brand_assets": {
+    "title": "Brand Assets",
+    "assets": [
+      {
+        "description": "Check out our Github repository for brand assets, including Frankencoin and FPS logos.",
+        "cta": {
+          "label": "Logo Assets",
+          "href": "https://github.com/Frankencoin-ZCHF/www/tree/main/media_kit"
+        }
+      },
+      {
+        "description": "Download our Brand Guidelines to learn more about how to use the logo, as well as important details such as brand colors and typography.",
+        "cta": {
+          "label": "Download Brand Guidelines",
+          "href": "https://github.com/Frankencoin-ZCHF/www/blob/main/media_kit/frankencoin_brand_guidelines.pdf"
+        }
+      }
+    ]
+  }
 }
