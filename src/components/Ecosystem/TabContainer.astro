@@ -6,7 +6,7 @@ interface Props {
 const { tabs } = Astro.props as Props;
 ---
 
-<div x-data="{ active: 0, activeCategory: 'Show All' }" class="tabs-menu flex flex-wrap gap-2">
+<div x-data="{ active: 0, activeCategory: 'Show All' }" class="tabs-menu flex md:flex-row flex-col">
   {tabs.map((label, i) => (
     <button
       type="button"

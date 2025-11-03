@@ -36,20 +36,20 @@ import NavLink from "../components/Button/NavLink.astro";
   >
     <Fragment>
       <p class="ty-body-2 text-[var(--color-gray-60)]">{ecosystem.intro.title}</p>
-      <div class="flex items-center gap-2">
+      <span class="flex md:flex-row flex-col items-start md:gap-2 gap-0">
         <p class="ty-body-2 text-[var(--color-gray-60)]">{ecosystem.intro.subtitle}</p>
 
-        <NavLink href={ecosystem.intro.cta.href} target="_blank"
-          >{ecosystem.intro.cta.label}</NavLink
+        <a href={ecosystem.intro.cta.href} target="_blank" class="text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)]" 
+          >{ecosystem.intro.cta.label}</a
         >
-      </div>
+      </span>
     </Fragment>
   </Section>
 
 
   <div x-data="{ active: 0, activeCategory: 'Show All' }">
     <Section id="ecosystem-tabs-menu" pad="none">
-      <div class="tabs-menu flex flex-wrap gap-4">
+      <div class="tabs-menu flex md:flex-row flex-col">
         {["Show All", ...ecosystem.categories].map((label, i) => (
           <button
             type="button"
