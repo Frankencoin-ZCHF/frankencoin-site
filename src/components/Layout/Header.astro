@@ -1,7 +1,8 @@
 ---
-import nav from "../content/shared/nav.json";
-import Button from "./Button/Button.astro";
-import NavLink from "./Button/NavLink.astro";
+import nav from "../../content/shared/nav.json";
+import Button from "../Button/Button.astro";
+import NavLink from "../Button/NavLink.astro";
+import MobileMenu from "./MobileMenu.astro";
 const { brand, links, cta } = nav;
 ---
 
@@ -65,32 +66,7 @@ const { brand, links, cta } = nav;
               d="M4 7h16M4 12h16M4 17h16"></path>
           </svg>
         </summary>
-        <div
-          class="absolute right-0 mt-2 w-60 rounded-[var(--radius-button-6)] border border-[var(--color-neutral-300)] bg-[var(--color-white)] shadow-md p-[var(--spacing-s)]"
-        >
-          <nav class="flex flex-col" aria-label="Mobile">
-            {
-              nav.links.map((l) => (
-                <a
-                  href={l.href}
-                  class="block rounded-[var(--radius-button-6)] px-[var(--spacing-l)] py-[var(--spacing-s)] text-base leading-[var(--line-height-body-2)] text-[var(--color-neutral-650)] hover:bg-[var(--color-neutral-100)] hover:text-[var(--color-brand-deep-blue)]"
-                  style="font-size: var(--font-size-body-2)"
-                >
-                  {l.label}
-                </a>
-              ))
-            }
-
-            <Button
-              href={nav.cta.href}
-              variant="primary"
-              rounded="full"
-              size="md"
-            >
-              {nav.cta.label}
-            </Button>
-          </nav>
-        </div>
+        <MobileMenu />
       </details>
     </div>
   </div>

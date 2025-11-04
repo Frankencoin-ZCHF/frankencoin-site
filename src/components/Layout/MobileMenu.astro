@@ -1,0 +1,44 @@
+---
+import Button from "../Button/Button.astro";
+import nav from "../../content/shared/nav.json";
+---
+
+<div
+  class="fixed left-0 right-0 top-[60px] h-[calc(100vh-60px)] w-full bg-[var(--color-gray-15)] shadow-lg overflow-y-auto animate-slide-down"
+>
+  <nav class="flex flex-col gap-2 px-5 pt-8 pb-6" aria-label="Mobile">
+    {
+      nav.links.map((l) => (
+        <a
+          href={l.href}
+          class="block ty-body-1-mobile  rounded-lg px-4 py-3  text-[var(--color-neutral-650)] transition-colors hover:bg-white hover:text-[var(--color-brand-deep-blue)] active:bg-[var(--color-neutral-100)]"
+        >
+          {l.label}
+        </a>
+      ))
+    }
+    <hr class="text-[var(--color-neutral-300)]" />
+    <div class="mt-4">
+      <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
+        {nav.cta.label}
+      </Button>
+    </div>
+  </nav>
+</div>
+
+<style>
+  @keyframes slide-down {
+    from {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  .animate-slide-down {
+    animation: slide-down 0.3s ease-out forwards;
+  }
+</style>
