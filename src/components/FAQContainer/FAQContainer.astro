@@ -6,16 +6,23 @@ interface Props {
 const { faqs } = Astro.props;
 ---
   
-    <div class="divide-y divide-gray-200 border border-gray-200 rounded-3xl px-2.5 py-0 ">
+    <div class="divide-y divide-gray-200 border border-gray-200 rounded-3xl px-8 py-4">
       {faqs.map((faq, index) => (
-        <div x-data="{ open: false }" class="px-5 py-4">
+        <div x-data="{ open: false }" class="py-10">
           <!-- Header -->
           <button
-            class="w-full flex justify-between items-center text-left font-medium text-gray-900 hover:text-black focus:outline-none gap-5"
+            class="w-full flex justify-between items-center text-left font-medium text-gray-900 hover:text-black focus:outline-none"
             x-on:click="open = !open"
+            :aria-expanded="open.toString()"
           >
-            <h4 class="ty-body-1 ty-semiblack pt-6 pb-2.5">{faq.question}</h4>
-            <span class="text-2xl leading-none" x-text="open ? '−' : '+'"></span>
+            <h4 class="ty-body-1 ty-black">{faq.question}</h4>
+            <h4
+              aria-hidden="true"
+              class="text-3xl ty-light leading-none inline-block transform-gpu transition-transform duration-200 [transform-style:preserve-3d]"
+              :class="open ? 'rotate-45' : ''"
+            >
+              +
+            </h4>
           </button>
   
           <!-- Content -->
