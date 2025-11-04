@@ -1,6 +1,7 @@
 ---
 import Button from "../Button/Button.astro";
 import nav from "../../content/shared/nav.json";
+import index from "../../content/index.json";
 ---
 
 <div
@@ -20,7 +21,7 @@ import nav from "../../content/shared/nav.json";
     <hr class="text-[var(--color-neutral-300)]" />
     <div class="mt-4">
       <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
-        {nav.cta.label}
+        {index.hero.cta.label}
       </Button>
     </div>
   </nav>

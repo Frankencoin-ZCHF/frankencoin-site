@@ -6,7 +6,7 @@ interface Props extends Option {}
 const { label, value, unit } = Astro.props as Props;
 ---
 
-<div class="flex flex-col items-start group">
+<div class="flex flex-col items-start group w-full">
   <div class="flex items-center gap-2">
     <h3 class="ty-regular">{label.toUpperCase()}</h3>
     <img

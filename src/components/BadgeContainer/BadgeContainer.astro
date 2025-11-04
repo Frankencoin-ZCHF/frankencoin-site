@@ -19,29 +19,29 @@ const { variant, options } = Astro.props as Props;
 
 const variants = {
   primary:
-    "bg-[var(--color-brand-deep-blue)] text-[var(--color-white)] hover:bg-[var(--color-brand-swiss)] rounded-xl",
+    "bg-[var(--color-brand-deep-blue)] text-[var(--color-white)] hover:bg-[var(--color-brand-swiss)]",
   secondary:
-    "bg-[var(--color-neutral-300)] text-[var(--color-brand-deep-blue)] ",
+    "bg-[var(--color-neutral-300)] text-[var(--color-brand-deep-blue)]",
 };
 const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class={`w-full bg-[var(--color-brand-deep-blue)] flex items-center justify-center md:flex-row flex-col gap-40px rounded-xl`}
+  class={` ${variantClass} w-full flex flex-col md:flex-row justify-center items-stretch rounded-[var(--radius-xl)] border border-[var(--color-brand-deep-blue)]`}
 >
   {
     options?.map((option, index) => (
       <a
         id={`badge-${index}-${options.length}`}
         href={option.href}
-        class={`${variantClass} 
-          flex items-center 
-          w-full
-          h-full 
-          flex-1 
-          bg-transparent
-          p-[var(--spacing-l)]`}
         target="_blank"
+        class={`
+          ${variantClass}
+          flex flex-col justify-center
+          transition-colors duration-200
+          group
+          ${index !== options.length - 1 ? "md:border-r border-t md:border-t-0 border-[var(--color-white)]" : ""}
+        `}
       >
         <Badge {...option} />
       </a>
