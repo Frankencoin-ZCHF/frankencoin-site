@@ -2,7 +2,7 @@
   "hero": {
     "image": {
       "desktop": "images/Hero-pic.webp",
-      "mobile": "images/Hero-pic.webp"
+      "mobile": "images/Hero_pic_mobile_2.webp"
     },
     "imageAlt": "Frankencoin logo",
     "title": "Frankencoin",

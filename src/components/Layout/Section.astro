@@ -19,7 +19,7 @@ import Container from "./Container.astro";
 interface Props {
   id?: string;
   variant?: "plain" | "accent";
-  width?: "narrow" | "content" | "wide" | "full";
+  width?: "narrow" | "content" | "medium" |"wide" | "full";
   align?: "left" | "center";
   pad?: "none"| "xxs" | "xs" | "sm" | "md" | "lg";
   layout?: "default" | "split" | "feature";
@@ -47,7 +47,7 @@ interface Props {
 const {
   id,
   variant = "plain",
-  width = "content",
+  width = "wide",
   align = "left",
   headerPosition = "items-center",
   pad = "md",
@@ -66,11 +66,11 @@ const {
 
 const pads = {
   none: "",
-  xxs: "py-[calc(var(--spacing-l)*2)]", // ~32px si --spacing-l=16px
-  xs: "py-[calc(var(--spacing-l)*4)]", // ~32px si --spacing-l=16px
-  sm: "py-[calc(var(--spacing-l)*6)]", // ~32px si --spacing-l=16px
-  md: "py-[calc(var(--spacing-l)*8)]", // ~64px
-  lg: "py-[calc(var(--spacing-l)*10)]", // ~96px
+  xxs: "py-[calc(var(--spacing-l)*1)] md:py-[calc(var(--spacing-l)*2)]", // mobile: ~20px, desktop: ~40px
+  xs: "py-[calc(var(--spacing-l)*2)] md:py-[calc(var(--spacing-l)*4)]", // mobile: ~40px, desktop: ~80px
+  sm: "py-[calc(var(--spacing-l)*3)] md:py-[calc(var(--spacing-l)*6)]", // mobile: ~60px, desktop: ~120px
+  md: "py-[calc(var(--spacing-l)*4)] md:py-[calc(var(--spacing-l)*8)]", // mobile: ~80px, desktop: ~160px
+  lg: "py-[calc(var(--spacing-l)*5)] md:py-[calc(var(--spacing-l)*10)]", // mobile: ~100px, desktop: ~200px
 }[pad];
 
 // Optional background image support
@@ -94,9 +94,11 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} data-has-bg={hasBgImage ? 'true' : 'false'} class={`${pads} ${bg} ${bgImageClasses} section-bg relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className} w-[100%]` } style={sectionStyle}>
+<section id={id} data-has-bg={hasBgImage ? 'true' : 'false'} class={`${pads} ${bg} ${bgImageClasses} section-bg relative overflow-unset z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className} w-[100%]` } style={sectionStyle}>
   <div class="relative z-10">
-{hasBgImage && <img src={imgUrl?.mobile} class="md:hidden block " alt="image" />}
+ {hasBgImage && 
+    <img src={imgUrl?.mobile} class="md:hidden object-cover w-full h-[300px] " alt="image" />
+}
 
     <Container width={width} id={id}>
     {layout === "default" && (
@@ -157,7 +159,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
   </div>
   {bottomPosition === 'absolute' ? (
     <>
-      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] md:px-0 px-8 z-20 w-full`}>
+      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] md:px-0 px-4 z-20 w-full`}>
         <slot name="bottom" />
       </div>
       <div class={` hidden md:block absolute inset-x-0 top-[90%] z-20 ${bottomClass ?? ''}`}>
