@@ -47,9 +47,9 @@ import NavLink from "../components/Button/NavLink.astro";
   </Section>
 
 
-  <div x-data="{ active: 0, activeCategory: 'Show All' }">
+  <div x-data="{ active: 2, activeCategory: 'On-and Offramp' }">
     <Section id="ecosystem-tabs-menu" pad="none">
-      <div class="tabs-menu flex md:flex-row flex-col">
+      <div class="tabs-menu flex md:flex-row flex-col md:gap-4 gap-2">
         {["Show All", ...ecosystem.categories].map((label, i) => (
           <button
             type="button"
