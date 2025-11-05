@@ -4,7 +4,6 @@ import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import index from "../content/index.json";
 import FlexStack from "../components/Layout/FlexStack.astro";
-import SocialLinksBar from "../components/SocialLinksBar.astro";
 import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
 import type { Option } from "../components/BadgeContainer/BadgeContainer.astro";
 import FeaturesContainer from "../components/FeaturesContainer/FeaturesContainer.astro";
@@ -75,7 +74,6 @@ const stats: Option[] = frankencoinInfo
   <Section
     id="main-page-header"
     variant="accent"
-    width="wide"
     align="center"
     pad="xxs"
     imgUrl={index.hero.image}
@@ -105,7 +103,6 @@ const stats: Option[] = frankencoinInfo
     id="core-features"
     eyebrow={index.core_features.eyebrow}
     title={index.core_features.title}
-    width="wide"
     pad="xs"
     margin="lg:mt-20 mt-60"
   >
@@ -186,7 +183,6 @@ const stats: Option[] = frankencoinInfo
     title={index.classification.title}
     subtitle={index.classification.summary}
     variant="accent"
-    width="full"
   >
     <div
       class="flex md:flex-row flex-col gap-40px gap-8 items-center"
@@ -209,7 +205,7 @@ const stats: Option[] = frankencoinInfo
   >
     <FAQContainer faqs={index.faq.questions} slot="aside" />
   </Section>
-  <Section id="brand-assets" variant="accent" width="content">
+  <Section id="brand-assets" variant="accent">
     <div
       class="mx-auto max-w-6xl px-[var(--spacing-l)] flex flex-col items-center gap-[var(--spacing-l)]"
     >
