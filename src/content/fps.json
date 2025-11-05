@@ -34,21 +34,25 @@
   ],
   "stats_list": [
     {
+      "id": "balance",
       "label": "Total Reserve",
       "value": "8'887.69",
       "unit": "ZCHF"
     },
     {
+      "id": "equity",
       "label": "Equity Capital",
       "value": "8'887.69",
       "unit": "ZCHF"
     },
     {
+      "id": "minter",
       "label": "Minter Reserve",
       "value": "8'887.69",
       "unit": "ZCHF"
     },
     {
+      "id": "netIncome",
       "label": "Net income since 2023",
       "value": "8'887.69",
       "unit": "ZCHF"

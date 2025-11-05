@@ -27,20 +27,22 @@ const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class={` bg-[var(--color-brand-deep-blue)] w-[400px] lg:w-full mx-auto flex lg:flex-row flex-col justify-between items-center rounded-xl`}
+  class="w-full max-w-[500px] lg:max-w-none lg:w-auto mx-auto flex flex-col lg:flex-row justify-center items-stretch rounded-[var(--radius-xl)] overflow-hidden border border-[var(--color-brand-deep-blue)]"
 >
   {
     options?.map((option, index) => (
       <a
         id={`badge-${index}-${options.length}`}
         href={option.href}
-        class={`${variantClass} 
-          flex items-center 
-          w-full
-          h-full 
-          flex-1 
-          ${index === 0 ? "md:rounded-l-xl" : ""} ${index === options.length - 1 ? "md:rounded-r-xl" : "md:border-r md:border-white "} cursor-pointer`}
         target="_blank"
+        class={`
+          ${variantClass}
+          w-full
+          flex flex-col justify-center
+          transition-colors duration-200
+          group
+          ${index > 0 ? "lg:border-l border-t lg:border-t-0 border-white" : ""}
+        `}
       >
         <Badge {...option} />
       </a>

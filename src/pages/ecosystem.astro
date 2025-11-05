@@ -11,9 +11,8 @@ import NavLink from "../components/Button/NavLink.astro";
 <Base>
   <Section
     variant="accent"
-    width="content"
     align="left"
-    pad="lg"
+    pad="xs"
     id="ecosystem-header"
   >
       <SectionHeader
@@ -23,40 +22,40 @@ import NavLink from "../components/Button/NavLink.astro";
         size="display"
         align="center"
         margin="xxl"
+        padding="lg"
       />
   </Section>
 
   <Section
     variant="plain"
-    width="content"
     align="left"
-    pad="sm"
+    pad="xxs"
     id="ecosystem-intro"
   >
     <Fragment>
-      <p class="ty-body-2">{ecosystem.intro.title}</p>
-      <div class="flex items-center gap-2">
-        <p class="ty-body-2">{ecosystem.intro.subtitle}</p>
+      <p class="ty-body-2 text-[var(--color-gray-60)]">{ecosystem.intro.title}</p>
+      <span class="flex md:flex-row flex-col items-start md:gap-2 gap-0">
+        <p class="ty-body-2 text-[var(--color-gray-60)]">{ecosystem.intro.subtitle}</p>
 
-        <NavLink href={ecosystem.intro.cta.href} target="_blank"
-          >{ecosystem.intro.cta.label}</NavLink
+        <a href={ecosystem.intro.cta.href} target="_blank" class="text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)]" 
+          >{ecosystem.intro.cta.label}</a
         >
-      </div>
+      </span>
     </Fragment>
   </Section>
 
 
-  <div x-data="{ active: 0, activeCategory: 'Show All' }">
-    <Section id="ecosystem-tabs-menu" pad="sm">
-      <div class="tabs-menu flex flex-wrap gap-2">
+  <div x-data="{ active: 2, activeCategory: 'On-and Offramp' }">
+    <Section id="ecosystem-tabs-menu" pad="none">
+      <div class="tabs-menu flex md:flex-row flex-col md:gap-4 gap-2">
         {["Show All", ...ecosystem.categories].map((label, i) => (
           <button
             type="button"
             data-index={i}
             data-category={label}
             @click="active = $el.dataset.index; activeCategory = $el.dataset.category"
-            :class="active == $el.dataset.index ? 'border border-gray-800 text-gray-900 font-semibold' : 'border border-transparent text-gray-600 hover:border-gray-300'"
-            class="px-4 py-2 rounded-md transition cursor-pointer"
+            :class="active == $el.dataset.index ? 'border border-gray-800 text-gray-900 ' : 'border border-transparent text-gray-600 hover:border-gray-300'"
+            class="px-7 py-2 font-semibold rounded-md transition cursor-pointer"
           >
             {label}
           </button>
@@ -65,10 +64,9 @@ import NavLink from "../components/Button/NavLink.astro";
     </Section>
     <Section
       variant="plain"
-      width="content"
       align="left"
-id="ecosystem-tabs"
-      pad="sm"
+      id="ecosystem-tabs"
+      pad="xxs"
     >
       <FlexStack direction="col" gap="40px">
         {

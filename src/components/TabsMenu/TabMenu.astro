@@ -1,4 +1,6 @@
 ---
+import TabHeader from './TabHeader.astro';
+
 interface Tab {
   title: string;
   image: string;
@@ -13,13 +15,13 @@ const { tabs } = Astro.props;
 
 ---
 
-<div x-data="{ tab: 0 }" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div x-data="{ tab: 0 }" class="grid grid-cols-1 xs:grid-cols-[1fr_2fr] xs:gap-10 gap-4">
   <!-- Tabs -->
-  <div class="flex flex-col space-y-2">
+  <div class="hidden xs:flex flex-col space-y-2">
     {
       tabs.map((t, i) => (
         <button
-          class="bg-white rounded-lg px-6 py-4 text-left cursor-pointer hover:border-[var(--color-gray-20)]"
+          class="bg-white rounded-lg px-6 py-4 text-left cursor-pointer hover:border-[var(--color-gray-20)] "
           x-on:click={`tab=${i}`}
           x-bind:class={`{
             'border border-[var(--color-brand-titan-gray)]': tab === ${i},
@@ -27,11 +29,14 @@ const { tabs } = Astro.props;
           }`}
         >
           <p class="ty-title-3 ty-black">{t.title}</p>
-          {/* {t.title} */}
         </button>
+      
       ))
     }
   </div>
+
+  <!-- Mobile Tab Header - visible only below sm breakpoint -->
+  <TabHeader tabs={tabs}/>
 
   <!-- Imagen -->
   <div

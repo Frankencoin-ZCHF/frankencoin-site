@@ -16,7 +16,8 @@
   --color-brand-anthracite: #272b38;
 
   /* Gray Scale */
-  --color-gray-15: #e5e6eb;
+  --color-gray-10: #f9fafc;
+  --color-gray-15: #f7f7f9;
   --color-gray-20: #dfe0e6;
   --color-gray-30: #ced1da;
   --color-gray-60: #8b92a8;
@@ -88,7 +89,8 @@
   --spacing-xs: 4px;
   --spacing-s: 8px;
   --spacing-snudge: 6px;
-  --spacing-l: 16px;
+  --spacing-m: 16px;
+  --spacing-l: 20px;
   --spacing-xl: 24px;
   --spacing-xxl: 32px;
 }

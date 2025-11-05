@@ -3,6 +3,10 @@
 @import "./fonts.css";
 @import "./typography.css";
 
+@theme {
+  --breakpoint-xs: 480px;
+}
+
 @layer base {
   /* ejemplo: tipografía por defecto */
   html {
@@ -12,5 +16,6 @@
   body {
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
+    overflow-x: hidden;
   }
 }

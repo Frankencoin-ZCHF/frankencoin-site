@@ -3,13 +3,17 @@
   /* Display & Titles */
   .ty-display {
     font-family: var(--font-sans);
-    font-size: var(--font-size-display);
-    line-height: var(--line-height-display);
+    font-size: clamp(
+      var(--font-size-display-mobile),
+      6vw,
+      var(--font-size-display)
+    );
+    line-height: clamp(
+      var(--line-height-display-mobile),
+      6vw,
+      var(--line-height-display)
+    );
     font-weight: 1000;
-    @media (max-width: 768px) {
-      font-size: var(--font-size-display-mobile);
-      line-height: var(--line-height-display-mobile);
-    }
   }
 
   .ty-display-mobile {
@@ -21,8 +25,18 @@
 
   .ty-large-title {
     font-family: var(--font-sans);
-    font-size: var(--font-size-large-title);
-    font-weight: 800;
+    font-size: clamp(
+      var(--font-size-large-title-mobile),
+      4.5vw,
+      var(--font-size-large-title)
+    );
+    line-height: clamp(
+      var(--line-height-large-title-mobile),
+      4.5vw,
+      var(--line-height-large-title)
+    );
+    font-weight: 1000;
+    color: var(--color-brand-deep-blue);
   }
 
   .ty-large-title-mobile {
@@ -33,6 +47,7 @@
   }
 
   .ty-title-1 {
+    color: var(--color-brand-deep-blue);
     font-family: var(--font-sans);
     font-size: var(--font-size-title-1);
     line-height: var(--line-height-title-1);
@@ -82,6 +97,7 @@
     font-size: var(--font-size-body-1-mobile);
     line-height: var(--line-height-body-1-mobile);
     font-weight: 400;
+    color: var(--color-brand-deep-blue);
   }
 
   .ty-body-2 {
@@ -102,11 +118,6 @@
     font-weight: 400;
   }
   /* Big Text */
-  .ty-large-title {
-    font-family: var(--font-sans);
-    font-size: var(--font-size--large-title);
-    font-weight: 1000;
-  }
 
   .ty-big {
     font-family: var(--font-sans);
@@ -115,12 +126,22 @@
   }
   .ty-big-2 {
     font-family: var(--font-sans);
-    font-size: var(--font-size--title-2-desktop);
+    font-size: var(--font-size-title-2-mobile);
     font-weight: 1000;
+  }
+
+  @media (min-width: 768px) {
+    .ty-big-2 {
+      font-size: var(--font-size--title-2-desktop);
+    }
   }
   .ty-big-3 {
     font-family: var(--font-sans);
-    font-size: var(--font-size--title-3-desktop);
+    font-size: clamp(
+      var(--font-size-title-3),
+      3vw,
+      var(--font-size--title-3-desktop)
+    );
     font-weight: 1000;
   }
 
@@ -161,6 +182,9 @@
   }
   .ty-extrabold {
     font-weight: 800;
+  }
+  .ty-semiblack {
+    font-weight: 900;
   }
   .ty-black {
     font-weight: 1000;

@@ -9,16 +9,19 @@ const { href, target = "_blank", class: className = "" } = Astro.props;
 const Component = href ? "a" : "div";
 ---
 
-<div
+<Component
+  href={href}
+  target={target}
   class={`
+    sm:max-w-[640px] lg:max-w-[800px] 
+    h-auto min-h-[180px] md:min-h-[220px]
+    bg-[url('../images/Vector-Compressify.io-1.webp')] bg-center md:bg-left-top bg-cover bg-no-repeat
+    px-[clamp(16px,5vw,60px)] py-[clamp(24px,8vw,60px)]
     flex flex-col justify-center items-center
-    w-full max-w-[800px] h-full max-h-[354px]
-    gap-2 no-underline
-    box-border overflow-hidden p-10 md:p-[60px]
-    overflow-x-hidden
-    bg-[url('../images/Vector-Compressify.io-1.webp')] bg-center bg-cover bg-no-repeat
+    gap-y-2 md:gap-y-3 no-underline
+    overflow-hidden
     ${className}
   `}
 >
   <slot />
-</div>
+</Component>

@@ -1,0 +1,35 @@
+---
+interface Tab {
+  title: string;
+  image: string;
+  description: Array<{ step: string; content: string }>;
+}
+
+interface Props {
+  tabs: Tab[];
+}
+
+const { tabs } = Astro.props;
+---
+
+<div class="xs:hidden flex flex-col">
+  {
+    tabs.map((t, i) => (
+      <div
+        x-show={`tab === ${i}`}
+        class="flex flex-row justify-between items-center "
+      >
+        <h3 class="ty-big">{t.title}</h3>
+        <div class="flex items-center gap-2">
+          <span class="ty-subtitle ">{tabs[(i + 1) % tabs.length]?.title}</span>
+          <button
+            x-on:click={`tab = ${(i + 1) % tabs.length}`}
+            class="px-2 py-1 bg-white border border-gray-300  hover:bg-gray-50"
+          >
+            →
+          </button>
+        </div>
+      </div>
+    ))
+  }
+</div>

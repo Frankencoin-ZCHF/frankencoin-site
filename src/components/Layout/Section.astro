@@ -19,15 +19,19 @@ import Container from "./Container.astro";
 interface Props {
   id?: string;
   variant?: "plain" | "accent";
-  width?: "narrow" | "content" | "wide" | "full";
+  width?: "narrow" | "content" | "medium" |"wide" | "full";
   align?: "left" | "center";
-  pad?: "sm" | "md" | "lg";
+  pad?: "none"| "xxs" | "xs" | "sm" | "md" | "lg";
   layout?: "default" | "split" | "feature";
   eyebrow?: string;
   title?: string;
   subtitle?: string;
   contentPosition?: "left" | "right";
-  imgUrl?: string;
+  headerPosition?: "items-center" | "items-start";
+  imgUrl?: {
+    desktop: string;
+    mobile: string;
+  };
   /** Optional classes for the absolutely-positioned bottom slot */
   bottomClass?: string;
   /** Optional Tailwind margin classes applied to the root section (e.g., "my-8 mt-12") */
@@ -43,8 +47,9 @@ interface Props {
 const {
   id,
   variant = "plain",
-  width = "content",
+  width = "wide",
   align = "left",
+  headerPosition = "items-center",
   pad = "md",
   layout = "default",
   eyebrow,
@@ -60,20 +65,24 @@ const {
 } = Astro.props as Props;
 
 const pads = {
-  sm: "py-[calc(var(--spacing-l)*2)]", // ~32px si --spacing-l=16px
-  md: "py-[calc(var(--spacing-l)*4)]", // ~64px
-  lg: "py-[calc(var(--spacing-l)*6)]", // ~96px
+  none: "",
+  xxs: "py-[calc(var(--spacing-l)*1)] md:py-[calc(var(--spacing-l)*2)]", // mobile: ~20px, desktop: ~40px
+  xs: "py-[calc(var(--spacing-l)*2)] md:py-[calc(var(--spacing-l)*4)]", // mobile: ~40px, desktop: ~80px
+  sm: "py-[calc(var(--spacing-l)*3)] md:py-[calc(var(--spacing-l)*6)]", // mobile: ~60px, desktop: ~120px
+  md: "py-[calc(var(--spacing-l)*4)] md:py-[calc(var(--spacing-l)*8)]", // mobile: ~80px, desktop: ~160px
+  lg: "py-[calc(var(--spacing-l)*5)] md:py-[calc(var(--spacing-l)*10)]", // mobile: ~100px, desktop: ~200px
 }[pad];
 
-const bg =imgUrl?.length   ? "bg-transparent" : 
-  variant === "accent"
-    ? "bg-[var(--color-neutral-100)]"
-    : "bg-[var(--color-white)]";
-
 // Optional background image support
-const hasBgImage = typeof imgUrl === "string" && imgUrl.length > 0;
-const bgImageClasses = hasBgImage ? "bg-cover bg-center bg-no-repeat" : "";
-const sectionStyle = hasBgImage ? `background-image: url('${imgUrl}')` : undefined;
+const hasBgImage = typeof imgUrl === "object" && imgUrl?.desktop?.length > 0;
+// Background color: ensure gray on mobile if there's an image, transparent only on desktop
+const bg = hasBgImage
+  ? "bg-[var(--color-gray-10)] md:bg-transparent"
+  : variant === "accent"
+    ? "bg-[var(--color-gray-10)]"
+    : "bg-[var(--color-white)]";
+const bgImageClasses = hasBgImage ? "md:bg-cover md:bg-center md:bg-no-repeat" : "";
+const sectionStyle = hasBgImage ? `--section-bg: url('/${imgUrl?.desktop}')` : undefined;
 
 const textAlign = align === "center" ? "text-center" : "text-left";
 
@@ -85,14 +94,19 @@ const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
 ---
 
-<section id={id} class={`${pads} ${bg} ${bgImageClasses} relative overflow-unset  z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className}`} style={sectionStyle}>
+<section id={id} data-has-bg={hasBgImage ? 'true' : 'false'} class={`${pads} ${bg} ${bgImageClasses} section-bg relative overflow-unset z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className}` } style={sectionStyle}>
   <div class="relative z-10">
-    <Container width={width}>
+ {hasBgImage && 
+    <img src={`/${imgUrl?.mobile}`} class="md:hidden object-cover w-full h-[300px] " alt="image" />
+}
+
+    <Container width={width} id={id}>
     {layout === "default" && (
       <div class={`${textAlign}`}>
+
         <div class="flex flex-col gap-2 items-center mb-8">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title">{title}</h1>}
+          {title && <h1 class="ty-large-title ">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
         </div>
         <slot />
@@ -100,16 +114,17 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     )}
 
     {layout === "split" && (
-      <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 items-center`}>
+      <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 ${headerPosition}`}>
         <!-- Contenido principal -->
         <div class={`${mainBasis} space-y-6`}>
-          {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
+
+          {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title">{title}</h1>}
           {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
           <slot />
         </div>
         
-        <div class={`${asideBasis}`}>
+        <div class={`${asideBasis} w-full`}>
           <slot name="aside" />
         </div>
       </div>
@@ -132,7 +147,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
           </div>
           
           <!-- Contenido secundario -->
-          <div class={`${asideBasis}`}>
+          <div class={` ${asideBasis}`}>
             <slot name="aside" />
           </div>
         </div>
@@ -143,12 +158,25 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
     
   </div>
   {bottomPosition === 'absolute' ? (
-    <div class={`pointer-events-none absolute inset-x-0 top-150 z-20 ${bottomClass ?? ''}`}>
-      <slot name="bottom" />
-    </div>
+    <>
+      <div class={`${bottomClass ?? ''} md:hidden absolute inset-x-0 top-[90%] md:px-0 px-4 z-20 w-full`}>
+        <slot name="bottom" />
+      </div>
+      <div class={` hidden md:block absolute inset-x-0 top-[90%] z-20 ${bottomClass ?? ''}`}>
+        <slot name="bottom" />
+      </div>
+    </>
   ) : (
     <div class={`${bottomClass ?? ''}`}>
       <slot name="bottom" />
     </div>
   )}
 </section>
+
+<style>
+  @media (min-width: 768px) {
+    .section-bg[data-has-bg="true"] {
+      background-image: var(--section-bg);
+    }
+  }
+</style>

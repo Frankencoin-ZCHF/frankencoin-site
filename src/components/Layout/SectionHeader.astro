@@ -1,4 +1,7 @@
 ---
+import Button from "../Button/Button.astro";
+import SocialLinksBar from "../SocialLinksBar.astro";
+
 /* src/components/layout/SectionHeader.astro
   SectionHeader Component
   
@@ -10,13 +13,28 @@
      - padding?: "none" | "sm" | "md" | "lg" | "xl" (default "md")
      - margin?: string
      - maxWidth?: "none" | "sm" | "md" | "lg" | "xl" | "2xl" | "3xl" | "4xl" | "5xl" | "6xl" | "7xl" (default "3xl")
+     - image?: string
+     - imageAlt?: string
+     - hasSocialMedia?: boolean
+     - cta?: {
+        label: string;
+        href: string;
+      };
 */
 
 interface Props {
   title: string;
+  image?: string;
+  imageAlt?: string;
   subtitle?: string;
   size?: "display" | "title1" | "title2" | "title3" | "title4";
   align?: "left" | "center";
+  hasSocialMedia?: boolean;
+  cta?: {
+    label: string;
+    href: string;
+    variant?: "primary" | "secondary";
+  };
   padding?: "none" | "sm" | "md" | "lg" | "xl" | "xxl";
   margin?: string;
   maxWidth?:
@@ -35,12 +53,16 @@ interface Props {
 
 const {
   title,
+  image,
+  imageAlt,
   subtitle,
   size = "title1",
   align = "left",
+  cta,
   padding = "md",
   maxWidth = "3xl",
-  margin = "",
+  margin = "none",
+  hasSocialMedia = false,
 } = Astro.props;
 
 const titleSizes = {
@@ -70,11 +92,16 @@ const spacing = {
 }[padding];
 
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
-
-console.log({ maxWidth, margin });
 ---
 
-<header class={` flex flex-col  w-full ${spacing} ${marginCls}`}>
+<header
+  class={`flex flex-col w-full ${spacing} ${marginCls} ${align === "center" ? "items-center" : "items-start"} `}
+>
+  {
+    image && (
+      <img src={image} alt={imageAlt} width="128" height="128" loading="lazy" />
+    )
+  }
   <h1
     class={` text-[color:var(--color-brand-deep-blue)] m-0 ${titleSizes} text-${align} `}
   >
@@ -83,10 +110,24 @@ console.log({ maxWidth, margin });
   {
     subtitle && (
       <p
-        class={`ty-body-1 text-${align} text-[color:var(--color-neutral-650)]  ${maxWidthCls}`}
+        class={`ty-body-1 text-${align} text-[color:var(--color-neutral-650)] ${maxWidthCls}`}
       >
         {subtitle}
       </p>
+    )
+  }
+  {hasSocialMedia && <SocialLinksBar theme={"dark"} />}
+  {
+    cta && (
+      <div class={cta.variant === "primary" ? "md:hidden" : " md:block"}>
+        <Button
+          variant={cta.variant || "secondary"}
+          href={cta.href}
+          rounded={cta.variant === "primary" ? "full" : "sm"}
+        >
+          {cta.label}
+        </Button>
+      </div>
     )
   }
 </header>

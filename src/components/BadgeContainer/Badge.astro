@@ -6,7 +6,7 @@ interface Props extends Option {}
 const { label, value, unit } = Astro.props as Props;
 ---
 
-<div class="flex flex-col items-start py-6 px-8 group">
+<div class="flex flex-col items-start group w-full lg:px-7 px-4 lg:py-5 py-4">
   <div class="flex items-center gap-2">
     <h3 class="ty-regular">{label.toUpperCase()}</h3>
     <img
@@ -17,6 +17,7 @@ const { label, value, unit } = Astro.props as Props;
     />
   </div>
   <div class="flex items-start gap-2">
-    <p class="ty-big">{value}</p><p class="ty-big-3">{unit}</p>
+    <p class="ty-big">{value}</p>
+    <p class="ty-big-3">{unit}</p>
   </div>
 </div>

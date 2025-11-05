@@ -3,7 +3,6 @@ import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import fps from "../content/fps.json";
-import Button from "../components/Button/Button.astro";
 import FlexStack from "../components/Layout/FlexStack.astro";
 import BadgeContainer, {
   type Option,
@@ -64,24 +63,26 @@ const caps = fpsInfo
     ]
   : [];
 
+const { unit } = fps.stats_list.find((s: any) => s.id === "netIncome") || {};
+
 const stats = fpsInfo
   ? [
       {
         label: s4.label ?? "Total Reserve",
         value: formatAmount(fpsInfo.reserve.balance ?? 0),
-        unit: s4.unit,
+        unit: s4.unit ?? unit,
         href: s4.href,
       },
       {
         label: s5.label ?? "Equity Capital",
         value: formatAmount(fpsInfo.reserve.equity ?? 0),
-        unit: s5.unit,
+        unit: s5.unit ?? unit,
         href: s5.href,
       },
       {
         label: s6.label ?? "Minter Reserve",
         value: formatAmount(fpsInfo.reserve.minter ?? 0),
-        unit: s6.unit,
+        unit: s6.unit ?? unit,
         href: s6.href,
       },
       {
@@ -89,54 +90,34 @@ const stats = fpsInfo
         value: formatAmount(
           (fpsInfo.earnings?.profit ?? 0) - (fpsInfo.earnings?.loss ?? 0)
         ),
-        unit: s7.unit,
+        unit: s7.unit ?? unit,
         href: s7.href,
       },
     ]
   : [];
-
-console.log({ fpsInfo });
 ---
 
 <Base>
-  <Section
-    variant="accent"
-    width="content"
-    align="center"
-    pad="lg"
-    id="fps-header"
-    margin="lg:my-0 my-64"
-  >
-    <FlexStack direction="col" gap="40px" align="center">
-      <img
-        src={fps.header.image}
-        alt={fps.header.imageAlt}
-        width="128"
-        height="128"
-        loading="lazy"
-      />
-      <SectionHeader
-        title={fps.header.title}
-        subtitle={fps.header.subtitle}
-        maxWidth="6xl"
-        size="display"
-        align="center"
-      />
-      <Button variant="secondary" href={fps.header.cta.href} rounded="sm"
-        >{fps.header.cta.label}</Button
-      >
-    </FlexStack>
-    <FlexStack
-      direction="col"
+  <Section variant="accent" align="center" pad="lg" id="fps-header">
+    <SectionHeader
+      title={fps.header.title}
+      subtitle={fps.header.subtitle}
+      image={fps.header.image}
+      imageAlt={fps.header.imageAlt}
+      cta={fps.header.cta}
+      padding="xl"
+      maxWidth="6xl"
+      size="display"
       align="center"
-      className="max-w-4xl mx-auto h-64"
-      slot="bottom"
-    >
-      <BadgeContainer options={caps} />
-      <StatsContainer options={stats} />
+    />
+    <FlexStack direction="col" align="center" slot="bottom">
+      <div class="md:max-w-[900px] flex flex-col gap-4">
+        <BadgeContainer options={caps} />
+        <StatsContainer options={stats} />
+      </div>
     </FlexStack>
   </Section>
-  <Section id="fps-introduction" className="mt-96 ">
+  <Section id="fps-introduction" className="md:mt-100 mt-160" pad="xxs">
     <FlexStack direction="col" gap="40px" align="center">
       {
         fps.introduction.map((feature) => (

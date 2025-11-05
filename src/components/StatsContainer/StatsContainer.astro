@@ -9,7 +9,7 @@ const { options } = Astro.props as Props;
 ---
 
 <div
-  class="grid grid-cols-1 w-full md:grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
+  class="grid w-auto lg:max-w-none grid-cols-2 lg:grid-cols-3 gap-y-4 gap-x-4"
 >
   {
     options.map((option) => (

@@ -4,7 +4,6 @@ import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import index from "../content/index.json";
 import FlexStack from "../components/Layout/FlexStack.astro";
-import SocialLinksBar from "../components/SocialLinksBar.astro";
 import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
 import type { Option } from "../components/BadgeContainer/BadgeContainer.astro";
 import FeaturesContainer from "../components/FeaturesContainer/FeaturesContainer.astro";
@@ -73,35 +72,39 @@ const stats: Option[] = frankencoinInfo
 
 <Base>
   <Section
-    variant="accent"
-    width="content"
-    align="center"
-    pad="lg"
     id="main-page-header"
+    variant="accent"
+    align="center"
+    pad="xxs"
     imgUrl={index.hero.image}
-    margin="lg:my-0"
   >
-    <FlexStack direction="col" gap="40px" align="start" marginY="150px">
+    <div class="flex flex-col gap-8 items-start md:my-60 mb-40">
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
-        maxWidth="lg"
+        margin="none"
         size="display"
         align="left"
-        padding="xxl"
+        padding="xl"
+        hasSocialMedia
+        cta={{
+          label: index.hero.cta.label,
+          href: index.hero.cta.href,
+          variant: "primary",
+        }}
       />
-
-      <SocialLinksBar theme={"dark"} />
+    </div>
+    <FlexStack direction="col" align="center" slot="bottom" align="center">
+      <BadgeContainer options={stats} />
     </FlexStack>
-  </Section>
-  <Section id="stats" pad="sm" align="center">
-    <BadgeContainer options={stats} />
   </Section>
 
   <Section
     id="core-features"
     eyebrow={index.core_features.eyebrow}
     title={index.core_features.title}
+    pad="xs"
+    margin="lg:mt-20 mt-60"
   >
     <FeaturesContainer features={index.core_features.features} />
   </Section>
@@ -135,67 +138,76 @@ const stats: Option[] = frankencoinInfo
     <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
       <TabMenu tabs={index.system.steps} />
     </div>
-    <Section
-      id="ecosystem"
-      layout="split"
-      eyebrow={index.ecosystem.eyebrow}
-      title={index.ecosystem.title}
-      subtitle={index.ecosystem.description}
-      contentPosition="right"
-    >
-      <EcosystemContainer />
-      <EcosystemPartners slot="aside" />
-    </Section>
-
-    <Section
-      id="foundation"
-      layout="split"
-      title={index.foundation.title}
-      subtitle={index.foundation.description}
-      contentPosition="left"
-    >
-      <div
-        class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
-        slot="aside"
-      >
-        <img src={index.foundation.image} alt={index.foundation.imageAlt} />
-      </div>
-      <FoundationContainer />
-    </Section>
-    <Section
-      id="audits"
-      layout="split"
-      eyebrow={index.audits.eyebrow}
-      title={index.audits.title}
-      subtitle={index.audits.subtitle}
-    >
-      <AuditsContainer slot="aside" />
-    </Section>
-    <Section
-      id="classification"
-      layout="split"
-      contentPosition="left"
-      title={index.classification.title}
-      subtitle={index.classification.summary}
-    >
-      <div
-        class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
-        slot="aside"
-      >
-        <img
-          src={index.classification.image}
-          alt={index.classification.imageAlt}
-          loading="lazy"
-          width="175"
-          height="175"
-        />
-      </div>
-    </Section>
-    <Section id="faq" title={index.faq.title}>
-      <FAQContainer faqs={index.faq.questions} />
-    </Section>
   </Section>
-  <Section id="brand-assets" variant="accent" width="content">
+  <Section
+    id="ecosystem"
+    layout="split"
+    width="full"
+    eyebrow={index.ecosystem.eyebrow}
+    title={index.ecosystem.title}
+    subtitle={index.ecosystem.description}
+    contentPosition="right"
+  >
+    <EcosystemContainer />
+    <EcosystemPartners slot="aside" />
+  </Section>
+
+  <Section
+    id="foundation"
+    layout="split"
+    title={index.foundation.title}
+    subtitle={index.foundation.description}
+    contentPosition="left"
+    variant="accent"
+  >
+    <div
+      class="flex md:flex-row flex-col gap-40px items-stretch gap-8"
+      slot="aside"
+    >
+      <img src={index.foundation.image} alt={index.foundation.imageAlt} />
+    </div>
+    <FoundationContainer />
+  </Section>
+  <Section
+    id="audits"
+    layout="split"
+    width="full"
+    eyebrow={index.audits.eyebrow}
+    title={index.audits.title}
+    subtitle={index.audits.subtitle}
+  >
+    <AuditsContainer slot="aside" />
+  </Section>
+  <Section
+    id="classification"
+    layout="split"
+    contentPosition="left"
+    title={index.classification.title}
+    subtitle={index.classification.summary}
+    variant="accent"
+  >
+    <div
+      class="flex md:flex-row flex-col gap-40px gap-8 items-center"
+      slot="aside"
+    >
+      <img
+        src={index.classification.image}
+        alt={index.classification.imageAlt}
+        loading="lazy"
+        width="175"
+        height="175"
+      />
+    </div>
+  </Section>
+  <Section
+    id="faq"
+    title={index.faq.title}
+    layout="split"
+    headerPosition="items-start"
+  >
+    <FAQContainer faqs={index.faq.questions} slot="aside" />
+  </Section>
+  <Section id="brand-assets" variant="accent">
     <div
       class="mx-auto max-w-6xl px-[var(--spacing-l)] flex flex-col items-center gap-[var(--spacing-l)]"
     >
