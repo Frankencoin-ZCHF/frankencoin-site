@@ -121,11 +121,7 @@
 
   .ty-big {
     font-family: var(--font-sans);
-    font-size: clamp(
-      var(--font-size-body-1-mobile),
-      4vw,
-      var(--font-size--title-1-desktop)
-    );
+    font-size: var(--font-size--title-1-desktop);
     font-weight: 1000;
   }
   .ty-big-2 {
