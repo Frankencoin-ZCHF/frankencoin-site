@@ -92,6 +92,13 @@ const flexOrder = isContentLeft ? "md:flex-row-reverse" : "md:flex-row";
 
 const mainBasis = isContentLeft ? "md:basis-4/5" : "md:basis-1/5";
 const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5"; 
+
+const parseMarkdownLinks = (text: string) => {
+  return text.replace(
+    /\[([^\]]+)\]\(([^)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand-swiss)] hover:underline">$1</a>'
+  );
+};
 ---
 
 <section id={id} data-has-bg={hasBgImage ? 'true' : 'false'} class={`${pads} ${bg} ${bgImageClasses} section-bg relative overflow-unset z-0 ${margin} ${bottomPosition === 'absolute' ? bottomSpacing : ''} ${className}` } style={sectionStyle}>
@@ -107,7 +114,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
         <div class="flex flex-col gap-2 items-center mb-8">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title ">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
+          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
         </div>
         <slot />
       </div>
@@ -120,7 +127,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
 
           {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
+          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
           <slot />
         </div>
         
@@ -136,7 +143,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
         <div class="text-center space-y-4">
           {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
           {title && <h1 class="ty-large-title">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1">{subtitle}</h2>}
+          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
         </div>
         
         <!-- Contenido con aside -->

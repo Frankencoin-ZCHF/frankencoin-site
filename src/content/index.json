@@ -369,7 +369,7 @@
 
   "foundation": {
     "title": "Theoretical Foundation",
-    "description": "Conceived as part of a PhD thesis at the University of Zurich, covering game theory of liquidation, Bitcoin collateral risk, and veto-based governance. Seen as a Continuous Capital Corporation.",
+    "description": "The Frankencoin was conceived a part of [a PhD thesis](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) completed at the Department of Finance at the University of Zurich. Among other things, it covers the game theory behind the system's novel liquidation mechanism, quantifies the risk of Bitcoin as a collateral, and it formally analyses the veto-based governance system. The Frankencoin system can be seen as a Continuous Capital Corporation, a concept introduced in chapter three denoting a company that issues and redeems shares autonomously according to fixed rules that are optimal under a wide range of theoretical assumptions.",
     "image": "images/frankencoin-foundation.webp",
     "imageAlt": "Frankencoin Foundation",
     "href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
@@ -403,7 +403,7 @@
     "title": "Token Classification",
     "image": "images/frame_427322438.webp",
     "imageAlt": "Frankencoin Classification",
-    "summary": "Frankencoins (ZCHF) have been classified as a payment tokens under Swiss law, and Frankencoin Pool Shares (FPS) as governance tokens in a memorandum by the Swiss law firm LEXR. In the European Union, the Frankencoin qualifies as a crypto-asset under MiCA. However, the duties and obligations set out in Title II, III, and IV of MiCA do not apply due to its decentralized nature and the absence of an identifiable issuer. This was concluded by the same law firm in a separate MiCA memorandum."
+    "summary": "Frankencoins (ZCHF) have been classified as a payment tokens under Swiss law, and Frankencoin Pool Shares (FPS) as governance tokens in a [memorandum](https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf) by the Swiss law firm [LEXR](https://www.lexr.com/). In the European Union, the Frankencoin qualifies as a crypto-asset under [MiCA](https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_MiCA_Memo.pdf). However, the duties and obligations set out in Title II, III, and IV of MiCA do not apply due to its decentralized nature and the absence of an identifiable issuer. This was concluded by the same law firm in a separate MiCA memorandum."
   },
 
   "faq": {
