@@ -207,11 +207,7 @@ const stats: Option[] = frankencoinInfo
   >
     <FAQContainer faqs={index.faq.questions} slot="aside" />
   </Section>
-  <Section id="brand-assets" variant="accent">
-    <div
-      class="mx-auto max-w-6xl px-[var(--spacing-l)] flex flex-col items-center gap-[var(--spacing-l)]"
-    >
-      <AssetsContainer assets={index.brand_assets.assets} />
-    </div>
+  <Section id="brand-assets" variant="accent" pad="sm">
+    <AssetsContainer assets={index.brand_assets.assets} />
   </Section>
 </Base>
