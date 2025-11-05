@@ -63,24 +63,26 @@ const caps = fpsInfo
     ]
   : [];
 
+const { unit } = fps.stats_list.find((s: any) => s.id === "netIncome") || {};
+
 const stats = fpsInfo
   ? [
       {
         label: s4.label ?? "Total Reserve",
         value: formatAmount(fpsInfo.reserve.balance ?? 0),
-        unit: s4.unit,
+        unit: s4.unit ?? unit,
         href: s4.href,
       },
       {
         label: s5.label ?? "Equity Capital",
         value: formatAmount(fpsInfo.reserve.equity ?? 0),
-        unit: s5.unit,
+        unit: s5.unit ?? unit,
         href: s5.href,
       },
       {
         label: s6.label ?? "Minter Reserve",
         value: formatAmount(fpsInfo.reserve.minter ?? 0),
-        unit: s6.unit,
+        unit: s6.unit ?? unit,
         href: s6.href,
       },
       {
@@ -88,13 +90,11 @@ const stats = fpsInfo
         value: formatAmount(
           (fpsInfo.earnings?.profit ?? 0) - (fpsInfo.earnings?.loss ?? 0)
         ),
-        unit: s7.unit,
+        unit: s7.unit ?? unit,
         href: s7.href,
       },
     ]
   : [];
-
-console.log({ fpsInfo });
 ---
 
 <Base>
@@ -110,17 +110,14 @@ console.log({ fpsInfo });
       size="display"
       align="center"
     />
-    <FlexStack
-      direction="col"
-      align="center"
-      className="max-w-4xl mx-auto h-64"
-      slot="bottom"
-    >
-      <BadgeContainer options={caps} />
-      <StatsContainer options={stats} />
+    <FlexStack direction="col" align="center" slot="bottom">
+      <div class="md:max-w-[900px] flex flex-col gap-4">
+        <BadgeContainer options={caps} />
+        <StatsContainer options={stats} />
+      </div>
     </FlexStack>
   </Section>
-  <Section id="fps-introduction" className="md:mt-65 mt-160" pad="xxs">
+  <Section id="fps-introduction" className="md:mt-100 mt-160" pad="xxs">
     <FlexStack direction="col" gap="40px" align="center">
       {
         fps.introduction.map((feature) => (

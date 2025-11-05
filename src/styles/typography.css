@@ -130,12 +130,14 @@
   }
   .ty-big-2 {
     font-family: var(--font-sans);
-    font-size: clamp(
-      var(--font-size-title-2),
-      3.5vw,
-      var(--font-size--title-2-desktop)
-    );
+    font-size: var(--font-size-title-2-mobile);
     font-weight: 1000;
+  }
+
+  @media (min-width: 768px) {
+    .ty-big-2 {
+      font-size: var(--font-size--title-2-desktop);
+    }
   }
   .ty-big-3 {
     font-family: var(--font-sans);

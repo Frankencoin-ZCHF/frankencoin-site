@@ -18,7 +18,8 @@ const { label, value, unit } = Astro.props as Props;
       class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-50"
     />
   </div>
-  <div class="flex items-start gap-2">
-    <p class="ty-big-2">{value}</p><p class="ty-xs">{unit}</p>
+  <div class="flex md:flex-row flex-col items-start md:gap-2 gap-0">
+    <p class="ty-big-2">{value}</p>
+    <p class="ty-xs">{unit}</p>
   </div>
 </div>
