@@ -96,13 +96,7 @@ const stats: Option[] = frankencoinInfo
         }}
       />
     </div>
-    <FlexStack
-      direction="col"
-      align="center"
-      className="max-w-4xl mx-auto h-64"
-      slot="bottom"
-      align="center"
-    >
+    <FlexStack direction="col" align="center" slot="bottom" align="center">
       <BadgeContainer options={stats} />
     </FlexStack>
   </Section>
@@ -113,7 +107,7 @@ const stats: Option[] = frankencoinInfo
     title={index.core_features.title}
     width="wide"
     pad="xs"
-    margin="md:mt-10 mt-50"
+    margin="lg:mt-20 mt-60"
   >
     <FeaturesContainer features={index.core_features.features} />
   </Section>
