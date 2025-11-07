@@ -61,7 +61,7 @@
         "description": "Get a yield on your Swiss franc stablecoin. ",
         "cta": {
           "label": "Launch Savings",
-          "href": "https://app.frankencoin.com/equity"
+          "href": "https://app.frankencoin.com/savings"
         }
       }
     ]
@@ -87,7 +87,7 @@
             "label": "Buy with fiat",
             "fiatProviders": [
               {
-                "href": "https://services.dfx.swiss/",
+                "href": "https://services.dfx.swiss/?mode=frankencoin-buy-ethereum/",
                 "image": "images/DFX-Logos.svg",
                 "name": "DFX"
               },
@@ -100,7 +100,7 @@
           },
           {
             "label": "Swap onchain",
-            "href": "https://app.frankencoin.com/",
+            "href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF",
             "image": "images/Cow-Swap-logo.svg"
           }
         ]
@@ -112,7 +112,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=polygon",
             "image": "images/Frankencoin-eth-poly.webp"
           }
         ]
@@ -124,7 +124,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=arbitrum",
             "image": "images/Frankencoin-eth-arb.webp"
           }
         ]
@@ -136,7 +136,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=optimism",
             "image": "images/Frankencoin-eth-opt.webp"
           }
         ]
@@ -148,7 +148,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=base",
             "image": "images/Frankencoin-eth-base.webp"
           }
         ]
@@ -160,7 +160,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=avalanche",
             "image": "images/Frankencoin-eth-avax.webp"
           }
         ]
@@ -172,7 +172,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=gnosis",
             "image": "images/Frankencoin-on-Gnosis.webp"
           }
         ]
@@ -184,7 +184,7 @@
         "actions": [
           {
             "label": "Bridge",
-            "href": "https://app.frankencoin.com/bridge",
+            "href": "https://app.frankencoin.com/transfer?chain=sonic",
             "image": "images/Frankencoin-eth-sonic.webp"
           }
         ]
@@ -208,7 +208,7 @@
         {
           "label": "Invest directly onchain",
           "image": "images/logo-etherscan.svg",
-          "href": "https://etherscan.io/token/0x1bA26788dfDe592fec8bcB0Eaff472a42BE341B2"
+          "href": "https://etherscan.io/address/0x1ba26788dfde592fec8bcb0eaff472a42be341b2#writeContract"
         }
       ]
     }
