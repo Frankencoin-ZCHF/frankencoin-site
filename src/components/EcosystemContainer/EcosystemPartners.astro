@@ -1,5 +1,6 @@
 ---
 import index from "../../content/index.json";
+import Button from "../Button/Button.astro";
 import LogoBlock from "../Layout/LogoBlock.astro";
 ---
 
@@ -9,7 +10,7 @@ import LogoBlock from "../Layout/LogoBlock.astro";
   >
     {
       index.ecosystem.partners.map((partner) => (
-        <div class="flex items-center justify-center w-[160px] sm:w-[180px] md:w-[200px] ">
+        <Button href={partner.href} variant="ghost">
           <img
             src={partner.image}
             alt={partner.altText}
@@ -17,7 +18,7 @@ import LogoBlock from "../Layout/LogoBlock.astro";
             loading="lazy"
             class="hover:scale-110 transition"
           />
-        </div>
+        </Button>
       ))
     }
   </div>

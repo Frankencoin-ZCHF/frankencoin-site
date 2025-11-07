@@ -328,35 +328,43 @@
     "partners": [
       {
         "altText": "Aktionariat",
-        "image": "images/aktionariat-Compressify.io.webp"
+        "image": "images/aktionariat-Compressify.io.webp",
+        "href": "https://www.aktionariat.com/all-companies"
       },
       {
         "altText": "DFX",
-        "image": "images/DFX-Logos-Compressify.io.webp"
+        "image": "images/DFX-Logos-Compressify.io.webp",
+        "href": "https://www.dfx.swiss"
       },
       {
         "altText": "MT Pelerin",
-        "image": "images/mt-pelerin-logo.png"
+        "image": "images/mt-pelerin-logo.png",
+        "href": "https://www.mtpelerin.com/?bdc=ZCHF"
       },
       {
         "altText": "Ammer Pay",
-        "image": "images/ammer-pay-Compressify.io.webp"
+        "image": "images/ammer-pay-Compressify.io.webp",
+        "href": "https://ammer.cash/"
       },
       {
         "altText": "Frankencoin Wallet",
-        "image": "images/Frankencoin-App-Logo.svg"
+        "image": "images/Frankencoin-App-Logo.svg",
+        "href": "https://frankencoin.app/"
       },
       {
         "altText": "Stay Liquid",
-        "image": "images/stayliquid.svg"
+        "image": "images/stayliquid.svg",
+        "href": "https://www.stayliquid.co/"
       },
       {
         "altText": "Frankencoin Merch",
-        "image": "images/frankencoin-merch.png"
+        "image": "images/frankencoin-merch.png",
+        "href": "https://merch.frankencoin.com/"
       },
       {
         "altText": "Operal",
-        "image": "images/OperalLogo-1.png"
+        "image": "images/OperalLogo-1.png",
+        "href": "https://operal.solutions/"
       }
     ],
     "actions": [
