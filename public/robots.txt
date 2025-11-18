@@ -1,0 +1,11 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+Crawl-delay: 0
+
+User-agent: ChatGPT-User
+Disallow: /
+
+# Sitemaps
+Sitemap: https://www.frankencoin.com/sitemap-index.xml
+Sitemap: https://www.frankencoin.com/sitemap-0.xml
