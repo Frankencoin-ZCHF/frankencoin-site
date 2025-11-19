@@ -1,21 +1,38 @@
 ---
 import index from "../../content/index.json";
 import LogoBlock from "../Layout/LogoBlock.astro";
+import Button from "../Button/Button.astro";
 ---
 
 <LogoBlock>
   <div
-    class="flex flex-wrap md:flex-col justify-center content-center gap-10 md:h-[200px]"
+    class="flex flex-wrap md:flex-col md:justify-between justify-center  w-full gap-5 md:h-[250px]"
   >
     {
       index.audits.partners.map((partner) => (
-        <img
-          class="w-[150px] md:w-[200px] hover:scale-120 transition"
-          src={partner.image}
-          alt={partner.altText}
-          height="40"
-          loading="lazy"
-        />
+        <Button href={partner.href} variant="ghost">
+          <div class="flex flex-col">
+            <img
+              class="w-[150px] md:w-[200px] hover:scale-120 transition"
+              src={partner.image}
+              alt={partner.altText}
+              height="40"
+              loading="lazy"
+            />
+            <div class="flex justify-between">
+              {partner?.sublinks &&
+                partner.sublinks.map((sublink) => (
+                  <a
+                    href={sublink.href}
+                    class="ty-small text-[var(--color-brand-titan-gray)] hover:text-[var(--color-brand-swiss)] hover:underline font-bold cursor-pointer"
+                    target="_blank"
+                  >
+                    {sublink.label}
+                  </a>
+                ))}
+            </div>
+          </div>
+        </Button>
       ))
     }
   </div>

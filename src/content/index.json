@@ -400,19 +400,36 @@
     "partners": [
       {
         "altText": "c4",
-        "image": "images/c4-logo-1-Compressify.io.webp"
+        "image": "images/c4-logo-1-Compressify.io.webp",
+        "href": "https://code4rena.com/reports/2023-04-frankencoin"
       },
       {
         "altText": "decurity",
-        "image": "images/Decurity_Logo.png"
+        "image": "images/Decurity_Logo.png",
+        "href": "https://github.com/Decurity/audits/blob/master/Frankencoin/frankencoin-audit-report-2024-1.1.pdf"
       },
       {
         "altText": "chainsec",
-        "image": "images/chainsec_logo.svg"
+        "image": "images/chainsec_logo.svg",
+        "sublinks": [
+          {
+            "label": "Audit 1",
+            "href": "https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts"
+          },
+          {
+            "label": "Audit 2",
+            "href": "https://www.chainsecurity.com/security-audit/frankencoin-v2024"
+          },
+          {
+            "label": "Audit 3",
+            "href": "https://www.chainsecurity.com/security-audit/frankencoin-ccip-bridge"
+          }
+        ]
       },
       {
         "altText": "blockbyte",
-        "image": "images/blockbyte-logo-black-1-Compressify.io.webp"
+        "image": "images/blockbyte-logo-black-1-Compressify.io.webp",
+        "href": "https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf"
       }
     ]
   },
