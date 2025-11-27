@@ -8,11 +8,13 @@
     - disabled?: boolean
     - loading?: boolean
     - block?: boolean (full width)
+    - withExternalIcon?: boolean
 */
 
 interface Props {
   href?: string;
   external?: boolean;
+  withExternalIcon?: boolean;
   variant?: "primary" | "secondary" | "ghost";
   size?: "sm" | "md" | "lg";
   rounded?: "none" | "sm" | "md" | "lg" | "full" | "";
@@ -24,6 +26,7 @@ interface Props {
 const {
   href,
   external = false,
+  withExternalIcon = false,
   variant = "primary",
   size = "md",
   rounded = "",
@@ -84,7 +87,7 @@ const state = loading
     <a
       href={href}
       class={`${base} ${sizes} ${variants} ${fontWeights} ${state}`}
-      target="_blank"
+      target={external ? "_blank" : undefined}
       rel={external ? "noopener noreferrer" : undefined}
       {...rest}
     >
@@ -93,7 +96,7 @@ const state = loading
         <slot />
       </span>
       <slot name="icon-right">
-        {external && (
+        {withExternalIcon && (
           <svg
             xmlns="http://www.w3.org/2000/svg"
             class="ml-1 h-4 w-4"

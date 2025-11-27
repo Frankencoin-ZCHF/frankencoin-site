@@ -23,7 +23,7 @@ const text = label ?? defaults[kind];
 {kind === "copy" ? (
   <CopyButton value={address} label={text} size="sm" />
 ) : (
-  <Button href={href} external variant="secondary" size="sm">
+  <Button href={href} withExternalIcon variant="secondary" size="sm">
     {text}
     <span slot="icon-right" />
   </Button>
