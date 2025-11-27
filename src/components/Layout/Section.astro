@@ -122,7 +122,7 @@ const parseMarkdownLinks = (text: string) => {
 
     {layout === "split" && (
       <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 ${headerPosition}`}>
-        <!-- Contenido principal -->
+        <!-- Main Content -->
         <div class={`${mainBasis} space-y-6`}>
 
           {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
@@ -146,14 +146,14 @@ const parseMarkdownLinks = (text: string) => {
           {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
         </div>
         
-        <!-- Contenido con aside -->
+        <!-- Aside Content -->
         <div class={`flex flex-col ${flexOrder} gap-8 md:gap-12 items-center`}>
-          <!-- Contenido principal -->
+          <!-- Main Content -->
           <div class={`${mainBasis}`}>
             <slot />
           </div>
           
-          <!-- Contenido secundario -->
+          <!-- Secondary Content -->
           <div class={` ${asideBasis}`}>
             <slot name="aside" />
           </div>
