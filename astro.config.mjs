@@ -1,18 +1,27 @@
 // @ts-check
-import { defineConfig } from "astro/config";
-import tailwindcss from "@tailwindcss/vite";
-import vercel from "@astrojs/vercel";
-import sitemap from "@astrojs/sitemap";
+import { defineConfig } from 'astro/config';
+import tailwindcss from '@tailwindcss/vite';
+import sitemap from '@astrojs/sitemap';
+
+import node from '@astrojs/node';
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://www.frankencoin.com",
+	site: process.env.SITE || 'https://frankencoin.com',
 
-  integrations: [sitemap()],
+	server: {
+		port: parseInt(process.env.SITE || '3000'),
+		host: true,
+		allowedHosts: ['frankencoin.com', 'dev.frankencoin.com'],
+	},
 
-  vite: {
-    plugins: [tailwindcss()],
-  },
+	integrations: [sitemap()],
 
-  adapter: vercel(),
+	vite: {
+		plugins: [tailwindcss()],
+	},
+
+	adapter: node({
+		mode: 'standalone',
+	}),
 });
