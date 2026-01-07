@@ -7,6 +7,7 @@ export interface Option {
   label: string;
   unit?: string;
   href?: string;
+  tooltip?: string;
 }
 
 interface Props {
@@ -27,7 +28,7 @@ const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class="w-full max-w-[500px] lg:max-w-none lg:w-auto mx-auto flex flex-col lg:flex-row justify-center items-stretch rounded-[var(--radius-xl)] overflow-hidden border border-[var(--color-brand-deep-blue)]"
+  class="w-full max-w-[500px] lg:max-w-none lg:w-auto mx-auto flex flex-col lg:flex-row justify-center items-stretch rounded-[var(--radius-xl)] border border-[var(--color-brand-deep-blue)]"
 >
   {
     options?.map((option, index) => (
@@ -41,6 +42,9 @@ const variantClass = variants[variant ?? "primary"];
           flex flex-col justify-center
           transition-colors duration-200
           group
+          relative
+          ${index === 0 ? "rounded-t-[var(--radius-xl)] lg:rounded-l-[var(--radius-xl)] lg:rounded-tr-none" : ""}
+          ${index === (options?.length ?? 0) - 1 ? "rounded-b-[var(--radius-xl)] lg:rounded-r-[var(--radius-xl)] lg:rounded-bl-none" : ""}
           ${index > 0 ? "lg:border-l border-t lg:border-t-0 border-white" : ""}
         `}
       >

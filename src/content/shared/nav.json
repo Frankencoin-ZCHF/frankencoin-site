@@ -1,9 +1,12 @@
 {
   "brand": { "name": "Frankencoin", "href": "/" },
   "links": [
-    { "label": "What is Frankencoin?", "href": "/what-is-frankencoin" },
-    { "label": "Pool Shares", "href": "/fps" },
-    { "label": "Ecosystem", "href": "/ecosystem" }
+    { "label": "What is Frankencoin", "href": "/#what-is" },
+    { "label": "Use Cases", "href": "/#core-features" },
+    { "label": "How it Works", "href": "/#how-does-it-work" },
+    { "label": "Compliance & Security", "href": "/#trust-security" },
+    { "label": "Media", "href": "/#in-the-media" },
+    { "label": "FAQs", "href": "/#faq" }
   ],
   "cta": { "label": "Launch App", "href": "https://app.frankencoin.com/" },
   "socials": [
@@ -23,7 +26,7 @@
       "width": 30,
       "height": 30
     },
-    {
+      {
       "name": "LinkedIn",
       "href": "https://www.linkedin.com/company/frankencoin/",
       "light_icon": "images/Social-icons-2_1.svg",

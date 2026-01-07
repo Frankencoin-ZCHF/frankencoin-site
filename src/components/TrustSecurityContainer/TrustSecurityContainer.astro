@@ -1,0 +1,58 @@
+---
+import index from "../../content/index.json";
+---
+
+<div class="space-y-16 max-w-5xl mx-auto">
+  <!-- Regulatory Section -->
+  <div class="space-y-6">
+    <h3 class="ty-big-2">{index.trust_security.regulatory.title}</h3>
+    <p class="ty-body-1">{index.trust_security.regulatory.description}</p>
+    <div class="flex flex-col md:flex-row gap-6 mt-8">
+      {index.trust_security.regulatory.documents.map((doc) => (
+        <a
+          href={doc.href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="ty-regular text-[var(--color-brand-deep-blue)] hover:underline inline-flex items-center gap-2"
+        >
+          <span>→</span>
+          <span>{doc.label}</span>
+        </a>
+      ))}
+    </div>
+  </div>
+
+  <!-- Audits Section -->
+  <div class="space-y-6">
+    <h3 class="ty-big-2">{index.trust_security.audits.title}</h3>
+    <p class="ty-body-1">{index.trust_security.audits.description}</p>
+    <div class="flex flex-wrap justify-center md:justify-start gap-8 mt-8">
+      {index.trust_security.audits.partners.map((partner) => (
+        <a href={partner.href} target="_blank" rel="noopener noreferrer" class="block">
+          <div class="flex flex-col items-center">
+            <img
+              class="w-[150px] md:w-[180px] hover:scale-110 transition"
+              src={partner.image}
+              alt={partner.altText}
+              height="40"
+              loading="lazy"
+            />
+            {partner?.sublinks && (
+              <div class="flex gap-4 mt-3">
+                {partner.sublinks.map((sublink) => (
+                  <a
+                    href={sublink.href}
+                    class="ty-small text-[var(--color-brand-titan-gray)] hover:text-[var(--color-brand-swiss)] hover:underline font-bold"
+                    target="_blank"
+                  >
+                    {sublink.label}
+                  </a>
+                ))}
+              </div>
+            )}
+          </div>
+        </a>
+      ))}
+    </div>
+  </div>
+</div>

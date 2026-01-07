@@ -1,0 +1,51 @@
+---
+import Section from "../components/Layout/Section.astro";
+import SectionHeader from "../components/Layout/SectionHeader.astro";
+import Base from "../layouts/Base.astro";
+import token from "../content/token.json";
+import ChainContainer from "../components/ChainContainer/ChainContainer.astro";
+---
+
+<Base>
+  <Section
+    id="token-header"
+    variant="accent"
+    align="center"
+    pad="xxs"
+  >
+    <div class="flex flex-col gap-8 items-start md:my-60 mb-40">
+      <SectionHeader
+        title={token.hero.title}
+        subtitle={token.hero.subtitle}
+        margin="none"
+        size="display"
+        align="left"
+        padding="xl"
+      />
+    </div>
+  </Section>
+
+  <Section
+    id="tokens"
+    title={token.tokens.title}
+    subtitle={token.tokens.subtitle}
+  >
+    <ChainContainer tokens={token.tokens.chains} />
+  </Section>
+
+  <Section id="fps" title={token.fps.title} subtitle={token.fps.subtitle}>
+    <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
+      <ChainContainer tokens={[token.fps.chain]} />
+    </div>
+  </Section>
+
+  <Section
+    id="svzchf"
+    title={token.svzchf.title}
+    subtitle={token.svzchf.subtitle}
+  >
+    <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
+      <ChainContainer tokens={token.svzchf.chains} />
+    </div>
+  </Section>
+</Base>

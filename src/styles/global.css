@@ -11,6 +11,7 @@
   /* ejemplo: tipografía por defecto */
   html {
     font-family: var(--font-sans);
+    scroll-behavior: smooth;
   }
   /* ejemplo: suavizado de fuentes */
   body {

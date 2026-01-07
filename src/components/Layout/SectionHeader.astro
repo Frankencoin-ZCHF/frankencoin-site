@@ -24,6 +24,7 @@ import SocialLinksBar from "../SocialLinksBar.astro";
 
 interface Props {
   title: string;
+  eyebrow?: string;
   image?: string;
   imageAlt?: string;
   subtitle?: string;
@@ -53,6 +54,7 @@ interface Props {
 
 const {
   title,
+  eyebrow,
   image,
   imageAlt,
   subtitle,
@@ -100,6 +102,13 @@ const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
   {
     image && (
       <img src={image} alt={imageAlt} width="128" height="128" loading="lazy" />
+    )
+  }
+  {
+    eyebrow && (
+      <h3 class={`ty-subtitle text-${align}`}>
+        {eyebrow.toUpperCase()}
+      </h3>
     )
   }
   <h1

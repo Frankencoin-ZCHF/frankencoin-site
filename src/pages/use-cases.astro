@@ -1,0 +1,57 @@
+---
+import Section from "../components/Layout/Section.astro";
+import SectionHeader from "../components/Layout/SectionHeader.astro";
+import Base from "../layouts/Base.astro";
+import index from "../content/index.json";
+---
+
+<Base>
+  <Section id="use-cases-header" variant="accent" align="center" pad="xxs">
+    <div class="flex flex-col gap-8 items-start md:my-60 mb-40">
+      <SectionHeader
+        title="Real Applications for Digital Swiss Francs"
+        subtitle="See how businesses and individuals are using Frankencoin today"
+        margin="none"
+        size="display"
+        align="left"
+        padding="xl"
+      />
+    </div>
+  </Section>
+
+  <Section
+    id="use-cases"
+    eyebrow={index.use_cases.eyebrow}
+    title={index.use_cases.title}
+    variant="plain"
+  >
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-7xl mx-auto">
+      {index.use_cases.cases.map((useCase) => (
+        <div class="bg-white rounded-lg shadow-md hover:shadow-lg transition p-8 space-y-4 flex flex-col">
+          <div class="flex-shrink-0 h-20 flex items-center justify-center mb-4">
+            <img
+              src={useCase.image}
+              alt={useCase.partner}
+              class="max-h-16 max-w-[180px] object-contain"
+              loading="lazy"
+            />
+          </div>
+          <div class="flex-grow space-y-2">
+            <div class="ty-small text-[var(--color-brand-titan-gray)] uppercase tracking-wide">
+              {useCase.category}
+            </div>
+            <h3 class="ty-big-2 text-[var(--color-brand-deep-blue)]">{useCase.title}</h3>
+            <p class="ty-body-2 text-[var(--color-brand-titan-gray)]">
+              {useCase.description}
+            </p>
+          </div>
+          <div class="pt-4 border-t border-gray-200">
+            <p class="ty-regular font-bold text-[var(--color-brand-deep-blue)]">
+              {useCase.partner}
+            </p>
+          </div>
+        </div>
+      ))}
+    </div>
+  </Section>
+</Base>
