@@ -6,7 +6,7 @@
 		},
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
-		"title": "Digital. Decentralized. Swiss.",
+		"title": "Swiss. Digital. Decentralized.",
 		"subtitle": "Frankencoin is the Swiss franc of the digital world — replicating the value of the CHF 1:1 on-chain.",
 		"cta": {
 			"label": "Launch Web App",
@@ -17,7 +17,7 @@
 	"stats": [
 		{
 			"id": "totalValueLocked",
-			"label": "Total value locked",
+			"label": "Collateral Value",
 			"unit": "ZCHF",
 			"href": "https://defillama.com/protocol/frankencoin#information"
 		},

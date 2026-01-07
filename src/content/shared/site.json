@@ -1,8 +1,13 @@
 {
   "site": {
     "name": "Frankencoin",
+    "title": "Frankencoin - Swiss Franc Stablecoin (ZCHF)",
     "url": "https://frankencoin.com",
-    "description": "Frankencoin is a decentralized platform for creating and trading tokens on the blockchain.",
-    "image": "https://frankencoin.com"
+    "description": "Frankencoin (ZCHF) is a Swiss franc stablecoin backed by cryptocurrency collateral. Used for payments, business operations, and decentralized finance across Switzerland and globally.",
+    "image": "/images/og_image.webp",
+    "twitterHandle": "@frankencoinzchf",
+    "keywords": "Frankencoin, ZCHF, Swiss Franc stablecoin, cryptocurrency payments, DeFi Switzerland, digital CHF, blockchain payments, Swiss stablecoin",
+    "author": "Frankencoin Association",
+    "locale": "en_US"
   }
 }
