@@ -6,10 +6,10 @@ interface Props extends Option {}
 const { label, value, unit, tooltip } = Astro.props as Props;
 ---
 
-<div class="flex flex-col items-start group w-full lg:px-7 px-4 lg:py-5 py-4">
+<div class="flex flex-col items-start group w-full min-w-[260px] lg:px-8 px-5 lg:py-5 py-4">
   <div class="flex items-center gap-2">
     <div class="relative inline-flex items-center">
-      <h3 class="ty-regular">{label.toUpperCase()}</h3>
+      <h3 class="ty-regular whitespace-nowrap">{label.toUpperCase()}</h3>
       {
         tooltip && (
           <span class="relative group/tooltip ml-1">
@@ -47,8 +47,8 @@ const { label, value, unit, tooltip } = Astro.props as Props;
       class="w-6 h-6 opacity-0 group-hover:opacity-100 transition-opacity duration-50"
     />
   </div>
-  <div class="flex items-start gap-2">
-    <p class="ty-big">{value}</p>
+  <div class="flex items-start gap-2 whitespace-nowrap">
+    <p class="ty-big-2">{value}</p>
     <p class="ty-big-3">{unit}</p>
   </div>
 </div>
