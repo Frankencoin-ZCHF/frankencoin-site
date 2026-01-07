@@ -465,17 +465,17 @@
 			{
 				"title": "Collateralized debt position",
 				"description": "Frankencoin operates as a decentralized collateralized debt position system. Users deposit crypto assets as collateral to mint digital Swiss francs (ZCHF). The collateral remains under the user's control while securing the outstanding franc issuance, similar to a secured lending facility with transparent, automated terms.",
-				"link": "https://docs.frankencoin.com/"
+				"link": "https://docs.frankencoin.com/positions/open"
 			},
 			{
 				"title": "Why 1 ZCHF equals 1 CHF",
 				"description": "Each ZCHF token is over-collateralized, backed by assets worth more than 1 Swiss franc. This structural over-collateralization ensures price stability and provides a robust backing mechanism that maintains the 1:1 peg to the Swiss franc.",
-				"link": "https://docs.frankencoin.com/"
+				"link": "https://docs.frankencoin.com/reserve"
 			},
 			{
 				"title": "Market-driven price stability",
 				"description": "The peg is maintained through arbitrage opportunities: When ZCHF trades below parity, market participants profit by purchasing discounted tokens and redeeming the underlying collateral. When ZCHF trades above parity, participants profit by minting new tokens and selling at a premium. These arbitrage mechanisms create natural market forces that maintain equilibrium at 1 CHF.",
-				"link": "https://docs.frankencoin.com/"
+				"link": "https://docs.frankencoin.com/positions/auctions"
 			}
 		]
 	},
@@ -717,7 +717,7 @@
 					},
 					{
 						"question": "Can I earn interest on my Frankencoin?",
-						"answer": "You can earn yield by [providing liquidity to DeFi protocols](https://app.frankencoin.com/) or using savings applications. Returns vary based on market conditions and are not guaranteed. Rates reflect supply and demand for CHF liquidity in decentralized markets."
+						"answer": "You can earn yield by [providing liquidity to DeFi protocols](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) like morpho or using the [Frankencoin savings module](https://https://app.frankencoin.com/savings). Returns vary based on market conditions and are not guaranteed. Rates reflect supply and demand for CHF liquidity in decentralized markets."
 					}
 				]
 			},
@@ -734,7 +734,7 @@
 					},
 					{
 						"question": "What is the Frankencoin Association?",
-						"answer": "The [Frankencoin Association](https://frankencoin.com/) is a Swiss non-profit organization based in Zug. It serves as a [point of contact for regulators](mailto:contact@frankencoin.com), oversees legal compliance, and supports the ecosystem—but does not control the protocol itself."
+						"answer": "The [Frankencoin Association](https://frankencoin.com/) is a Swiss non-profit organization based in Zug. It serves as a [point of contact](mailto:hello@frankencoin.com), furthers the development and supports the ecosystem—but does not control the protocol itself."
 					},
 					{
 						"question": "Has Frankencoin been audited?",
