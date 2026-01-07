@@ -2,15 +2,18 @@
 import Button from "../Button/Button.astro";
 import NavLink from "../Button/NavLink.astro";
 
+interface CTA {
+  label: string;
+  href: string;
+}
+
 interface Props {
   title: string;
   image: string;
   imageAlt?: string;
   description: string;
-  cta: {
-    label: string;
-    href: string;
-  };
+  cta?: CTA;
+  ctas?: CTA[];
   shadow?: "none" | "sm" | "md" | "lg" | "xl" | "2xl";
 }
 
@@ -20,6 +23,7 @@ const {
   imageAlt = "",
   description,
   cta,
+  ctas,
   shadow = "md",
 } = Astro.props as Props;
 
@@ -43,36 +47,76 @@ const hoverShadows = {
 
 const shadowClass = shadows[shadow];
 const hoverShadowClass = hoverShadows[shadow];
+
+// Support both single cta and multiple ctas
+const ctaList = ctas || (cta ? [cta] : []);
+const hasSingleCta = ctaList.length === 1;
 ---
 
-<a
-  href={cta.href}
-  target="_blank"
-  rel="noopener noreferrer"
-  class={`block rounded-lg ${shadowClass} ${hoverShadowClass} bg-[var(--color-neutral-100)] hover:bg-[var(--color-neutral-200)] transition h-auto`}
->
-  <div
-    class="flex flex-col justify-between gap-[var(--spacing-l)] p-[var(--spacing-xxl)] group w-full h-auto"
+{hasSingleCta ? (
+  <a
+    href={ctaList[0].href}
+    target="_blank"
+    rel="noopener noreferrer"
+    class={`block rounded-lg ${shadowClass} ${hoverShadowClass} bg-[var(--color-neutral-100)] hover:bg-[var(--color-neutral-200)] transition h-auto`}
   >
-    <div class="flex flex-col gap-[var(--spacing-l)] h-auto justify-between">
-      <h2 class="ty-big-2">{title}</h2>
-      <img
-        src={image}
-        alt={imageAlt}
-        loading="lazy"
-        class="max-h-[90px] max-w-[90px]"
-      />
-      <h3 class="ty-body-1">
-        {description}
-      </h3>
+    <div
+      class="flex flex-col justify-between gap-[var(--spacing-l)] p-[var(--spacing-xxl)] group w-full h-auto"
+    >
+      <div class="flex flex-col gap-[var(--spacing-l)] h-auto justify-between">
+        <h2 class="ty-big-2">{title}</h2>
+        <img
+          src={image}
+          alt={imageAlt}
+          loading="lazy"
+          class="max-h-[90px] max-w-[90px]"
+        />
+        <h3 class="ty-body-1">
+          {description}
+        </h3>
+      </div>
+      <div class="flex items-center gap-2 mt-auto">
+        <h3 class="ty-regular ty-black text-[var(--color-brand-deep-blue)]">
+          {ctaList[0].label}
+        </h3>
+        <img src="images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
+      </div>
     </div>
-    <div class="flex items-center gap-2 mt-auto">
-      <h3 class="ty-regular ty-black text-[var(--color-brand-deep-blue)]">
-        {cta.label}
-      </h3>
-      <img src="images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
+  </a>
+) : (
+  <div
+    class={`block rounded-lg ${shadowClass} bg-[var(--color-neutral-100)] h-auto`}
+  >
+    <div
+      class="flex flex-col justify-between gap-[var(--spacing-l)] p-[var(--spacing-xxl)] w-full h-auto"
+    >
+      <div class="flex flex-col gap-[var(--spacing-l)] h-auto justify-between">
+        <h2 class="ty-big-2">{title}</h2>
+        <img
+          src={image}
+          alt={imageAlt}
+          loading="lazy"
+          class="max-h-[90px] max-w-[90px]"
+        />
+        <h3 class="ty-body-1">
+          {description}
+        </h3>
+      </div>
+      <div class="flex flex-col gap-3 mt-auto">
+        {ctaList.map((ctaItem) => (
+          <a
+            href={ctaItem.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center gap-2 text-[var(--color-brand-deep-blue)] hover:underline group"
+          >
+            <h3 class="ty-regular ty-black">
+              {ctaItem.label}
+            </h3>
+            <img src="images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
+          </a>
+        ))}
+      </div>
     </div>
-
-    <!-- </div> -->
   </div>
-</a>
+)}

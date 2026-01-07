@@ -170,10 +170,16 @@
 					"Bill payments",
 					"Salary receipts"
 				],
-				"cta": {
-					"label": "Get Started with Mt Pelerin",
-					"href": "https://www.mtpelerin.com/?bdc=ZCHF"
-				}
+				"ctas": [
+					{
+						"label": "Buy ZCHF with Fiat",
+						"href": "https://www.mtpelerin.com/?bdc=ZCHF"
+					},
+					{
+						"label": "Buy ZCHF with USDC",
+						"href": "https://swap.cow.fi/#/100/swap/USDC/ZCHF"
+					}
+				]
 			},
 			{
 				"title": "Borrow & Earn",
@@ -185,10 +191,16 @@
 					"Liquidity provision",
 					"Treasury management"
 				],
-				"cta": {
-					"label": "Launch App",
-					"href": "https://app.frankencoin.com/"
-				}
+				"ctas": [
+					{
+						"label": "Borrow ZCHF",
+						"href": "https://app.frankencoin.com/mint"
+					},
+					{
+						"label": "Earn yield on ZCHF",
+						"href": "https://app.frankencoin.com/savings"
+					}
+				]
 			},
 			{
 				"title": "Build & Integrate",
