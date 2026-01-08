@@ -9,5 +9,9 @@
     "keywords": "Frankencoin, ZCHF, Swiss Franc stablecoin, cryptocurrency payments, DeFi Switzerland, digital CHF, blockchain payments, Swiss stablecoin",
     "author": "Frankencoin Association",
     "locale": "en_US"
+  },
+  "contact": {
+    "type": "Customer Service",
+    "email": "info@frankencoin.com"
   }
 }

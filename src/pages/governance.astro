@@ -2,7 +2,7 @@
 import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
-import fps from "../content/fps.json";
+import governance from "../content/governance.json";
 import FlexStack from "../components/Layout/FlexStack.astro";
 import BadgeContainer, {
   type Option,
@@ -24,7 +24,7 @@ async function getFpsInfo() {
 const fpsInfo = await getFpsInfo();
 
 function findStat(id: string) {
-  return ((fps.caps ?? []).find((s: any) => s.id === id) || {}) as Option;
+  return ((governance.caps ?? []).find((s: any) => s.id === id) || {}) as Option;
 }
 
 function formatAmount(n: number) {
@@ -63,7 +63,7 @@ const caps = fpsInfo
     ]
   : [];
 
-const { unit } = fps.stats_list.find((s: any) => s.id === "netIncome") || {};
+const { unit } = governance.stats_list.find((s: any) => s.id === "netIncome") || {};
 
 const stats = fpsInfo
   ? [
@@ -98,13 +98,13 @@ const stats = fpsInfo
 ---
 
 <Base>
-  <Section variant="accent" align="center" pad="lg" id="fps-header">
+  <Section variant="accent" align="center" pad="lg" id="governance-header">
     <SectionHeader
-      title={fps.header.title}
-      subtitle={fps.header.subtitle}
-      image={fps.header.image}
-      imageAlt={fps.header.imageAlt}
-      cta={fps.header.cta}
+      title={governance.header.title}
+      subtitle={governance.header.subtitle}
+      image={governance.header.image}
+      imageAlt={governance.header.imageAlt}
+      cta={governance.header.cta}
       padding="xl"
       maxWidth="6xl"
       size="display"
@@ -117,18 +117,18 @@ const stats = fpsInfo
       </div>
     </FlexStack>
   </Section>
-  <Section id="fps-introduction" className="md:mt-100 mt-160 mb-10" pad="xxs">
+  <Section id="governance-content" className="md:mt-100 mt-160 mb-10" pad="xxs">
     <FlexStack direction="col" gap="40px" align="center">
       {
-        fps.introduction.map((feature) => (
+        governance.sections.map((section) => (
           <div class="flex flex-col md:flex-row justify-between">
             <div class="w-full md:w-1/2">
-              <h1 class="ty-title-1 ty-black">{feature.title}</h1>
+              <h1 class="ty-title-1 ty-black">{section.title}</h1>
             </div>
             <div class="w-full md:w-1/2">
               <p
                 class="ty-body-1"
-                set:html={feature.description.replace(/\n/g, "<br>")}
+                set:html={section.description.replace(/\n/g, "<br>")}
               />
             </div>
           </div>

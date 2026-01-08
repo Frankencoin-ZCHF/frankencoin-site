@@ -7,11 +7,21 @@
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
 		"title": "Swiss. Digital. Decentralized.",
-		"subtitle": "Frankencoin is the Swiss franc of the digital world — replicating the value of the CHF 1:1 on-chain.",
+		"subtitle": "Frankencoin (ZCHF) is a stablecoin and the Swiss franc of the digital world — replicating the value of the CHF 1:1 on-chain.",
 		"cta": {
 			"label": "Launch Web App",
 			"href": "https://app.frankencoin.com/"
-		}
+		},
+		"cta_buttons": [
+			{
+				"label": "Get ZCHF with Fiat",
+				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
+			},
+			{
+				"label": "Get ZCHF with Crypto",
+				"href": "https://swap.cow.fi/#/100/swap/USDC/ZCHF"
+			}
+		]
 	},
 
 	"stats": [
@@ -85,6 +95,7 @@
 	"use_cases": {
 		"eyebrow": "Already in Use Today",
 		"title": "Real Applications for Digital Swiss Francs",
+		"intro": "Frankencoin is already being used by businesses and individuals across Switzerland for everyday payments, financial operations, and decentralized finance. Explore how ZCHF bridges traditional Swiss francs with the digital economy.",
 		"cases": [
 			{
 				"title": "Retail Payments",
@@ -189,7 +200,7 @@
 	},
 	"core_features": {
 		"eyebrow": "Ways to Use Frankencoin",
-		"title": "Pay. Borrow & Earn. Build.",
+		"title": "Pay. Borrow. Earn. Build.",
 		"features": [
 			{
 				"title": "Pay",
@@ -213,30 +224,39 @@
 				]
 			},
 			{
-				"title": "Borrow & Earn",
-				"image": "images/Icon-Invest.svg",
-				"description": "Borrow Swiss francs by depositing crypto assets as collateral, or earn market-based yield on your ZCHF holdings through DeFi applications. Access CHF liquidity while maintaining exposure to your digital assets, or put your Swiss francs to work generating returns.",
+				"title": "Borrow",
+				"image": "images/Icon-Mint.svg",
+				"description": "Borrow Frankencoin by depositing crypto assets as collateral. Access ZCHF liquidity while maintaining exposure to your digital assets.",
 				"examples": [
 					"Mint ZCHF with crypto collateral",
-					"Earn yield on savings",
-					"Liquidity provision",
+					"Access ZCHF liquidity",
+					"Leverage digital assets",
 					"Treasury management"
 				],
-				"ctas": [
-					{
-						"label": "Borrow ZCHF",
-						"href": "https://app.frankencoin.com/mint"
-					},
-					{
-						"label": "Earn yield on ZCHF",
-						"href": "https://app.frankencoin.com/savings"
-					}
-				]
+				"cta": {
+					"label": "Borrow ZCHF",
+					"href": "https://app.frankencoin.com/mint"
+				}
+			},
+			{
+				"title": "Earn",
+				"image": "images/Icon-Invest.svg",
+				"description": "Earn market-based yield on your ZCHF holdings through DeFi applications. Put your Frankencoin to work generating returns.",
+				"examples": [
+					"Earn yield on savings",
+					"Liquidity provision",
+					"Generate passive income",
+					"DeFi participation"
+				],
+				"cta": {
+					"label": "Earn yield on ZCHF",
+					"href": "https://app.frankencoin.com/savings"
+				}
 			},
 			{
 				"title": "Build & Integrate",
 				"image": "images/Icon-Mint.svg",
-				"description": "Developers and businesses can integrate Frankencoin as a programmable CHF layer for applications and financial services. Use crypto collateral to access CHF liquidity.",
+				"description": "Developers and businesses can integrate Frankencoin as a programmable Swiss franc layer for applications and financial services. Use crypto collateral to access ZCHF liquidity.",
 				"examples": [
 					"Payroll systems",
 					"Trading platforms",
@@ -248,7 +268,11 @@
 					"href": "https://docs.frankencoin.com/"
 				}
 			}
-		]
+		],
+		"more_link": {
+			"label": "See more use-cases",
+			"href": "/use-cases"
+		}
 	},
 	"tokens": {
 		"title": "The Frankencoin Token",

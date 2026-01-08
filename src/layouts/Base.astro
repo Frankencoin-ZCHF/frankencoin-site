@@ -48,8 +48,8 @@ const { title, description, image, type } = Astro.props;
       ],
       "contactPoint": {
         "@type": "ContactPoint",
-        "contactType": "Customer Service",
-        "email": "info@frankencoin.com"
+        "contactType": site.contact.type,
+        "email": site.contact.email
       }
     })} />
 

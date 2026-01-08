@@ -10,6 +10,7 @@
     - block?: boolean (full width)
     - withExternalIcon?: boolean
 */
+import ui from "../../content/shared/ui.json";
 
 interface Props {
   href?: string;
@@ -118,7 +119,7 @@ const state = loading
       {...rest}
     >
       <slot name="icon-left" />
-      <p class="mx-1">{loading ? "Loading…" : <slot />}</p>
+      <p class="mx-1">{loading ? ui.buttons.loading : <slot />}</p>
       <slot name="icon-right" />
     </button>
   )

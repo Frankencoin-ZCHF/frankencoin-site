@@ -1,0 +1,83 @@
+{
+  "header": {
+    "image": "images/FPS-Logo-Compressify.io.webp",
+    "imageAlt": "Frankencoin governance",
+    "title": "Frankencoin Governance",
+    "subtitle": "A decentralized, community-driven approach to managing the Swiss franc stablecoin",
+    "cta": {
+      "label": "Participate in Governance",
+      "href": "https://app.frankencoin.com/equity"
+    }
+  },
+  "caps": [
+    {
+      "id": "fpsPrice",
+      "label": "FPS Price",
+      "value": "1'162.13",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsSupply",
+      "label": "FPS Supply",
+      "value": "8'887.69",
+      "unit": "FPS",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsMarketCap",
+      "label": "FPS Market Cap",
+      "value": "10'328'609.12",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    }
+  ],
+  "stats_list": [
+    {
+      "id": "balance",
+      "label": "Total Reserve",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "equity",
+      "label": "Equity Capital",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "minter",
+      "label": "Minter Reserve",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "netIncome",
+      "label": "Net income since 2023",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    }
+  ],
+  "sections": [
+    {
+      "title": "How Governance Works",
+      "description": "Frankencoin operates with a unique veto-based governance model. Anyone can propose new collateral types or methods to mint Frankencoin, but just 2% of voting power can veto proposals. This ensures the system remains stable while allowing innovation."
+    },
+    {
+      "title": "Frankencoin Pool Shares (FPS)",
+      "description": "FPS tokens represent ownership shares in the Frankencoin equity reserve. Holding FPS functions similarly to owning bank stock—as the system generates profits, your share value automatically increases. When you acquire FPS, you're providing equity capital to the system and gaining voting rights over governance decisions.\n\n<strong>How Value Accrues to FPS Holders:</strong>\n\n• <strong>Interest Income:</strong> When users borrow ZCHF against their collateral through minting positions, they pay interest. This interest income flows into the equity reserve, increasing the value backing each FPS. For example, with 30 million ZCHF in circulation at 5% annual interest, this generates 1.5 million ZCHF per year in revenue.\n\n• <strong>Liquidation Profits:</strong> When collateral is liquidated and sold, any surplus value above the debt amount strengthens the reserve. These profits are distributed proportionally to FPS holders.\n\n• <strong>Governance Fees:</strong> Governance actions generate fees that flow to the equity reserve. For example, proposing a new collateral type requires a 1,000 ZCHF fee, which compensates FPS holders for evaluating and voting on proposals.\n\n<strong>Costs and Economics:</strong>\n\nThe primary cost borne by FPS holders is the savings yield paid to users of the savings module. When ZCHF holders deposit to earn yield, that yield is funded by the equity reserve. This creates a traditional banking dynamic: borrowers pay interest, savers receive yield, and equity holders earn the spread.\n\n<strong>Valuation and Pricing:</strong>\n\nFPS uses a proportional capital valuation with a constant 3x multiplier. If equity capital is 1 million ZCHF, the total FPS market cap becomes 3 million ZCHF. This multiplier ensures that both new investors minting FPS and existing holders redeeming shares transact at the same fair valuation.\n\n<strong>Risk Profile:</strong>\n\nFPS holders bear the residual risk—similar to bank shareholders. If liquidations result in losses that exceed the minter's reserve contribution, these losses are absorbed by the equity pool. This risk-reward alignment ensures FPS holders are incentivized to govern the system responsibly and approve only sound collateral types.\n\nYou can acquire FPS by depositing ZCHF into the equity reserve through the <a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>Frankencoin app</a>. Redemption requires a 90-day minimum holding period to ensure system stability."
+    },
+    {
+      "title": "How to Get FPS",
+      "description": "There are two main ways to acquire FPS:\n\n1. Mint new FPS: Deposit ZCHF into the equity reserve through the <a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>Frankencoin app</a>. You receive newly minted FPS at the current book value price.\n\n2. Buy on secondary markets: Trade FPS on decentralized exchanges. Check current prices and trading activity on <a href='https://www.coingecko.com/en/coins/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>CoinGecko</a> or <a href='https://defillama.com/protocol/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>DeFiLlama</a>.\n\nWhen you're ready to exit, you can redeem FPS back to the system to withdraw your capital plus accumulated earnings. There's a mandatory holding period to ensure system stability. This creates a dynamic, market-based equity pool that grows with the system."
+    },
+    {
+      "title": "Wrapped FPS (WFPS)",
+      "description": "WFPS is a wrapped version of FPS with identical economic value but without voting rights. It's designed for easier trading on exchanges while FPS itself remains the governance token."
+    },
+    {
+      "title": "Proposal Process",
+      "description": "The governance process is open and transparent. Proposals for new collateral types or minting mechanisms can be submitted by anyone. The community reviews proposals, and FPS holders vote. A 2% veto threshold ensures checks and balances while maintaining agility."
+    }
+  ]
+}

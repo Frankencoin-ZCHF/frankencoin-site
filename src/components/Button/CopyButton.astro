@@ -3,10 +3,12 @@
   Botón compacto para copiar direcciones/texto.
   Props:
     - value: string (texto a copiar)
-    - label?: string (default: "Copy")
-    - copiedLabel?: string (default: "Copied!")
+    - label?: string (default from ui.json)
+    - copiedLabel?: string (default from ui.json)
     - size?: "sm" | "md" (default: "sm")
 */
+import ui from "../../content/shared/ui.json";
+
 interface Props {
   value: string;
   label?: string;
@@ -14,7 +16,7 @@ interface Props {
   size?: "sm" | "md";
 }
 
-const { value, label = "Copy", copiedLabel = "Copied!", size = "sm", ...rest } = Astro.props as Props;
+const { value, label = ui.buttons.copy, copiedLabel = ui.buttons.copied, size = "sm", ...rest } = Astro.props as Props;
 
 const base =
   "inline-flex items-center justify-center rounded-[var(--radius-button)] " +

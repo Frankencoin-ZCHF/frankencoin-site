@@ -1,0 +1,126 @@
+{
+  "footer": {
+    "columns": [
+      {
+        "title": "About",
+        "links": [
+          {
+            "label": "What is Frankencoin",
+            "href": "/what-is-frankencoin"
+          },
+          {
+            "label": "Use Cases",
+            "href": "/use-cases"
+          },
+                    {
+            "label": "Governance",
+            "href": "/governance"
+          }
+        ],
+        "sections": [
+          {
+            "title": "Brand Assets",
+            "links": [
+              {
+                "label": "Logos",
+                "href": "https://github.com/Frankencoin-ZCHF/www/tree/main/media_kit",
+                "external": true
+              },
+              {
+                "label": "Brand Guidelines",
+                "href": "https://github.com/Frankencoin-ZCHF/www/blob/main/media_kit/frankencoin_brand_guidelines.pdf",
+                "external": true
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Token",
+        "links": [
+          {
+            "label": "Token Info",
+            "href": "/token"
+          },
+
+          {
+            "label": "DeFiLlama",
+            "href": "https://defillama.com/protocol/frankencoin",
+            "external": true
+          },
+          {
+            "label": "CoinGecko",
+            "href": "https://www.coingecko.com/en/coins/frankencoin",
+            "external": true
+          },
+           {
+            "label": "Dune Dashboard",
+            "href": "https://dune.com/mathewmeconry/zchf",
+            "external": true
+          }
+        ]
+      },
+      {
+        "title": "Developers",
+        "links": [
+          {
+            "label": "Documentation",
+            "href": "https://docs.frankencoin.com",
+            "external": true
+          },
+          {
+            "label": "API",
+            "href": "https://api.frankencoin.com",
+            "external": true
+          },
+          {
+            "label": "Frankencoin Whitepaper",
+            "href": "https://app.frankencoin.com/thesis-frankencoin.pdf",
+            "external": true
+          },
+          {
+            "label": "GitHub",
+            "href": "https://github.com/Frankencoin-ZCHF",
+            "external": true
+          }
+        ]
+      },
+      {
+        "title": "Community",
+        "links": [
+          {
+            "label": "X (Twitter)",
+            "href": "https://x.com/frankencoinzchf",
+            "external": true
+          },
+          {
+            "label": "Telegram",
+            "href": "https://t.me/frankencoinzchf",
+            "external": true
+          },
+          {
+            "label": "LinkedIn",
+            "href": "https://www.linkedin.com/company/frankencoin/",
+            "external": true
+          },
+          {
+            "label": "YouTube",
+            "href": "https://www.youtube.com/@frankencoinzchf",
+            "external": true
+          },
+          {
+            "label": "Discussion Forum",
+            "href": "https://github.com/Frankencoin-ZCHF/Frankencoin/discussions",
+            "external": true
+          },
+          {
+            "label": "Upcoming Events",
+            "href": "https://luma.com/user/frankencoin",
+            "external": true
+          }
+        ]
+      }
+    ],
+    "copyright": "© {year} Frankencoin Association. All rights reserved."
+  }
+}

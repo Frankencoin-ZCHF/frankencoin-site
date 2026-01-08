@@ -80,27 +80,38 @@ const stats: Option[] = frankencoinInfo
     pad="xxs"
     imgUrl={index.hero.image}
   >
-    <div class="flex flex-col gap-8 items-start md:my-60 mb-40">
+    <div class="min-h-screen flex flex-col justify-center gap-8 items-start pb-20">
       <SectionHeader
-        eyebrow={index.hero.eyebrow}
         title={index.hero.title}
         subtitle={index.hero.subtitle}
         margin="none"
         size="display"
         align="left"
         padding="xl"
-        hasSocialMedia
         cta={{
           label: index.hero.cta.label,
           href: index.hero.cta.href,
           variant: "primary",
         }}
       />
+
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4 w-full max-w-3xl mx-auto">
+        {index.hero.cta_buttons.map((button) => (
+          <a
+            href={button.href}
+            target="_blank"
+            rel="noopener noreferrer"
+            class="flex items-center justify-center gap-2 bg-[var(--color-gray-10)] border-2 border-[var(--color-brand-deep-blue)] text-[var(--color-brand-deep-blue)] px-6 py-3 rounded-lg ty-sm font-bold hover:bg-[var(--color-brand-deep-blue)] hover:text-white transition-all whitespace-nowrap"
+          >
+            {button.label}
+          </a>
+        ))}
+      </div>
     </div>
-       <FlexStack direction="col" align="center" slot="bottom" align="center">
+
+    <FlexStack direction="col" align="center" slot="bottom">
       <BadgeContainer options={stats} />
     </FlexStack>
-   
   </Section>
 
   <Section
@@ -124,10 +135,10 @@ const stats: Option[] = frankencoinInfo
     <FeaturesContainer features={index.core_features.features} />
     <div class="flex justify-center mt-12">
       <a
-        href="/use-cases"
+        href={index.core_features.more_link.href}
         class="w-full flex items-center justify-center gap-2 bg-[var(--color-brand-deep-blue)] text-white px-6 py-3 rounded-lg ty-regular font-bold hover:bg-[var(--color-brand-swiss)] transition-colors"
       >
-        <span>See more use-cases</span>
+        <span>{index.core_features.more_link.label}</span>
         <img src="images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3 brightness-0 invert" />
       </a>
     </div>

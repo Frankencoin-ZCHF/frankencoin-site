@@ -1,183 +1,98 @@
 ---
 import SocialLinksBar from "../SocialLinksBar.astro";
+import footerData from "../../content/shared/footer.json";
 
 const year = new Date().getFullYear();
+const { footer } = footerData;
+const copyrightText = footer.copyright.replace("{year}", year.toString());
+
+interface Link {
+  label: string;
+  href: string;
+  external?: boolean;
+}
+
+interface Section {
+  title: string;
+  links: Link[];
+}
+
+interface Column {
+  title: string;
+  links: Link[];
+  sections?: Section[];
+}
 ---
 
 <footer
   class="w-full bottom-0 bg-[var(--color-brand-anthracite)] border-t border-[var(--color-neutral-700)]"
 >
-  <div
-    class="mx-auto max-w-6xl px-[var(--spacing-l)] py-12"
-  >
+  <div class="mx-auto max-w-6xl px-[var(--spacing-l)] py-12">
     <!-- 4 Column Layout -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
-      <!-- Column 1: About -->
-      <div class="flex flex-col gap-4">
-        <h3 class="text-[var(--color-white)] text-[var(--font-size-base)] font-semibold">
-          About
-        </h3>
-        <nav class="flex flex-col gap-3">
-          <a
-            href="/what-is-frankencoin"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            What is Frankencoin
-          </a>
-          <a
-            href="/use-cases"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Use Cases
-          </a>
-          <a
-            href="/ecosystem"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Ecosystem
-          </a>
-        </nav>
-      </div>
+      {
+        footer.columns.map((column: Column) => (
+          <div class="flex flex-col gap-4">
+            <h3
+              style="color: var(--color-white);"
+              class="text-[var(--font-size-base)] font-semibold"
+            >
+              {column.title}
+            </h3>
+            <nav class="flex flex-col gap-3">
+              {column.links.map((link: Link) => (
+                <a
+                  href={link.href}
+                  {...(link.external
+                    ? { target: "_blank", rel: "noopener noreferrer" }
+                    : {})}
+                  style="color: var(--color-white);"
+                  class="text-[var(--font-size-sm)] transition-opacity hover:opacity-70"
+                >
+                  {link.label}
+                </a>
+              ))}
+            </nav>
 
-      <!-- Column 2: Token -->
-      <div class="flex flex-col gap-4">
-        <h3 class="text-[var(--color-white)] text-[var(--font-size-base)] font-semibold">
-          Token
-        </h3>
-        <nav class="flex flex-col gap-3">
-          <a
-            href="/token"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Token Info
-          </a>
-          <a
-            href="/fps"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            FPS
-          </a>
-          <a
-            href="https://defillama.com/protocol/frankencoin"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            DeFiLlama
-          </a>
-          <a
-            href="https://www.coingecko.com/en/coins/frankencoin"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            CoinGecko
-          </a>
-        </nav>
-      </div>
-
-      <!-- Column 3: Developers -->
-      <div class="flex flex-col gap-4">
-        <h3 class="text-[var(--color-white)] text-[var(--font-size-base)] font-semibold">
-          Developers
-        </h3>
-        <nav class="flex flex-col gap-3">
-          <a
-            href="https://docs.frankencoin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Documentation
-          </a>
-          <a
-            href="https://api.frankencoin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            API
-          </a>
-          <a
-            href="https://app.frankencoin.com/thesis-frankencoin.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Thesis Paper
-          </a>
-          <a
-            href="https://github.com/Frankencoin-ZCHF"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            GitHub
-          </a>
-        </nav>
-      </div>
-
-      <!-- Column 4: Community & Brand -->
-      <div class="flex flex-col gap-4">
-        <h3 class="text-[var(--color-white)] text-[var(--font-size-base)] font-semibold">
-          Community
-        </h3>
-        <nav class="flex flex-col gap-3">
-          <a
-            href="https://x.com/frankencoinzchf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            X (Twitter)
-          </a>
-          <a
-            href="https://t.me/frankencoinzchf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Telegram
-          </a>
-          <a
-            href="https://app.frankencoin.com"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Web App
-          </a>
-        </nav>
-
-        <h3 class="text-[var(--color-white)] text-[var(--font-size-base)] font-semibold mt-4">
-          Brand Assets
-        </h3>
-        <nav class="flex flex-col gap-3">
-          <a
-            href="https://github.com/Frankencoin-ZCHF/www/tree/main/media_kit"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Logo Assets
-          </a>
-          <a
-            href="https://github.com/Frankencoin-ZCHF/www/blob/main/media_kit/frankencoin_brand_guidelines.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="text-[var(--color-neutral-100)] hover:text-[var(--color-white)] text-[var(--font-size-sm)] transition-colors"
-          >
-            Brand Guidelines
-          </a>
-        </nav>
-      </div>
+            {column.sections?.map((section: Section) => (
+              <>
+                <h3
+                  style="color: var(--color-white);"
+                  class="text-[var(--font-size-base)] font-semibold mt-4"
+                >
+                  {section.title}
+                </h3>
+                <nav class="flex flex-col gap-3">
+                  {section.links.map((link: Link) => (
+                    <a
+                      href={link.href}
+                      {...(link.external
+                        ? { target: "_blank", rel: "noopener noreferrer" }
+                        : {})}
+                      style="color: var(--color-white);"
+                      class="text-[var(--font-size-sm)] transition-opacity hover:opacity-70"
+                    >
+                      {link.label}
+                    </a>
+                  ))}
+                </nav>
+              </>
+            ))}
+          </div>
+        ))
+      }
     </div>
 
     <!-- Social icons bar and copyright -->
-    <div class="flex flex-col items-center gap-6 pt-8 border-t border-[var(--color-neutral-700)]">
+    <div
+      class="flex flex-col items-center gap-6 pt-8 border-t border-[var(--color-neutral-700)]"
+    >
       <SocialLinksBar theme={"light"} />
-      <p class="text-[var(--color-neutral-400)] text-[var(--font-size-xs)]">
-        © {year} Frankencoin Association. All rights reserved.
+      <p
+        style="color: var(--color-neutral-400);"
+        class="text-[var(--font-size-xs)]"
+      >
+        {copyrightText}
       </p>
     </div>
   </div>
