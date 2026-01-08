@@ -14,11 +14,11 @@
 		},
 		"cta_buttons": [
 			{
-				"label": "Get Frankencoin (ZCHF) with Fiat",
+				"label": "Get Frankencoins with Fiat",
 				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
 			},
 			{
-				"label": "Get Frankencoin (ZCHF) with Crypto",
+				"label": "Get Frankencoins with Crypto",
 				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
 			}
 		]
@@ -474,52 +474,88 @@
 	"how_it_works": {
 		"title": "A Decentralized Alternative to Traditional Banking",
 		"subtitle": "Frankencoin operates like a transparent, rules-based financial infrastructure",
+		"eyebrow":"How it works",
 		"steps": [
 			{
-				"number": "1",
-				"title": "Collateral is deposited",
+				"title": "Mint",
+				"image": "images/Grafik_Mint.svg",
 				"description": [
 					{
-						"step": "",
-						"content": "To create Frankencoins, users deposit crypto assets worth more than the ZCHF amount they want to mint"
+						"step": "1. Mint",
+						"content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
+					},
+					{
+						"step": "2. Fees.",
+						"content": "Anyone can deposit a suitable collateral and mint Frankencoins. These Frankencoins have to be returned before you can get your collateral back."
 					}
-				],
-				"image": "images/Grafik_Mint.svg"
+				]
 			},
 			{
-				"number": "2",
-				"title": "ZCHF is minted",
+				"title": "Sell",
+				"image": "images/Grafik_Sell.svg",
 				"description": [
 					{
-						"step": "",
-						"content": "New Frankencoins come into circulation—fully backed by the deposited collateral"
+						"step": "3. Sell.",
+						"content": "The minter sells the Frankencoins for 1 CHF each in the market."
 					}
-				],
-				"image": "images/Grafik_Sell.svg"
+				]
 			},
 			{
-				"number": "3",
-				"title": "Used in the real economy",
+				"title": "Spend",
+				"image": "images/Grafik_Spend.svg",
 				"description": [
 					{
-						"step": "",
-						"content": "ZCHF is used for payments, savings, treasury management, and financial applications"
+						"step": "4. Buy.",
+						"content": "Someone else buys some Frankencoins from Uniswap or other market places."
+					},
+					{
+						"step": "5. Pay.",
+						"content": "Frankencoins can be used to make Swiss franc payments in DeFi or elsewhere."
+					},
+					{
+						"step": "6. Sell.",
+						"content": "Recipients can sell their Frankencoins again on the market."
 					}
-				],
-				"image": "images/Grafik_Spend.svg"
+				]
 			},
 			{
-				"number": "4",
-				"title": "Stability is maintained",
+				"title": "Save",
+				"image": "images/Grafik_Save.svg",
 				"description": [
 					{
-						"step": "",
-						"content": "If collateral values drop, automated mechanisms ensure the system remains over-collateralized"
+						"step": "7. Buy.",
+						"content": "Someone who is interested in saving Swiss francs might buy some Frankencoins."
+					},
+					{
+						"step": "8. Save.",
+						"content": "And then commit to lock them up in the system for a chosen period of time."
+					},
+					{
+						"step": "9. Interest.",
+						"content": "The saver receives interest on their Frankencoins."
 					}
-				],
-				"image": "images/Grafik_Save.svg"
+				]
+			},
+			{
+				"title": "Invest",
+				"image": "images/Grafik_Invest.svg",
+				"description": [
+					{
+						"step": "10. Buy FPS.",
+						"content": "Investors might want to buy FPS in order to speculate on the success of the whole system."
+					},
+					{
+						"step": "11. Add capital.",
+						"content": "When adding capital to the equity reserve pool, you get freshly minted Frankencoin Pool Shares (FPS) in return. The amount of FPS is calculated using a bonding curve with the invariant 'Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool', minus 0.3% issuance fee."
+					},
+					{
+						"step": "12. FPS appreciation or depreciation.",
+						"content": "After a minimum holding duration of three months, the FPS can be returned to the system at the current price, minus 0.3% redemption fee."
+					}
+				]
 			}
-		],
+		]
+,
 		"cta": {
 			"label": "Read the detailed documentation",
 			"href": "https://docs.frankencoin.com/"
