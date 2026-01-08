@@ -1,5 +1,6 @@
 ---
 import { fetchOgData } from "../../utils/fetchOgData";
+import manualMetadata from "../../content/shared/article-metadata.json";
 
 interface Props {
   articles: string[];
@@ -8,10 +9,14 @@ interface Props {
 const { articles } = Astro.props;
 
 // Fetch Open Graph data for all articles at build time
+// Manual metadata can override specific fields if provided
 const articlesWithMetadata = await Promise.all(
   articles.map(async (url) => {
+    // Fetch Open Graph data by default
+    console.log(`Fetching Open Graph data for: ${url}`);
     const ogData = await fetchOgData(url);
-    return ogData || {
+
+    const defaultData = ogData || {
       title: "Article",
       description: "",
       image: "",
@@ -19,6 +24,22 @@ const articlesWithMetadata = await Promise.all(
       url,
       publishedDate: "",
     };
+
+    // Check if manual override exists for this URL
+    if (manualMetadata.manual[url]) {
+      console.log(`Applying manual overrides for: ${url}`);
+      const manual = manualMetadata.manual[url];
+
+      // Merge: manual metadata overrides OG data for any fields that are provided
+      return {
+        ...defaultData,
+        ...Object.fromEntries(
+          Object.entries(manual).filter(([_, value]) => value !== "" && value !== null && value !== undefined)
+        )
+      };
+    }
+
+    return defaultData;
   })
 );
 
@@ -42,18 +63,43 @@ const sortedArticles = articlesWithMetadata.sort((a, b) => {
     currentIndex: 0,
     articles: [],
     itemsPerPage: 3,
+    isTransitioning: false,
+    enableTransition: true,
+    translateX: 0,
     get totalPages() {
       return Math.ceil(this.articles.length / this.itemsPerPage);
     },
-    get visibleArticles() {
-      const start = this.currentIndex * this.itemsPerPage;
+    getPageArticles(pageIndex) {
+      const start = pageIndex * this.itemsPerPage;
       return this.articles.slice(start, start + this.itemsPerPage);
     },
     next() {
-      this.currentIndex = (this.currentIndex + 1) % this.totalPages;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+      this.enableTransition = true;
+      this.translateX = -100;
+      setTimeout(() => {
+        this.enableTransition = false;
+        this.currentIndex = (this.currentIndex + 1) % this.totalPages;
+        this.translateX = 0;
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 50);
+      }, 700);
     },
     prev() {
-      this.currentIndex = (this.currentIndex - 1 + this.totalPages) % this.totalPages;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+      this.enableTransition = true;
+      this.translateX = 100;
+      setTimeout(() => {
+        this.enableTransition = false;
+        this.currentIndex = (this.currentIndex - 1 + this.totalPages) % this.totalPages;
+        this.translateX = 0;
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 50);
+      }, 700);
     },
     init() {
       this.articles = JSON.parse(this.$el.dataset.articles);
@@ -64,17 +110,21 @@ const sortedArticles = articlesWithMetadata.sort((a, b) => {
   class="relative"
 >
   <!-- Carousel Container -->
-  <div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <template x-for="article in visibleArticles" :key="article.url">
+  <div class="relative pt-2 pb-20">
+    <div
+      class="flex overflow-hidden"
+      :class="{ 'transition-transform duration-700 ease-in-out': enableTransition }"
+      :style="`transform: translateX(${translateX}%)`"
+    >
+      <!-- Current page -->
+      <div class="w-full flex-shrink-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="article in getPageArticles(currentIndex)" :key="article.url">
         <a
           :href="article.url"
           target="_blank"
           rel="noopener noreferrer"
           class="block bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col justify-between h-full"
-          x-transition:enter="transition ease-out duration-500"
-          x-transition:enter-start="opacity-0 transform scale-95"
-          x-transition:enter-end="opacity-100 transform scale-100"
         >
           <!-- Image if available -->
           <div class="mb-4" x-data="{ imageError: false }">
@@ -95,28 +145,113 @@ const sortedArticles = articlesWithMetadata.sort((a, b) => {
             </template>
           </div>
 
-          <div class="flex-1 flex flex-col justify-between">
-            <div>
-              <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
-                <span x-text="article.siteName"></span>
-                <template x-if="article.publishedDate">
-                  <span>
-                    <span> • </span>
-                    <span x-text="article.publishedDate"></span>
-                  </span>
-                </template>
-              </p>
-              <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="article.title"></h3>
-              <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="article.description"></p>
-            </div>
-
-            <div class="flex items-center gap-2 text-[var(--color-brand-deep-blue)] ty-regular font-bold mt-4">
-              <span>Read more</span>
-              <img src="images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
-            </div>
+          <div class="flex-1 flex flex-col">
+            <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
+              <span x-text="article.siteName"></span>
+              <template x-if="article.publishedDate">
+                <span>
+                  <span> • </span>
+                  <span x-text="article.publishedDate"></span>
+                </span>
+              </template>
+            </p>
+            <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="article.title"></h3>
+            <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="article.description"></p>
           </div>
         </a>
-      </template>
+          </template>
+        </div>
+      </div>
+
+      <!-- Next page (for left slide) -->
+      <div class="w-full flex-shrink-0" x-show="isTransitioning && translateX < 0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="article in getPageArticles((currentIndex + 1) % totalPages)" :key="article.url">
+            <a
+              :href="article.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col justify-between h-full"
+            >
+              <div class="mb-4" x-data="{ imageError: false }">
+                <template x-if="article.image && !imageError">
+                  <img
+                    :src="article.image"
+                    :alt="article.title"
+                    class="w-full h-48 object-cover rounded-lg"
+                    @error="imageError = true"
+                  />
+                </template>
+                <template x-if="!article.image || imageError">
+                  <div class="w-full h-48 bg-gradient-to-br from-[var(--color-brand-deep-blue)] to-[var(--color-brand-swiss)] rounded-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                </template>
+              </div>
+              <div class="flex-1 flex flex-col">
+                <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
+                  <span x-text="article.siteName"></span>
+                  <template x-if="article.publishedDate">
+                    <span>
+                      <span> • </span>
+                      <span x-text="article.publishedDate"></span>
+                    </span>
+                  </template>
+                </p>
+                <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="article.title"></h3>
+                <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="article.description"></p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+
+      <!-- Previous page (for right slide) - positioned before current -->
+      <div class="w-full flex-shrink-0 -order-1" x-show="isTransitioning && translateX > 0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="article in getPageArticles((currentIndex - 1 + totalPages) % totalPages)" :key="article.url">
+            <a
+              :href="article.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-white rounded-lg shadow-md hover:shadow-lg transition p-6 flex flex-col justify-between h-full"
+            >
+              <div class="mb-4" x-data="{ imageError: false }">
+                <template x-if="article.image && !imageError">
+                  <img
+                    :src="article.image"
+                    :alt="article.title"
+                    class="w-full h-48 object-cover rounded-lg"
+                    @error="imageError = true"
+                  />
+                </template>
+                <template x-if="!article.image || imageError">
+                  <div class="w-full h-48 bg-gradient-to-br from-[var(--color-brand-deep-blue)] to-[var(--color-brand-swiss)] rounded-lg flex items-center justify-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-16 w-16 text-white opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
+                    </svg>
+                  </div>
+                </template>
+              </div>
+              <div class="flex-1 flex flex-col">
+                <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
+                  <span x-text="article.siteName"></span>
+                  <template x-if="article.publishedDate">
+                    <span>
+                      <span> • </span>
+                      <span x-text="article.publishedDate"></span>
+                    </span>
+                  </template>
+                </p>
+                <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="article.title"></h3>
+                <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="article.description"></p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
     </div>
   </div>
 

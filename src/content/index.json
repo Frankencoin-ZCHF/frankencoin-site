@@ -6,8 +6,8 @@
 		},
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
-		"title": "Swiss. Digital. Decentralized.",
-		"subtitle": "Frankencoin (ZCHF) is a stablecoin and the Swiss franc of the digital world — replicating the value of the CHF 1:1 on-chain.",
+		"title": "Digital. Decentralized. Swiss.",
+		"subtitle": "Frankencoin (ZCHF) is the largest and most successful Swiss franc stablecoin.",
 		"cta": {
 			"label": "Launch Web App",
 			"href": "https://app.frankencoin.com/"
@@ -182,7 +182,7 @@
 	"what_is": {
 		"eyebrow": "Introduction",
 		"title": "What is Frankencoin?",
-		"subtitle": "A stablecoin that tracks the value of the Swiss franc, fully compatible with any on-chain finance.",
+		"subtitle": "A stablecoin that tracks the value of the Swiss franc, natively compatible with on-chain finance.",
 		"explanation": [
 			{
 				"title": "Swiss Franc Stablecoin",
@@ -225,7 +225,7 @@
 			},
 			{
 				"title": "Borrow",
-				"image": "images/Icon-Mint.svg",
+				"image": "images/Icon-Borrow.svg",
 				"description": "Borrow Frankencoin by depositing crypto assets as collateral. Access ZCHF liquidity while maintaining exposure to your digital assets.",
 				"examples": [
 					"Mint ZCHF with crypto collateral",
@@ -707,7 +707,13 @@
 			"https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/",
 			"https://www.leaderdigital.ch/specials/investsg-2025-mit-energie-nachhaltigkeit-621/zwischen-bau-immobilien-und-fintech-14153.html",
 			"https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/",
-			"https://www.20min.ch/story/tether-und-co-werden-stablecoins-die-naechste-finanzkrise-ausloesen-103387106"
+			"https://www.20min.ch/story/tether-und-co-werden-stablecoins-die-naechste-finanzkrise-ausloesen-103387106",
+			"https://www.nzz.ch/wirtschaft/kunden-von-spar-schweiz-koennen-bereits-in-ueber-100-laeden-mit-kryptowaehrungen-bezahlen-ld.1898731",
+			"https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable",
+			"https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine",
+			"https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association",
+			"https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin"
+
 		]
 	},
 	"videos": {

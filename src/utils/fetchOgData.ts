@@ -9,7 +9,22 @@ interface OgData {
 
 export async function fetchOgData(url: string): Promise<OgData | null> {
   try {
-    const response = await fetch(url);
+    const response = await fetch(url, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36',
+        'Accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,*/*;q=0.8',
+        'Accept-Language': 'en-US,en;q=0.9,de;q=0.8,fr;q=0.7',
+        'Accept-Encoding': 'gzip, deflate, br',
+        'DNT': '1',
+        'Connection': 'keep-alive',
+        'Upgrade-Insecure-Requests': '1',
+        'Sec-Fetch-Dest': 'document',
+        'Sec-Fetch-Mode': 'navigate',
+        'Sec-Fetch-Site': 'none',
+        'Cache-Control': 'max-age=0'
+      }
+    });
+
     if (!response.ok) {
       console.error(`Failed to fetch ${url}: ${response.status}`);
       return null;
@@ -17,28 +32,82 @@ export async function fetchOgData(url: string): Promise<OgData | null> {
 
     const html = await response.text();
 
-    // Extract Open Graph tags
-    const ogTitle = html.match(/<meta[^>]*property=["']og:title["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
-    const ogDescription = html.match(/<meta[^>]*property=["']og:description["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
-    const ogImage = html.match(/<meta[^>]*property=["']og:image["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
-    const ogSiteName = html.match(/<meta[^>]*property=["']og:site_name["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
+    // Helper to extract meta content from various formats
+    const getMeta = (patterns: string[]): string => {
+      for (const pattern of patterns) {
+        // Try property="..." content="..."
+        let match = html.match(new RegExp(`<meta\\s+property=["']${pattern}["']\\s+content=["']([^"']*?)["']`, 'i'));
+        if (match?.[1]) return match[1];
 
-    // Extract publication date from various meta tags
-    const ogPublishedTime = html.match(/<meta[^>]*property=["'](?:article:published_time|og:published_time)["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
-    const datePublished = html.match(/<meta[^>]*(?:name|property)=["'](?:datePublished|publishdate|date)["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
+        // Try content="..." property="..."
+        match = html.match(new RegExp(`<meta\\s+content=["']([^"']*?)["']\\s+property=["']${pattern}["']`, 'i'));
+        if (match?.[1]) return match[1];
 
-    // Fallback to regular title if og:title not found
-    const title = ogTitle || html.match(/<title[^>]*>([^<]*)<\/title>/i)?.[1] || '';
+        // Try name="..." content="..."
+        match = html.match(new RegExp(`<meta\\s+name=["']${pattern}["']\\s+content=["']([^"']*?)["']`, 'i'));
+        if (match?.[1]) return match[1];
 
-    // Fallback to meta description if og:description not found
-    const description = ogDescription || html.match(/<meta[^>]*name=["']description["'][^>]*content=["']([^"']*)["']/i)?.[1] || '';
+        // Try content="..." name="..."
+        match = html.match(new RegExp(`<meta\\s+content=["']([^"']*?)["']\\s+name=["']${pattern}["']`, 'i'));
+        if (match?.[1]) return match[1];
+      }
+      return '';
+    };
 
-    // Use the first available date, format it nicely
-    const rawDate = ogPublishedTime || datePublished;
-    let formattedDate = '';
-    if (rawDate) {
+    // Extract Open Graph and Twitter Card tags
+    const ogTitle = getMeta(['og:title', 'twitter:title']);
+    const ogDescription = getMeta(['og:description', 'twitter:description', 'description']);
+    const ogImage = getMeta(['og:image', 'twitter:image']);
+    const ogSiteName = getMeta(['og:site_name', 'twitter:site', 'application-name']);
+    const ogPublishedTime = getMeta([
+      'article:published_time',
+      'og:published_time',
+      'article:published',
+      'published_time',
+      'publication_date',
+      'datePublished',
+      'publishdate',
+      'pubdate',
+      'date',
+      'DC.date',
+      'DC.date.issued',
+      'sailthru.date',
+      'article.published',
+      'bt:pubdate'
+    ]);
+
+    // Fallback to title tag
+    const titleMatch = html.match(/<title[^>]*>([^<]+)<\/title>/i);
+    const title = ogTitle || (titleMatch?.[1] || '');
+
+    // Make image URL absolute if relative
+    let imageUrl = ogImage;
+    if (imageUrl && !imageUrl.startsWith('http')) {
       try {
-        const date = new Date(rawDate);
+        const baseUrl = new URL(url);
+        imageUrl = new URL(imageUrl, baseUrl.origin).href;
+      } catch (e) {
+        imageUrl = '';
+      }
+    }
+
+    // Generate site name from hostname if not found
+    let siteName = ogSiteName;
+    if (!siteName) {
+      try {
+        const hostname = new URL(url).hostname;
+        siteName = hostname.replace('www.', '').split('.')[0];
+        siteName = siteName.charAt(0).toUpperCase() + siteName.slice(1);
+      } catch (e) {
+        siteName = '';
+      }
+    }
+
+    // Format date
+    let formattedDate = '';
+    if (ogPublishedTime) {
+      try {
+        const date = new Date(ogPublishedTime);
         if (!isNaN(date.getTime())) {
           formattedDate = date.toLocaleDateString('en-US', {
             year: 'numeric',
@@ -47,15 +116,15 @@ export async function fetchOgData(url: string): Promise<OgData | null> {
           });
         }
       } catch (e) {
-        console.error('Error parsing date:', e);
+        // Ignore date parsing errors
       }
     }
 
     return {
       title: title.trim(),
-      description: description.trim(),
-      image: ogImage.trim(),
-      siteName: ogSiteName.trim(),
+      description: ogDescription.trim(),
+      image: imageUrl.trim(),
+      siteName: siteName.trim(),
       url,
       publishedDate: formattedDate,
     };

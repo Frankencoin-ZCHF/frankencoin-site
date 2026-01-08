@@ -43,18 +43,43 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
     currentIndex: 0,
     videos: [],
     itemsPerPage: 3,
+    isTransitioning: false,
+    enableTransition: true,
+    translateX: 0,
     get totalPages() {
       return Math.ceil(this.videos.length / this.itemsPerPage);
     },
-    get visibleVideos() {
-      const start = this.currentIndex * this.itemsPerPage;
+    getPageVideos(pageIndex) {
+      const start = pageIndex * this.itemsPerPage;
       return this.videos.slice(start, start + this.itemsPerPage);
     },
     next() {
-      this.currentIndex = (this.currentIndex + 1) % this.totalPages;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+      this.enableTransition = true;
+      this.translateX = -100;
+      setTimeout(() => {
+        this.enableTransition = false;
+        this.currentIndex = (this.currentIndex + 1) % this.totalPages;
+        this.translateX = 0;
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 50);
+      }, 700);
     },
     prev() {
-      this.currentIndex = (this.currentIndex - 1 + this.totalPages) % this.totalPages;
+      if (this.isTransitioning) return;
+      this.isTransitioning = true;
+      this.enableTransition = true;
+      this.translateX = 100;
+      setTimeout(() => {
+        this.enableTransition = false;
+        this.currentIndex = (this.currentIndex - 1 + this.totalPages) % this.totalPages;
+        this.translateX = 0;
+        setTimeout(() => {
+          this.isTransitioning = false;
+        }, 50);
+      }, 700);
     },
     init() {
       this.videos = JSON.parse(this.$el.dataset.videos);
@@ -65,17 +90,21 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
   class="relative"
 >
   <!-- Carousel Container -->
-  <div>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      <template x-for="video in visibleVideos" :key="video.url">
+  <div class="relative pt-2 pb-20">
+    <div
+      class="flex overflow-hidden"
+      :class="{ 'transition-transform duration-700 ease-in-out': enableTransition }"
+      :style="`transform: translateX(${translateX}%)`"
+    >
+      <!-- Current page -->
+      <div class="w-full flex-shrink-0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="video in getPageVideos(currentIndex)" :key="video.url">
         <a
           :href="video.url"
           target="_blank"
           rel="noopener noreferrer"
           class="block bg-white rounded-lg shadow-md hover:shadow-lg transition h-full flex flex-col"
-          x-transition:enter="transition ease-out duration-500"
-          x-transition:enter-start="opacity-0 transform scale-95"
-          x-transition:enter-end="opacity-100 transform scale-100"
         >
           <!-- Video Thumbnail -->
           <div class="relative overflow-hidden rounded-t-lg">
@@ -110,7 +139,95 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
             <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="video.description"></p>
           </div>
         </a>
-      </template>
+          </template>
+        </div>
+      </div>
+
+      <!-- Next page (for left slide) -->
+      <div class="w-full flex-shrink-0" x-show="isTransitioning && translateX < 0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="video in getPageVideos((currentIndex + 1) % totalPages)" :key="video.url">
+            <a
+              :href="video.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-white rounded-lg shadow-md hover:shadow-lg transition h-full flex flex-col"
+            >
+              <div class="relative overflow-hidden rounded-t-lg">
+                <img
+                  :src="video.thumbnail"
+                  :alt="video.title"
+                  class="w-full aspect-video object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition flex items-center justify-center opacity-0 hover:opacity-100">
+                  <div class="bg-red-600 rounded-full p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
+                  <span x-text="video.author"></span>
+                  <template x-if="video.publishedDate">
+                    <span>
+                      <span> • </span>
+                      <span x-text="video.publishedDate"></span>
+                    </span>
+                  </template>
+                </p>
+                <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="video.title"></h3>
+                <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="video.description"></p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
+
+      <!-- Previous page (for right slide) - positioned before current -->
+      <div class="w-full flex-shrink-0 -order-1" x-show="isTransitioning && translateX > 0">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <template x-for="video in getPageVideos((currentIndex - 1 + totalPages) % totalPages)" :key="video.url">
+            <a
+              :href="video.url"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="block bg-white rounded-lg shadow-md hover:shadow-lg transition h-full flex flex-col"
+            >
+              <div class="relative overflow-hidden rounded-t-lg">
+                <img
+                  :src="video.thumbnail"
+                  :alt="video.title"
+                  class="w-full aspect-video object-cover"
+                  loading="lazy"
+                />
+                <div class="absolute inset-0 bg-black bg-opacity-0 hover:bg-opacity-30 transition flex items-center justify-center opacity-0 hover:opacity-100">
+                  <div class="bg-red-600 rounded-full p-3">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 text-white" viewBox="0 0 24 24" fill="currentColor">
+                      <path d="M8 5v14l11-7z"/>
+                    </svg>
+                  </div>
+                </div>
+              </div>
+              <div class="p-6 flex-1 flex flex-col">
+                <p class="ty-small text-[var(--color-brand-titan-gray)] mb-2">
+                  <span x-text="video.author"></span>
+                  <template x-if="video.publishedDate">
+                    <span>
+                      <span> • </span>
+                      <span x-text="video.publishedDate"></span>
+                    </span>
+                  </template>
+                </p>
+                <h3 class="ty-big-2 mb-3 line-clamp-2" x-text="video.title"></h3>
+                <p class="ty-body-2 text-[var(--color-brand-titan-gray)] line-clamp-3" x-text="video.description"></p>
+              </div>
+            </a>
+          </template>
+        </div>
+      </div>
     </div>
   </div>
 
