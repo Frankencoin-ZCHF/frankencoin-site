@@ -786,24 +786,5 @@
 				]
 			}
 		]
-	},
-	"brand_assets": {
-		"title": "Brand Assets",
-		"assets": [
-			{
-				"description": "Check out our Github repository for brand assets, including Frankencoin and FPS logos.",
-				"cta": {
-					"label": "Logo Assets",
-					"href": "https://github.com/Frankencoin-ZCHF/www/tree/main/media_kit"
-				}
-			},
-			{
-				"description": "Download our Brand Guidelines to learn more about how to use the logo, as well as important details such as brand colors and typography.",
-				"cta": {
-					"label": "Download Brand Guidelines",
-					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/media_kit/frankencoin_brand_guidelines.pdf"
-				}
-			}
-		]
 	}
 }
