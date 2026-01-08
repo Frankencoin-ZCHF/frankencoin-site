@@ -7,19 +7,19 @@
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
 		"title": "Digital. Decentralized. Swiss.",
-		"subtitle": "Frankencoin (ZCHF) is the largest and most successful Swiss franc stablecoin.",
+		"subtitle": "Frankencoin is the largest and most successful Swiss franc stablecoin.",
 		"cta": {
 			"label": "Launch Web App",
 			"href": "https://app.frankencoin.com/"
 		},
 		"cta_buttons": [
 			{
-				"label": "Get ZCHF with Fiat",
+				"label": "Get Frankencoin (ZCHF) with Fiat",
 				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
 			},
 			{
-				"label": "Get ZCHF with Crypto",
-				"href": "https://swap.cow.fi/#/100/swap/USDC/ZCHF"
+				"label": "Get Frankencoin (ZCHF) with Crypto",
+				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
 			}
 		]
 	},
@@ -218,8 +218,8 @@
 						"href": "https://www.mtpelerin.com/?bdc=ZCHF"
 					},
 					{
-						"label": "Buy ZCHF with USDC",
-						"href": "https://swap.cow.fi/#/100/swap/USDC/ZCHF"
+						"label": "Buy ZCHF with Crypto",
+						"href": "https://swap.cow.fi/#/11/swap/USDT/ZCHF"
 					}
 				]
 			},
@@ -256,7 +256,7 @@
 			{
 				"title": "Build & Integrate",
 				"image": "images/Icon-Mint.svg",
-				"description": "Developers and businesses can integrate Frankencoin as a programmable Swiss franc layer for applications and financial services. Use crypto collateral to access ZCHF liquidity.",
+				"description": "Developers and businesses can integrate Frankencoin as a programmable Swiss franc layer for applications and financial services.",
 				"examples": [
 					"Payroll systems",
 					"Trading platforms",
