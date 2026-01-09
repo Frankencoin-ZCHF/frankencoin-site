@@ -1,5 +1,6 @@
 ---
 import { fetchYouTubeData } from "../../utils/fetchYouTubeData";
+import { getLanguageFromURL, loadContent } from "../../utils/i18n";
 
 interface Props {
   videos: string[];
@@ -7,11 +8,17 @@ interface Props {
 
 const { videos } = Astro.props;
 
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const media = await loadContent("media", currentLang);
+
 // Fetch YouTube data for all videos at build time
+// Manual metadata can override specific fields if provided
 const videosWithMetadata = await Promise.all(
   videos.map(async (url) => {
+    // Try to fetch YouTube data
     const videoData = await fetchYouTubeData(url);
-    return videoData || {
+
+    const defaultData = videoData || {
       title: "Video",
       description: "",
       thumbnail: "",
@@ -20,6 +27,22 @@ const videosWithMetadata = await Promise.all(
       publishedDate: "",
       videoId: "",
     };
+
+    // Check if manual override exists for this URL
+    if (media.videoMetadata && media.videoMetadata[url]) {
+      console.log(`Applying manual video metadata for: ${url}`);
+      const manual = media.videoMetadata[url];
+
+      // Merge: manual metadata overrides fetched data for any fields that are provided
+      return {
+        ...defaultData,
+        ...Object.fromEntries(
+          Object.entries(manual).filter(([_, value]) => value !== "" && value !== null && value !== undefined)
+        )
+      };
+    }
+
+    return defaultData;
   })
 );
 

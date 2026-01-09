@@ -76,5 +76,37 @@
 		"https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/": {
 			"publishedDate": "Jun 17, 2024"
 		}
+	},
+	"videoMetadata": {
+		"https://www.youtube.com/watch?v=05lqIc8nvWY": {
+			"title": "Frankencoin 2025 Recap Interview - with Managing Director Johannes Kern",
+			"description": "Earlier this December, DAdvisoor sat down with Johannes Kern, the Managing Director of the Frankencoin Association, to talk about Frankencoin, the advancements made in 2025, and what's on the horizon for 2026.",
+			"author": "Frankencoin",
+			"publishedDate": "Dec 31, 2025"
+		},
+		"https://www.youtube.com/watch?v=uvpNgTYQUXc": {
+			"title": "Onchain FX: Opportunities & Challenges for the next phase of DeFi Stablecoins - Panel",
+			"description": "This panel explores the evolution of onchain foreign exchange and stablecoins beyond the US dollar. The discussion dives deep into how local stablecoins are reshaping global finance.",
+			"author": "Stable Summit",
+			"publishedDate": "Dec 1, 2025"
+		},
+		"https://www.youtube.com/watch?v=SKBjuVndCZ8": {
+			"title": "A Real Stable Stablecoin: The Cultural Roots of a Sound Currency",
+			"description": "\"The Swiss franc dodged every shady financial trend for 150 years.\" - Johannes Kern, Managing Director, Frankencoin. Frankencoin is built on the Swiss franc, combining cultural heritage with modern blockchain technology.",
+			"author": "Stable Summit",
+			"publishedDate": "Jul 15, 2025"
+		},
+		"https://youtu.be/YF_a7A7lwoQ": {
+			"title": "In welche Währung muss man jetzt \"Krypto\"-Gewinne umschichten (Interview mit Johannes Kern)",
+			"description": "Interview with Johannes Kern about cryptocurrency gains and the importance of stable currencies in the current market environment.",
+			"author": "Marc Steiner Investment Academy",
+			"publishedDate": "Jul 2, 2025"
+		},
+		"https://www.youtube.com/watch?v=otCYU2AduGY": {
+			"title": "Bridging TradFi and DeFi: RWA-Backed Stables (Panel)",
+			"description": "Panel discussion featuring Jacob Laufer (M^0), Johannes Kern (Frankencoin Association), and Jennifer Senha exploring the intersection of traditional finance and DeFi through real-world asset-backed stablecoins.",
+			"author": "Stable Summit",
+			"publishedDate": "Mar 14, 2025"
+		}
 	}
 }
