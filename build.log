@@ -1,0 +1,149 @@
+
+> frankencoin-site@0.0.1 build
+> astro build
+
+[2m15:07:36[22m [34m[@astrojs/node][39m Enabling sessions with filesystem storage
+
+Auto-generating collections for folders in "src/content/" that are not defined as collections.
+This is deprecated, so you should define these collections yourself in "src/content.config.ts".
+The following collections have been auto-generated: [32mde[39m, [32men[39m, [32mfr[39m
+
+[2m15:07:36[22m [34m[content][39m Syncing content
+[33m[1m15:07:36[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\en"
+[33m[1m15:07:36[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\fr"
+[33m[1m15:07:36[22m [WARN] [glob-loader][39m No files found matching "**/*.md,!**/_*/**/*.md,!**/_*.md" in directory "src\content\de"
+[2m15:07:36[22m [34m[content][39m Synced content
+[2m15:07:36[22m [34m[types][39m Generated [2m66ms[22m
+[2m15:07:36[22m [34m[build][39m output: [34m"static"[39m
+[2m15:07:36[22m [34m[build][39m mode: [34m"server"[39m
+[2m15:07:36[22m [34m[build][39m directory: [34mC:\code\frankencoin-site\dist\[39m
+[2m15:07:36[22m [34m[build][39m adapter: [32m@astrojs/node[39m
+[2m15:07:36[22m [34m[build][39m Collecting build info...
+[2m15:07:36[22m [34m[build][39m [32m✓ Completed in 109ms.[39m
+[2m15:07:36[22m [34m[build][39m Building server entrypoints...
+[33m[1m15:07:37[22m [WARN] [vite][39m 
+../images/Vector-Compressify.io-1.webp referenced in ../images/Vector-Compressify.io-1.webp didn't resolve at build time, it will remain unchanged to be resolved at runtime
+[2m15:07:38[22m [34m[vite][39m [32m✓ built in 2.54s[39m
+[2m15:07:38[22m [34m[build][39m [32m✓ Completed in 2.59s.[39m
+
+[42m[30m building client (vite) [39m[49m
+[2m15:07:38[22m [34m[vite][39m transforming...
+[2m15:07:38[22m [34m[vite][39m [32m✓[39m 1 modules transformed.
+[2m15:07:39[22m [34m[vite][39m rendering chunks...
+[2m15:07:39[22m [34m[vite][39m [32m✓ built in 286ms[39m
+
+[42m[30m prerendering static routes [39m[49m
+[2m15:07:39[22m [32m▶[39m src/pages/ecosystem.astro
+[2m15:07:39[22m   [34m└─[39m [2m/ecosystem/index.html[22m [2m(+88ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/governance.astro
+[2m15:07:39[22m   [34m└─[39m [2m/governance/index.html[22m [2m(+193ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/token.astro
+[2m15:07:39[22m   [34m└─[39m [2m/token/index.html[22m [2m(+26ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/use-cases.astro
+[2m15:07:39[22m   [34m└─[39m [2m/use-cases/index.html[22m [2m(+15ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/what-is-frankencoin.astro
+[2m15:07:39[22m   [34m└─[39m [2m/what-is-frankencoin/index.html[22m [2m(+16ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/ecosystem.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/ecosystem/index.html[22m [2m(+30ms)[22m 
+[2m15:07:39[22m   [34m└─[39m [2m/fr/ecosystem/index.html[22m [2m(+30ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/governance.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/governance/index.html[22m [2m(+32ms)[22m 
+[2m15:07:39[22m   [34m└─[39m [2m/fr/governance/index.html[22m [2m(+30ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/token.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/token/index.html[22m [2m(+27ms)[22m 
+[2m15:07:39[22m   [34m└─[39m [2m/fr/token/index.html[22m [2m(+25ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/use-cases.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/use-cases/index.html[22m [2m(+22ms)[22m 
+[2m15:07:39[22m   [34m└─[39m [2m/fr/use-cases/index.html[22m [2m(+13ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/what-is-frankencoin.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/what-is-frankencoin/index.html[22m [2m(+22ms)[22m 
+[2m15:07:39[22m   [34m└─[39m [2m/fr/what-is-frankencoin/index.html[22m [2m(+14ms)[22m 
+[2m15:07:39[22m [32m▶[39m src/pages/[lang]/index.astro
+[2m15:07:39[22m   [34m├─[39m [2m/de/index.html[22mFetching Open Graph data for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Fetching Open Graph data for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Fetching Open Graph data for: https://www.finews.ch/news/finanzplatz/68422-frankencoin-mt-pelerin-integration-johannes-kern-arnaud-salomon-zchf-stablecoin
+Fetching Open Graph data for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Fetching Open Graph data for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Fetching Open Graph data for: https://www.leaderdigital.ch/specials/investsg-2025-mit-energie-nachhaltigkeit-621/zwischen-bau-immobilien-und-fintech-14153.html
+Fetching Open Graph data for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+Fetching Open Graph data for: https://www.20min.ch/story/tether-und-co-werden-stablecoins-die-naechste-finanzkrise-ausloesen-103387106
+Fetching Open Graph data for: https://www.nzz.ch/wirtschaft/kunden-von-spar-schweiz-koennen-bereits-in-ueber-100-laeden-mit-kryptowaehrungen-bezahlen-ld.1898731
+Fetching Open Graph data for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Fetching Open Graph data for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Failed to fetch https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden: 403
+Applying manual overrides for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Failed to fetch https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Failed to fetch https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association: 403
+Applying manual overrides for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Failed to fetch https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Applying manual overrides for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Applying manual overrides for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Applying manual overrides for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+ [31m(+1.79s)[39m 
+[2m15:07:41[22m   [34m└─[39m [2m/fr/index.html[22mFetching Open Graph data for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Fetching Open Graph data for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Fetching Open Graph data for: https://www.finews.ch/news/finanzplatz/68422-frankencoin-mt-pelerin-integration-johannes-kern-arnaud-salomon-zchf-stablecoin
+Fetching Open Graph data for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Fetching Open Graph data for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Fetching Open Graph data for: https://www.leaderdigital.ch/specials/investsg-2025-mit-energie-nachhaltigkeit-621/zwischen-bau-immobilien-und-fintech-14153.html
+Fetching Open Graph data for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+Fetching Open Graph data for: https://www.20min.ch/story/tether-und-co-werden-stablecoins-die-naechste-finanzkrise-ausloesen-103387106
+Fetching Open Graph data for: https://www.nzz.ch/wirtschaft/kunden-von-spar-schweiz-koennen-bereits-in-ueber-100-laeden-mit-kryptowaehrungen-bezahlen-ld.1898731
+Fetching Open Graph data for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Fetching Open Graph data for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Failed to fetch https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association: 403
+Applying manual overrides for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Failed to fetch https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Failed to fetch https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Failed to fetch https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden: 403
+Applying manual overrides for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Applying manual overrides for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Applying manual overrides for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Applying manual overrides for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+ [31m(+1.76s)[39m 
+[2m15:07:43[22m [32m▶[39m src/pages/index.astro
+[2m15:07:43[22m   [34m└─[39m [2m/index.html[22mFetching Open Graph data for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Fetching Open Graph data for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Fetching Open Graph data for: https://www.finews.ch/news/finanzplatz/68422-frankencoin-mt-pelerin-integration-johannes-kern-arnaud-salomon-zchf-stablecoin
+Fetching Open Graph data for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Fetching Open Graph data for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Fetching Open Graph data for: https://www.leaderdigital.ch/specials/investsg-2025-mit-energie-nachhaltigkeit-621/zwischen-bau-immobilien-und-fintech-14153.html
+Fetching Open Graph data for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+Fetching Open Graph data for: https://www.20min.ch/story/tether-und-co-werden-stablecoins-die-naechste-finanzkrise-ausloesen-103387106
+Fetching Open Graph data for: https://www.nzz.ch/wirtschaft/kunden-von-spar-schweiz-koennen-bereits-in-ueber-100-laeden-mit-kryptowaehrungen-bezahlen-ld.1898731
+Fetching Open Graph data for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Fetching Open Graph data for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Fetching Open Graph data for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Failed to fetch https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/frankencoin-valeur-locative-swatch-les-trois-mots-cles-de-la-semaine
+Failed to fetch https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden: 403
+Applying manual overrides for: https://agefi.com/de/nachrichten/unternehmen/der-erste-stablecoin-in-schweizer-franken-kann-jetzt-als-zahlungsmittel-in-der-schweiz-genutzt-werden
+Failed to fetch https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association: 403
+Applying manual overrides for: https://agefi.com/actualites/trajectoires/johannes-kern-nomme-directeur-general-de-la-frankencoin-association
+Failed to fetch https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin: 403
+Applying manual overrides for: https://agefi.com/actualites/entreprises/le-frankencoin-desormais-disponible-sur-mt-pelerin
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html
+Applying manual overrides for: https://www.btc-echo.de/news/krypto-news-dach-frankencoin-stablecoin-haertesten-waehrung-europa-217105/
+Applying manual overrides for: https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html
+Applying manual overrides for: https://www.letemps.ch/cyber/crypto/le-bitcoin-continue-de-battre-des-records-porte-par-un-contexte-qui-lui-est-de-plus-en-plus-favorable
+Applying manual overrides for: https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/
+ [31m(+1.91s)[39m 
+[2m15:07:45[22m [32m✓ Completed in 6.22s.
+[39m
+[2m15:07:45[22m [34m[build][39m Rearranging server assets...
+[2m15:07:45[22m [34m[@astrojs/sitemap][39m `sitemap-index.xml` created at `dist\client`
+[2m15:07:45[22m [34m[build][39m Server built in [1m9.31s[22m
+[2m15:07:45[22m [34m[build][39m [1mComplete![22m
