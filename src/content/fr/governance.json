@@ -1,0 +1,91 @@
+{
+  "header": {
+    "image": "/images/FPS-Logo-Compressify.io.webp",
+    "imageAlt": "Gouvernance Frankencoin",
+    "title": "Gouvernance Frankencoin",
+    "subtitle": "Une approche décentralisée et communautaire pour gérer le stablecoin du franc suisse",
+    "cta": [
+      {
+        "label": "Frapper/Racheter FPS",
+        "href": "https://app.frankencoin.com/equity",
+        "external": true
+      },
+      {
+        "label": "Participer à la gouvernance",
+        "href": "https://app.frankencoin.com/governance",
+        "external": true
+      }
+    ]
+  },
+  "caps": [
+    {
+      "id": "fpsPrice",
+      "label": "Prix FPS",
+      "value": "1'162.13",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsSupply",
+      "label": "Offre FPS",
+      "value": "8'887.69",
+      "unit": "FPS",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsMarketCap",
+      "label": "Capitalisation boursière FPS",
+      "value": "10'328'609.12",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    }
+  ],
+  "stats_list": [
+    {
+      "id": "balance",
+      "label": "Réserve totale",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "equity",
+      "label": "Capital propre",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "minter",
+      "label": "Réserve du frappeur",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "netIncome",
+      "label": "Revenu net depuis 2023",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Fonctionnement de la gouvernance",
+      "description": "Frankencoin fonctionne avec un modèle de gouvernance unique basé sur le droit de veto. Tout le monde peut proposer de nouveaux types de garanties ou de méthodes pour frapper des Frankencoin, mais seulement 2% du pouvoir de vote peuvent opposer leur veto aux propositions. Cela garantit la stabilité du système tout en permettant l'innovation."
+    },
+    {
+      "title": "Frankencoin Pool Shares (FPS)",
+      "description": "Les jetons FPS représentent des parts de propriété dans la réserve de capital propre de Frankencoin. Détenir des FPS fonctionne de manière similaire à posséder des actions bancaires – à mesure que le système génère des bénéfices, la valeur de vos parts augmente automatiquement. Lorsque vous acquérez des FPS, vous apportez du capital propre au système et obtenez des droits de vote sur les décisions de gouvernance.\n\n<strong>Comment la valeur est créée pour les détenteurs de FPS :</strong>\n\n• <strong>Revenus d'intérêts :</strong> Lorsque les utilisateurs empruntent des ZCHF contre leurs garanties par le biais de positions de frappe, ils paient des intérêts. Ces revenus d'intérêts sont versés dans la réserve de capital propre, augmentant la valeur soutenant chaque FPS. Par exemple, avec 30 millions de ZCHF en circulation à 5% d'intérêt annuel, cela génère 1,5 million de ZCHF par an de revenus.\n\n• <strong>Bénéfices de liquidation :</strong> Lorsque les garanties sont liquidées et vendues, toute valeur excédentaire au-delà du montant de la dette renforce la réserve. Ces bénéfices sont distribués proportionnellement aux détenteurs de FPS.\n\n• <strong>Frais de gouvernance :</strong> Les actions de gouvernance génèrent des frais qui alimentent la réserve de capital propre. Par exemple, proposer un nouveau type de garantie nécessite des frais de 1'000 ZCHF, qui compensent les détenteurs de FPS pour l'évaluation et le vote sur les propositions.\n\n<strong>Coûts et économie :</strong>\n\nLe coût principal supporté par les détenteurs de FPS est le rendement d'épargne versé aux utilisateurs du module d'épargne. Lorsque les détenteurs de ZCHF déposent pour gagner un rendement, ce rendement est financé par la réserve de capital propre. Cela crée une dynamique bancaire traditionnelle : les emprunteurs paient des intérêts, les épargnants reçoivent un rendement et les détenteurs de capital propre gagnent la différence.\n\n<strong>Évaluation et tarification :</strong>\n\nFPS utilise une évaluation du capital proportionnelle avec un multiplicateur constant de 3x. Si le capital propre est de 1 million de ZCHF, la capitalisation boursière totale de FPS devient 3 millions de ZCHF. Ce multiplicateur garantit que les nouveaux investisseurs frappant des FPS et les détenteurs existants rachetant des parts effectuent des transactions à la même évaluation équitable.\n\n<strong>Profil de risque :</strong>\n\nLes détenteurs de FPS supportent le risque résiduel – de manière similaire aux actionnaires bancaires. Si les liquidations entraînent des pertes dépassant la contribution de réserve du frappeur, ces pertes sont absorbées par le pool de capital propre. Cet alignement risque-rendement garantit que les détenteurs de FPS sont incités à gouverner le système de manière responsable et à n'approuver que des types de garanties solides.\n\nVous pouvez acquérir des FPS en déposant des ZCHF dans la réserve de capital propre via l'<a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>application Frankencoin</a>. Le rachat nécessite une période de détention minimale de 90 jours pour garantir la stabilité du système."
+    },
+    {
+      "title": "Comment obtenir des FPS",
+      "description": "Il existe deux façons principales d'acquérir des FPS :\n\n1. Frapper de nouveaux FPS : Déposez des ZCHF dans la réserve de capital propre via l'<a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>application Frankencoin</a>. Vous recevez des FPS nouvellement frappés au prix de valeur comptable actuel.\n\n2. Acheter sur les marchés secondaires : Échangez des FPS sur des bourses décentralisées. Vérifiez les prix actuels et l'activité de négociation sur <a href='https://www.coingecko.com/en/coins/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>CoinGecko</a> ou <a href='https://defillama.com/protocol/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>DeFiLlama</a>.\n\nLorsque vous êtes prêt à sortir, vous pouvez racheter des FPS au système pour retirer votre capital plus les gains accumulés. Il existe une période de détention obligatoire pour garantir la stabilité du système. Cela crée un pool de capital propre dynamique et basé sur le marché qui croît avec le système."
+    },
+    {
+      "title": "Wrapped FPS (WFPS)",
+      "description": "WFPS est une version enveloppée de FPS avec une valeur économique identique mais sans droits de vote. Il est conçu pour faciliter les échanges sur les bourses, tandis que FPS reste le jeton de gouvernance."
+    },
+    {
+      "title": "Processus de proposition",
+      "description": "Le processus de gouvernance est ouvert et transparent. Les propositions de nouveaux types de garanties ou de mécanismes de frappe peuvent être soumises par n'importe qui. La communauté examine les propositions et les détenteurs de FPS votent. Un seuil de veto de 2% garantit des freins et contrepoids tout en maintenant l'agilité."
+    }
+  ]
+}

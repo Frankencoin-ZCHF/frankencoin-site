@@ -1,0 +1,91 @@
+{
+  "header": {
+    "image": "/images/FPS-Logo-Compressify.io.webp",
+    "imageAlt": "Frankencoin Governance",
+    "title": "Frankencoin Governance",
+    "subtitle": "Ein dezentraler, gemeinschaftsgetriebener Ansatz zur Verwaltung des Schweizer-Franken-Stablecoins",
+    "cta": [
+      {
+        "label": "FPS prägen/einlösen",
+        "href": "https://app.frankencoin.com/equity",
+        "external": true
+      },
+      {
+        "label": "An Governance teilnehmen",
+        "href": "https://app.frankencoin.com/governance",
+        "external": true
+      }
+    ]
+  },
+  "caps": [
+    {
+      "id": "fpsPrice",
+      "label": "FPS-Preis",
+      "value": "1'162.13",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsSupply",
+      "label": "FPS-Angebot",
+      "value": "8'887.69",
+      "unit": "FPS",
+      "href": "https://app.frankencoin.com/equity"
+    },
+    {
+      "id": "fpsMarketCap",
+      "label": "FPS-Marktkapitalisierung",
+      "value": "10'328'609.12",
+      "unit": "ZCHF",
+      "href": "https://app.frankencoin.com/equity"
+    }
+  ],
+  "stats_list": [
+    {
+      "id": "balance",
+      "label": "Gesamtreserve",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "equity",
+      "label": "Eigenkapital",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "minter",
+      "label": "Präger-Reserve",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    },
+    {
+      "id": "netIncome",
+      "label": "Nettogewinn seit 2023",
+      "value": "8'887.69",
+      "unit": "ZCHF"
+    }
+  ],
+  "sections": [
+    {
+      "title": "Wie Governance funktioniert",
+      "description": "Frankencoin arbeitet mit einem einzigartigen Veto-basierten Governance-Modell. Jeder kann neue Sicherheitenarten oder Methoden zur Prägung von Frankencoin vorschlagen, aber bereits 2% der Stimmrechte können Vorschläge ablehnen. Dies gewährleistet die Stabilität des Systems und ermöglicht gleichzeitig Innovation."
+    },
+    {
+      "title": "Frankencoin Pool Shares (FPS)",
+      "description": "FPS-Token repräsentieren Eigentumsanteile an der Frankencoin-Eigenkapitalreserve. FPS zu halten funktioniert ähnlich wie der Besitz von Bankaktien – während das System Gewinne erwirtschaftet, steigt automatisch der Wert Ihrer Anteile. Wenn Sie FPS erwerben, stellen Sie dem System Eigenkapital zur Verfügung und erhalten Stimmrechte für Governance-Entscheidungen.\n\n<strong>Wie Wert für FPS-Inhaber entsteht:</strong>\n\n• <strong>Zinserträge:</strong> Wenn Benutzer ZCHF gegen ihre Sicherheiten durch Präge-Positionen leihen, zahlen sie Zinsen. Diese Zinserträge fliessen in die Eigenkapitalreserve und erhöhen den Wert, der jeden FPS unterstützt. Bei beispielsweise 30 Millionen ZCHF im Umlauf zu 5% jährlichem Zins werden 1,5 Millionen ZCHF pro Jahr an Einnahmen generiert.\n\n• <strong>Liquidationsgewinne:</strong> Wenn Sicherheiten liquidiert und verkauft werden, stärkt jeder Überschusswert über den Schuldenbetrag hinaus die Reserve. Diese Gewinne werden proportional an FPS-Inhaber verteilt.\n\n• <strong>Governance-Gebühren:</strong> Governance-Aktionen generieren Gebühren, die in die Eigenkapitalreserve fliessen. Beispielsweise erfordert das Vorschlagen einer neuen Sicherheitenart eine Gebühr von 1'000 ZCHF, die FPS-Inhaber für die Bewertung und Abstimmung über Vorschläge entschädigt.\n\n<strong>Kosten und Ökonomie:</strong>\n\nDie Hauptkosten für FPS-Inhaber sind die Sparrendite, die an Benutzer des Sparmoduls gezahlt wird. Wenn ZCHF-Inhaber einzahlen, um Rendite zu erzielen, wird diese Rendite aus der Eigenkapitalreserve finanziert. Dies schafft eine traditionelle Bankdynamik: Kreditnehmer zahlen Zinsen, Sparer erhalten Rendite und Eigenkapitalinhaber verdienen die Differenz.\n\n<strong>Bewertung und Preisgestaltung:</strong>\n\nFPS verwendet eine proportionale Kapitalbewertung mit einem konstanten 3-fachen Multiplikator. Wenn das Eigenkapital 1 Million ZCHF beträgt, wird die gesamte FPS-Marktkapitalisierung 3 Millionen ZCHF. Dieser Multiplikator stellt sicher, dass sowohl neue Investoren, die FPS prägen, als auch bestehende Inhaber, die Anteile einlösen, zur gleichen fairen Bewertung handeln.\n\n<strong>Risikoprofil:</strong>\n\nFPS-Inhaber tragen das Restrisiko – ähnlich wie Bankaktionäre. Wenn Liquidationen zu Verlusten führen, die den Reservebeitrag des Prägers übersteigen, werden diese Verluste vom Eigenkapitalpool absorbiert. Diese Risiko-Ertrags-Ausrichtung stellt sicher, dass FPS-Inhaber motiviert sind, das System verantwortungsvoll zu führen und nur solide Sicherheitenarten zu genehmigen.\n\nSie können FPS erwerben, indem Sie ZCHF über die <a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>Frankencoin-App</a> in die Eigenkapitalreserve einzahlen. Die Rücknahme erfordert eine Mindesthaltedauer von 90 Tagen, um die Systemstabilität zu gewährleisten."
+    },
+    {
+      "title": "Wie man FPS erhält",
+      "description": "Es gibt zwei Hauptwege, FPS zu erwerben:\n\n1. Neue FPS prägen: Zahlen Sie ZCHF über die <a href='https://app.frankencoin.com/equity' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>Frankencoin-App</a> in die Eigenkapitalreserve ein. Sie erhalten neu geprägte FPS zum aktuellen Buchwertpreis.\n\n2. Auf Sekundärmärkten kaufen: Handeln Sie FPS auf dezentralen Börsen. Prüfen Sie aktuelle Preise und Handelsaktivitäten auf <a href='https://www.coingecko.com/en/coins/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>CoinGecko</a> oder <a href='https://defillama.com/protocol/frankencoin' target='_blank' rel='noopener noreferrer' style='color: var(--color-brand-deep-blue); text-decoration: underline;'>DeFiLlama</a>.\n\nWenn Sie bereit sind auszusteigen, können Sie FPS an das System zurückgeben, um Ihr Kapital plus aufgelaufene Erträge abzuheben. Es gibt eine obligatorische Haltedauer, um die Systemstabilität zu gewährleisten. Dies schafft einen dynamischen, marktbasierten Eigenkapitalpool, der mit dem System wächst."
+    },
+    {
+      "title": "Wrapped FPS (WFPS)",
+      "description": "WFPS ist eine umhüllte Version von FPS mit identischem wirtschaftlichem Wert, aber ohne Stimmrechte. Es ist für den einfacheren Handel an Börsen konzipiert, während FPS selbst der Governance-Token bleibt."
+    },
+    {
+      "title": "Vorschlagsprozess",
+      "description": "Der Governance-Prozess ist offen und transparent. Vorschläge für neue Sicherheitenarten oder Prägemechanismen können von jedem eingereicht werden. Die Gemeinschaft prüft Vorschläge, und FPS-Inhaber stimmen ab. Eine 2%-Veto-Schwelle gewährleistet gegenseitige Kontrolle bei gleichzeitiger Agilität."
+    }
+  ]
+}

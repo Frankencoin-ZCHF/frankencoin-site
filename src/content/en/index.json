@@ -1,8 +1,8 @@
 {
 	"hero": {
 		"image": {
-			"desktop": "images/Hero-pic.webp",
-			"mobile": "images/Hero_pic_mobile_2.webp"
+			"desktop": "/images/Hero-pic.webp",
+			"mobile": "/images/Hero_pic_mobile_2.webp"
 		},
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
@@ -70,7 +70,7 @@
 		"features": [
 			{
 				"title": "Pay",
-				"image": "images/Icon-Payments.svg",
+				"image": "/images/Icon-Payments.svg",
 				"description": "Use Frankencoin for Swiss franc payments—at Spar stores, via debit cards (GnosisPay), or with IBAN integration (Mt Pelerin). Pay bills, receive salary, and make everyday purchases.",
 				"examples": [
 					"Retail purchases at Spar",
@@ -91,7 +91,7 @@
 			},
 			{
 				"title": "Borrow",
-				"image": "images/Icon-Borrow.svg",
+				"image": "/images/Icon-Borrow.svg",
 				"description": "Borrow Frankencoin by depositing crypto assets as collateral. Access ZCHF liquidity while maintaining exposure to your digital assets.",
 				"examples": [
 					"Mint ZCHF with crypto collateral",
@@ -106,7 +106,7 @@
 			},
 			{
 				"title": "Earn",
-				"image": "images/Icon-Invest.svg",
+				"image": "/images/Icon-Invest.svg",
 				"description": "Earn market-based yield on your ZCHF holdings through DeFi applications. Put your Frankencoin to work generating returns.",
 				"examples": [
 					"Earn yield on savings",
@@ -121,7 +121,7 @@
 			},
 			{
 				"title": "Build & Integrate",
-				"image": "images/Icon-Mint.svg",
+				"image": "/images/Icon-Mint.svg",
 				"description": "Developers and businesses can integrate Frankencoin as a programmable Swiss franc layer for applications and financial services.",
 				"examples": [
 					"Payroll systems",
@@ -147,7 +147,7 @@
 		"steps": [
 			{
 				"title": "Mint",
-				"image": "images/Grafik_Mint.svg",
+				"image": "/images/Grafik_Mint.svg",
 				"description": [
 					{
 						"step": "1. Mint",
@@ -161,7 +161,7 @@
 			},
 			{
 				"title": "Sell",
-				"image": "images/Grafik_Sell.svg",
+				"image": "/images/Grafik_Sell.svg",
 				"description": [
 					{
 						"step": "3. Sell.",
@@ -171,7 +171,7 @@
 			},
 			{
 				"title": "Spend",
-				"image": "images/Grafik_Spend.svg",
+				"image": "/images/Grafik_Spend.svg",
 				"description": [
 					{
 						"step": "4. Buy.",
@@ -189,7 +189,7 @@
 			},
 			{
 				"title": "Save",
-				"image": "images/Grafik_Save.svg",
+				"image": "/images/Grafik_Save.svg",
 				"description": [
 					{
 						"step": "7. Buy.",
@@ -207,7 +207,7 @@
 			},
 			{
 				"title": "Invest",
-				"image": "images/Grafik_Invest.svg",
+				"image": "/images/Grafik_Invest.svg",
 				"description": [
 					{
 						"step": "10. Buy FPS.",
@@ -274,17 +274,17 @@
 			"partners": [
 				{
 					"altText": "Code4rena",
-					"image": "images/c4-logo-1-Compressify.io.webp",
+					"image": "/images/c4-logo-1-Compressify.io.webp",
 					"href": "https://code4rena.com/reports/2023-04-frankencoin"
 				},
 				{
 					"altText": "Decurity",
-					"image": "images/Decurity_Logo.png",
+					"image": "/images/Decurity_Logo.png",
 					"href": "https://github.com/Decurity/audits/blob/master/Frankencoin/frankencoin-audit-report-2024-1.1.pdf"
 				},
 				{
 					"altText": "ChainSecurity",
-					"image": "images/chainsec_logo.svg",
+					"image": "/images/chainsec_logo.svg",
 					"sublinks": [
 						{
 							"label": "Audit 1",
@@ -302,7 +302,7 @@
 				},
 				{
 					"altText": "Blockbyte",
-					"image": "images/blockbyte-logo-black-1-Compressify.io.webp",
+					"image": "/images/blockbyte-logo-black-1-Compressify.io.webp",
 					"href": "https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf"
 				}
 			]
@@ -311,14 +311,15 @@
 	"foundation": {
 		"title": "Theoretical Foundation",
 		"description": "The Frankencoin was conceived a part of [a PhD thesis](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) completed at the Department of Finance at the University of Zurich. Among other things, it covers the game theory behind the system's novel liquidation mechanism, quantifies the risk of Bitcoin as a collateral, and it formally analyses the veto-based governance system. The Frankencoin system can be seen as a Continuous Capital Corporation, a concept introduced in chapter three denoting a company that issues and redeems shares autonomously according to fixed rules that are optimal under a wide range of theoretical assumptions.",
-		"image": "images/frankencoin-foundation.webp",
+		"image": "/images/frankencoin-foundation.webp",
 		"imageAlt": "Frankencoin Foundation",
 		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
 	},
 	"in_the_media": {
 		"eyebrow": "Media Coverage",
 		"title": "In the Media",
-		"subtitle": "See what the media are saying about Frankencoin"
+		"subtitle": "See what the media are saying about Frankencoin",
+		"contact_text": "Would you like to report about Frankencoin? Get in touch using"
 	},
 	"videos": {
 		"eyebrow": "Videos",

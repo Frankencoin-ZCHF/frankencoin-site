@@ -1,5 +1,8 @@
 ---
-import ui from "../../content/shared/ui.json";
+import { getLanguageFromURL, loadSharedContent } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const ui = await loadSharedContent("ui", currentLang);
 
 interface ExplanationCard {
   title: string;

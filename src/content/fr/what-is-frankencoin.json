@@ -1,0 +1,44 @@
+{
+  "header": {
+    "image": "/images/Frankencoin-Logo-Compressify.io_1.webp",
+    "imageAlt": "Logo Frankencoin",
+    "title": "Qu'est-ce que Frankencoin?",
+    "subtitle": "Et pourquoi c'est le seul stablecoin qui ne nécessite pas d'oracle.",
+    "cta": {
+      "label": "Obtenir des Frankencoin",
+      "href": "https://app.frankencoin.com/mint"
+    }
+  },
+  "features": [
+    {
+      "title": "Stablecoin CHF",
+      "image": "/images/Icon-Stability-Compressify.io.webp"
+    },
+    {
+      "title": "Sans oracles",
+      "image": "/images/Icon-Oraclefree-Compressify.io.webp"
+    },
+    {
+      "title": "Entièrement décentralisé",
+      "image": "/images/Icon-Decentralized-Compressify.io.webp"
+    }
+  ],
+  "introduction": [
+    {
+      "title": "Frankencoin?",
+      "description": "Notre objectif est d'établir un stablecoin qui résout les problèmes auxquels sont confrontés les stablecoins actuels. Ces problèmes incluent la dépendance aux oracles centralisés, la confiance accordée à des tiers centralisés, et moins d'options de garantie lors de la création de stablecoins."
+    },
+    {
+      "title": "Histoire des Stablecoins",
+      "description": "Les stablecoins sont désespérément nécessaires, comme le montre le paysage financier numérique en développement, qui a une capitalisation boursière totale de 146,736,756 milliards de CHF. Ils sont essentiels à l'industrie des cryptomonnaies car ils peuvent stocker de la valeur pendant les périodes de volatilité extrême, faciliter la circulation du capital entre les plateformes d'échange et permettre des transactions transfrontalières rapides et peu coûteuses. Cela est particulièrement utile dans les pays où les taux d'inflation sont élevés, car les stablecoins peuvent offrir une alternative fiable et facilement accessible à la monnaie fiduciaire. Avant tout, ils rendent possibles plusieurs des applications DeFi les plus passionnantes.\n\nLes stablecoins tels qu'ils existent aujourd'hui présentent des inconvénients malgré leurs avantages apparents. Les deux plus couramment utilisés, USDT (Tether) et USDC, s'appuient sur un émetteur unique. Cela pose des problèmes de transparence et de confiance. Par exemple, un groupe d'entreprises qui possèdent USDC a le pouvoir de geler des fonds et d'ajouter des adresses à une liste noire. De plus, contrairement à la croyance populaire, DAI, le stablecoin décentralisé le plus connu, n'est pas très décentralisé. Il dépend d'oracles qui peuvent être influencés par des acteurs extérieurs au système."
+    },
+    {
+      "title": "Le problème avec les oracles",
+      "description": "Les attaques par manipulation d'oracles sont un type d'attaque dans lequel un adversaire exploite les flux de données (oracles) sur lesquels les contrats intelligents s'appuient pour prendre des décisions. En manipulant les données fournies par les oracles, les attaquants peuvent tromper les contrats intelligents pour qu'ils exécutent des transactions basées sur de fausses informations, ce qui entraîne souvent le vol de cryptomonnaies.\n\n Un exemple? Avec plaisir: En avril 2022, chez Beanstalk Farms, un protocole de finance décentralisée (DeFi) construit sur Ethereum qui émet son propre stablecoin en utilisant un système basé sur le crédit plutôt que sur des garanties, 182 millions de dollars ont été volés grâce à une exploitation par prêt flash qui a manipulé le système de gouvernance via la tarification des oracles.\n\n Ce n'est qu'un cas parmi d'innombrables exemples où des fonds ont été volés par la manipulation d'oracles."
+    },
+    {
+      "title": "Pourquoi Frankencoin?",
+      "description": "Frankencoin est destiné à résoudre ces problèmes. C'est un stablecoin décentralisé basé sur Ethereum qui est garanti et suit la valeur du franc suisse. Il se distingue par le fait qu'il fonctionne indépendamment des oracles et peut être appliqué à une grande variété de types de garanties. Les utilisateurs, et non les oracles, déterminent la valeur de la garantie, et sa méthode de frappe exclusive basée sur les enchères fonctionne sans avoir besoin d'oracles externes. Tant que la garantie dispose d'une disponibilité sur le marché suffisante, cette flexibilité permet l'utilisation d'une large gamme de formes de garanties. En éliminant les principales faiblesses du concept conventionnel de stablecoin, Frankencoin présente une alternative de stablecoin plus fiable, adaptable et démocratique. En raison de sa structure décentralisée, il peut fonctionner même en l'absence d'un système juridique conventionnel car il n'a pas d'autorité centrale. Grâce aux incitations et aux règles du système, tout le monde peut frapper de nouvelles pièces et participer à la gouvernance de la monnaie. Cette approche de la mécanique des stablecoins est fondamentalement différente. Le mécanisme Frankencoin crée essentiellement de l'argent contre des garanties, tout comme le ferait une banque typique. Les utilisateurs impriment leur propre monnaie. Chaque processus est transparent et automatisé."
+    }
+  ]
+}

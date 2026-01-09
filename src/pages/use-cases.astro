@@ -1,7 +1,10 @@
 ---
 import Section from "../components/Layout/Section.astro";
 import Base from "../layouts/Base.astro";
-import useCases from "../content/use-cases.json";
+import { getLanguageFromURL, loadContent } from "../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const useCases = await loadContent("use-cases", currentLang);
 
 // Extract unique categories from use cases
 const categories = ["All", ...new Set(useCases.cases.map(c => c.category))];

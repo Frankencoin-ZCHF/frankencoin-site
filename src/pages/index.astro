@@ -2,9 +2,12 @@
 import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
-import index from "../content/index.json";
-import media from "../content/media.json";
-import faq from "../content/faq.json";
+import { getLanguageFromURL, loadContent } from "../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const index = await loadContent("index", currentLang);
+const media = await loadContent("media", currentLang);
+const faq = await loadContent("faq", currentLang);
 import FeaturesContainer from "../components/FeaturesContainer/FeaturesContainer.astro";
 import TabMenu from "../components/TabsMenu/TabMenu.astro";
 import FoundationContainer from "../components/FoundationContainer/FoundationContainer.astro";
@@ -146,7 +149,7 @@ const stats: Option[] = frankencoinInfo
       </a>
     </div>
   </Section>
-      <Section
+  <Section
     id="how-it-works"
     title={index.how_it_works.title}
     subtitle={index.how_it_works.subtitle}
@@ -155,6 +158,15 @@ const stats: Option[] = frankencoinInfo
     <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8">
       <TabMenu tabs={index.how_it_works.steps} />
     </div>
+  </Section>
+
+  <Section
+    id="how-does-it-work"
+    eyebrow={index.how_does_it_work.eyebrow}
+    title={index.how_does_it_work.title}
+    pad="xs"
+    margin="lg:mt-20 mt-32"
+  >
     <ExplanationCardsContainer cards={index.how_does_it_work.explanation} />
   </Section>
     

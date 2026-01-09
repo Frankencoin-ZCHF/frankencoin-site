@@ -1,6 +1,10 @@
 ---
+import { getLanguageFromURL, loadContent } from "../../utils/i18n";
 import { fetchOgData } from "../../utils/fetchOgData";
-import media from "../../content/media.json";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const media = await loadContent("media", currentLang);
+const index = await loadContent("index", currentLang);
 
 interface Props {
   articles: string[];
@@ -293,6 +297,6 @@ const sortedArticles = articlesWithMetadata.sort((a, b) => {
 
 <div class="mt-12 text-center">
   <p class="ty-body-1 text-[var(--color-brand-titan-gray)]">
-    Would you like to report about Frankencoin? Get in touch using <a href="mailto:media@frankencoin.com" class="text-[var(--color-brand-deep-blue)] hover:underline font-bold">media@frankencoin.com</a>
+    {index.in_the_media.contact_text} <a href="mailto:media@frankencoin.com" class="text-[var(--color-brand-deep-blue)] hover:underline font-bold">media@frankencoin.com</a>
   </p>
 </div>

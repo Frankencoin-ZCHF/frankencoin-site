@@ -1,6 +1,9 @@
 ---
 import SocialLinksBar from "../SocialLinksBar.astro";
-import footerData from "../../content/shared/footer.json";
+import { getLanguageFromURL, loadSharedContent } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const footerData = await loadSharedContent("footer", currentLang);
 
 const year = new Date().getFullYear();
 const { footer } = footerData;
@@ -22,6 +25,39 @@ interface Column {
   links: Link[];
   sections?: Section[];
 }
+
+// Helper function to add language prefix to internal links
+const prefixLanguage = (href: string) => {
+  // Skip external links (http/https)
+  if (href.startsWith('http://') || href.startsWith('https://')) {
+    return href;
+  }
+  // For English, keep the original href
+  if (currentLang === 'en') {
+    return href;
+  }
+  // For other languages, prefix with language code
+  if (href === '/') {
+    return `/${currentLang}/`;
+  }
+  if (href.startsWith('/#')) {
+    return `/${currentLang}${href}`;
+  }
+  if (href.startsWith('/')) {
+    return `/${currentLang}${href}`;
+  }
+  return href;
+};
+
+// Process all columns, links and sections with language prefix
+const localizedColumns = footer.columns.map((column: Column) => ({
+  ...column,
+  links: column.links.map((link: Link) => ({ ...link, href: prefixLanguage(link.href) })),
+  sections: column.sections?.map((section: Section) => ({
+    ...section,
+    links: section.links.map((link: Link) => ({ ...link, href: prefixLanguage(link.href) }))
+  }))
+}));
 ---
 
 <footer
@@ -31,7 +67,7 @@ interface Column {
     <!-- 4 Column Layout -->
     <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
       {
-        footer.columns.map((column: Column) => (
+        localizedColumns.map((column: Column) => (
           <div class="flex flex-col gap-4">
             <h3
               style="color: var(--color-white);"

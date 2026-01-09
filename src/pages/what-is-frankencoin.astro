@@ -2,8 +2,11 @@
 import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
-import whatIsFrankencoin from "../content/what-is-frankencoin.json";
+import { getLanguageFromURL, loadContent } from "../utils/i18n";
 import FlexStack from "../components/Layout/FlexStack.astro";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const whatIsFrankencoin = await loadContent("what-is-frankencoin", currentLang);
 ---
 
 <Base>

@@ -1,0 +1,54 @@
+{
+  "brand": { "name": "Frankencoin", "href": "/" },
+  "links": [
+    { "label": "Frankencoin", "href": "/#what-is" },
+    { "label": "Usages", "href": "/#core-features" },
+    { "label": "Fonctionnement", "href": "/#how-does-it-work" },
+    { "label": "Conformité", "href": "/#trust-security" },
+    { "label": "Médias", "href": "/#in-the-media" },
+    { "label": "FAQs", "href": "/#faq" }
+  ],
+  "cta": { "label": "Lancer l'application", "href": "https://app.frankencoin.com/" },
+  "socials": [
+    {
+      "name": "Telegram",
+      "href": "https://t.me/frankencoinzchf",
+      "light_icon": "/images/Social-icons-1_1.svg",
+      "dark_icon": "/images/Social-icons-1.svg",
+      "width": 30,
+      "height": 30
+    },
+    {
+      "name": "X (Twitter)",
+      "href": "https://x.com/frankencoinzchf",
+      "light_icon": "/images/Social-icons_1.svg",
+      "dark_icon": "/images/Social-icons.svg",
+      "width": 30,
+      "height": 30
+    },
+      {
+      "name": "LinkedIn",
+      "href": "https://www.linkedin.com/company/frankencoin/",
+      "light_icon": "/images/Social-icons-2_1.svg",
+      "dark_icon": "/images/Social-icons-2.svg",
+      "width": 30,
+      "height": 30
+    },
+    {
+      "name": "GitHub",
+      "href": "https://github.com/Frankencoin-ZCHF/",
+      "light_icon": "/images/Social-icons-4_1.svg",
+      "dark_icon": "/images/Social-icons-4.svg",
+      "width": 51,
+      "height": 32
+    },
+    {
+      "name": "Docs (GitBook)",
+      "href": "https://docs.frankencoin.com/",
+      "light_icon": "/images/Gitbook_1.svg",
+      "dark_icon": "/images/Gitbook.svg",
+      "width": 30,
+      "height": 30
+    }
+  ]
+}

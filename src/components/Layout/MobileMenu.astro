@@ -1,7 +1,38 @@
 ---
 import Button from "../Button/Button.astro";
-import nav from "../../content/shared/nav.json";
-import index from "../../content/index.json";
+import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.astro";
+import { getLanguageFromURL, loadSharedContent, loadContent } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const nav = await loadSharedContent("nav", currentLang);
+const index = await loadContent("index", currentLang);
+
+// Helper function to add language prefix to internal links
+const prefixLanguage = (href: string) => {
+  // Skip external links (http/https)
+  if (href.startsWith('http://') || href.startsWith('https://')) {
+    return href;
+  }
+  // For English, keep the original href
+  if (currentLang === 'en') {
+    return href;
+  }
+  // For other languages, prefix with language code
+  // Handle both "/" and "/#section" formats
+  if (href === '/') {
+    return `/${currentLang}/`;
+  }
+  if (href.startsWith('/#')) {
+    return `/${currentLang}${href}`;
+  }
+  if (href.startsWith('/')) {
+    return `/${currentLang}${href}`;
+  }
+  return href;
+};
+
+// Process all links with language prefix
+const localizedLinks = nav.links.map(link => ({ ...link, href: prefixLanguage(link.href) }));
 ---
 
 <div
@@ -9,7 +40,7 @@ import index from "../../content/index.json";
 >
   <nav class="flex flex-col gap-2 px-5 pt-8 pb-6" aria-label="Mobile">
     {
-      nav.links.map((l) => (
+      localizedLinks.map((l) => (
         <a
           href={l.href}
           class="ty-body-1-mobile block rounded-lg px-4 py-3 text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] active:text-[var(--color-brand-swiss)]"
@@ -19,7 +50,8 @@ import index from "../../content/index.json";
       ))
     }
     <hr class="text-[var(--color-neutral-300)]" />
-    <div class="mt-4">
+    <div class="mt-4 flex flex-col gap-4">
+      <LanguageSwitcher />
       <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
         {index.hero.cta.label}
       </Button>

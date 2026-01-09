@@ -7,7 +7,10 @@
     - copiedLabel?: string (default from ui.json)
     - size?: "sm" | "md" (default: "sm")
 */
-import ui from "../../content/shared/ui.json";
+import { getLanguageFromURL, loadSharedContent } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const ui = await loadSharedContent("ui", currentLang);
 
 interface Props {
   value: string;

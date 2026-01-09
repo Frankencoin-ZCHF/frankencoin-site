@@ -1,7 +1,10 @@
 ---
-import index from "../../content/index.json";
+import { getLanguageFromURL, loadContent } from "../../utils/i18n";
 import Button from "../Button/Button.astro";
 import LogoBlock from "../Layout/LogoBlock.astro";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const index = await loadContent("index", currentLang);
 ---
 
 <LogoBlock>

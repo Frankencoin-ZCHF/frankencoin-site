@@ -1,8 +1,11 @@
 ---
 import Section from "../components/Layout/Section.astro";
 import Base from "../layouts/Base.astro";
-import token from "../content/token.json";
+import { getLanguageFromURL, loadContent } from "../utils/i18n";
 import ChainContainer from "../components/ChainContainer/ChainContainer.astro";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const token = await loadContent("token", currentLang);
 ---
 
 <Base>

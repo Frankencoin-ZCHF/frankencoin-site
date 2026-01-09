@@ -1,6 +1,6 @@
 {
   "header": {
-    "image": "images/Frankencoin-Logo-Compressify.io_1.webp",
+    "image": "/images/Frankencoin-Logo-Compressify.io_1.webp",
     "imageAlt": "Frankencoin logo",
     "title": "What’s that, Frankencoin?",
     "subtitle": "And why is it the only stablecoin that does not require an oracle.",
@@ -12,15 +12,15 @@
   "features": [
     {
       "title": "CHF Stablecoin",
-      "image": "images/Icon-Stability-Compressify.io.webp"
+      "image": "/images/Icon-Stability-Compressify.io.webp"
     },
     {
       "title": "No Oracles",
-      "image": "images/Icon-Oraclefree-Compressify.io.webp"
+      "image": "/images/Icon-Oraclefree-Compressify.io.webp"
     },
     {
       "title": "Fully decentralized",
-      "image": "images/Icon-Decentralized-Compressify.io.webp"
+      "image": "/images/Icon-Decentralized-Compressify.io.webp"
     }
   ],
   "introduction": [

@@ -1,0 +1,17 @@
+{
+  "site": {
+    "name": "Frankencoin",
+    "title": "Frankencoin - Stablecoin franc suisse (ZCHF)",
+    "url": "https://frankencoin.com",
+    "description": "Frankencoin (ZCHF) est le plus grand stablecoin franc suisse.",
+    "image": "/images/og_image.webp",
+    "twitterHandle": "@frankencoinzchf",
+    "keywords": "Frankencoin, ZCHF, stablecoin franc suisse, paiements cryptomonnaie, DeFi Suisse, CHF numérique, paiements blockchain, stablecoin suisse",
+    "author": "Frankencoin Association",
+    "locale": "fr_CH"
+  },
+  "contact": {
+    "type": "Service client",
+    "email": "info@frankencoin.com"
+  }
+}

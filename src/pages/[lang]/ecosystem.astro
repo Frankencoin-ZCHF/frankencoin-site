@@ -1,0 +1,12 @@
+---
+import MainEcosystem from '../ecosystem.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+---
+
+<MainEcosystem />

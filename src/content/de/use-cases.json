@@ -1,0 +1,87 @@
+{
+	"eyebrow": "Bereits heute im Einsatz",
+	"title": "Echte Anwendungen für digitale Schweizer Franken",
+	"intro": "Frankencoin wird bereits von Unternehmen und Privatpersonen in der ganzen Schweiz für alltägliche Zahlungen, Finanzgeschäfte und dezentrale Finanzdienstleistungen eingesetzt. Entdecken Sie, wie ZCHF traditionelle Schweizer Franken mit der digitalen Wirtschaft verbindet.",
+	"cases": [
+		{
+			"title": "Zahlungen im Einzelhandel",
+			"partner": "Spar Schweiz",
+			"description": "Bezahlen Sie direkt mit Frankencoin in Spar-Filialen in der ganzen Schweiz",
+			"category": "Payments",
+			"image": "/images/spar.png",
+			"link": "https://presse.spar.ch/de/spar-schweiz/allgemein/neu%3A-jetzt-bei-spar-mit-krypto-waehrung-bezahlen/"
+		},
+		{
+			"title": "Banking-Integration",
+			"partner": "Mt Pelerin",
+			"description": "Verbinden Sie Frankencoin mit einer persönlichen IBAN – verknüpfen Sie traditionelle Banküberweisungen mit digitalen Zahlungen",
+			"category": "Payments",
+			"image": "/images/mt-pelerin-logo.png",
+			"link": "https://www.mtpelerin.com/buy-zchf-frankencoin"
+		},
+		{
+			"title": "Zinsen auf Spareinlagen verdienen",
+			"partner": "Frankencoin Protocol",
+			"description": "Legen Sie ZCHF im Spar-Tresor des Protokolls an und erzielen Sie marktbasierte Erträge auf Ihre Schweizer Franken-Guthaben",
+			"category": "DeFi",
+			"image": "/images/Icon-Invest.svg",
+			"link": "https://app.frankencoin.com/savings"
+		},
+		{
+			"title": "Lohnbuchhaltung & HR-Administration",
+			"partner": "Quitt",
+			"description": "Komplette Mitarbeiterverwaltung inklusive Lohnbuchhaltung, Sozialversicherungen und Pensionskassen – vollständig in ZCHF abgewickelt",
+			"category": "Business",
+			"image": "/images/quitt-logo.svg",
+			"link": "https://www.quitt.ch/"
+		},
+		{
+			"title": "Treasury Management",
+			"partner": "Plusplus",
+			"description": "Professionelle Treasury-Lösungen inklusive Verwaltung von Mietsicherheitskautionen in ZCHF",
+			"category": "Business",
+			"image": "/images/logo_plusplus.avif",
+			"link": "https://www.plusplus.swiss/"
+		},
+		{
+			"title": "Digitale Wertpapiere",
+			"partner": "Aktionariat",
+			"description": "Handeln Sie tokenisierte Aktien und beteiligen Sie sich an Kapitalerhöhungen mit ZCHF als Abwicklungswährung",
+			"category": "Business",
+			"image": "/images/aktionariat-Compressify.io.webp",
+			"link": "https://www.aktionariat.com/"
+		},
+		{
+			"title": "Kartenzahlungen",
+			"partner": "GnosisPay",
+			"description": "Nutzen Sie Frankencoin für alltägliche Kartenzahlungen – Transaktionen werden im Hintergrund in ZCHF abgewickelt",
+			"category": "Payments",
+			"image": "/images/gnosispay.png",
+			"link": "https://zeal.app/"
+		},
+		{
+			"title": "Krypto-Wallet & Kartenzahlungen",
+			"partner": "Zeal",
+			"description": "Digitale Wallet für weltweite ZCHF-Ausgaben mit Gnosis Pay-Karte – verdienen Sie Erträge und Cashback bei alltäglichen Einkäufen",
+			"category": "Payments",
+			"image": "/images/zeal.png",
+			"link": "https://www.zeal.app/"
+		},
+		{
+			"title": "DeFi-Liquidität",
+			"partner": "Curve Finance",
+			"description": "Handeln Sie ZCHF mit geringer Slippage über Curves automatisiertes Market-Maker-Protokoll",
+			"category": "DeFi",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://curve.fi/"
+		},
+		{
+			"title": "Dezentrales Kreditwesen",
+			"partner": "Morpho",
+			"description": "Verleihen und leihen Sie ZCHF über anpassbare, überbesicherte Kreditmärkte auf Ethereum und Base",
+			"category": "DeFi",
+			"image": "/images/morpho.png",
+			"link": "https://morpho.org/"
+		}
+	]
+}

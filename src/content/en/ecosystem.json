@@ -16,7 +16,7 @@
 		{
 			"href": "https://www.aktionariat.com/all-companies",
 			"name": "Aktionariat",
-			"image": "images/aktionariat-Compressify.io_1.webp",
+			"image": "/images/aktionariat-Compressify.io_1.webp",
 			"imageAlt": "Aktionariat Logo",
 			"badge": "Tokenization",
 			"category": "Tokenization",
@@ -26,7 +26,7 @@
 		{
 			"href": "https://www.mtpelerin.com/buy-zchf-frankencoin",
 			"name": "Mt Pelerin",
-			"image": "images/mt-pelerin-logo.png",
+			"image": "/images/mt-pelerin-logo.png",
 			"imageAlt": "Mt Pelerin Logo",
 			"badge": "Service Provider",
 			"category": "On-and Offramp",
@@ -36,7 +36,7 @@
 		{
 			"href": "https://dfx.swiss/",
 			"name": "DFX",
-			"image": "images/Vectors-Wrapper_3.svg",
+			"image": "/images/Vectors-Wrapper_3.svg",
 			"imageAlt": "DFX Logo",
 			"badge": "Service Provider",
 			"category": "On-and Offramp",
@@ -46,7 +46,7 @@
 		{
 			"href": "https://www.stayliquid.co/",
 			"name": "Stay Liquid",
-			"image": "images/stayliquid.svg",
+			"image": "/images/stayliquid.svg",
 			"imageAlt": "Stay Liquid Logo",
 			"badge": "Service Provider",
 			"description": "Stay Liquid has built a novel business savings account powered by DeFi and enhanced by AI. Clients can access returns on their idle assets in Euros or British Pounds, which is generating over 10% annual returns, by using a stablecoin-only smart portfolio management solution. Stay Liquid has a familiar ‘neobank’-style interface to ensure assets are secure and onboarding is effortless.",
@@ -55,7 +55,7 @@
 		{
 			"href": "https://ammer.cash/",
 			"name": "Ammer.cash",
-			"image": "images/ammer_pay_logo-Compressify.io.webp",
+			"image": "/images/ammer_pay_logo-Compressify.io.webp",
 			"imageAlt": "Ammer Logo",
 			"badge": "Payment",
 			"category": "On-and Offramp",
@@ -65,7 +65,7 @@
 		{
 			"href": "https://operal.solutions/",
 			"name": "Operal",
-			"image": "images/OperalLogo-1-Compressify.io.webp",
+			"image": "/images/OperalLogo-1-Compressify.io.webp",
 			"imageAlt": "Operal Logo",
 			"badge": "Gaming",
 			"category": "On-and Offramp",
@@ -75,7 +75,7 @@
 		{
 			"href": "https://zippy.app/",
 			"name": "Zippy",
-			"image": "images/zippy-1-Compressify.io.webp",
+			"image": "/images/zippy-1-Compressify.io.webp",
 			"imageAlt": "Operal Logo",
 			"badge": "Gaming",
 			"category": "Wallet",
@@ -85,7 +85,7 @@
 		{
 			"href": "https://uniswap.org/",
 			"name": "Uniswap",
-			"image": "images/Uniswap_Logo_and_Wordmark-1-Compressify.io.webp",
+			"image": "/images/Uniswap_Logo_and_Wordmark-1-Compressify.io.webp",
 			"imageAlt": "Uniswap Logo",
 			"category": "DEX",
 			"badge": "DEX",
@@ -95,7 +95,7 @@
 		{
 			"href": "https://frankencoin.app/",
 			"name": "Frankencoin App",
-			"image": "images/Frankencoin-App-Logo-Compressify.io.webp",
+			"image": "/images/Frankencoin-App-Logo-Compressify.io.webp",
 			"imageAlt": "Frankencoin App Logo",
 			"badge": "Gaming",
 			"category": "Wallet",

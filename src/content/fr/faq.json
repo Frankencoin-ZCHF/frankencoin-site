@@ -1,0 +1,89 @@
+{
+	"title": "Questions fréquemment posées",
+	"categories": [
+		{
+			"category": "Bases",
+			"questions": [
+				{
+					"question": "Qu'est-ce que Frankencoin ?",
+					"answer": "Frankencoin (ZCHF) est un stablecoin décentralisé qui réplique numériquement la valeur du franc suisse. Il fonctionne sur l'infrastructure blockchain et suit le CHF 1:1. Contrairement à un dépôt bancaire, Frankencoin n'est pas émis par une seule institution mais créé par un [système sur-collatéralisé](/#how-does-it-work) transparent. En savoir plus dans notre [documentation](https://docs.frankencoin.com/)."
+				},
+				{
+					"question": "Qu'est-ce qu'un stablecoin ?",
+					"answer": "Un stablecoin est une monnaie numérique conçue pour maintenir une valeur stable par rapport à un actif de référence – dans ce cas, le franc suisse. [Frankencoin](/#what-is) utilise des actifs cryptographiques comme garantie pour s'assurer que chaque ZCHF est adossé à plus de 1 CHF de valeur."
+				},
+				{
+					"question": "En quoi Frankencoin diffère-t-il d'un compte bancaire en CHF ?",
+					"answer": "Un compte bancaire représente une créance contre une banque spécifique. [Frankencoin est décentralisé](/#how-does-it-work) – aucune institution unique ne le contrôle. Toutes les réserves et paramètres du système sont publiquement vérifiables sur la [blockchain](https://etherscan.io/token/0xb58e26ac9cc14c0e9f8c0c58152e25fa5b01e875). Vous avez un contrôle total sur vos ZCHF sans dépendre de la solvabilité d'une banque."
+				},
+				{
+					"question": "En quoi Frankencoin diffère-t-il de l'USDT ou de l'USDC ?",
+					"answer": "L'USDT et l'USDC sont émis de manière centralisée par des entreprises et adossés à des réserves fiat détenues dans des comptes bancaires. Frankencoin est décentralisé, adossé à des garanties cryptographiques et gouverné par une communauté de [détenteurs de FPS](/#foundation). Aucune entité unique ne peut geler vos ZCHF."
+				}
+			]
+		},
+		{
+			"category": "Fonctionnement",
+			"questions": [
+				{
+					"question": "Frankencoin est-il adossé 1:1 aux francs suisses ?",
+					"answer": "Non. Frankencoin est [sur-collatéralisé](/#how-does-it-work) par des actifs cryptographiques (par ex. ETH, WBTC). Pour chaque 1 ZCHF en circulation, il existe des garanties d'une valeur supérieure à 1 CHF. Cela fournit un tampon de sécurité contre la volatilité du marché."
+				},
+				{
+					"question": "Que signifie 'sur-collatéralisé' ?",
+					"answer": "La sur-collatéralisation signifie que le système détient des actifs cryptographiques d'une valeur supérieure aux ZCHF émis. Par exemple, pour [frapper 100 ZCHF](https://app.frankencoin.com/), vous devrez peut-être déposer 120 CHF d'ETH. Ce tampon protège le système si les valeurs des garanties baissent."
+				},
+				{
+					"question": "Que se passe-t-il si les garanties perdent de la valeur ?",
+					"answer": "Le système dispose de plusieurs couches de sécurité : les réserves de positions individuelles, le [pool de réserve FPS](/#foundation) et les [mécanismes de liquidation](https://docs.frankencoin.com/positions/liquidation) automatisés. Si les garanties tombent en dessous de niveaux sûrs, les positions sont liquidées pour maintenir la sur-collatéralisation."
+				},
+				{
+					"question": "Que sont les Frankencoin Pool Shares (FPS) ?",
+					"answer": "FPS est le jeton de gouvernance qui représente une part dans le pool de réserve. Les détenteurs de FPS fournissent un capital de secours et ont des droits de vote dans le système. Les FPS peuvent être achetés sur des bourses ou frappés en contribuant au pool de réserve. En savoir plus sur [FPS](/#foundation) ou [investir via l'application](https://app.frankencoin.com/equity)."
+				},
+				{
+					"question": "Frankencoin peut-il perdre son ancrage au franc suisse ?",
+					"answer": "Bien que conçu pour suivre le CHF 1:1, le ZCHF peut temporairement se négocier légèrement au-dessus ou en dessous de l'ancrage en raison de la dynamique du marché. Les [mécanismes d'arbitrage](https://docs.frankencoin.com/positions/minting) et les incitations économiques travaillent à restaurer l'ancrage. La stabilité à long terme dépend d'une [collatéralisation](/#how-does-it-work) adéquate."
+				}
+			]
+		},
+		{
+			"category": "Utiliser Frankencoin",
+			"questions": [
+				{
+					"question": "Où puis-je utiliser Frankencoin ?",
+					"answer": "Le ZCHF est accepté dans les [magasins Spar en Suisse](https://presse.spar.ch/de/spar-schweiz/allgemein/neu%3A-jetzt-bei-spar-mit-krypto-waehrung-bezahlen/), intégré avec [GnosisPay](https://zeal.app/) pour les paiements par carte, disponible via les services IBAN de [Mt Pelerin](https://www.mtpelerin.com/) et utilisé dans des systèmes de paie comme [Quitt](https://www.quitt.ch/). Voir plus de [cas d'usage](/#core-features)."
+				},
+				{
+					"question": "Comment obtenir des Frankencoin ?",
+					"answer": "Vous pouvez acheter des ZCHF via des bourses comme [Uniswap](https://app.uniswap.org/), des services d'accès comme [Mt Pelerin](https://www.mtpelerin.com/) ou [DFX](https://dfx.swiss/), ou en [les frappant directement](https://app.frankencoin.com/) en utilisant des garanties cryptographiques sur l'application Frankencoin."
+				},
+				{
+					"question": "Puis-je gagner des intérêts sur mes Frankencoin ?",
+					"answer": "Vous pouvez gagner un rendement en [fournissant de la liquidité aux protocoles DeFi](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) comme Morpho ou en utilisant le [module d'épargne Frankencoin](https://https://app.frankencoin.com/savings). Les rendements varient en fonction des conditions du marché et ne sont pas garantis. Les taux reflètent l'offre et la demande de liquidité CHF sur les marchés décentralisés."
+				}
+			]
+		},
+		{
+			"category": "Conformité et risques",
+			"questions": [
+				{
+					"question": "Frankencoin est-il réglementé ?",
+					"answer": "Frankencoin (ZCHF) est classé comme jeton de paiement selon la loi suisse et se conforme aux [réglementations suisses et européennes](/#trust-security). Il se qualifie comme crypto-actif sous [MiCA](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica) dans l'UE, bien que certaines dispositions ne s'appliquent pas en raison de sa nature décentralisée."
+				},
+				{
+					"question": "Quels sont les risques ?",
+					"answer": "Frankencoin implique des risques techniques (vulnérabilités des smart contracts), des risques de marché (fluctuations de la valeur des garanties) et des risques de liquidité. Bien qu'[audité par des entreprises de sécurité de premier plan](/#trust-security), aucun système n'est sans risque. Utilisez ZCHF uniquement avec des fonds dont vous pouvez vous permettre de perdre."
+				},
+				{
+					"question": "Qu'est-ce que la Frankencoin Association ?",
+					"answer": "La [Frankencoin Association](https://frankencoin.com/) est une organisation suisse à but non lucratif basée à Zoug. Elle sert de [point de contact](mailto:hello@frankencoin.com), favorise le développement et soutient l'écosystème – mais ne contrôle pas le protocole lui-même."
+				},
+				{
+					"question": "Frankencoin a-t-il été audité ?",
+					"answer": "Oui, les smart contracts ont été audités par plusieurs entreprises de sécurité blockchain de premier plan, notamment [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [Blockbite](https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite.pdf) et [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). Les [rapports d'audit](/#trust-security) sont publiquement disponibles."
+				}
+			]
+		}
+	]
+}

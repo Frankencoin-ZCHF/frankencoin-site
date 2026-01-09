@@ -1,0 +1,329 @@
+{
+	"hero": {
+		"image": {
+			"desktop": "/images/Hero-pic.webp",
+			"mobile": "/images/Hero_pic_mobile_2.webp"
+		},
+		"imageAlt": "Frankencoin Logo",
+		"eyebrow": "Frankencoin: Der Schweizer-Franken-Stablecoin",
+		"title": "Digital. Dezentralisiert. Schweizerisch.",
+		"subtitle": "Frankencoin ist der grösste und erfolgreichste Schweizer-Franken-Stablecoin.",
+		"cta": {
+			"label": "Web-App starten",
+			"href": "https://app.frankencoin.com/"
+		},
+		"cta_buttons": [
+			{
+				"label": "Frankencoins mit Fiat kaufen",
+				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
+			},
+			{
+				"label": "Frankencoins mit Krypto kaufen",
+				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
+			}
+		]
+	},
+
+	"stats": [
+		{
+			"id": "totalValueLocked",
+			"label": "Sicherheitenwert",
+			"unit": "ZCHF",
+			"href": "https://defillama.com/protocol/frankencoin#information"
+		},
+		{
+			"id": "totalSupply",
+			"label": "Geld im Umlauf",
+			"unit": "ZCHF",
+			"href": "https://defillama.com/stablecoin/frankencoin"
+		},
+		{
+			"id": "fpsMarketCap",
+			"label": "Frankencoin-Nutzer",
+			"unit": "Inhaber",
+			"href": "https://dune.com/mathewmeconry/zchf"
+		}
+	],
+
+	"what_is": {
+		"eyebrow": "Einführung",
+		"title": "Was ist Frankencoin?",
+		"subtitle": "Ein Stablecoin, der den Wert des Schweizer Frankens abbildet und nativ mit On-Chain-Finanzwesen kompatibel ist.",
+		"explanation": [
+			{
+				"title": "Schweizer-Franken-Stablecoin",
+				"description": "Frankencoin (ZCHF) ist eine digitale Währung, die einen stabilen Wert von 1:1 zum Schweizer Franken beibehält. Sie verbindet die Stabilität der bewährten Schweizer Währung mit den Vorteilen der Blockchain-Technologie."
+			},
+			{
+				"title": "Vollständig dezentralisiert",
+				"description": "Im Gegensatz zu traditionellen Stablecoins, die von Unternehmen kontrolliert werden, funktioniert Frankencoin ohne zentrale Autorität. Das System wird durch transparente Regeln gesteuert, die durch Smart Contracts auf der Ethereum-Blockchain durchgesetzt werden."
+			},
+			{
+				"title": "Live und etabliert",
+				"description": "Frankencoin ist seit 2024 live und auf 8 verschiedenen Blockchains verfügbar. Es ist mit Abstand der grösste und liquideste Schweizer-Franken-Stablecoin, einer der grössten Nicht-USD-Stablecoins und wird zum De-facto-Standard für On-Chain-Schweizer-Franken im DeFi-Bereich."
+			}
+		]
+	},
+	"core_features": {
+		"eyebrow": "Verwendungsmöglichkeiten von Frankencoin",
+		"title": "Bezahlen. Ausleihen. Verdienen. Entwickeln.",
+		"features": [
+			{
+				"title": "Bezahlen",
+				"image": "/images/Icon-Payments.svg",
+				"description": "Verwenden Sie Frankencoin für Schweizer-Franken-Zahlungen – in Spar-Filialen, über Debitkarten (GnosisPay) oder mit IBAN-Integration (Mt Pelerin). Bezahlen Sie Rechnungen, empfangen Sie Gehalt und tätigen Sie alltägliche Einkäufe.",
+				"examples": [
+					"Einzelhandelskäufe bei Spar",
+					"Internationale Überweisungen",
+					"Rechnungszahlungen",
+					"Gehaltsempfang"
+				],
+				"ctas": [
+					{
+						"label": "ZCHF mit Fiat kaufen",
+						"href": "https://www.mtpelerin.com/buy-zchf-frankencoin"
+					},
+					{
+						"label": "ZCHF mit Krypto kaufen",
+						"href": "https://swap.cow.fi/#/11/swap/USDT/ZCHF"
+					}
+				]
+			},
+			{
+				"title": "Ausleihen",
+				"image": "/images/Icon-Borrow.svg",
+				"description": "Leihen Sie Frankencoin aus, indem Sie Krypto-Assets als Sicherheit hinterlegen. Erhalten Sie Zugang zu ZCHF-Liquidität, während Sie weiterhin von Ihren digitalen Assets profitieren.",
+				"examples": [
+					"ZCHF mit Krypto-Sicherheiten prägen",
+					"Zugang zu ZCHF-Liquidität",
+					"Digitale Assets hebeln",
+					"Treasury-Management"
+				],
+				"cta": {
+					"label": "ZCHF ausleihen",
+					"href": "https://app.frankencoin.com/mint"
+				}
+			},
+			{
+				"title": "Verdienen",
+				"image": "/images/Icon-Invest.svg",
+				"description": "Verdienen Sie marktbasierte Renditen auf Ihre ZCHF-Bestände durch DeFi-Anwendungen. Lassen Sie Ihre Frankencoins für sich arbeiten.",
+				"examples": [
+					"Rendite auf Ersparnisse verdienen",
+					"Liquiditätsbereitstellung",
+					"Passives Einkommen generieren",
+					"DeFi-Teilnahme"
+				],
+				"cta": {
+					"label": "Rendite auf ZCHF verdienen",
+					"href": "https://app.frankencoin.com/savings"
+				}
+			},
+			{
+				"title": "Entwickeln & Integrieren",
+				"image": "/images/Icon-Mint.svg",
+				"description": "Entwickler und Unternehmen können Frankencoin als programmierbare Schweizer-Franken-Schicht für Anwendungen und Finanzdienstleistungen integrieren.",
+				"examples": [
+					"Lohnabrechnungssysteme",
+					"Handelsplattformen",
+					"Treasury-Tools",
+					"Finanzanwendungen"
+				],
+				"cta": {
+					"label": "Dokumentation ansehen",
+					"href": "https://docs.frankencoin.com/"
+				}
+			}
+		],
+		"more_link": {
+			"label": "Weitere Anwendungsfälle ansehen",
+			"href": "/use-cases"
+		}
+	},
+	"how_it_works": {
+		"title": "Eine dezentralisierte Alternative zum traditionellen Bankwesen",
+		"subtitle": "Frankencoin funktioniert wie eine transparente, regelbasierte Finanzinfrastruktur",
+		"eyebrow":"Wie es funktioniert",
+		"steps": [
+			{
+				"title": "Prägen",
+				"image": "/images/Grafik_Mint.svg",
+				"description": [
+					{
+						"step": "1. Prägen",
+						"content": "Jeder kann eine geeignete Sicherheit hinterlegen und Frankencoins prägen. Diese Frankencoins müssen zurückgegeben werden, bevor Sie Ihre Sicherheit zurückbekommen können."
+					},
+					{
+						"step": "2. Gebühren.",
+						"content": "Jeder kann eine geeignete Sicherheit hinterlegen und Frankencoins prägen. Diese Frankencoins müssen zurückgegeben werden, bevor Sie Ihre Sicherheit zurückbekommen können."
+					}
+				]
+			},
+			{
+				"title": "Verkaufen",
+				"image": "/images/Grafik_Sell.svg",
+				"description": [
+					{
+						"step": "3. Verkaufen.",
+						"content": "Der Präger verkauft die Frankencoins für je 1 CHF auf dem Markt."
+					}
+				]
+			},
+			{
+				"title": "Ausgeben",
+				"image": "/images/Grafik_Spend.svg",
+				"description": [
+					{
+						"step": "4. Kaufen.",
+						"content": "Jemand anderes kauft einige Frankencoins von Uniswap oder anderen Marktplätzen."
+					},
+					{
+						"step": "5. Bezahlen.",
+						"content": "Frankencoins können für Schweizer-Franken-Zahlungen im DeFi-Bereich oder anderswo verwendet werden."
+					},
+					{
+						"step": "6. Verkaufen.",
+						"content": "Empfänger können ihre Frankencoins wieder auf dem Markt verkaufen."
+					}
+				]
+			},
+			{
+				"title": "Sparen",
+				"image": "/images/Grafik_Save.svg",
+				"description": [
+					{
+						"step": "7. Kaufen.",
+						"content": "Jemand, der daran interessiert ist, Schweizer Franken zu sparen, könnte einige Frankencoins kaufen."
+					},
+					{
+						"step": "8. Sparen.",
+						"content": "Und dann verpflichten, diese für einen gewählten Zeitraum im System zu sperren."
+					},
+					{
+						"step": "9. Zinsen.",
+						"content": "Der Sparer erhält Zinsen auf seine Frankencoins."
+					}
+				]
+			},
+			{
+				"title": "Investieren",
+				"image": "/images/Grafik_Invest.svg",
+				"description": [
+					{
+						"step": "10. FPS kaufen.",
+						"content": "Investoren möchten möglicherweise FPS kaufen, um auf den Erfolg des gesamten Systems zu spekulieren."
+					},
+					{
+						"step": "11. Kapital hinzufügen.",
+						"content": "Beim Hinzufügen von Kapital zum Eigenkapitalreservepool erhalten Sie neu geprägte Frankencoin Pool Shares (FPS) im Gegenzug. Die Anzahl der FPS wird anhand einer Bonding Curve mit der Invariante 'Marktkapitalisierung = FPS-Umlauf * FPS-Preis = 3 * Eigenkapitalreservepool' berechnet, abzüglich 0,3 % Ausgabegebühr."
+					},
+					{
+						"step": "12. FPS-Wertsteigerung oder -verlust.",
+						"content": "Nach einer minimalen Haltedauer von drei Monaten können die FPS zum aktuellen Preis an das System zurückgegeben werden, abzüglich 0,3 % Rücknahmegebühr."
+					}
+				]
+			}
+		]
+,
+		"cta": {
+			"label": "Detaillierte Dokumentation lesen",
+			"href": "https://docs.frankencoin.com/"
+		}
+	},
+	"how_does_it_work": {
+		"eyebrow": "Technischer Tiefgang",
+		"title": "Wie funktioniert Frankencoin?",
+		"explanation": [
+			{
+				"title": "Besicherte Schuldposition",
+				"description": "Frankencoin funktioniert als dezentralisiertes System für besicherte Schuldpositionen. Nutzer hinterlegen Krypto-Assets als Sicherheit, um digitale Schweizer Franken (ZCHF) zu prägen. Die Sicherheit bleibt unter der Kontrolle des Nutzers, während sie die ausstehende Franken-Emission absichert, ähnlich einer besicherten Kreditfazilität mit transparenten, automatisierten Bedingungen.",
+				"link": "https://docs.frankencoin.com/positions/open"
+			},
+			{
+				"title": "Warum 1 ZCHF gleich 1 CHF ist",
+				"description": "Jeder ZCHF-Token ist überbesichert und durch Assets im Wert von mehr als 1 Schweizer Franken gedeckt. Diese strukturelle Überbesicherung gewährleistet Preisstabilität und bietet einen robusten Deckungsmechanismus, der die 1:1-Bindung zum Schweizer Franken aufrechterhält.",
+				"link": "https://docs.frankencoin.com/reserve"
+			},
+			{
+				"title": "Marktgetriebene Preisstabilität",
+				"description": "Die Bindung wird durch Arbitragemöglichkeiten aufrechterhalten: Wenn ZCHF unter Parität gehandelt wird, profitieren Marktteilnehmer davon, vergünstigte Token zu kaufen und die zugrunde liegenden Sicherheiten einzulösen. Wenn ZCHF über Parität gehandelt wird, profitieren Teilnehmer davon, neue Token zu prägen und mit Aufschlag zu verkaufen. Diese Arbitragemechanismen schaffen natürliche Marktkräfte, die das Gleichgewicht bei 1 CHF aufrechterhalten.",
+				"link": "https://docs.frankencoin.com/positions/auctions"
+			}
+		]
+	},
+	"trust_security": {
+		"eyebrow": "Transparent & Verifiziert",
+		"title": "Regulatorische Klarheit und Sicherheitsprüfungen",
+		"regulatory": {
+			"title": "Rechtliche Klassifizierung",
+			"description": "Frankencoin (ZCHF) ist nach schweizerischem Recht als Zahlungstoken klassifiziert. Das System ist vollständig konform mit schweizerischen und EU-Vorschriften und kann ohne Einschränkungen verwendet werden. In der Europäischen Union qualifiziert Frankencoin als Krypto-Asset gemäss MiCA, wobei die in den Titeln II, III und IV festgelegten Pflichten aufgrund seiner dezentralisierten Natur nicht gelten.",
+			"documents": [
+				{
+					"label": "Schweizer Rechtsklassifizierung (LEXR)",
+					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf"
+				},
+				{
+					"label": "EU-MiCA-Konformitätsmemo",
+					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_MiCA_Memo.pdf"
+				}
+			]
+		},
+		"audits": {
+			"title": "Sicherheitsprüfungen",
+			"description": "Geprüft von führenden Blockchain-Sicherheitsunternehmen, um die Integrität des Protokolls zu gewährleisten",
+			"partners": [
+				{
+					"altText": "Code4rena",
+					"image": "/images/c4-logo-1-Compressify.io.webp",
+					"href": "https://code4rena.com/reports/2023-04-frankencoin"
+				},
+				{
+					"altText": "Decurity",
+					"image": "/images/Decurity_Logo.png",
+					"href": "https://github.com/Decurity/audits/blob/master/Frankencoin/frankencoin-audit-report-2024-1.1.pdf"
+				},
+				{
+					"altText": "ChainSecurity",
+					"image": "/images/chainsec_logo.svg",
+					"sublinks": [
+						{
+							"label": "Audit 1",
+							"href": "https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts"
+						},
+						{
+							"label": "Audit 2",
+							"href": "https://www.chainsecurity.com/security-audit/frankencoin-v2024"
+						},
+						{
+							"label": "Audit 3",
+							"href": "https://www.chainsecurity.com/security-audit/frankencoin-ccip-bridge"
+						}
+					]
+				},
+				{
+					"altText": "Blockbyte",
+					"image": "/images/blockbyte-logo-black-1-Compressify.io.webp",
+					"href": "https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf"
+				}
+			]
+		}
+	},
+	"foundation": {
+		"title": "Theoretische Grundlage",
+		"description": "Der Frankencoin wurde als Teil [einer Doktorarbeit](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) am Lehrstuhl für Finanzwirtschaft der Universität Zürich konzipiert. Unter anderem behandelt sie die Spieltheorie hinter dem neuartigen Liquidationsmechanismus des Systems, quantifiziert das Risiko von Bitcoin als Sicherheit und analysiert formal das Veto-basierte Governance-System. Das Frankencoin-System kann als Continuous Capital Corporation betrachtet werden, ein in Kapitel drei eingeführtes Konzept, das ein Unternehmen bezeichnet, das Aktien autonom gemäss festen Regeln ausgibt und zurücknimmt, die unter einer Vielzahl theoretischer Annahmen optimal sind.",
+		"image": "/images/frankencoin-foundation.webp",
+		"imageAlt": "Frankencoin-Grundlage",
+		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
+	},
+	"in_the_media": {
+		"eyebrow": "Medienberichterstattung",
+		"title": "In den Medien",
+		"subtitle": "Sehen Sie, was die Medien über Frankencoin sagen",
+		"contact_text": "Möchten Sie über Frankencoin berichten? Kontaktieren Sie uns unter"
+	},
+	"videos": {
+		"eyebrow": "Videos",
+		"title": "Frankencoin erklärt",
+		"subtitle": "Schauen Sie sich unsere Videos an, um mehr über Frankencoin zu erfahren"
+	}
+}

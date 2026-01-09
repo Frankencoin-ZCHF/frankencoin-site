@@ -1,0 +1,117 @@
+---
+import { languages, type Language, getLanguageFromURL, getLocalizedPath, stripLangFromPath } from '../../utils/i18n';
+
+const currentPath = Astro.url.pathname;
+const currentLang = getLanguageFromURL(currentPath);
+const basePath = stripLangFromPath(currentPath);
+---
+
+<div
+  x-data={`{
+    open: false,
+    currentLang: '${currentLang}',
+    basePath: '${basePath}',
+    languages: {
+      en: 'English',
+      de: 'Deutsch',
+      fr: 'Français'
+    },
+    languageCodes: {
+      en: 'EN',
+      de: 'DE',
+      fr: 'FR'
+    },
+    init() {
+      // Check if we've already done auto-detection
+      const hasAutoDetected = localStorage.getItem('language-auto-detected');
+
+      if (!hasAutoDetected) {
+        // First visit - try to auto-detect browser language
+        const browserLang = navigator.language.toLowerCase().split('-')[0];
+
+        // Only redirect if browser language is de/fr and different from current page
+        if ((browserLang === 'de' || browserLang === 'fr') && browserLang !== this.currentLang) {
+          // Mark that we've auto-detected
+          localStorage.setItem('language-auto-detected', 'true');
+          localStorage.setItem('preferred-language', browserLang);
+
+          // Redirect to browser language
+          const newPath = this.getLocalizedPath(this.basePath, browserLang);
+          window.location.href = newPath;
+          return;
+        }
+
+        // Mark auto-detection as complete even if we didn't redirect
+        localStorage.setItem('language-auto-detected', 'true');
+        localStorage.setItem('preferred-language', this.currentLang);
+      }
+    },
+    getLocalizedPath(path, lang) {
+      if (lang === 'en') {
+        return path === '/' || !path ? '/' : path;
+      }
+      // Handle root path
+      if (path === '/' || !path) {
+        return '/' + lang + '/';
+      }
+      // Handle other paths - remove leading slash if present
+      const cleanPath = path.startsWith('/') ? path.slice(1) : path;
+      return '/' + lang + '/' + cleanPath;
+    },
+    switchLanguage(lang) {
+      if (lang === this.currentLang) {
+        this.open = false;
+        return;
+      }
+
+      // Mark that user has manually chosen a language
+      localStorage.setItem('language-auto-detected', 'true');
+      localStorage.setItem('preferred-language', lang);
+
+      // Preserve the current hash/anchor
+      const currentHash = window.location.hash;
+      const newPath = this.getLocalizedPath(this.basePath, lang);
+      window.location.href = newPath + currentHash;
+    }
+  }`}
+  @click.away="open = false"
+  class="relative"
+>
+  <!-- Language Button -->
+  <button
+    @click="open = !open"
+    class="flex items-center gap-2 px-4 py-2 rounded-lg border-2 border-[var(--color-gray-20)] hover:border-[var(--color-brand-deep-blue)] transition-colors"
+    aria-label="Select language"
+  >
+    <span x-text="languageCodes[currentLang]" class="ty-small font-bold"></span>
+    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg" :class="open ? 'rotate-180' : ''" class="transition-transform">
+      <path d="M2 4L6 8L10 4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+    </svg>
+  </button>
+
+  <!-- Dropdown Menu -->
+  <div
+    x-show="open"
+    x-transition:enter="transition ease-out duration-100"
+    x-transition:enter-start="transform opacity-0 scale-95"
+    x-transition:enter-end="transform opacity-100 scale-100"
+    x-transition:leave="transition ease-in duration-75"
+    x-transition:leave-start="transform opacity-100 scale-100"
+    x-transition:leave-end="transform opacity-0 scale-95"
+    class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border-2 border-[var(--color-gray-20)] overflow-hidden z-50"
+  >
+    {Object.entries(languages).map(([code, name]) => (
+      <button
+        @click={`switchLanguage('${code}')`}
+        class={`w-full text-left px-4 py-3 hover:bg-[var(--color-gray-10)] transition-colors ${code === currentLang ? 'bg-[var(--color-gray-10)] font-bold' : ''}`}
+      >
+        <span class="ty-small">{code.toUpperCase()}</span>
+        {code === currentLang && (
+          <svg class="inline-block ml-2" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M13.3 4L6 11.3L2.7 8" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        )}
+      </button>
+    ))}
+  </div>
+</div>

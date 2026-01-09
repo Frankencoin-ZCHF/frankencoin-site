@@ -1,0 +1,12 @@
+---
+import MainToken from '../token.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+---
+
+<MainToken />

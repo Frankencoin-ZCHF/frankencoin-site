@@ -1,10 +1,14 @@
 ---
+import { getLanguageFromURL, loadSharedContent } from "../utils/i18n";
+
 interface Props {
   theme?: "light" | "dark";
 }
 
 const { theme = "light" } = Astro.props as Props;
-import nav from "../content/shared/nav.json";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const nav = await loadSharedContent("nav", currentLang);
 ---
 
 <div class="grid grid-cols-5 gap-[var(--spacing-l)] items-center">

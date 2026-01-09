@@ -1,6 +1,9 @@
 ---
-import token from "../../content/token.json";
+import { getLanguageFromURL, loadContent } from "../../utils/i18n";
 import Tooltip from "../Tooltip/Tooltip.astro";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const token = await loadContent("token", currentLang);
 
 interface Props {
   name: string;

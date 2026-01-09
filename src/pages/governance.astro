@@ -2,12 +2,15 @@
 import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
-import governance from "../content/governance.json";
+import { getLanguageFromURL, loadContent } from "../utils/i18n";
 import FlexStack from "../components/Layout/FlexStack.astro";
 import BadgeContainer, {
   type Option,
 } from "../components/BadgeContainer/BadgeContainer.astro";
 import StatsContainer from "../components/StatsContainer/StatsContainer.astro";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const governance = await loadContent("governance", currentLang);
 
 async function getFpsInfo() {
   try {

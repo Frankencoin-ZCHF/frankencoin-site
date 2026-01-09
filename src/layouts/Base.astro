@@ -2,7 +2,7 @@
 import Footer from "../components/Layout/Footer.astro";
 import Header from "../components/Layout/Header.astro";
 import SEO from "../components/SEO.astro";
-import site from "../content/shared/site.json";
+import { getLanguageFromURL, loadSharedContent } from "../utils/i18n";
 import "../styles/global.css";
 
 interface Props {
@@ -13,10 +13,12 @@ interface Props {
 }
 
 const { title, description, image, type } = Astro.props;
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const site = await loadSharedContent("site", currentLang);
 ---
 
 <!doctype html>
-<html lang="en">
+<html lang={currentLang}>
   <head>
     <!-- Basic Meta Tags -->
     <meta charset="UTF-8" />

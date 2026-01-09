@@ -1,0 +1,13 @@
+{
+  "buttons": {
+    "copy": "Kopieren",
+    "copied": "Kopiert!",
+    "loading": "Lädt…",
+    "learnMore": "Mehr erfahren",
+    "seeMoreUseCases": "Weitere Anwendungsfälle anzeigen"
+  },
+  "contact": {
+    "type": "Kundenservice",
+    "email": "info@frankencoin.com"
+  }
+}

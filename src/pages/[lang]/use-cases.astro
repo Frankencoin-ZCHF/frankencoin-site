@@ -1,0 +1,12 @@
+---
+import MainUseCases from '../use-cases.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'de' } },
+    { params: { lang: 'fr' } },
+  ];
+}
+---
+
+<MainUseCases />
