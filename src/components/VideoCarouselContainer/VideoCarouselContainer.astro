@@ -98,7 +98,7 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
     >
       <!-- Current page -->
       <div class="w-full flex-shrink-0">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-4">
           <template x-for="video in getPageVideos(currentIndex)" :key="video.url">
         <a
           :href="video.url"
@@ -145,7 +145,7 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
 
       <!-- Next page (for left slide) -->
       <div class="w-full flex-shrink-0" x-show="isTransitioning && translateX < 0">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-4">
           <template x-for="video in getPageVideos((currentIndex + 1) % totalPages)" :key="video.url">
             <a
               :href="video.url"
@@ -188,7 +188,7 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
 
       <!-- Previous page (for right slide) - positioned before current -->
       <div class="w-full flex-shrink-0 -order-1" x-show="isTransitioning && translateX > 0">
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8 pb-4">
           <template x-for="video in getPageVideos((currentIndex - 1 + totalPages) % totalPages)" :key="video.url">
             <a
               :href="video.url"
@@ -232,7 +232,7 @@ const sortedVideos = videosWithMetadata.sort((a, b) => {
   </div>
 
   <!-- Navigation Controls -->
-  <div class="flex justify-center items-center gap-4 mt-8">
+  <div class="flex justify-center items-center gap-1 mt-1">
     <button
       @click="prev()"
       class="p-3 rounded-full bg-[var(--color-brand-deep-blue)] text-white hover:bg-[var(--color-brand-swiss)] transition-colors"
