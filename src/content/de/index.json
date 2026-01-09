@@ -6,7 +6,7 @@
 		},
 		"imageAlt": "Frankencoin Logo",
 		"eyebrow": "Frankencoin: Der Schweizer-Franken-Stablecoin",
-		"title": "Digital. Dezentralisiert. Schweizerisch.",
+		"title": "Digital. Dezentral. Schweizerisch.",
 		"subtitle": "Frankencoin ist der grösste und erfolgreichste Schweizer-Franken-Stablecoin.",
 		"cta": {
 			"label": "Web-App starten",
@@ -27,13 +27,13 @@
 	"stats": [
 		{
 			"id": "totalValueLocked",
-			"label": "Sicherheitenwert",
+			"label": "Collateralwert",
 			"unit": "ZCHF",
 			"href": "https://defillama.com/protocol/frankencoin#information"
 		},
 		{
 			"id": "totalSupply",
-			"label": "Geld im Umlauf",
+			"label": "Tokens im Umlauf",
 			"unit": "ZCHF",
 			"href": "https://defillama.com/stablecoin/frankencoin"
 		},
@@ -52,7 +52,7 @@
 		"explanation": [
 			{
 				"title": "Schweizer-Franken-Stablecoin",
-				"description": "Frankencoin (ZCHF) ist eine digitale Währung, die einen stabilen Wert von 1:1 zum Schweizer Franken beibehält. Sie verbindet die Stabilität der bewährten Schweizer Währung mit den Vorteilen der Blockchain-Technologie."
+				"description": "Frankencoin (ZCHF) ist eine digitale Währung, die einen  Wert von 1:1 zum Schweizer Franken beibehält. Sie verbindet die Stabilität der bewährten Schweizer Währung mit den Vorteilen der Blockchain-Technologie."
 			},
 			{
 				"title": "Vollständig dezentralisiert",
@@ -231,7 +231,7 @@
 		}
 	},
 	"how_does_it_work": {
-		"eyebrow": "Technischer Tiefgang",
+		"eyebrow": "Technischer Deepdive",
 		"title": "Wie funktioniert Frankencoin?",
 		"explanation": [
 			{
@@ -253,7 +253,7 @@
 	},
 	"trust_security": {
 		"eyebrow": "Transparent & Verifiziert",
-		"title": "Regulatorische Klarheit und Sicherheitsprüfungen",
+		"title": "Regulatorische Klarheit und Sicherheitsaudits",
 		"regulatory": {
 			"title": "Rechtliche Klassifizierung",
 			"description": "Frankencoin (ZCHF) ist nach schweizerischem Recht als Zahlungstoken klassifiziert. Das System ist vollständig konform mit schweizerischen und EU-Vorschriften und kann ohne Einschränkungen verwendet werden. In der Europäischen Union qualifiziert Frankencoin als Krypto-Asset gemäss MiCA, wobei die in den Titeln II, III und IV festgelegten Pflichten aufgrund seiner dezentralisierten Natur nicht gelten.",
@@ -269,7 +269,7 @@
 			]
 		},
 		"audits": {
-			"title": "Sicherheitsprüfungen",
+			"title": "Sicherheitsaudits",
 			"description": "Geprüft von führenden Blockchain-Sicherheitsunternehmen, um die Integrität des Protokolls zu gewährleisten",
 			"partners": [
 				{
@@ -316,7 +316,7 @@
 		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
 	},
 	"in_the_media": {
-		"eyebrow": "Medienberichterstattung",
+		"eyebrow": "Berichterstattung",
 		"title": "In den Medien",
 		"subtitle": "Sehen Sie, was die Medien über Frankencoin sagen",
 		"contact_text": "Möchten Sie über Frankencoin berichten? Kontaktieren Sie uns unter"
