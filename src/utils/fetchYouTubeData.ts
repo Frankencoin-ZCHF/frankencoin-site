@@ -50,7 +50,11 @@ export async function fetchYouTubeData(url: string): Promise<YouTubeData | null>
     }
 
     // Fetch the YouTube page to get metadata
-    const response = await fetch(`https://www.youtube.com/watch?v=${videoId}`);
+    const response = await fetch(`https://www.youtube.com/watch?v=${videoId}`, {
+      headers: {
+        'User-Agent': 'Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36'
+      }
+    });
     if (!response.ok) {
       console.error(`Failed to fetch ${url}: ${response.status}`);
       return null;
