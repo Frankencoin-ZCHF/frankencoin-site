@@ -155,12 +155,11 @@ const stats: Option[] = frankencoinInfo
     subtitle={index.how_it_works.subtitle}
     eyebrow={index.how_it_works.eyebrow}
   >
+    <div id="how-does-it-work"></div>
     <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8 mb-16">
       <TabMenu tabs={index.how_it_works.steps} />
     </div>
-    <div id="how-does-it-work">
-      <ExplanationCardsContainer cards={index.how_does_it_work.explanation} />
-    </div>
+    <ExplanationCardsContainer cards={index.how_does_it_work.explanation} />
   </Section>
     
     <Section
