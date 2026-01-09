@@ -13,7 +13,7 @@
             "href": "/use-cases"
           },
                     {
-            "label": "Governance",
+            "label": "Governance / FPS",
             "href": "/governance"
           }
         ],
@@ -36,7 +36,7 @@
         ]
       },
       {
-        "title": "Token",
+        "title": "Tokens",
         "links": [
           {
             "label": "Token Info",

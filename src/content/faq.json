@@ -1,0 +1,89 @@
+{
+	"title": "Frequently Asked Questions",
+	"categories": [
+		{
+			"category": "Basics",
+			"questions": [
+				{
+					"question": "What is Frankencoin?",
+					"answer": "Frankencoin (ZCHF) is a decentralized stablecoin that digitally replicates the value of the Swiss franc. It operates on blockchain infrastructure and tracks CHF 1:1. Unlike a bank deposit, Frankencoin is not issued by a single institution but created through a transparent, [over-collateralized system](/#how-does-it-work). Learn more in our [documentation](https://docs.frankencoin.com/)."
+				},
+				{
+					"question": "What is a stablecoin?",
+					"answer": "A stablecoin is a digital currency designed to maintain a stable value relative to a reference asset—in this case, the Swiss franc. [Frankencoin](/#what-is) uses crypto assets as collateral to ensure each ZCHF is backed by more than 1 CHF worth of value."
+				},
+				{
+					"question": "How is Frankencoin different from a bank account in CHF?",
+					"answer": "A bank account represents a claim against a specific bank. [Frankencoin is decentralized](/#how-does-it-work)—no single institution controls it. All reserves and system parameters are publicly verifiable on the [blockchain](https://etherscan.io/token/0xb58e26ac9cc14c0e9f8c0c58152e25fa5b01e875). You have full control over your ZCHF without relying on a bank's solvency."
+				},
+				{
+					"question": "How is Frankencoin different from USDT or USDC?",
+					"answer": "USDT and USDC are centrally issued by companies and backed by fiat reserves held in bank accounts. Frankencoin is decentralized, backed by crypto collateral, and governed by a community of [FPS holders](/#foundation). No single entity can freeze your ZCHF."
+				}
+			]
+		},
+		{
+			"category": "How it Works",
+			"questions": [
+				{
+					"question": "Is Frankencoin backed 1:1 by Swiss francs?",
+					"answer": "No. Frankencoin is [over-collateralized](/#how-does-it-work) by crypto assets (e.g., ETH, WBTC). For every 1 ZCHF in circulation, there is collateral worth more than 1 CHF. This provides a safety buffer against market volatility."
+				},
+				{
+					"question": "What does 'over-collateralized' mean?",
+					"answer": "Over-collateralization means the system holds crypto assets worth more than the ZCHF issued. For example, to [mint 100 ZCHF](https://app.frankencoin.com/), you might need to deposit 120 CHF worth of ETH. This buffer protects the system if collateral values drop."
+				},
+				{
+					"question": "What happens if the collateral loses value?",
+					"answer": "The system has multiple safety layers: individual position reserves, the [FPS reserve pool](/#foundation), and automated [liquidation mechanisms](https://docs.frankencoin.com/positions/liquidation). If collateral drops below safe levels, positions are liquidated to maintain over-collateralization."
+				},
+				{
+					"question": "What are Frankencoin Pool Shares (FPS)?",
+					"answer": "FPS is the governance token that represents a share in the reserve pool. FPS holders provide backup capital and have voting rights in the system. FPS can be bought on exchanges or minted by contributing to the reserve pool. Learn more about [FPS](/#foundation) or [invest via the app](https://app.frankencoin.com/equity)."
+				},
+				{
+					"question": "Can Frankencoin lose its peg to the Swiss franc?",
+					"answer": "While designed to track CHF 1:1, ZCHF can temporarily trade slightly above or below peg due to market dynamics. [Arbitrage mechanisms](https://docs.frankencoin.com/positions/minting) and economic incentives work to restore the peg. Long-term stability depends on adequate [collateralization](/#how-does-it-work)."
+				}
+			]
+		},
+		{
+			"category": "Using Frankencoin",
+			"questions": [
+				{
+					"question": "Where can I use Frankencoin?",
+					"answer": "ZCHF is accepted at [Spar stores in Switzerland](https://presse.spar.ch/de/spar-schweiz/allgemein/neu%3A-jetzt-bei-spar-mit-krypto-waehrung-bezahlen/), integrated with [GnosisPay](https://zeal.app/) for card payments, available through [Mt Pelerin's](https://www.mtpelerin.com/) IBAN services, and used in payroll systems like [Quitt](https://www.quitt.ch/). See more [use cases](/#core-features)."
+				},
+				{
+					"question": "How do I get Frankencoin?",
+					"answer": "You can buy ZCHF through exchanges like [Uniswap](https://app.uniswap.org/), on-ramp services like [Mt Pelerin](https://www.mtpelerin.com/) or [DFX](https://dfx.swiss/), or by [minting it directly](https://app.frankencoin.com/) using crypto collateral on the Frankencoin app."
+				},
+				{
+					"question": "Can I earn interest on my Frankencoin?",
+					"answer": "You can earn yield by [providing liquidity to DeFi protocols](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) like morpho or using the [Frankencoin savings module](https://https://app.frankencoin.com/savings). Returns vary based on market conditions and are not guaranteed. Rates reflect supply and demand for CHF liquidity in decentralized markets."
+				}
+			]
+		},
+		{
+			"category": "Compliance & Risk",
+			"questions": [
+				{
+					"question": "Is Frankencoin regulated?",
+					"answer": "Frankencoin (ZCHF) is classified as a payment token under Swiss law and complies with [Swiss and EU regulations](/#trust-security). It qualifies as a crypto-asset under [MiCA](https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica) in the EU, though certain provisions do not apply due to its decentralized nature."
+				},
+				{
+					"question": "What are the risks?",
+					"answer": "Frankencoin involves technical risks (smart contract vulnerabilities), market risks (collateral value fluctuations), and liquidity risks. While [audited by leading security firms](/#trust-security), no system is risk-free. Only use ZCHF with funds you can afford to risk."
+				},
+				{
+					"question": "What is the Frankencoin Association?",
+					"answer": "The [Frankencoin Association](https://frankencoin.com/) is a Swiss non-profit organization based in Zug. It serves as a [point of contact](mailto:hello@frankencoin.com), furthers the development and supports the ecosystem—but does not control the protocol itself."
+				},
+				{
+					"question": "Has Frankencoin been audited?",
+					"answer": "Yes, the smart contracts have been audited by multiple leading blockchain security firms including [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [Blockbite](https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite.pdf), and [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). [Audit reports](/#trust-security) are publicly available."
+				}
+			]
+		}
+	]
+}

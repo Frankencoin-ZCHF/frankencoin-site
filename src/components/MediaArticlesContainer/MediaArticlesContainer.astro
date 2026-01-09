@@ -1,6 +1,6 @@
 ---
 import { fetchOgData } from "../../utils/fetchOgData";
-import manualMetadata from "../../content/shared/article-metadata.json";
+import media from "../../content/media.json";
 
 interface Props {
   articles: string[];
@@ -26,9 +26,9 @@ const articlesWithMetadata = await Promise.all(
     };
 
     // Check if manual override exists for this URL
-    if (manualMetadata.manual[url]) {
+    if (media.articleMetadata[url]) {
       console.log(`Applying manual overrides for: ${url}`);
-      const manual = manualMetadata.manual[url];
+      const manual = media.articleMetadata[url];
 
       // Merge: manual metadata overrides OG data for any fields that are provided
       return {

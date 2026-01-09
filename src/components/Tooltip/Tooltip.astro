@@ -1,12 +1,12 @@
 ---
-import index from "../../content/index.json";
+import token from "../../content/token.json";
 
 interface Props {
   text: string;
   toCopy: string;
 }
 
-const { text = index.tokens.actions.copyTextTooltip, toCopy } = Astro.props;
+const { text = token.tokens.actions.copyTextTooltip, toCopy } = Astro.props;
 ---
 
 <div
@@ -57,7 +57,7 @@ const { text = index.tokens.actions.copyTextTooltip, toCopy } = Astro.props;
     x-transition:leave-start="opacity-100 transform scale-100"
     x-transition:leave-end="opacity-0 transform scale-95"
   >
-    {index.tokens.actions.copiedLabel}
+    {token.tokens.actions.copiedLabel}
     <div
       class="absolute left-1/2 -bottom-0.5 -translate-x-1/2 w-2 h-2 rotate-45 bg-gray-800"
     >

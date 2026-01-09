@@ -4,10 +4,18 @@
     "imageAlt": "Frankencoin governance",
     "title": "Frankencoin Governance",
     "subtitle": "A decentralized, community-driven approach to managing the Swiss franc stablecoin",
-    "cta": {
-      "label": "Participate in Governance",
-      "href": "https://app.frankencoin.com/equity"
-    }
+    "cta": [
+      {
+        "label": "Mint/Redeem FPS",
+        "href": "https://app.frankencoin.com/equity",
+        "external": true
+      },
+      {
+        "label": "Participate in Governance",
+        "href": "https://app.frankencoin.com/governance",
+        "external": true
+      }
+    ]
   },
   "caps": [
     {

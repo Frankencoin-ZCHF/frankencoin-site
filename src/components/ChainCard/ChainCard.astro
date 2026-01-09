@@ -1,5 +1,5 @@
 ---
-import index from "../../content/index.json";
+import token from "../../content/token.json";
 import Tooltip from "../Tooltip/Tooltip.astro";
 
 interface Props {
@@ -30,7 +30,7 @@ const contractUrl = `${explorerBaseUrl}/${contract}`;
     <img src={image} alt={name} class="w-10 h-10" />
     <div>
       <p class="ty-xs ty-black text-[var(--color-brand-anthracite)]">
-        {index.tokens.header.label}
+        {token.tokens.header.label}
       </p>
       <h2 class="ty-big-2 ty-black">{name}</h2>
     </div>
@@ -39,7 +39,7 @@ const contractUrl = `${explorerBaseUrl}/${contract}`;
   <div class="mt-4">
     <div class="flex items-center gap-2 text-sm text-gray-800 break-all">
       <p class="ty-body-3 ty-black text-gray-500">
-        {index.tokens.header.title}
+        {token.tokens.header.title}
       </p>
       <img
         src="images/Vectors-Wrapper.svg"
@@ -56,7 +56,7 @@ const contractUrl = `${explorerBaseUrl}/${contract}`;
       >
         {contract}
       </a>
-      <Tooltip text={index.tokens.actions.copyTextTooltip} toCopy={contract} />
+      <Tooltip text={token.tokens.actions.copyTextTooltip} toCopy={contract} />
     </div>
   </div>
 

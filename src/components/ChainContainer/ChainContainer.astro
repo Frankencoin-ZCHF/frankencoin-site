@@ -1,9 +1,9 @@
 ---
 import ChainCard from "../ChainCard/ChainCard.astro";
-import index from "../../content/index.json";
+import token from "../../content/token.json";
 
 interface Props {
-  tokens: typeof index.tokens.chains;
+  tokens: typeof token.tokens.chains;
 }
 
 const { tokens } = Astro.props;

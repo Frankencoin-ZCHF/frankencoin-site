@@ -38,8 +38,8 @@ const { brand, links, cta } = nav;
 
     <!-- Right: CTA + Mobile Menu -->
     <div class="flex items-center gap-[var(--spacing-l)]">
-      <!-- CTA (desktop) -->
-      <div class="hidden sm:block">
+      <!-- CTA (desktop only) -->
+      <div class="hidden lg:block">
         <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
           {nav.cta.label}
         </Button>

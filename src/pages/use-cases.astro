@@ -1,22 +1,22 @@
 ---
 import Section from "../components/Layout/Section.astro";
 import Base from "../layouts/Base.astro";
-import index from "../content/index.json";
+import useCases from "../content/use-cases.json";
 
 // Extract unique categories from use cases
-const categories = ["All", ...new Set(index.use_cases.cases.map(c => c.category))];
+const categories = ["All", ...new Set(useCases.cases.map(c => c.category))];
 ---
 
 <Base>
   <Section
     id="use-cases"
-    eyebrow={index.use_cases.eyebrow}
-    title={index.use_cases.title}
+    eyebrow={useCases.eyebrow}
+    title={useCases.title}
     variant="plain"
   >
     <div class="max-w-4xl mx-auto mb-12 text-center">
       <p class="ty-body-1 text-[var(--color-brand-titan-gray)] leading-relaxed">
-        {index.use_cases.intro}
+        {useCases.intro}
       </p>
     </div>
 
@@ -44,7 +44,7 @@ const categories = ["All", ...new Set(index.use_cases.cases.map(c => c.category)
         }
       }"
       x-init="init()"
-      data-cases={JSON.stringify(index.use_cases.cases)}
+      data-cases={JSON.stringify(useCases.cases)}
     >
       {categories.map((category) => (
         <button

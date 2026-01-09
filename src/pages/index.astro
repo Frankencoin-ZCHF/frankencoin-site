@@ -3,6 +3,8 @@ import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
 import index from "../content/index.json";
+import media from "../content/media.json";
+import faq from "../content/faq.json";
 import FeaturesContainer from "../components/FeaturesContainer/FeaturesContainer.astro";
 import TabMenu from "../components/TabsMenu/TabMenu.astro";
 import FoundationContainer from "../components/FoundationContainer/FoundationContainer.astro";
@@ -93,6 +95,7 @@ const stats: Option[] = frankencoinInfo
           href: index.hero.cta.href,
           variant: "primary",
         }}
+        ctaHideOnLarge={true}
       />
 
       <div class="flex flex-col items-center gap-8">
@@ -193,7 +196,7 @@ const stats: Option[] = frankencoinInfo
     subtitle={index.in_the_media.subtitle}
     variant="accent"
   >
-    <MediaArticlesContainer articles={index.in_the_media.articles} />
+    <MediaArticlesContainer articles={media.articles} />
   </Section>
 
   <Section
@@ -202,15 +205,15 @@ const stats: Option[] = frankencoinInfo
     title={index.videos.title}
     subtitle={index.videos.subtitle}
   >
-    <VideoCarouselContainer videos={index.videos.videoUrls} />
+    <VideoCarouselContainer videos={media.videos} />
   </Section>
 
   <Section
     id="faq"
-    title={index.faq.title}
+    title={faq.title}
     layout="split"
     headerPosition="items-start"
   >
-    <FAQContainer faqs={index.faq} slot="aside" />
+    <FAQContainer faqs={faq} slot="aside" />
   </Section>
 </Base>

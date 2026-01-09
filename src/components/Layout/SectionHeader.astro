@@ -35,7 +35,14 @@ interface Props {
     label: string;
     href: string;
     variant?: "primary" | "secondary";
-  };
+    external?: boolean;
+  } | Array<{
+    label: string;
+    href: string;
+    variant?: "primary" | "secondary";
+    external?: boolean;
+  }>;
+  ctaHideOnLarge?: boolean;
   padding?: "none" | "sm" | "md" | "lg" | "xl" | "xxl";
   margin?: string;
   maxWidth?:
@@ -61,6 +68,7 @@ const {
   size = "title1",
   align = "left",
   cta,
+  ctaHideOnLarge = false,
   padding = "md",
   maxWidth = "3xl",
   margin = "none",
@@ -94,6 +102,9 @@ const spacing = {
 }[padding];
 
 const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
+
+// Normalize cta to always be an array for rendering
+const ctas = cta ? (Array.isArray(cta) ? cta : [cta]) : [];
 ---
 
 <header
@@ -127,15 +138,18 @@ const maxWidthCls = maxWidth === "none" ? "" : `max-w-${maxWidth}`;
   }
   {hasSocialMedia && <SocialLinksBar theme={"dark"} />}
   {
-    cta && (
-      <div class={cta.variant === "primary" ? "md:hidden" : " md:block"}>
-        <Button
-          variant={cta.variant || "secondary"}
-          href={cta.href}
-          rounded={cta.variant === "primary" ? "full" : "sm"}   
-        >
-          {cta.label}
-        </Button>
+    ctas.length > 0 && (
+      <div class={`flex gap-4 ${align === "center" ? "justify-center" : ""} ${ctaHideOnLarge ? "lg:hidden" : ""}`}>
+        {ctas.map((ctaItem) => (
+          <Button
+            variant={ctaItem.variant || "secondary"}
+            href={ctaItem.href}
+            rounded={ctaItem.variant === "primary" ? "full" : "sm"}
+            external={ctaItem.external || false}
+          >
+            {ctaItem.label}
+          </Button>
+        ))}
       </div>
     )
   }
