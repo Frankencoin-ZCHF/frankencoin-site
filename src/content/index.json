@@ -111,7 +111,7 @@
 				"description": "Link Frankencoin to a personal IBAN—connect traditional bank transfers with digital payments",
 				"category": "Payments",
 				"image": "images/mt-pelerin-logo.png",
-				"link": "https://www.mtpelerin.com/?bdc=ZCHF"
+				"link": "https://www.mtpelerin.com/buy-zchf-frankencoin"
 			},
 			{
 				"title": "Earn Interest on Savings",
@@ -215,7 +215,7 @@
 				"ctas": [
 					{
 						"label": "Buy ZCHF with Fiat",
-						"href": "https://www.mtpelerin.com/?bdc=ZCHF"
+						"href": "https://www.mtpelerin.com/buy-zchf-frankencoin"
 					},
 					{
 						"label": "Buy ZCHF with Crypto",
