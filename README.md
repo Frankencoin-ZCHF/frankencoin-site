@@ -35,33 +35,46 @@ The website is designed to be accessible to non-technical audiences, traditional
 │   │   ├── FAQContainer/
 │   │   └── Layout/       # Header, Footer, Section, Base
 │   ├── content/          # JSON data files (content-first architecture)
-│   │   ├── index.json            # Homepage content (hero, features, etc.)
-│   │   ├── media.json            # Articles, videos, and metadata overrides
-│   │   ├── use-cases.json        # Real-world use cases
-│   │   ├── faq.json              # Frequently asked questions
-│   │   ├── governance.json       # Governance & FPS page content
-│   │   ├── ecosystem.json        # Ecosystem page content
-│   │   ├── token.json            # Token page content
-│   │   ├── what-is-frankencoin.json
-│   │   └── shared/               # Shared content across pages
-│   │       ├── site.json         # Site metadata & SEO
-│   │       ├── nav.json          # Navigation config
-│   │       ├── footer.json       # Footer content
-│   │       └── ui.json           # UI text labels
+│   │   ├── en/                   # English content
+│   │   │   ├── index.json            # Homepage content
+│   │   │   ├── use-cases.json        # Real-world use cases
+│   │   │   ├── faq.json              # FAQs
+│   │   │   ├── governance.json       # Governance & FPS page
+│   │   │   ├── ecosystem.json        # Ecosystem page
+│   │   │   ├── token.json            # Token page
+│   │   │   ├── what-is-frankencoin.json
+│   │   │   └── shared/               # English-specific shared content
+│   │   │       ├── site.json         # Site metadata & SEO
+│   │   │       ├── nav.json          # Navigation config
+│   │   │       ├── footer.json       # Footer content
+│   │   │       └── ui.json           # UI text labels
+│   │   ├── de/                   # German content (same structure as en/)
+│   │   ├── fr/                   # French content (same structure as en/)
+│   │   └── shared/               # Globally shared content (all languages)
+│   │       └── media.json        # Articles, videos, and metadata overrides
 │   ├── pages/            # Route pages
-│   │   ├── index.astro           # Homepage
-│   │   ├── governance.astro      # Governance & FPS (uses governance.json)
-│   │   ├── ecosystem.astro       # Ecosystem overview
-│   │   ├── token.astro           # Token information
-│   │   ├── use-cases.astro       # Real-world use cases
-│   │   └── what-is-frankencoin.astro
+│   │   ├── index.astro           # Homepage (English default)
+│   │   ├── governance.astro
+│   │   ├── ecosystem.astro
+│   │   ├── token.astro
+│   │   ├── use-cases.astro
+│   │   ├── what-is-frankencoin.astro
+│   │   └── [lang]/               # Localized routes
+│   │       ├── index.astro
+│   │       ├── governance.astro
+│   │       ├── ecosystem.astro
+│   │       ├── token.astro
+│   │       ├── use-cases.astro
+│   │       └── what-is-frankencoin.astro
 │   ├── styles/           # Global styles
 │   │   ├── global.css
 │   │   ├── tokens.css    # Design tokens (CSS custom properties)
 │   │   ├── typography.css
 │   │   └── fonts.css
 │   └── utils/            # Utility functions
-│       └── fetchOgData.ts        # Open Graph metadata fetcher
+│       ├── i18n.ts               # Internationalization helpers
+│       ├── fetchOgData.ts        # Open Graph metadata fetcher
+│       └── fetchYouTubeData.ts   # YouTube metadata fetcher
 └── package.json
 ```
 
@@ -77,6 +90,66 @@ All commands are run from the root of the project:
 | `npm run preview`         | Preview production build locally                 |
 | `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
 | `npm run astro -- --help` | Get help using the Astro CLI                     |
+
+## 🌍 Internationalization (i18n)
+
+The website supports multiple languages with a file-based content structure:
+
+### Supported Languages
+
+- **English (en)** - Default language at `/`
+- **German (de)** - Available at `/de/*`
+- **French (fr)** - Available at `/fr/*`
+
+### URL Structure
+
+- English (default): `https://frankencoin.com/` → `src/content/en/`
+- German: `https://frankencoin.com/de/` → `src/content/de/`
+- French: `https://frankencoin.com/fr/` → `src/content/fr/`
+
+### Content Organization
+
+Content is organized into three levels:
+
+1. **Language-specific content** (`src/content/{lang}/`)
+   - Page content files (index.json, governance.json, etc.)
+   - Unique to each language
+
+2. **Language-specific shared content** (`src/content/{lang}/shared/`)
+   - Navigation, footer, site metadata, UI labels
+   - Shared across all pages within a language
+
+3. **Globally shared content** (`src/content/shared/`)
+   - Media (articles, videos) with metadata
+   - Shared across ALL languages
+
+### i18n Utilities
+
+The `src/utils/i18n.ts` file provides helper functions:
+
+- `getLanguageFromURL(pathname)` - Detects language from URL
+- `loadContent(file, lang)` - Loads language-specific content
+- `loadSharedContent(file, lang)` - Loads language-specific shared content
+- `loadGlobalSharedContent(file)` - Loads globally shared content
+- `getLocalizedPath(path, lang)` - Generates localized URLs
+
+### Adding a New Language
+
+1. Create new language folder: `src/content/{lang}/`
+2. Copy all JSON files from `src/content/en/` to `src/content/{lang}/`
+3. Create `src/content/{lang}/shared/` folder
+4. Copy shared files from `src/content/en/shared/` to `src/content/{lang}/shared/`
+5. Translate all content in the JSON files
+6. Add language to `src/utils/i18n.ts`:
+   ```typescript
+   export const languages = {
+     en: 'English',
+     de: 'Deutsch',
+     fr: 'Français',
+     // Add new language here
+   };
+   ```
+7. Update language selector in header component
 
 ## 🎨 Key Features
 
@@ -169,11 +242,16 @@ npm run preview
 
 All website content is managed through JSON files in `src/content/`. This content-first architecture separates content from code, making updates simple and safe.
 
+### Language-Specific vs. Globally Shared Content
+
+- **Language-specific content**: Files in `src/content/{lang}/` contain translated text for each language
+- **Globally shared content**: Files in `src/content/shared/` are used across all languages (e.g., media articles/videos)
+
 ### Adding New Articles
 
-Articles appear in the "In the Media" section on the homepage.
+Articles appear in the "In the Media" section on the homepage and are **shared across all languages**.
 
-**File:** `src/content/media.json`
+**File:** `src/content/shared/media.json`
 
 1. Add the article URL to the `articles` array:
 
@@ -204,13 +282,13 @@ Articles appear in the "In the Media" section on the homepage.
 }
 ```
 
-**Note:** Only include fields you want to override. The system will use fetched Open Graph data for any fields not specified.
+**Note:** Only include fields you want to override. The system will use fetched Open Graph data for any fields not specified. Articles appear the same on all language versions of the site.
 
 ### Adding New Videos
 
-Videos appear in the "Frankencoin Explained" section on the homepage.
+Videos appear in the "Frankencoin Explained" section on the homepage and are **shared across all languages**.
 
-**File:** `src/content/media.json`
+**File:** `src/content/shared/media.json`
 
 Add YouTube video URLs to the `videos` array:
 
@@ -223,15 +301,33 @@ Add YouTube video URLs to the `videos` array:
 }
 ```
 
-The video carousel will automatically display the new videos.
+To override video metadata, add to the `videoMetadata` object:
+
+```json
+{
+  "videoMetadata": {
+    "https://www.youtube.com/watch?v=VIDEO_ID": {
+      "title": "Custom Video Title",
+      "description": "Custom description...",
+      "author": "Channel Name",
+      "publishedDate": "Dec 31, 2025"
+    }
+  }
+}
+```
+
+The video carousel will automatically display the new videos across all languages.
 
 ### Adding New Use Cases
 
-Use cases are displayed on the `/use-cases` page with category filtering.
+Use cases are displayed on the `/use-cases` page with category filtering and are **language-specific**.
 
-**File:** `src/content/use-cases.json`
+**Files:**
+- English: `src/content/en/use-cases.json`
+- German: `src/content/de/use-cases.json`
+- French: `src/content/fr/use-cases.json`
 
-Add a new use case to the `cases` array:
+Add a new use case to the `cases` array in each language file:
 
 ```json
 {
@@ -253,11 +349,14 @@ Add a new use case to the `cases` array:
 
 ### Managing FAQs
 
-FAQs are organized by category and displayed on the homepage.
+FAQs are organized by category, displayed on the homepage, and are **language-specific**.
 
-**File:** `src/content/faq.json`
+**Files:**
+- English: `src/content/en/faq.json`
+- German: `src/content/de/faq.json`
+- French: `src/content/fr/faq.json`
 
-Add a new question to an existing category:
+Add a new question to an existing category in each language file:
 
 ```json
 {
@@ -297,7 +396,12 @@ Or add a new category:
 
 ### Updating Homepage Content
 
-**File:** `src/content/index.json`
+Homepage content is **language-specific**.
+
+**Files:**
+- English: `src/content/en/index.json`
+- German: `src/content/de/index.json`
+- French: `src/content/fr/index.json`
 
 The homepage content includes:
 - `hero` - Hero section with title, subtitle, and CTA
@@ -314,7 +418,12 @@ Edit the relevant section in the JSON file to update content.
 
 ### Updating Governance Page
 
-**File:** `src/content/governance.json`
+Governance content is **language-specific**.
+
+**Files:**
+- English: `src/content/en/governance.json`
+- German: `src/content/de/governance.json`
+- French: `src/content/fr/governance.json`
 
 The governance page includes:
 - `header` - Page title, subtitle, image, and CTA buttons
@@ -362,17 +471,22 @@ These update automatically when you rebuild the site.
 
 Common content management tasks:
 
-| Task | File | Action |
-|------|------|--------|
-| Add article | `src/content/media.json` | Add URL to `articles` array |
-| Add video | `src/content/media.json` | Add YouTube URL to `videos` array |
-| Override article metadata | `src/content/media.json` | Add entry to `articleMetadata` object |
-| Add use case | `src/content/use-cases.json` | Add object to `cases` array |
-| Add FAQ | `src/content/faq.json` | Add question to appropriate category |
-| Update hero text | `src/content/index.json` | Edit `hero` section |
-| Update governance CTAs | `src/content/governance.json` | Edit `header.cta` array |
-| Update navigation | `src/content/shared/nav.json` | Edit `links` array |
-| Update site metadata | `src/content/shared/site.json` | Edit SEO fields |
+| Task | File | Shared Across Languages? |
+|------|------|--------------------------|
+| Add article | `src/content/shared/media.json` | ✅ Yes - Same for all languages |
+| Add video | `src/content/shared/media.json` | ✅ Yes - Same for all languages |
+| Override article metadata | `src/content/shared/media.json` | ✅ Yes - Same for all languages |
+| Override video metadata | `src/content/shared/media.json` | ✅ Yes - Same for all languages |
+| Add use case | `src/content/{lang}/use-cases.json` | ❌ No - Translate for each language |
+| Add FAQ | `src/content/{lang}/faq.json` | ❌ No - Translate for each language |
+| Update hero text | `src/content/{lang}/index.json` | ❌ No - Translate for each language |
+| Update governance CTAs | `src/content/{lang}/governance.json` | ❌ No - Translate for each language |
+| Update navigation | `src/content/{lang}/shared/nav.json` | ❌ No - Translate for each language |
+| Update footer | `src/content/{lang}/shared/footer.json` | ❌ No - Translate for each language |
+| Update site metadata | `src/content/{lang}/shared/site.json` | ❌ No - Translate for each language |
+| Update UI labels | `src/content/{lang}/shared/ui.json` | ❌ No - Translate for each language |
+
+**Note:** Replace `{lang}` with `en`, `de`, or `fr` depending on the language.
 
 After making changes, rebuild the site to see updates.
 
