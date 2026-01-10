@@ -74,3 +74,9 @@ export async function loadSharedContent<T>(contentFile: string, lang: Language):
 		return fallbackContent.default;
 	}
 }
+
+// Load globally shared content (not language-specific)
+export async function loadGlobalSharedContent<T>(contentFile: string): Promise<T> {
+	const content = await import(`../content/shared/${contentFile}.json`);
+	return content.default;
+}

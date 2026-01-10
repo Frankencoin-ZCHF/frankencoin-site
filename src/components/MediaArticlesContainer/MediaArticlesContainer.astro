@@ -1,9 +1,9 @@
 ---
-import { getLanguageFromURL, loadContent } from "../../utils/i18n";
+import { getLanguageFromURL, loadContent, loadGlobalSharedContent } from "../../utils/i18n";
 import { fetchOgData } from "../../utils/fetchOgData";
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
-const media = await loadContent("media", currentLang);
+const media = await loadGlobalSharedContent("media");
 const index = await loadContent("index", currentLang);
 
 interface Props {
