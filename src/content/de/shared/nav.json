@@ -1,10 +1,10 @@
 {
   "brand": { "name": "Frankencoin", "href": "/" },
   "links": [
-    { "label": "Was ist Frankencoin", "href": "/#what-is" },
-    { "label": "Anwendungsfälle", "href": "/#core-features" },
-    { "label": "Wie es funktioniert", "href": "/#how-does-it-work" },
-    { "label": "Compliance & Sicherheit", "href": "/#trust-security" },
+    { "label": "Über Frankencoin", "href": "/#what-is" },
+    { "label": "Anwendungen", "href": "/#core-features" },
+    { "label": "Wie's funktioniert", "href": "/#how-does-it-work" },
+    { "label": "Compliance", "href": "/#trust-security" },
     { "label": "Medien", "href": "/#in-the-media" },
     { "label": "FAQs", "href": "/#faq" }
   ],
