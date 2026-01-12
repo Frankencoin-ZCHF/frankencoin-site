@@ -14,7 +14,7 @@
 				},
 				{
 					"question": "En quoi Frankencoin diffère-t-il d'un compte bancaire en CHF ?",
-					"answer": "Un compte bancaire représente une créance contre une banque spécifique. [Frankencoin est décentralisé](/#how-does-it-work) – aucune institution unique ne le contrôle. Toutes les réserves et paramètres du système sont publiquement vérifiables sur la [blockchain](https://etherscan.io/token/0xb58e26ac9cc14c0e9f8c0c58152e25fa5b01e875). Vous avez un contrôle total sur vos ZCHF sans dépendre de la solvabilité d'une banque."
+					"answer": "Un compte bancaire représente une créance contre une banque spécifique. [Frankencoin est décentralisé](/#how-does-it-work) – aucune institution unique ne le contrôle. Toutes les réserves et paramètres du système sont publiquement vérifiables sur la [blockchain](https://etherscan.io/token/0xb58e61c3098d85632df34eecfb899a1ed80921cb). Vous avez un contrôle total sur vos ZCHF sans dépendre de la solvabilité d'une banque."
 				},
 				{
 					"question": "En quoi Frankencoin diffère-t-il de l'USDT ou de l'USDC ?",

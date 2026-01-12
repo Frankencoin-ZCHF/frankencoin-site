@@ -14,7 +14,7 @@
 				},
 				{
 					"question": "Wie unterscheidet sich Frankencoin von einem Bankkonto in CHF?",
-					"answer": "Ein Bankkonto stellt einen Anspruch gegen eine bestimmte Bank dar. [Frankencoin ist dezentralisiert](/#how-does-it-work) – keine einzelne Institution kontrolliert ihn. Alle Reserven und Systemparameter sind öffentlich auf der [Blockchain](https://etherscan.io/token/0xb58e26ac9cc14c0e9f8c0c58152e25fa5b01e875) überprüfbar. Sie haben die volle Kontrolle über Ihre ZCHF, ohne auf die Zahlungsfähigkeit einer Bank angewiesen zu sein."
+					"answer": "Ein Bankkonto stellt einen Anspruch gegen eine bestimmte Bank dar. [Frankencoin ist dezentralisiert](/#how-does-it-work) – keine einzelne Institution kontrolliert ihn. Alle Reserven und Systemparameter sind öffentlich auf der [Blockchain](https://etherscan.io/token/0xb58e61c3098d85632df34eecfb899a1ed80921cb) überprüfbar. Sie haben die volle Kontrolle über Ihre ZCHF, ohne auf die Zahlungsfähigkeit einer Bank angewiesen zu sein."
 				},
 				{
 					"question": "Wie unterscheidet sich Frankencoin von USDT oder USDC?",

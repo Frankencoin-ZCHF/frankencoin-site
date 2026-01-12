@@ -1,0 +1,125 @@
+---
+import { getLanguageFromURL, loadContent } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const useCases = await loadContent("use-cases", currentLang);
+
+interface Props {
+  buttonLabel: string;
+}
+
+const { buttonLabel } = Astro.props;
+
+// Extract unique categories
+const categories = ["All", ...new Set(useCases.cases.map((c: any) => c.category))];
+---
+
+<div
+  x-data="{
+    isOpen: false,
+    selectedCategory: 'All',
+    allCases: [],
+    get filteredCases() {
+      if (this.selectedCategory === 'All') return this.allCases;
+      return this.allCases.filter(c => c.category === this.selectedCategory);
+    },
+    init() {
+      this.allCases = JSON.parse(this.$el.dataset.cases);
+    }
+  }"
+  x-init="init()"
+  data-cases={JSON.stringify(useCases.cases)}
+  class="w-full"
+>
+  <!-- Toggle Button -->
+  <button
+    @click="isOpen = !isOpen"
+    class="w-full flex items-center justify-center gap-2 bg-[var(--color-brand-deep-blue)] text-white px-6 py-3 rounded-lg ty-regular font-bold hover:bg-[var(--color-brand-swiss)] transition-colors"
+  >
+    <span>{buttonLabel}</span>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-4 h-4 transition-transform duration-300"
+      :class="isOpen ? 'rotate-180' : ''"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+    >
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+    </svg>
+  </button>
+
+  <!-- Accordion Content -->
+  <div
+    x-show="isOpen"
+    x-transition:enter="transition ease-out duration-300"
+    x-transition:enter-start="opacity-0 -translate-y-4"
+    x-transition:enter-end="opacity-100 translate-y-0"
+    x-transition:leave="transition ease-in duration-200"
+    x-transition:leave-start="opacity-100 translate-y-0"
+    x-transition:leave-end="opacity-0 -translate-y-4"
+    x-cloak
+    class="mt-8"
+  >
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      {categories.map((category) => (
+        <button
+          @click={`selectedCategory = '${category}'`}
+          :class={`selectedCategory === '${category}' ? 'bg-[var(--color-brand-deep-blue)] text-white' : 'bg-white text-[var(--color-brand-deep-blue)] border border-[var(--color-brand-deep-blue)]'`}
+          class="px-4 py-1.5 rounded-full ty-small font-bold transition-all hover:shadow-md"
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+
+    <!-- Use Cases Grid - 5 columns on desktop -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <template x-for="useCase in filteredCases" :key="useCase.title">
+        <a
+          :href="useCase.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-4 flex flex-col border border-gray-100 hover:border-[var(--color-brand-deep-blue)]"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+        >
+          <!-- Logo -->
+          <div class="h-12 flex items-center justify-center mb-3">
+            <img
+              :src="useCase.image"
+              :alt="useCase.partner"
+              class="max-h-10 max-w-full object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Category badge -->
+          <div class="mb-2">
+            <span
+              class="inline-block ty-small text-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)]/10 px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide"
+              x-text="useCase.category"
+            ></span>
+          </div>
+
+          <!-- Title -->
+          <h4
+            class="ty-regular font-bold text-[var(--color-brand-deep-blue)] group-hover:text-[var(--color-brand-swiss)] transition-colors line-clamp-2 mb-1"
+            x-text="useCase.title"
+          ></h4>
+
+          <!-- Partner -->
+          <p class="ty-small text-[var(--color-brand-titan-gray)] mt-auto" x-text="useCase.partner"></p>
+        </a>
+      </template>
+    </div>
+  </div>
+</div>
+
+<style>
+  [x-cloak] {
+    display: none !important;
+  }
+</style>

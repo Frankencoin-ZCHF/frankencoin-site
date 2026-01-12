@@ -14,7 +14,7 @@
 				},
 				{
 					"question": "How is Frankencoin different from a bank account in CHF?",
-					"answer": "A bank account represents a claim against a specific bank. [Frankencoin is decentralized](/#how-does-it-work)—no single institution controls it. All reserves and system parameters are publicly verifiable on the [blockchain](https://etherscan.io/token/0xb58e26ac9cc14c0e9f8c0c58152e25fa5b01e875). You have full control over your ZCHF without relying on a bank's solvency."
+					"answer": "A bank account represents a claim against a specific bank. [Frankencoin is decentralized](/#how-does-it-work)—no single institution controls it. All reserves and system parameters are publicly verifiable on the [blockchain](https://etherscan.io/token/0xb58e61c3098d85632df34eecfb899a1ed80921cb). You have full control over your ZCHF without relying on a bank's solvency."
 				},
 				{
 					"question": "How is Frankencoin different from USDT or USDC?",
@@ -39,7 +39,7 @@
 				},
 				{
 					"question": "What are Frankencoin Pool Shares (FPS)?",
-					"answer": "FPS is the governance token that represents a share in the reserve pool. FPS holders provide backup capital and have voting rights in the system. FPS can be bought on exchanges or minted by contributing to the reserve pool. Learn more about [FPS](/#foundation) or [invest via the app](https://app.frankencoin.com/equity)."
+					"answer": "FPS is the governance token that represents a share in the reserve pool. FPS holders provide backup capital and have voting rights in the system. FPS can be bought on exchanges or minted by contributing to the reserve pool. Learn more about [FPS](/governance) or [invest via the app](https://app.frankencoin.com/equity)."
 				},
 				{
 					"question": "Can Frankencoin lose its peg to the Swiss franc?",
