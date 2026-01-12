@@ -28,7 +28,7 @@ const variantClass = variants[variant ?? "primary"];
 ---
 
 <div
-  class="w-full max-w-[600px] lg:max-w-none lg:w-auto mx-auto flex flex-col lg:flex-row justify-center items-stretch rounded-[var(--radius-xl)] border border-[var(--color-brand-deep-blue)]"
+  class="w-full max-w-[600px] lg:max-w-none lg:w-auto mx-auto grid grid-cols-1 lg:grid-cols-3 rounded-[var(--radius-xl)] border border-[var(--color-brand-deep-blue)]"
 >
   {
     options?.map((option, index) => (
@@ -38,7 +38,6 @@ const variantClass = variants[variant ?? "primary"];
         target="_blank"
         class={`
           ${variantClass}
-          w-full
           flex flex-col justify-center
           transition-colors duration-200
           group

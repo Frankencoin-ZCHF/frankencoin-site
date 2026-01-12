@@ -82,6 +82,14 @@
 			"category": "DeFi",
 			"image": "/images/morpho.png",
 			"link": "https://morpho.org/"
+		},
+		{
+			"title": "Krypto Verwahrung",
+			"partner": "Bitcoin Suisse",
+			"description": "Verwahren Sie ZCHF mit dem Schweizer Pionier für Krypto-Finanzdienstleistungen mit institutioneller Sicherheit",
+			"category": "Business",
+			"image": "/images/bitcoin-suisse.png",
+			"link": "https://www.bitcoinsuisse.com/"
 		}
 	]
 }

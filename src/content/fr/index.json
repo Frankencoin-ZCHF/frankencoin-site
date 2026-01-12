@@ -6,19 +6,19 @@
 		},
 		"imageAlt": "Logo Frankencoin",
 		"eyebrow": "Frankencoin : Le stablecoin en franc suisse",
-		"title": "Numérique. Décentralisé. Suisse.",
+		"title": "Digital. Décentralisé. Neutre.",
 		"subtitle": "Frankencoin est le plus grand et le plus performant stablecoin en franc suisse.",
 		"cta": {
-			"label": "Lancer l'application Web",
+			"label": "Lancer l'application",
 			"href": "https://app.frankencoin.com/"
 		},
 		"cta_buttons": [
 			{
-				"label": "Obtenir des Frankencoins avec de la monnaie fiat",
+				"label": "Obtenir des Frankencoin avec du Fiat",
 				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
 			},
 			{
-				"label": "Obtenir des Frankencoins avec de la crypto",
+				"label": "Obtenir des Frankencoin avec du Crypto",
 				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
 			}
 		]
@@ -27,45 +27,51 @@
 	"stats": [
 		{
 			"id": "totalValueLocked",
-			"label": "Valeur du collatéral",
+			"label": "Collateral Value",
 			"unit": "ZCHF",
 			"href": "https://defillama.com/protocol/frankencoin#information"
 		},
 		{
 			"id": "totalSupply",
-			"label": "Monnaie en circulation",
+			"label": "En circulation",
 			"unit": "ZCHF",
 			"href": "https://defillama.com/stablecoin/frankencoin"
 		},
 		{
 			"id": "fpsMarketCap",
 			"label": "Utilisateurs Frankencoin",
-			"unit": "Détenteurs",
+			"unit": "Holders",
 			"href": "https://dune.com/mathewmeconry/zchf"
+		},
+		{
+			"id": "compliance",
+			"label": "Fully Compliant",
+			"value": "Droit suisse & MiCAR",
+			"href": "/#trust-security"
 		}
 	],
 
 	"what_is": {
 		"eyebrow": "Introduction",
 		"title": "Qu'est-ce que Frankencoin ?",
-		"subtitle": "Un stablecoin qui suit la valeur du franc suisse, nativement compatible avec la finance on-chain.",
+		"subtitle": "Un stablecoin indexé sur le franc suisse, nativement compatible avec la finance on-chain.",
 		"explanation": [
 			{
 				"title": "Stablecoin en franc suisse",
-				"description": "Frankencoin (ZCHF) est une monnaie numérique qui maintient une valeur stable de 1:1 avec le franc suisse. Elle combine la stabilité de la monnaie suisse de confiance avec les avantages de la technologie blockchain."
+				"description": "Frankencoin (ZCHF) est une monnaie numérique qui maintient une valeur stable de 1:1 avec le franc suisse. Il combine la stabilité de la monnaie suisse avec les avantages de la technologie blockchain."
 			},
 			{
 				"title": "Entièrement décentralisé",
-				"description": "Contrairement aux stablecoins traditionnels contrôlés par des entreprises, Frankencoin fonctionne sans autorité centrale. Le système est régi par des règles transparentes appliquées par des contrats intelligents sur la blockchain Ethereum."
+				"description": "Contrairement aux stablecoins traditionnels contrôlés par des entreprises, Frankencoin fonctionne sans autorité centrale. Le système est régi par des règles transparentes appliquées par des smart contracts sur la blockchain Ethereum."
 			},
 			{
-				"title": "En ligne et établi",
-				"description": "Frankencoin est en ligne depuis 2024 et est disponible sur 8 blockchains différentes. Il s'agit de loin du plus grand et du plus liquide stablecoin en franc suisse, l'un des plus grands stablecoins non-USD et il devient le standard de facto pour les francs suisses on-chain dans la DeFi."
+				"title": "Live et établi",
+				"description": "Frankencoin est live depuis 2024 et disponible sur 8 blockchains différentes. C'est de loin le plus grand et le plus liquide stablecoin en franc suisse, l'un des plus grands stablecoins non-USD, et il devient le standard de facto pour les francs suisses on-chain dans la DeFi."
 			}
 		]
 	},
 	"core_features": {
-		"eyebrow": "Façons d'utiliser Frankencoin",
+		"eyebrow": "Cas d'utilisation",
 		"title": "Payer. Emprunter. Gagner. Construire.",
 		"features": [
 			{
@@ -73,18 +79,18 @@
 				"image": "/images/Icon-Payments.svg",
 				"description": "Utilisez Frankencoin pour des paiements en francs suisses – dans les magasins Spar, via des cartes de débit (GnosisPay) ou avec l'intégration IBAN (Mt Pelerin). Payez des factures, recevez votre salaire et effectuez des achats quotidiens.",
 				"examples": [
-					"Achats au détail chez Spar",
+					"Achats chez Spar",
 					"Transferts internationaux",
 					"Paiements de factures",
 					"Réception de salaire"
 				],
 				"ctas": [
 					{
-						"label": "Acheter ZCHF avec de la monnaie fiat",
+						"label": "Acheter ZCHF avec du Fiat",
 						"href": "https://www.mtpelerin.com/buy-zchf-frankencoin"
 					},
 					{
-						"label": "Acheter ZCHF avec de la crypto",
+						"label": "Acheter ZCHF avec du Crypto",
 						"href": "https://swap.cow.fi/#/11/swap/USDT/ZCHF"
 					}
 				]
@@ -92,12 +98,12 @@
 			{
 				"title": "Emprunter",
 				"image": "/images/Icon-Borrow.svg",
-				"description": "Empruntez des Frankencoins en déposant des actifs crypto comme collatéral. Accédez à la liquidité ZCHF tout en maintenant votre exposition à vos actifs numériques.",
+				"description": "Empruntez des Frankencoin en déposant des crypto-assets comme collateral. Accédez à la liquidité ZCHF tout en maintenant votre exposure à vos actifs numériques.",
 				"examples": [
-					"Frapper des ZCHF avec du collatéral crypto",
+					"Minter des ZCHF avec du crypto-collateral",
 					"Accéder à la liquidité ZCHF",
-					"Effet de levier sur les actifs numériques",
-					"Gestion de trésorerie"
+					"Leverage sur les actifs numériques",
+					"Treasury management"
 				],
 				"cta": {
 					"label": "Emprunter des ZCHF",
@@ -107,26 +113,26 @@
 			{
 				"title": "Gagner",
 				"image": "/images/Icon-Invest.svg",
-				"description": "Gagnez des rendements basés sur le marché sur vos avoirs ZCHF grâce aux applications DeFi. Faites travailler vos Frankencoins pour générer des retours.",
+				"description": "Gagnez des rendements basés sur le marché sur vos avoirs ZCHF grâce aux applications DeFi. Faites travailler vos Frankencoin pour générer des returns.",
 				"examples": [
-					"Gagner des rendements sur l'épargne",
-					"Fourniture de liquidité",
-					"Générer un revenu passif",
+					"Rendement sur l'épargne",
+					"Liquidity provision",
+					"Revenu passif",
 					"Participation DeFi"
 				],
 				"cta": {
-					"label": "Gagner des rendements sur ZCHF",
+					"label": "Gagner du rendement sur ZCHF",
 					"href": "https://app.frankencoin.com/savings"
 				}
 			},
 			{
-				"title": "Construire et Intégrer",
+				"title": "Construire & Intégrer",
 				"image": "/images/Icon-Mint.svg",
-				"description": "Les développeurs et les entreprises peuvent intégrer Frankencoin comme couche de franc suisse programmable pour des applications et des services financiers.",
+				"description": "Les développeurs et les entreprises peuvent intégrer Frankencoin comme layer de franc suisse programmable pour des applications et des services financiers.",
 				"examples": [
-					"Systèmes de paie",
+					"Systèmes de payroll",
 					"Plateformes de trading",
-					"Outils de trésorerie",
+					"Treasury tools",
 					"Applications financières"
 				],
 				"cta": {
@@ -136,141 +142,143 @@
 			}
 		],
 		"more_link": {
-			"label": "Voir plus de cas d'usage",
+			"label": "Voir plus de use cases",
 			"href": "/use-cases"
 		}
 	},
 	"how_it_works": {
 		"title": "Une alternative décentralisée au système bancaire traditionnel",
 		"subtitle": "Frankencoin fonctionne comme une infrastructure financière transparente et basée sur des règles",
-		"eyebrow":"Comment ça fonctionne",
+		"eyebrow": "Comment Frankencoin fonctionne",
 		"steps": [
 			{
-				"title": "Frapper",
+				"title": "Mint",
 				"image": "/images/Grafik_Mint.svg",
 				"description": [
 					{
-						"step": "1. Frapper",
-						"content": "N'importe qui peut déposer un collatéral approprié et frapper des Frankencoins. Ces Frankencoins doivent être retournés avant de pouvoir récupérer votre collatéral."
+						"step": "1. Mint",
+						"content": "N'importe qui peut déposer un collateral approprié et minter des Frankencoin. Ces Frankencoin doivent être retournés avant de pouvoir récupérer votre collateral."
 					},
 					{
-						"step": "2. Frais.",
-						"content": "N'importe qui peut déposer un collatéral approprié et frapper des Frankencoins. Ces Frankencoins doivent être retournés avant de pouvoir récupérer votre collatéral."
+						"step": "2. Fees",
+						"content": "N'importe qui peut déposer un collateral approprié et minter des Frankencoin. Ces Frankencoin doivent être retournés avant de pouvoir récupérer votre collateral."
 					}
 				]
 			},
 			{
-				"title": "Vendre",
+				"title": "Sell",
 				"image": "/images/Grafik_Sell.svg",
 				"description": [
 					{
-						"step": "3. Vendre.",
-						"content": "Le frappeur vend les Frankencoins pour 1 CHF chacun sur le marché."
+						"step": "3. Sell",
+						"content": "Le minter vend les Frankencoin pour 1 CHF chacun sur le marché."
 					}
 				]
 			},
 			{
-				"title": "Dépenser",
+				"title": "Spend",
 				"image": "/images/Grafik_Spend.svg",
 				"description": [
 					{
-						"step": "4. Acheter.",
-						"content": "Quelqu'un d'autre achète des Frankencoins sur Uniswap ou d'autres places de marché."
+						"step": "4. Buy",
+						"content": "Quelqu'un d'autre achète des Frankencoin sur Uniswap ou d'autres marketplaces."
 					},
 					{
-						"step": "5. Payer.",
-						"content": "Les Frankencoins peuvent être utilisés pour effectuer des paiements en francs suisses dans la DeFi ou ailleurs."
+						"step": "5. Pay",
+						"content": "Les Frankencoin peuvent être utilisés pour effectuer des paiements en francs suisses dans la DeFi ou ailleurs."
 					},
 					{
-						"step": "6. Vendre.",
-						"content": "Les destinataires peuvent revendre leurs Frankencoins sur le marché."
+						"step": "6. Sell",
+						"content": "Les destinataires peuvent revendre leurs Frankencoin sur le marché."
 					}
 				]
 			},
 			{
-				"title": "Épargner",
+				"title": "Save",
 				"image": "/images/Grafik_Save.svg",
 				"description": [
 					{
-						"step": "7. Acheter.",
-						"content": "Quelqu'un qui souhaite épargner des francs suisses pourrait acheter des Frankencoins."
+						"step": "7. Buy",
+						"content": "Quelqu'un qui souhaite épargner des francs suisses achète des Frankencoin."
 					},
 					{
-						"step": "8. Épargner.",
-						"content": "Et ensuite s'engager à les bloquer dans le système pour une période choisie."
+						"step": "8. Save",
+						"content": "Et les lock ensuite dans le système pour une période choisie."
 					},
 					{
-						"step": "9. Intérêts.",
-						"content": "L'épargnant reçoit des intérêts sur ses Frankencoins."
+						"step": "9. Interest",
+						"content": "L'épargnant reçoit des intérêts sur ses Frankencoin."
 					}
 				]
 			},
 			{
-				"title": "Investir",
+				"title": "Invest",
 				"image": "/images/Grafik_Invest.svg",
 				"description": [
 					{
-						"step": "10. Acheter des FPS.",
-						"content": "Les investisseurs pourraient vouloir acheter des FPS afin de spéculer sur le succès de l'ensemble du système."
+						"step": "10. Buy FPS",
+						"content": "Les investisseurs peuvent acheter des FPS pour spéculer sur le succès de l'ensemble du système."
 					},
 					{
-						"step": "11. Ajouter du capital.",
-						"content": "Lors de l'ajout de capital à la réserve de capitaux propres, vous recevez en retour des Frankencoin Pool Shares (FPS) fraîchement frappés. Le montant de FPS est calculé à l'aide d'une courbe de liaison avec l'invariant 'Capitalisation boursière = Approvisionnement FPS * Prix FPS = 3 * Réserve de capitaux propres', moins 0,3 % de frais d'émission."
+						"step": "11. Add Capital",
+						"content": "Lors de l'ajout de capital à l'Equity Reserve Pool, vous recevez des Frankencoin Pool Shares (FPS) fraîchement mintés. Le montant de FPS est calculé à l'aide d'une bonding curve avec l'invariant 'Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool', moins 0.3% d'issuance fee."
 					},
 					{
-						"step": "12. Appréciation ou dépréciation des FPS.",
-						"content": "Après une durée de détention minimale de trois mois, les FPS peuvent être retournés au système au prix actuel, moins 0,3 % de frais de rachat."
+						"step": "12. FPS Appreciation ou Depreciation",
+						"content": "Après une holding duration minimale de trois mois, les FPS peuvent être retournés au système au prix actuel, moins 0.3% de redemption fee."
 					}
 				]
 			}
-		]
-,
+		],
 		"cta": {
 			"label": "Lire la documentation détaillée",
 			"href": "https://docs.frankencoin.com/"
 		}
 	},
 	"how_does_it_work": {
-		"eyebrow": "Analyse technique approfondie",
+		"eyebrow": "Technical Deep Dive",
 		"title": "Comment fonctionne Frankencoin ?",
 		"explanation": [
 			{
-				"title": "Position de dette collatéralisée",
-				"description": "Frankencoin fonctionne comme un système décentralisé de positions de dette collatéralisées. Les utilisateurs déposent des actifs crypto comme collatéral pour frapper des francs suisses numériques (ZCHF). Le collatéral reste sous le contrôle de l'utilisateur tout en garantissant l'émission de francs en cours, similaire à une facilité de prêt garantie avec des conditions transparentes et automatisées.",
-				"link": "https://docs.frankencoin.com/positions/open"
+				"title": "Collateralized Debt Position",
+				"description": "Frankencoin fonctionne comme un système décentralisé de Collateralized Debt Position. Les utilisateurs déposent des crypto-assets comme collateral pour minter des francs suisses numériques (ZCHF). Le collateral reste sous le contrôle de l'utilisateur tout en garantissant l'émission de francs en cours – similaire à une facilité de crédit garantie avec des conditions transparentes et automatisées.",
+				"link": "https://docs.frankencoin.com/positions/open",
+				"linkLabel": "Ouvrir une position"
 			},
 			{
-				"title": "Pourquoi 1 ZCHF équivaut à 1 CHF",
-				"description": "Chaque jeton ZCHF est sur-collatéralisé, adossé à des actifs d'une valeur supérieure à 1 franc suisse. Cette sur-collatéralisation structurelle garantit la stabilité des prix et fournit un mécanisme de garantie robuste qui maintient l'ancrage 1:1 au franc suisse.",
-				"link": "https://docs.frankencoin.com/reserve"
+				"title": "Pourquoi 1 ZCHF = 1 CHF",
+				"description": "Chaque token ZCHF est sur-collateralisé, backed par des assets d'une valeur supérieure à 1 franc suisse. Cette sur-collateralisation structurelle garantit la stabilité des prix et fournit un mécanisme de backing robuste qui maintient le peg 1:1 au franc suisse.",
+				"link": "https://docs.frankencoin.com/reserve",
+				"linkLabel": "À propos de la reserve"
 			},
 			{
 				"title": "Stabilité des prix basée sur le marché",
-				"description": "L'ancrage est maintenu grâce aux opportunités d'arbitrage : Lorsque le ZCHF se négocie en dessous de la parité, les participants au marché profitent en achetant des jetons à prix réduit et en récupérant le collatéral sous-jacent. Lorsque le ZCHF se négocie au-dessus de la parité, les participants profitent en frappant de nouveaux jetons et en les vendant avec une prime. Ces mécanismes d'arbitrage créent des forces de marché naturelles qui maintiennent l'équilibre à 1 CHF.",
-				"link": "https://docs.frankencoin.com/positions/auctions"
+				"description": "Le peg est maintenu grâce aux opportunités d'arbitrage : Lorsque le ZCHF trade en dessous de la parité, les participants au marché profitent en achetant des tokens à prix réduit et en récupérant le collateral sous-jacent. Lorsque le ZCHF trade au-dessus de la parité, les participants profitent en mintant de nouveaux tokens et en les vendant avec un premium. Ces mécanismes d'arbitrage créent des forces de marché naturelles qui maintiennent l'equilibrium à 1 CHF.",
+				"link": "https://docs.frankencoin.com/positions/auctions",
+				"linkLabel": "Comment les auctions fonctionnent"
 			}
 		]
 	},
 	"trust_security": {
-		"eyebrow": "Transparent et vérifié",
-		"title": "Clarté réglementaire et audits de sécurité",
+		"eyebrow": "Transparent & Verified",
+		"title": "Regulatory Clarity et Security Audits",
 		"regulatory": {
 			"title": "Classification juridique",
-			"description": "Frankencoin (ZCHF) est classé comme jeton de paiement selon le droit suisse. Le système est entièrement conforme aux réglementations suisses et européennes et peut être utilisé sans restrictions. Dans l'Union européenne, Frankencoin est qualifié de crypto-actif selon MiCA, bien que les obligations énoncées dans les titres II, III et IV ne s'appliquent pas en raison de sa nature décentralisée.",
+			"description": "Frankencoin (ZCHF) est classé comme payment token selon le droit suisse. Le système est fully compliant avec les régulations suisses et européennes et peut être utilisé sans restrictions. Dans l'Union européenne, Frankencoin qualifie comme crypto-asset selon MiCA, bien que les obligations énoncées dans les titres II, III et IV ne s'appliquent pas en raison de sa nature décentralisée.",
 			"documents": [
 				{
-					"label": "Classification juridique suisse (LEXR)",
+					"label": "Swiss Legal Classification (LEXR)",
 					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf"
 				},
 				{
-					"label": "Mémo de conformité MiCA de l'UE",
+					"label": "EU MiCA Compliance Memo",
 					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_MiCA_Memo.pdf"
 				}
 			]
 		},
 		"audits": {
-			"title": "Audits de sécurité",
-			"description": "Audité par des entreprises de sécurité blockchain de premier plan pour garantir l'intégrité du protocole",
+			"title": "Security Audits",
+			"description": "Audité par des security firms blockchain de premier plan pour garantir l'intégrité du protocole",
 			"partners": [
 				{
 					"altText": "Code4rena",
@@ -310,19 +318,19 @@
 	},
 	"foundation": {
 		"title": "Fondement théorique",
-		"description": "Le Frankencoin a été conçu dans le cadre [d'une thèse de doctorat](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) réalisée au Département des finances de l'Université de Zurich. Entre autres choses, elle couvre la théorie des jeux derrière le mécanisme de liquidation novateur du système, quantifie le risque du Bitcoin en tant que collatéral et analyse formellement le système de gouvernance basé sur le veto. Le système Frankencoin peut être vu comme une Continuous Capital Corporation, un concept introduit dans le chapitre trois désignant une entreprise qui émet et rachète des actions de manière autonome selon des règles fixes qui sont optimales dans un large éventail d'hypothèses théoriques.",
+		"description": "Frankencoin a été conçu dans le cadre [d'une thèse de doctorat](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) réalisée au Département des finances de l'Université de Zurich. Entre autres, elle couvre la game theory derrière le mécanisme de liquidation novateur du système, quantifie le risque de Bitcoin comme collateral et analyse formellement le système de governance basé sur le veto. Le système Frankencoin peut être vu comme une Continuous Capital Corporation – un concept introduit dans le chapitre trois désignant une entreprise qui émet et rachète des shares de manière autonome selon des règles fixes qui sont optimales dans un large éventail d'hypothèses théoriques.",
 		"image": "/images/frankencoin-foundation.webp",
-		"imageAlt": "Fondement Frankencoin",
+		"imageAlt": "Frankencoin Foundation",
 		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
 	},
 	"in_the_media": {
-		"eyebrow": "Couverture médiatique",
+		"eyebrow": "Media Coverage",
 		"title": "Dans les médias",
-		"subtitle": "Découvrez ce que les médias disent de Frankencoin",
+		"subtitle": "Ce que les médias disent de Frankencoin",
 		"contact_text": "Vous souhaitez écrire sur Frankencoin ? Contactez-nous à"
 	},
 	"videos": {
-		"eyebrow": "Vidéos",
+		"eyebrow": "Videos",
 		"title": "Frankencoin expliqué",
 		"subtitle": "Regardez nos vidéos pour en savoir plus sur Frankencoin"
 	}

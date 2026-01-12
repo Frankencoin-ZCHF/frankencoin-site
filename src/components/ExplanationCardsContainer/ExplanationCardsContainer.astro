@@ -8,6 +8,7 @@ interface ExplanationCard {
   title: string;
   description: string;
   link?: string;
+  linkLabel?: string;
 }
 
 interface Props {
@@ -29,7 +30,7 @@ const { cards } = Astro.props;
           rel="noopener noreferrer"
           class="inline-flex items-center gap-2 text-[var(--color-brand-deep-blue)] hover:underline font-bold ty-body-1"
         >
-          <span>{ui.buttons.learnMore}</span>
+          <span>{card.linkLabel || ui.buttons.learnMore}</span>
           <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
         </a>
       )}

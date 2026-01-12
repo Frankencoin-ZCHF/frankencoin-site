@@ -52,7 +52,7 @@ const localizedLinks = nav.links.map(link => ({ ...link, href: prefixLanguage(li
     <hr class="text-[var(--color-neutral-300)]" />
     <div class="mt-4 flex flex-col gap-4">
       <LanguageSwitcher />
-      <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
+      <Button href={nav.cta.href} variant="primary" rounded="full" size="md" external={true}>
         {index.hero.cta.label}
       </Button>
     </div>

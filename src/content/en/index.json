@@ -6,7 +6,7 @@
 		},
 		"imageAlt": "Frankencoin logo",
 		"eyebrow": "Frankencoin: The Swiss franc stablecoin",
-		"title": "Digital. Decentralized. Swiss.",
+		"title": "Digital. Decentralized. Neutral.",
 		"subtitle": "Frankencoin is the largest and most successful Swiss franc stablecoin.",
 		"cta": {
 			"label": "Launch Web App",
@@ -42,6 +42,12 @@
 			"label": "Frankencoin users",
 			"unit": "Holders",
 			"href": "https://dune.com/mathewmeconry/zchf"
+		},
+		{
+			"id": "compliance",
+			"label": "Fully Compliant",
+			"value": "Swiss Law & MiCAR",
+			"href": "/#trust-security"
 		}
 	],
 
@@ -143,7 +149,7 @@
 	"how_it_works": {
 		"title": "A Decentralized Alternative to Traditional Banking",
 		"subtitle": "Frankencoin operates like a transparent, rules-based financial infrastructure",
-		"eyebrow":"How it works",
+		"eyebrow":"How Frankencoin works",
 		"steps": [
 			{
 				"title": "Mint",
@@ -237,17 +243,20 @@
 			{
 				"title": "Collateralized debt position",
 				"description": "Frankencoin operates as a decentralized collateralized debt position system. Users deposit crypto assets as collateral to mint digital Swiss francs (ZCHF). The collateral remains under the user's control while securing the outstanding franc issuance, similar to a secured lending facility with transparent, automated terms.",
-				"link": "https://docs.frankencoin.com/positions/open"
+				"link": "https://docs.frankencoin.com/positions/open",
+				"linkLabel": "How to open a position"
 			},
 			{
 				"title": "Why 1 ZCHF equals 1 CHF",
 				"description": "Each ZCHF token is over-collateralized, backed by assets worth more than 1 Swiss franc. This structural over-collateralization ensures price stability and provides a robust backing mechanism that maintains the 1:1 peg to the Swiss franc.",
-				"link": "https://docs.frankencoin.com/reserve"
+				"link": "https://docs.frankencoin.com/reserve",
+				"linkLabel": "About the reserve"
 			},
 			{
 				"title": "Market-driven price stability",
 				"description": "The peg is maintained through arbitrage opportunities: When ZCHF trades below parity, market participants profit by purchasing discounted tokens and redeeming the underlying collateral. When ZCHF trades above parity, participants profit by minting new tokens and selling at a premium. These arbitrage mechanisms create natural market forces that maintain equilibrium at 1 CHF.",
-				"link": "https://docs.frankencoin.com/positions/auctions"
+				"link": "https://docs.frankencoin.com/positions/auctions",
+				"linkLabel": "How auctions work"
 			}
 		]
 	},

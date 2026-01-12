@@ -1,0 +1,27 @@
+---
+import Section from "../components/Layout/Section.astro";
+import Base from "../layouts/Base.astro";
+---
+
+<Base title="Page Not Found" description="The page you're looking for doesn't exist.">
+  <Section
+    id="not-found"
+    variant="plain"
+    align="center"
+    pad="lg"
+  >
+    <div class="flex flex-col items-center justify-center min-h-[50vh] gap-6">
+      <h1 class="ty-display text-[var(--color-brand-deep-blue)]">404</h1>
+      <h2 class="ty-large-title">Page Not Found</h2>
+      <p class="ty-body-1 text-[var(--color-neutral-600)] max-w-md text-center">
+        The page you're looking for doesn't exist or has been moved.
+      </p>
+      <a
+        href="/"
+        class="flex items-center justify-center gap-2 bg-[var(--color-brand-deep-blue)] text-white px-6 py-3 rounded-lg ty-regular font-bold hover:bg-[var(--color-brand-swiss)] transition-colors mt-4"
+      >
+        Back to Homepage
+      </a>
+    </div>
+  </Section>
+</Base>

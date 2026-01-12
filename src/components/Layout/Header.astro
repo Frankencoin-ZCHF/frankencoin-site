@@ -77,7 +77,7 @@ const localizedLinks = links.map(link => ({ ...link, href: prefixLanguage(link.h
 
       <!-- CTA (desktop only) -->
       <div class="hidden lg:block">
-        <Button href={nav.cta.href} variant="primary" rounded="full" size="md">
+        <Button href={nav.cta.href} variant="primary" rounded="full" size="md" external={true}>
           {nav.cta.label}
         </Button>
       </div>

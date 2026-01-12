@@ -82,6 +82,14 @@
 			"category": "DeFi",
 			"image": "/images/morpho.png",
 			"link": "https://morpho.org/"
+		},
+		{
+			"title": "Crypto Custody",
+			"partner": "Bitcoin Suisse",
+			"description": "Custody ZCHF through Switzerland's pioneering crypto financial services provider with institutional-grade security",
+			"category": "Business",
+			"image": "/images/bitcoin-suisse.png",
+			"link": "https://www.bitcoinsuisse.com/"
 		}
 	]
 }

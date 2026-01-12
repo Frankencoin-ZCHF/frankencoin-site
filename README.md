@@ -30,8 +30,7 @@ The website is designed to be accessible to non-technical audiences, traditional
 │   │   ├── ChainCard/
 │   │   ├── Tooltip/
 │   │   ├── TabsMenu/
-│   │   ├── MediaArticlesContainer/
-│   │   ├── VideoCarouselContainer/
+│   │   ├── MediaCarousel/
 │   │   ├── FAQContainer/
 │   │   └── Layout/       # Header, Footer, Section, Base
 │   ├── content/          # JSON data files (content-first architecture)
@@ -169,7 +168,7 @@ The `src/utils/i18n.ts` file provides helper functions:
 - **TabMenu Component**: Tabbed interface for system workflow visualization
 - **ChainCard Component**: Display blockchain network information
 - **BadgeContainer**: Responsive stats display with hover effects
-- **MediaArticlesContainer**: Carousel for media articles with Open Graph metadata fetching
+- **MediaCarousel**: Unified carousel combining articles and videos with automatic metadata fetching
 - **Use Cases Filtering**: Category-based filtering with Alpine.js (Payments, Business, DeFi)
 
 ### Content Management
