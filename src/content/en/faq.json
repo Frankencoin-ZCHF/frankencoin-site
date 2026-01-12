@@ -73,7 +73,7 @@
 				},
 				{
 					"question": "What are the risks?",
-					"answer": "Frankencoin involves technical risks (smart contract vulnerabilities), market risks (collateral value fluctuations), and liquidity risks. While [audited by leading security firms](/#trust-security), no system is risk-free. Only use ZCHF with funds you can afford to risk."
+					"answer": "Among others, the Frankencoin is subject to technical risks like smart contract vulnerabilities, to market risks like a sudden and sharp drop in the value of the collateral that backs the system, and liquidity risks like the inability to find a buyer in the market even though the system is still sound. While [audited by leading security firms](/#trust-security), no system is risk-free. Handle with care."
 				},
 				{
 					"question": "What is the Frankencoin Association?",
