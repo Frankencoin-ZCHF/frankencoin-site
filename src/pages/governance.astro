@@ -12,6 +12,8 @@ import StatsContainer from "../components/StatsContainer/StatsContainer.astro";
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const governance = await loadContent("governance", currentLang);
 
+export const prerender = false;
+
 async function getFpsInfo() {
   try {
     let response = await fetch(
@@ -98,6 +100,8 @@ const stats = fpsInfo
       },
     ]
   : [];
+
+Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300');
 ---
 
 <Base>

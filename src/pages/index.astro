@@ -20,6 +20,8 @@ import ExplanationCardsContainer from "../components/ExplanationCardsContainer/E
 import MediaCarousel from "../components/MediaCarousel/MediaCarousel.astro";
 import UseCasesAccordion from "../components/UseCasesAccordion/UseCasesAccordion.astro";
 
+export const prerender = false;
+
 async function getFrankencoinInfo() {
   try {
     let response = await fetch(
@@ -71,6 +73,8 @@ const stats: Option[] = frankencoinInfo
       },
     ]
   : [];
+
+Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300');
 ---
 
 
