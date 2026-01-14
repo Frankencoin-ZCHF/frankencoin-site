@@ -10,15 +10,15 @@
   "icons": [
     {
       "src": "/favicon.png",
-      "sizes": "512x512",
+      "sizes": "32x32",
       "type": "image/png",
-      "purpose": "any maskable"
+      "purpose": "any"
     },
     {
       "src": "/images/webclip.png",
-      "sizes": "180x180",
+      "sizes": "256x256",
       "type": "image/png",
-      "purpose": "apple touch icon"
+      "purpose": "any maskable"
     }
   ],
   "categories": ["finance", "business"],
@@ -30,8 +30,8 @@
       "url": "/use-cases",
       "icons": [
         {
-          "src": "/favicon.png",
-          "sizes": "192x192",
+          "src": "/images/webclip.png",
+          "sizes": "256x256",
           "type": "image/png"
         }
       ]
@@ -43,8 +43,8 @@
       "url": "https://app.frankencoin.com",
       "icons": [
         {
-          "src": "/favicon.png",
-          "sizes": "192x192",
+          "src": "/images/webclip.png",
+          "sizes": "256x256",
           "type": "image/png"
         }
       ]

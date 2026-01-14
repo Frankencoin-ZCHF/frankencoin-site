@@ -13,7 +13,7 @@ const index = await loadContent("index", currentLang);
   >
     {
       index.audits.partners.map((partner) => (
-        <Button href={partner.href} variant="ghost">
+        <Button href={partner.href} variant="ghost" external={true}>
           <div class="flex flex-col">
             <img
               class="w-[150px] md:w-[200px] hover:scale-120 transition"

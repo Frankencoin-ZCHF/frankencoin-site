@@ -311,7 +311,7 @@
 				{
 					"altText": "BlockBite",
 					"image": "/images/blockbite-logo-black.svg",
-					"href": "https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite-audit.pdf"
+					"href": "/AuditReport-Frankencoin.pdf"
 				}
 			]
 		}
