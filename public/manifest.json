@@ -9,9 +9,9 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-			"src": "icon.ico",
+			"src": "/favicon.ico",
 			"sizes": "any",
-			"type": "image/ico"
+			"type": "image/x-icon"
 		}
   ],
   "categories": ["finance", "business"],
