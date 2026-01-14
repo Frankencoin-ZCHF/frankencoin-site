@@ -81,7 +81,7 @@
 				},
 				{
 					"question": "Frankencoin a-t-il été audité ?",
-					"answer": "Oui, les smart contracts ont été audités par plusieurs entreprises de sécurité blockchain de premier plan, notamment [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [Blockbite](https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite.pdf) et [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). Les [rapports d'audit](/#trust-security) sont publiquement disponibles."
+					"answer": "Oui, les smart contracts ont été audités par plusieurs entreprises de sécurité blockchain de premier plan, notamment [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](https://github.com/Frankencoin-ZCHF/FrankenCoin/blob/main/audits/blockbite.pdf) et [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). Les [rapports d'audit](/#trust-security) sont publiquement disponibles."
 				}
 			]
 		}
