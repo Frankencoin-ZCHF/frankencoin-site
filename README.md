@@ -83,12 +83,12 @@ All commands are run from the root of the project:
 
 | Command                   | Action                                           |
 | :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:3000`      |
-| `npm run build`           | Build production site to `./dist/`               |
-| `npm run preview`         | Preview production build locally                 |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+| `yarn install`             | Installs dependencies                            |
+| `yarn run dev`             | Starts local dev server at `localhost:3000`      |
+| `yarn run build`           | Build production site to `./dist/`               |
+| `yarn run preview`         | Preview production build locally                 |
+| `yarn run astro ...`       | Run CLI commands like `astro add`, `astro check` |
+| `yarn run astro -- --help` | Get help using the Astro CLI                     |
 
 ## 🌍 Internationalization (i18n)
 
@@ -214,10 +214,10 @@ git clone https://github.com/Frankencoin-ZCHF/frankencoin-site.git
 cd frankencoin-site
 
 # Install dependencies
-npm install
+yarn install
 
 # Start development server
-npm run dev
+yarn run dev
 ```
 
 The development server will start at `http://localhost:3000` (or the next available port if 3000 is in use).
@@ -226,10 +226,10 @@ The development server will start at `http://localhost:3000` (or the next availa
 
 ```bash
 # Build the site
-npm run build
+yarn run build
 
 # Preview the build
-npm run preview
+yarn run preview
 ```
 
 ### Environment Variables
