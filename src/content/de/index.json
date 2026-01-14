@@ -14,11 +14,11 @@
 		},
 		"cta_buttons": [
 			{
-				"label": "Frankencoin mit Fiat kaufen",
-				"href": "https://www.mtpelerin.com/?bdc=ZCHF"
+				"label": "Frankencoin kaufen (0% Gebühren)",
+				"href": "https://www.mtpelerin.com/buy-zchf-frankencoin"
 			},
 			{
-				"label": "Frankencoin mit Crypto kaufen",
+				"label": "Frankencoin mit Crypto tauschen",
 				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
 			}
 		]
@@ -54,19 +54,19 @@
 	"what_is": {
 		"eyebrow": "Einführung",
 		"title": "Was ist Frankencoin?",
-		"subtitle": "Ein Stablecoin, der den Wert des Schweizer Frankens abbildet und nativ mit On-Chain-Finance kompatibel ist.",
+		"subtitle": "Frankencoin ist ein Stablecoin, der den Wert des Schweizer Frankens abbildet.",
 		"explanation": [
 			{
 				"title": "Schweizer-Franken-Stablecoin",
-				"description": "Frankencoin (ZCHF) ist eine digitale Währung mit einem stabilen Wert von 1:1 zum Schweizer Franken. Er verbindet die Stabilität der bewährten Schweizer Währung mit den Vorteilen der Blockchain-Technologie."
+				"description": "Frankencoin (ZCHF) ist eine digitale Währung mit einem stabilen Wert von 1:1 zum Schweizer Franken. Er verbindet die Stabilität der bewährten Schweizer Währung mit der Transparenz und Offenheit der Blockchain."
 			},
 			{
 				"title": "Vollständig dezentralisiert",
-				"description": "Im Gegensatz zu traditionellen Stablecoins, die von Unternehmen kontrolliert werden, funktioniert Frankencoin ohne zentrale Instanz. Das System wird durch transparente Regeln gesteuert, die durch Smart Contracts auf der Ethereum Blockchain durchgesetzt werden."
+				"description": "Im Gegensatz zu zentralisierten Stablecoins hängt der Wert des Frankencoin nicht von einem Emittenten ab, der seinen Wert garantiert. Stattdessen ist der Frankencoin durch On-Chain-Collateral gedeckt, das bei Bedarf liquidiert werden kann, um seinen Wert zu erhalten."
 			},
 			{
 				"title": "Live und etabliert",
-				"description": "Frankencoin ist seit 2024 live und auf 8 verschiedenen Blockchains verfügbar. Er ist mit Abstand der grösste und liquideste Schweizer-Franken-Stablecoin, einer der grössten Nicht-USD-Stablecoins und wird zum De-facto-Standard für On-Chain-Schweizer-Franken in DeFi."
+				"description": "Frankencoin ist auf 8 verschiedenen Blockchains verfügbar. Er ist der grösste und beliebteste Schweizer-Franken-Stablecoin und ermöglicht seit 2023 On-Chain-Transaktionen in Schweizer Franken ohne signifikante Abweichungen vom Peg."
 			}
 		]
 	},
@@ -248,13 +248,13 @@
 			},
 			{
 				"title": "Warum 1 ZCHF = 1 CHF",
-				"description": "Jeder ZCHF-Token ist über-collateralisiert und durch Assets im Wert von mehr als 1 Schweizer Franken gedeckt. Diese strukturelle Über-Collateralisierung gewährleistet Preisstabilität und bietet einen robusten Deckungsmechanismus, der den 1:1-Peg zum Schweizer Franken aufrechterhält.",
-				"link": "https://docs.frankencoin.com/reserve",
-				"linkLabel": "Über die Reserve"
+				"description": "Frankencoin ist über-collateralisiert, sodass jeder Frankencoin stets durch Assets im Wert von mindestens einem Schweizer Franken gedeckt ist. Die hinterlegten Assets sind öffentlich On-Chain einsehbar.",
+				"link": "https://app.frankencoin.com/monitoring/collateral",
+				"linkLabel": "Reserven einsehen"
 			},
 			{
 				"title": "Marktgetriebene Preisstabilität",
-				"description": "Der Peg wird durch Arbitrage-Möglichkeiten aufrechterhalten: Wenn ZCHF unter Parität handelt, profitieren Marktteilnehmer vom Kauf vergünstigter Token und dem Einlösen des zugrunde liegenden Collaterals. Wenn ZCHF über Parität handelt, profitieren Teilnehmer vom Minten neuer Token und Verkauf mit Premium. Diese Arbitrage-Mechanismen schaffen natürliche Marktkräfte, die das Equilibrium bei 1 CHF aufrechterhalten.",
+				"description": "Das System ist darauf ausgelegt, den langfristigen Wert des Frankencoin im Einklang mit dem Schweizer Franken zu halten. Jede kurzfristige Abweichung ist eine Arbitrage-Möglichkeit für den Markt, wodurch der Wechselkurs nahe der Parität gehalten wird.",
 				"link": "https://docs.frankencoin.com/positions/auctions",
 				"linkLabel": "Wie Auctions funktionieren"
 			}
@@ -280,8 +280,8 @@
 			]
 		},
 		"audits": {
-			"title": "Security Audits",
-			"description": "Geprüft von führenden Blockchain Security Firms, um die Integrität des Protokolls zu gewährleisten",
+			"title": "Technical Audits",
+			"description": "Frankencoin und alle hinzugefügten Komponenten wurden von führenden Blockchain Security Firms geprüft. Die Audits umfassen Smart-Contract-Sicherheit, ökonomisches Design und die Gesamtintegrität des Systems, um eine robuste und sichere Plattform für Nutzer zu gewährleisten.",
 			"partners": [
 				{
 					"altText": "Code4rena",
