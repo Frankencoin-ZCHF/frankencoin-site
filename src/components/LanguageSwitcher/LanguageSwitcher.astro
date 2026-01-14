@@ -66,9 +66,13 @@ const basePath = stripLangFromPath(currentPath);
       localStorage.setItem('language-auto-detected', 'true');
       localStorage.setItem('preferred-language', lang);
 
-      // Preserve the current hash/anchor
+      // Preserve the current hash/anchor and mark as language switch for instant scroll
       const currentHash = window.location.hash;
       const newPath = this.getLocalizedPath(this.basePath, lang);
+      if (currentHash) {
+        // Store scroll position flag to prevent smooth scroll animation on page load
+        sessionStorage.setItem('lang-switch-anchor', currentHash);
+      }
       window.location.href = newPath + currentHash;
     }
   }`}

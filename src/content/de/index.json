@@ -148,8 +148,8 @@
 		}
 	},
 	"how_it_works": {
-		"title": "Eine dezentrale Alternative zum traditionellen Bankwesen",
-		"subtitle": "Frankencoin funktioniert wie eine transparente, regelbasierte Finanzinfrastruktur",
+		"title": "Das Frankencoin-System im Überblick",
+		"subtitle": "Frankencoin ist eine vollständig transparente, regelbasierte, dezentralisierte, modulare und neutrale Finanzinfrastruktur.",
 		"eyebrow": "Wie Frankencoin funktioniert",
 		"steps": [
 			{
@@ -157,12 +157,12 @@
 				"image": "/images/Grafik_Mint.svg",
 				"description": [
 					{
-						"step": "1. Mint",
-						"content": "Jeder kann ein geeignetes Collateral hinterlegen und Frankencoin minten. Diese Frankencoin müssen zurückgegeben werden, bevor Sie Ihr Collateral zurückbekommen."
+						"step": "1 Mint",
+						"content": "Frankencoin können von jedem erstellt werden, der ein geeignetes Collateral hinterlegt."
 					},
 					{
-						"step": "2. Fees",
-						"content": "Jeder kann ein geeignetes Collateral hinterlegen und Frankencoin minten. Diese Frankencoin müssen zurückgegeben werden, bevor Sie Ihr Collateral zurückbekommen."
+						"step": "2 Burn",
+						"content": "Das Collateral bleibt gesperrt, bis der Eigentümer die erstellten Frankencoin (plus Gebühren) zurückgibt."
 					}
 				]
 			},
@@ -171,8 +171,8 @@
 				"image": "/images/Grafik_Sell.svg",
 				"description": [
 					{
-						"step": "3. Sell",
-						"content": "Der Minter verkauft die Frankencoin für je 1 CHF auf dem Markt."
+						"step": "3 Sell",
+						"content": "Neu gemintete Frankencoin werden typischerweise auf dem Markt verkauft."
 					}
 				]
 			},
@@ -181,16 +181,16 @@
 				"image": "/images/Grafik_Spend.svg",
 				"description": [
 					{
-						"step": "4. Buy",
-						"content": "Jemand anderes kauft Frankencoin auf Uniswap oder anderen Marktplätzen."
+						"step": "4 Buy",
+						"content": "Nutzer können Frankencoin auf verschiedenen Handelsplätzen kaufen."
 					},
 					{
-						"step": "5. Pay",
-						"content": "Frankencoin können für Schweizer-Franken-Zahlungen in DeFi oder anderswo verwendet werden."
+						"step": "5 Pay",
+						"content": "Sie können Frankencoin für Schweizer-Franken-Zahlungen in DeFi oder anderswo verwenden."
 					},
 					{
-						"step": "6. Sell",
-						"content": "Empfänger können ihre Frankencoin wieder auf dem Markt verkaufen."
+						"step": "6 Sell",
+						"content": "Empfänger können die erhaltenen Frankencoin wieder verkaufen."
 					}
 				]
 			},
@@ -199,16 +199,16 @@
 				"image": "/images/Grafik_Save.svg",
 				"description": [
 					{
-						"step": "7. Buy",
-						"content": "Jemand, der Schweizer Franken sparen möchte, kauft Frankencoin."
+						"step": "7 Buy",
+						"content": "Beim Tausch von Schweizer Franken in Frankencoin auf dem Markt"
 					},
 					{
-						"step": "8. Save",
-						"content": "Und lockt diese dann für einen gewählten Zeitraum im System."
+						"step": "8 Save",
+						"content": "und anschliessendem Einlegen ins Savings-Modul"
 					},
 					{
-						"step": "9. Interest",
-						"content": "Der Sparer erhält Zinsen auf seine Frankencoin."
+						"step": "9 Interest",
+						"content": "können Nutzer attraktive Zinsen verdienen."
 					}
 				]
 			},
@@ -217,16 +217,16 @@
 				"image": "/images/Grafik_Invest.svg",
 				"description": [
 					{
-						"step": "10. Buy FPS",
-						"content": "Investoren können FPS kaufen, um auf den Erfolg des gesamten Systems zu spekulieren."
+						"step": "10 Buy",
+						"content": "Andere Nutzer kaufen Frankencoin auf dem Markt,"
 					},
 					{
-						"step": "11. Add Capital",
-						"content": "Beim Hinzufügen von Kapital zum Equity Reserve Pool erhalten Sie neu gemintete Frankencoin Pool Shares (FPS). Die Anzahl FPS wird anhand einer Bonding Curve mit der Invariante 'Market Cap = FPS Supply * FPS Price = 3 * Equity Reserve Pool' berechnet, abzüglich 0.3% Issuance Fee."
+						"step": "11 Contribute",
+						"content": "um zur Kapitalreserve des Systems beizutragen und dafür Frankencoin Pool Shares (FPS) zu erhalten."
 					},
 					{
-						"step": "12. FPS Appreciation oder Depreciation",
-						"content": "Nach einer minimalen Holding Duration von drei Monaten können die FPS zum aktuellen Preis an das System zurückgegeben werden, abzüglich 0.3% Redemption Fee."
+						"step": "12 Redeem",
+						"content": "Diese können später wieder eingelöst werden, wobei der Preis von der Profitabilität des Systems abhängt."
 					}
 				]
 			}

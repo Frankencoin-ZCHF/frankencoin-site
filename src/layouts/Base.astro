@@ -57,6 +57,29 @@ const site = await loadSharedContent("site", currentLang);
     <!-- Alpine.js -->
     <script src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js" defer></script>
 
+    <!-- Handle instant scroll for language switch with anchors -->
+    <script is:inline>
+      (function() {
+        const langSwitchAnchor = sessionStorage.getItem('lang-switch-anchor');
+        if (langSwitchAnchor && window.location.hash === langSwitchAnchor) {
+          sessionStorage.removeItem('lang-switch-anchor');
+          // Disable smooth scroll temporarily
+          document.documentElement.style.scrollBehavior = 'auto';
+          // After page load, scroll instantly to anchor
+          window.addEventListener('DOMContentLoaded', function() {
+            const element = document.querySelector(langSwitchAnchor);
+            if (element) {
+              element.scrollIntoView({ behavior: 'instant', block: 'start' });
+            }
+            // Restore smooth scroll after a brief delay
+            setTimeout(function() {
+              document.documentElement.style.scrollBehavior = '';
+            }, 100);
+          });
+        }
+      })();
+    </script>
+
     <!-- Google Analytics -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-RNM9S018ES"></script>
     <script>
