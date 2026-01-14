@@ -1,0 +1,112 @@
+---
+import { getLanguageFromURL, loadContent, getLocalizedPath } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const useCases = await loadContent("use-cases", currentLang);
+const index = await loadContent("index", currentLang);
+
+const viewAllPath = getLocalizedPath('/use-cases', currentLang);
+
+// Extract unique categories
+const categories = ["All", ...new Set(useCases.cases.map((c: any) => c.category))];
+---
+
+<div class="w-full">
+  <!-- Title -->
+  <h3 class="ty-big-2 text-[var(--color-brand-deep-blue)] mb-6 text-center">
+    {index.core_features.use_cases_title}
+  </h3>
+
+  <!-- Filter and Grid Container -->
+  <div
+    x-data="{
+      selectedCategory: 'All',
+      allCases: [],
+      get filteredCases() {
+        if (this.selectedCategory === 'All') return this.allCases;
+        return this.allCases.filter(c => c.category === this.selectedCategory);
+      },
+      init() {
+        this.allCases = JSON.parse(this.$el.dataset.cases);
+      }
+    }"
+    x-init="init()"
+    data-cases={JSON.stringify(useCases.cases)}
+  >
+    <!-- Filter Buttons -->
+    <div class="flex flex-wrap justify-center gap-2 mb-6">
+      {categories.map((category) => (
+        <button
+          @click={`selectedCategory = '${category}'`}
+          :class={`selectedCategory === '${category}' ? 'bg-[var(--color-brand-deep-blue)] text-white' : 'bg-white text-[var(--color-brand-deep-blue)] border border-[var(--color-brand-deep-blue)]'`}
+          class="px-4 py-1.5 rounded-full ty-small font-bold transition-all hover:shadow-md"
+        >
+          {category}
+        </button>
+      ))}
+    </div>
+
+    <!-- Use Cases Grid -->
+    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-4">
+      <template x-for="useCase in filteredCases" :key="useCase.title">
+        <a
+          :href="useCase.link"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-4 flex flex-col border border-gray-100 hover:border-[var(--color-brand-deep-blue)]"
+          x-transition:enter="transition ease-out duration-200"
+          x-transition:enter-start="opacity-0 scale-95"
+          x-transition:enter-end="opacity-100 scale-100"
+        >
+          <!-- Logo -->
+          <div class="h-12 flex items-center justify-center mb-3">
+            <img
+              :src="useCase.image"
+              :alt="useCase.partner"
+              class="max-h-10 max-w-full object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <!-- Category badge -->
+          <div class="mb-2">
+            <span
+              class="inline-block ty-small text-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)]/10 px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide"
+              x-text="useCase.category"
+            ></span>
+          </div>
+
+          <!-- Title -->
+          <h4
+            class="ty-regular font-bold text-[var(--color-brand-deep-blue)] group-hover:text-[var(--color-brand-swiss)] transition-colors line-clamp-2 mb-1"
+            x-text="useCase.title"
+          ></h4>
+
+          <!-- Partner -->
+          <p class="ty-small text-[var(--color-brand-titan-gray)] mt-auto" x-text="useCase.partner"></p>
+        </a>
+      </template>
+
+      <!-- Learn More Box -->
+      <a
+        href={viewAllPath}
+        class="group bg-[var(--color-brand-deep-blue)] rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-4 flex flex-col items-center justify-center border border-[var(--color-brand-deep-blue)] hover:bg-[var(--color-brand-swiss)] min-h-[160px]"
+      >
+        <div class="flex flex-col items-center text-center">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-8 h-8 text-white mb-3"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7l5 5m0 0l-5 5m5-5H6" />
+          </svg>
+          <span class="ty-regular font-bold text-white">
+            {index.core_features.more_link.label}
+          </span>
+        </div>
+      </a>
+    </div>
+  </div>
+</div>

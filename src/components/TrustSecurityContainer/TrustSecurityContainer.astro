@@ -1,8 +1,9 @@
 ---
-import { getLanguageFromURL, loadContent } from "../../utils/i18n";
+import { getLanguageFromURL, loadContent, getLocalizedPath } from "../../utils/i18n";
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const index = await loadContent("index", currentLang);
+const compliancePath = getLocalizedPath('/compliance', currentLang);
 ---
 
 <div class="space-y-16 max-w-5xl mx-auto">
@@ -10,7 +11,20 @@ const index = await loadContent("index", currentLang);
   <div class="space-y-6">
     <h3 class="ty-big-2">{index.trust_security.regulatory.title}</h3>
     <p class="ty-body-1">{index.trust_security.regulatory.description}</p>
-    <div class="flex flex-col md:flex-row gap-6 mt-8">
+
+    <!-- Learn More Link -->
+    <div class="mt-6">
+      <a
+        href={compliancePath}
+        class="inline-flex items-center gap-2 bg-[var(--color-brand-deep-blue)] text-white px-6 py-3 rounded-lg ty-regular font-bold hover:bg-[var(--color-brand-swiss)] transition-colors"
+      >
+        <span>{index.trust_security.regulatory.learnMoreLabel}</span>
+        <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3 invert" />
+      </a>
+    </div>
+
+    <!-- Direct PDF Links -->
+    <div class="flex flex-col md:flex-row gap-6 mt-6">
       {index.trust_security.regulatory.documents.map((doc) => (
         <a
           href={doc.href}
@@ -18,7 +32,9 @@ const index = await loadContent("index", currentLang);
           rel="noopener noreferrer"
           class="ty-regular text-[var(--color-brand-deep-blue)] hover:underline inline-flex items-center gap-2"
         >
-          <span>→</span>
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+          </svg>
           <span>{doc.label}</span>
         </a>
       ))}

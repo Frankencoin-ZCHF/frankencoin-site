@@ -37,13 +37,14 @@ const localizedLinks = nav.links.map(link => ({ ...link, href: prefixLanguage(li
 
 <div
   class="fixed left-0 right-0 top-[60px] h-[calc(100vh-60px)] w-full bg-[var(--color-gray-15)] shadow-lg overflow-y-auto animate-slide-down"
+  id="mobile-menu"
 >
   <nav class="flex flex-col gap-2 px-5 pt-8 pb-6" aria-label="Mobile">
     {
       localizedLinks.map((l) => (
         <a
           href={l.href}
-          class="ty-body-1-mobile block rounded-lg px-4 py-3 text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] active:text-[var(--color-brand-swiss)]"
+          class="mobile-nav-link ty-body-1-mobile block rounded-lg px-4 py-3 text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] active:text-[var(--color-brand-swiss)]"
         >
           {l.label}
         </a>
@@ -58,6 +59,24 @@ const localizedLinks = nav.links.map(link => ({ ...link, href: prefixLanguage(li
     </div>
   </nav>
 </div>
+
+<script>
+  // Close mobile menu when clicking on any nav link
+  document.addEventListener('DOMContentLoaded', () => {
+    const mobileMenu = document.getElementById('mobile-menu');
+    const navLinks = mobileMenu?.querySelectorAll('.mobile-nav-link');
+
+    navLinks?.forEach(link => {
+      link.addEventListener('click', () => {
+        // Find the parent details element and close it
+        const details = mobileMenu?.closest('details');
+        if (details) {
+          details.removeAttribute('open');
+        }
+      });
+    });
+  });
+</script>
 
 <style>
   @keyframes slide-down {

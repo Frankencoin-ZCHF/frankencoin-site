@@ -13,13 +13,11 @@ const basePath = stripLangFromPath(currentPath);
     basePath: '${basePath}',
     languages: {
       en: 'English',
-      de: 'Deutsch',
-      fr: 'Français'
+      de: 'Deutsch'
     },
     languageCodes: {
       en: 'EN',
-      de: 'DE',
-      fr: 'FR'
+      de: 'DE'
     },
     init() {
       // Check if we've already done auto-detection
@@ -29,8 +27,8 @@ const basePath = stripLangFromPath(currentPath);
         // First visit - try to auto-detect browser language
         const browserLang = navigator.language.toLowerCase().split('-')[0];
 
-        // Only redirect if browser language is de/fr and different from current page
-        if ((browserLang === 'de' || browserLang === 'fr') && browserLang !== this.currentLang) {
+        // Only redirect if browser language is de and different from current page (fr disabled)
+        if (browserLang === 'de' && browserLang !== this.currentLang) {
           // Mark that we've auto-detected
           localStorage.setItem('language-auto-detected', 'true');
           localStorage.setItem('preferred-language', browserLang);
@@ -98,7 +96,7 @@ const basePath = stripLangFromPath(currentPath);
     x-transition:leave="transition ease-in duration-75"
     x-transition:leave-start="transform opacity-100 scale-100"
     x-transition:leave-end="transform opacity-0 scale-95"
-    class="absolute right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border-2 border-[var(--color-gray-20)] overflow-hidden z-50"
+    class="absolute left-0 md:left-auto md:right-0 mt-2 w-32 bg-white rounded-lg shadow-lg border-2 border-[var(--color-gray-20)] overflow-hidden z-50"
   >
     {Object.entries(languages).map(([code, name]) => (
       <button

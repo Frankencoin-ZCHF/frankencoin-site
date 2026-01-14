@@ -1,0 +1,73 @@
+{
+	"eyebrow": "Rechtliches & Regulatorisches",
+	"title": "Frankencoin Compliance",
+	"intro": "Frankencoin ist vollständig konform mit den Schweizer und EU-Vorschriften. Unabhängige rechtliche Gutachten bestätigen, dass ZCHF ohne Einschränkungen als Payment Token verwendet werden kann.",
+	"toc": {
+		"title": "Auf dieser Seite",
+		"items": [
+			{ "label": "Schweizer Regulatorische Klassifizierung", "href": "#swiss-compliance" },
+			{ "label": "EU MiCA-Klassifizierung", "href": "#eu-compliance" },
+			{ "label": "Zusammenfassung", "href": "#compliance-summary" }
+		]
+	},
+	"swiss": {
+		"title": "Schweizer Regulatorische Klassifizierung",
+		"subtitle": "Klassifiziert als Payment Token gemäss FINMA-Richtlinien",
+		"description": "Ein Rechtsgutachten von LEXR Law Switzerland AG bestätigt, dass Frankencoin (ZCHF) als Payment Token und Stablecoin gemäss den Richtlinien der Eidgenössischen Finanzmarktaufsicht (FINMA) qualifiziert. Der Token ist nicht als Utility, Asset oder Security Token klassifiziert.",
+		"keyPoints": [
+			{
+				"title": "Payment Token",
+				"description": "Die primäre Funktion von ZCHF ist die eines Zahlungsmittels – konkret ein an den CHF gekoppeltes Tauschmittel."
+			},
+			{
+				"title": "Währungsgebundener Stablecoin",
+				"description": "Da 1 ZCHF an 1 CHF gekoppelt sein soll, qualifiziert er als währungsgebundener Stablecoin gemäss den FINMA-Stablecoin-Richtlinien."
+			},
+			{
+				"title": "Keine Wertpapier-Klassifizierung",
+				"description": "ZCHF stellt keinen rechtlichen Anspruch gegen irgendjemanden dar – es gibt keinen Emittenten ausser dem Smart-Contract-Code, der die Mint-Funktion ausführt."
+			},
+			{
+				"title": "Nutzungsfreiheit",
+				"description": "Die blosse Verwendung von ZCHF als Zahlungsmittel für den Erwerb von Waren oder Dienstleistungen unterliegt generell nicht dem Schweizer Finanzmarktrecht."
+			}
+		],
+		"fpsTitle": "Frankencoin Pool Shares (FPS)",
+		"fpsDescription": "FPS qualifiziert als voll funktionsfähiger Utility Token gemäss FINMA-Richtlinien. Er ermöglicht den Zugang zu den Governance-Funktionen des Frankencoin-Systems (Abstimmung und Veto bei Positionen). Die Nutzung und der Austausch von FPS ist nicht unter dem Schweizer Finanzmarktrecht reguliert.",
+		"documentLabel": "Vollständige Schweizer Rechtsklassifizierung lesen",
+		"documentHref": "/2024-08-14_Frankencoin_Swiss_Regulatory_Classification.pdf"
+	},
+	"eu": {
+		"title": "EU MiCA-Klassifizierung",
+		"subtitle": "Crypto-Asset ohne identifizierbaren Emittenten",
+		"description": "Ein Rechtsgutachten von LEXR Germany Rechtsanwalts GmbH bestätigt, dass Frankencoin als Crypto-Asset gemäss der EU-Verordnung über Märkte für Kryptowerte (MiCA) qualifiziert. Aufgrund seiner dezentralen Natur gelten die regulatorischen Anforderungen, die typischerweise Stablecoin-Emittenten auferlegt werden, nicht.",
+		"keyPoints": [
+			{
+				"title": "Dezentrales Protokoll",
+				"description": "ZCHF wird durch ein dezentrales Protokoll generiert, das nicht zentral von einer juristischen Person, einem Unternehmen oder einer natürlichen Person organisiert oder kontrolliert wird – es gibt keinen 'identifizierbaren Emittenten'."
+			},
+			{
+				"title": "Kein White Paper erforderlich",
+				"description": "Die in MiCA Titel II, III und IV festgelegten Pflichten gelten nicht für ZCHF. Das bedeutet, es besteht keine Verpflichtung zur Erstellung eines Crypto-Asset-White-Papers."
+			},
+			{
+				"title": "Kein Finanzinstrument",
+				"description": "ZCHF qualifiziert nicht als übertragbares Wertpapier oder Finanzinstrument gemäss MiFID II. Er repräsentiert weder Eigentum, Schulden noch Derivate."
+			},
+			{
+				"title": "CASP-Compliance",
+				"description": "Crypto-Asset-Service-Provider, die Dienstleistungen im Zusammenhang mit ZCHF anbieten, unterliegen weiterhin MiCA, sind aber nicht verpflichtet, ein White Paper für ZCHF zu erstellen."
+			}
+		],
+		"documentLabel": "Vollständige EU MiCA-Klassifizierung lesen",
+		"documentHref": "/2025-01-04_Frankencoin_MiCA_Classification.pdf"
+	},
+	"summary": {
+		"title": "Zusammenfassung",
+		"description": "Beide Rechtsgutachten bestätigen, dass Frankencoin frei für Zahlungen und Transaktionen verwendet werden kann. Das dezentrale, oracle-freie Design des Protokolls bedeutet, dass es ohne die regulatorischen Belastungen operiert, die typischerweise mit zentralisierten Stablecoin-Emittenten verbunden sind, während es gleichzeitig die vollständige rechtliche Compliance sowohl in der Schweiz als auch in der Europäischen Union aufrechterhält."
+	},
+	"disclaimer": {
+		"title": "Haftungsausschluss",
+		"text": "Die Informationen auf dieser Seite fassen unabhängige Rechtsgutachten zusammen und stellen keine Rechtsberatung dar. Es besteht weiterhin regulatorische Unsicherheit in Bezug auf dezentrale Finanzanwendungen. Bitte konsultieren Sie die Originaldokumente und suchen Sie professionelle Rechtsberatung für Ihre spezifische Situation."
+	}
+}

@@ -31,24 +31,28 @@ const variantClass = variants[variant ?? "primary"];
   class="w-full max-w-[600px] lg:max-w-none lg:w-auto mx-auto grid grid-cols-1 lg:grid-cols-3 rounded-[var(--radius-xl)] border border-[var(--color-brand-deep-blue)]"
 >
   {
-    options?.map((option, index) => (
-      <a
-        id={`badge-${index}-${options.length}`}
-        href={option.href}
-        target="_blank"
-        class={`
-          ${variantClass}
-          flex flex-col justify-center
-          transition-colors duration-200
-          group
-          relative
-          ${index === 0 ? "rounded-t-[var(--radius-xl)] lg:rounded-l-[var(--radius-xl)] lg:rounded-tr-none" : ""}
-          ${index === (options?.length ?? 0) - 1 ? "rounded-b-[var(--radius-xl)] lg:rounded-r-[var(--radius-xl)] lg:rounded-bl-none" : ""}
-          ${index > 0 ? "lg:border-l border-t lg:border-t-0 border-white" : ""}
-        `}
-      >
-        <Badge {...option} />
-      </a>
-    ))
+    options?.map((option, index) => {
+      const isExternal = option.href?.startsWith('http://') || option.href?.startsWith('https://');
+      return (
+        <a
+          id={`badge-${index}-${options.length}`}
+          href={option.href}
+          target={isExternal ? "_blank" : undefined}
+          rel={isExternal ? "noopener noreferrer" : undefined}
+          class={`
+            ${variantClass}
+            flex flex-col justify-center
+            transition-colors duration-200
+            group
+            relative
+            ${index === 0 ? "rounded-t-[var(--radius-xl)] lg:rounded-l-[var(--radius-xl)] lg:rounded-tr-none" : ""}
+            ${index === (options?.length ?? 0) - 1 ? "rounded-b-[var(--radius-xl)] lg:rounded-r-[var(--radius-xl)] lg:rounded-bl-none" : ""}
+            ${index > 0 ? "lg:border-l border-t lg:border-t-0 border-white" : ""}
+          `}
+        >
+          <Badge {...option} />
+        </a>
+      );
+    })
   }
 </div>

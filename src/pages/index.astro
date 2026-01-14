@@ -2,7 +2,7 @@
 import Section from "../components/Layout/Section.astro";
 import SectionHeader from "../components/Layout/SectionHeader.astro";
 import Base from "../layouts/Base.astro";
-import { getLanguageFromURL, loadContent, loadGlobalSharedContent } from "../utils/i18n";
+import { getLanguageFromURL, loadContent, loadGlobalSharedContent, getLocalizedPath } from "../utils/i18n";
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const index = await loadContent("index", currentLang);
@@ -18,7 +18,7 @@ import FlexStack from "../components/Layout/FlexStack.astro";
 import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
 import ExplanationCardsContainer from "../components/ExplanationCardsContainer/ExplanationCardsContainer.astro";
 import MediaCarousel from "../components/MediaCarousel/MediaCarousel.astro";
-import UseCasesAccordion from "../components/UseCasesAccordion/UseCasesAccordion.astro";
+import UseCasesGrid from "../components/UseCasesGrid/UseCasesGrid.astro";
 
 export const prerender = false;
 
@@ -52,6 +52,16 @@ const s1 = findStat("totalSupply");
 const s2 = findStat("totalValueLocked");
 const s4 = findStat("compliance");
 
+// Helper to localize internal hrefs
+function localizeHref(href: string | undefined, fallback: string): string {
+  const path = href ?? fallback;
+  // Only localize internal paths (not external URLs or anchors)
+  if (path.startsWith('/') && !path.startsWith('//') && !path.includes('://')) {
+    return getLocalizedPath(path, currentLang);
+  }
+  return path;
+}
+
 const stats: Option[] = frankencoinInfo
   ? [
       {
@@ -69,7 +79,7 @@ const stats: Option[] = frankencoinInfo
       {
         label: s4.label ?? "Fully Compliant",
         value: s4.value ?? "Swiss Law & MiCAR",
-        href: s4.href ?? "/#trust-security",
+        href: localizeHref(s4.href, "/compliance"),
       },
     ]
   : [];
@@ -144,7 +154,7 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
   >
     <FeaturesContainer features={index.core_features.features} />
     <div class="mt-12">
-      <UseCasesAccordion buttonLabel={index.core_features.more_link.label} />
+      <UseCasesGrid />
     </div>
   </Section>
   <Section

@@ -47,7 +47,7 @@
 			"id": "compliance",
 			"label": "Fully Compliant",
 			"value": "CH-Recht & MiCAR",
-			"href": "/#trust-security"
+			"href": "/compliance"
 		}
 	],
 
@@ -141,8 +141,9 @@
 				}
 			}
 		],
+		"use_cases_title": "Frankencoin Use-Cases",
 		"more_link": {
-			"label": "Weitere Use Cases ansehen",
+			"label": "Mehr erfahren, wie Sie Frankencoin nutzen können",
 			"href": "/use-cases"
 		}
 	},
@@ -261,18 +262,20 @@
 	},
 	"trust_security": {
 		"eyebrow": "Compliant & Secure",
-		"title": "Regulatory Clarity und Security Audits",
+		"title": "Rechtliche Klassifizierung und Security Audits",
 		"regulatory": {
 			"title": "Rechtliche Klassifizierung",
-			"description": "Frankencoin (ZCHF) ist nach Schweizer Recht als Payment Token klassifiziert. Das System ist fully compliant mit Schweizer und EU-Regulierungen und kann ohne Einschränkungen verwendet werden. In der Europäischen Union qualifiziert Frankencoin als Crypto-Asset gemäss MiCA, wobei die in den Titeln II, III und IV festgelegten Pflichten aufgrund seiner dezentralisierten Natur nicht gelten.",
+			"description": "Frankencoin (ZCHF) ist nach Schweizer Recht als Payment Token klassifiziert. Das System ist vollständig konform mit Schweizer und EU-Regulierungen und kann ohne Einschränkungen verwendet werden. In der Europäischen Union qualifiziert Frankencoin als Crypto-Asset gemäss MiCA, wobei die in den Titeln II, III und IV festgelegten Pflichten aufgrund seiner dezentralisierten Natur nicht gelten.",
+			"learnMoreLabel": "Mehr über Frankencoin's Compliance erfahren",
+			"learnMoreHref": "/compliance",
 			"documents": [
 				{
-					"label": "Swiss Legal Classification (LEXR)",
-					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_FPS_Memo.pdf"
+					"label": "Schweizer Rechtsklassifizierung (PDF)",
+					"href": "/2024-08-14_Frankencoin_Swiss_Regulatory_Classification.pdf"
 				},
 				{
-					"label": "EU MiCA Compliance Memo",
-					"href": "https://github.com/Frankencoin-ZCHF/www/blob/main/documents/ZCHF_MiCA_Memo.pdf"
+					"label": "EU MiCA-Klassifizierung (PDF)",
+					"href": "/2025-01-04_Frankencoin_MiCA_Classification.pdf"
 				}
 			]
 		},

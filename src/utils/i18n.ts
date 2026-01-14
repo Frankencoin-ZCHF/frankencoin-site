@@ -1,6 +1,13 @@
 export const languages = {
 	en: 'English',
 	de: 'Deutsch',
+	// fr: 'Français', // French temporarily disabled
+} as const;
+
+// All languages including disabled ones (for URL parsing)
+export const allLanguages = {
+	en: 'English',
+	de: 'Deutsch',
 	fr: 'Français',
 } as const;
 
@@ -9,9 +16,14 @@ export type Language = keyof typeof languages;
 export const defaultLang: Language = 'en';
 
 export function getLanguageFromURL(pathname: string): Language {
-	const langMatch = pathname.match(/^\/(en|de|fr)(\/|$)/);
+	const langMatch = pathname.match(/^\/(en|de)(\/|$)/);
 	if (langMatch) {
 		return langMatch[1] as Language;
+	}
+	// Handle disabled French URLs - redirect to English
+	const frMatch = pathname.match(/^\/(fr)(\/|$)/);
+	if (frMatch) {
+		return defaultLang;
 	}
 	return defaultLang;
 }
@@ -26,6 +38,7 @@ export function getLocalizedPath(path: string, lang: Language): string {
 }
 
 export function stripLangFromPath(pathname: string): string {
+	// Also strip fr for backwards compatibility
 	return pathname.replace(/^\/(en|de|fr)(\/|$)/, '/');
 }
 
