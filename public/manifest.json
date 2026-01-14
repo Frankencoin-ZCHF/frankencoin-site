@@ -9,17 +9,10 @@
   "orientation": "portrait-primary",
   "icons": [
     {
-      "src": "/favicon.png",
-      "sizes": "512x512",
-      "type": "image/png",
-      "purpose": "any maskable"
-    },
-    {
-      "src": "/images/webclip.png",
-      "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "apple touch icon"
-    }
+			"src": "icon.ico",
+			"sizes": "any",
+			"type": "image/ico"
+		}
   ],
   "categories": ["finance", "business"],
   "shortcuts": [
