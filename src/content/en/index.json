@@ -254,7 +254,7 @@
 			},
 			{
 				"title": "Market-driven price stability",
-				"description": "The system is designed to keep the long-term value of the Frankencoin in line with the Swiss franc. This means that every short-term deviation is an arbitrage opportunity for the market to expoit, thereby keeping the exchange rate close to parity.",
+				"description": "The system is designed to keep the long-term value of the Frankencoin in line with the Swiss franc. This means that every short-term deviation is an arbitrage opportunity for the market to exploit, thereby keeping the exchange rate close to parity.",
 				"link": "https://docs.frankencoin.com/positions/auctions",
 				"linkLabel": "How auctions work"
 			}
