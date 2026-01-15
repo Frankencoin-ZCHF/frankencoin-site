@@ -1,6 +1,8 @@
 ---
 import MainIndex from '../index.astro';
 
+export const prerender = false;
+
 export function getStaticPaths() {
   return [
     { params: { lang: 'de' } },
