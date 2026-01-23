@@ -65,11 +65,17 @@ const site = await loadSharedContent("site", currentLang);
         const langSwitchAnchor = sessionStorage.getItem('lang-switch-anchor');
         if (langSwitchAnchor && window.location.hash === langSwitchAnchor) {
           sessionStorage.removeItem('lang-switch-anchor');
+          // Validate that the anchor is safe (must start with # and only contain safe characters)
+          if (!/^#[a-zA-Z0-9_-]+$/.test(langSwitchAnchor)) {
+            return; // Invalid anchor format, don't proceed
+          }
           // Disable smooth scroll temporarily
           document.documentElement.style.scrollBehavior = 'auto';
           // After page load, scroll instantly to anchor
           window.addEventListener('DOMContentLoaded', function() {
-            const element = document.querySelector(langSwitchAnchor);
+            // Extract ID from hash (remove #) and use getElementById for safe lookup
+            const elementId = langSwitchAnchor.substring(1);
+            const element = document.getElementById(elementId);
             if (element) {
               element.scrollIntoView({ behavior: 'instant', block: 'start' });
             }

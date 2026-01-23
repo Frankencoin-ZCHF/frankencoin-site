@@ -4,13 +4,17 @@ import { languages, type Language, getLanguageFromURL, getLocalizedPath, stripLa
 const currentPath = Astro.url.pathname;
 const currentLang = getLanguageFromURL(currentPath);
 const basePath = stripLangFromPath(currentPath);
+
+// Escape values for safe injection into Alpine.js x-data attribute
+const escapedBasePath = JSON.stringify(basePath);
+const escapedCurrentLang = JSON.stringify(currentLang);
 ---
 
 <div
   x-data={`{
     open: false,
-    currentLang: '${currentLang}',
-    basePath: '${basePath}',
+    currentLang: ${escapedCurrentLang},
+    basePath: ${escapedBasePath},
     languages: {
       en: 'English',
       de: 'Deutsch'
