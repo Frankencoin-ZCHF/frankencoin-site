@@ -1,6 +1,7 @@
 {
 	"_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
 	"articles": [
+		"https://www.finews.ch/news/finanzplatz/70924-frankencoin-association-advisory-board-stablecoin-andre-scherrer-cedric-waldburger-eric-sarasin-philip-hopf-rene-keller-blockchain",
 		"https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html",
 		"https://www.tippinpoint.ch/artikel/77293/bitcoin-suisse-praesident_luzius_meisser_lanciert_mit_dem_frankencoin_einen_alternativen_digitalen_franken_.html",
 		"https://www.finews.ch/news/finanzplatz/68422-frankencoin-mt-pelerin-integration-johannes-kern-arnaud-salomon-zchf-stablecoin",
@@ -23,6 +24,13 @@
 		"https://youtu.be/YF_a7A7lwoQ"
 	],
 	"articleMetadata": {
+		"https://www.finews.ch/news/finanzplatz/70924-frankencoin-association-advisory-board-stablecoin-andre-scherrer-cedric-waldburger-eric-sarasin-philip-hopf-rene-keller-blockchain": {
+			"title": "Franken-Stablecoin-Vereinigung setzt Beirat ein",
+			"description": "Die Frankencoin Association hat einen fünfköpfigen Beirat eingesetzt, um die nächste Entwicklungsphase des Schweizer Stablecoin-Ökosystems zu begleiten.",
+			"image": "https://www.finews.ch/images/cache/63e1071a2c45c4689f939402875f80fd_w646_h388_cp.jpg",
+			"siteName": "finews.ch",
+			"publishedDate": "Jan 22, 2026"
+		},
 		"https://www.tippinpoint.ch/artikel/78308/der_franken-stablecoin_wird_zahlungsmittel_und_macht_das_bankkonto_ueberfluessig_.html": {
 			"title": "Der Franken-Stablecoin wird Zahlungsmittel und macht das Bankkonto überflüssig",
 			"description": "Eine Gruppe von Kryptodienstleistern lanciert ein System mit Visakarte, Rendite und Cashback. Das neue Zahlungssystem soll wie die Lösungen von Revolut oder Neon funktionieren.",
