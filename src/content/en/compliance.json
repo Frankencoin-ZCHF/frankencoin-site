@@ -59,7 +59,8 @@
 				"description": "Crypto-Asset Service Providers offering services related to ZCHF remain subject to MiCA but are not required to prepare a white paper for ZCHF."
 			}
 		],
-		"documentLabel": "Report available on request."
+		"documentLabel": "Read the full EU MiCA Classification",
+		"documentHref": "/20260209 ZCHF MiCA Frankencoin Association Public Summary FINAL.pdf"
 	},
 	"summary": {
 		"title": "Summary",
