@@ -19,6 +19,7 @@ import BadgeContainer from "../components/BadgeContainer/BadgeContainer.astro";
 import ExplanationCardsContainer from "../components/ExplanationCardsContainer/ExplanationCardsContainer.astro";
 import MediaCarousel from "../components/MediaCarousel/MediaCarousel.astro";
 import UseCasesGrid from "../components/UseCasesGrid/UseCasesGrid.astro";
+import ExchangesGrid from "../components/ExchangesGrid/ExchangesGrid.astro";
 
 export const prerender = false;
 
@@ -155,6 +156,9 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
     <FeaturesContainer features={index.core_features.features} />
     <div class="mt-12">
       <UseCasesGrid />
+    </div>
+    <div class="mt-16">
+      <ExchangesGrid />
     </div>
   </Section>
   <Section

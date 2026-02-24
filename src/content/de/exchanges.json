@@ -1,0 +1,55 @@
+{
+	"eyebrow": "Wo Sie Frankencoin erhalten",
+	"title": "Börsen & Zugänge",
+	"intro": "Frankencoin (ZCHF) ist auf verschiedenen Plattformen erhältlich – von regulierten Schweizer Zugängen bis hin zu dezentralen Börsen. Ob per Banküberweisung oder direktem Tausch, es gibt einen bequemen Weg, ZCHF zu erwerben.",
+	"exchanges": [
+		{
+			"name": "Mt Pelerin",
+			"description": "Regulierter Schweizer Zugang: ZCHF direkt per Banküberweisung über persönliche IBAN kaufen. Vollständig konform und einsteigerfreundlich.",
+			"type": "On-Ramp",
+			"image": "/images/mt-pelerin-logo.png",
+			"link": "https://www.mtpelerin.com/buy-zchf-frankencoin",
+			"linkLabel": "ZCHF kaufen"
+		},
+		{
+			"name": "DFX",
+			"description": "Schweizer Dienst für den Kauf und Verkauf von ZCHF per Banküberweisung. Einfach, konform und nicht-verwahrend – Ihre Schlüssel, Ihre Coins.",
+			"type": "On-Ramp",
+			"image": "/images/DFX-Logos.svg",
+			"link": "https://dfx.swiss/app?type=buy&asset-out=ZCHF",
+			"linkLabel": "ZCHF kaufen"
+		},
+		{
+			"name": "Curve",
+			"description": "Führende dezentrale Börse, optimiert für Stablecoins. ZCHF tauschen mit geringer Slippage und hoher Liquidität auf Ethereum.",
+			"type": "DEX",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://curve.fi/#/ethereum/swap?from=0xdac17f958d2ee523a2206206994597c13d831ec7&to=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Auf Curve tauschen"
+		},
+		{
+			"name": "Uniswap",
+			"description": "Die meistgenutzte dezentrale Börse. ZCHF erlaubnisfrei auf Ethereum und anderen Netzwerken handeln, mit voller Transparenz.",
+			"type": "DEX",
+			"image": "/images/Uniswap_Logo_and_Wordmark-1-Compressify.io.webp",
+			"link": "https://app.uniswap.org/swap?outputCurrency=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Auf Uniswap tauschen"
+		},
+		{
+			"name": "MEXC",
+			"description": "Globale zentralisierte Börse mit ZCHF-Handelspaaren. Konto erstellen, Guthaben einzahlen und ZCHF mit günstigen Gebühren handeln.",
+			"type": "CEX",
+			"image": "/images/mexc.webp",
+			"link": "https://www.mexc.com/exchange/ZCHF_USDT",
+			"linkLabel": "Auf MEXC handeln"
+		},
+		{
+			"name": "CowSwap",
+			"description": "MEV-geschützte dezentrale Börse. Batch-Auktionen finden automatisch den besten verfügbaren Preis für Ihre ZCHF-Trades.",
+			"type": "DEX",
+			"image": "/images/Cow-Swap-logo.svg",
+			"link": "https://swap.cow.fi/#/1/swap/USDT/ZCHF",
+			"linkLabel": "Auf CowSwap tauschen"
+		}
+	]
+}

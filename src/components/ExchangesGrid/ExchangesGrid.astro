@@ -1,0 +1,60 @@
+---
+import { getLanguageFromURL, loadContent, getLocalizedPath } from "../../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const exchanges = await loadContent("exchanges", currentLang);
+---
+
+<div class="w-full">
+  <!-- Title -->
+  <h3 class="ty-big-2 text-[var(--color-brand-deep-blue)] mb-2 text-center">
+    {exchanges.title}
+  </h3>
+  <p class="ty-body-2 text-[var(--color-brand-titan-gray)] mb-8 text-center max-w-2xl mx-auto">
+    {exchanges.intro}
+  </p>
+
+  <!-- Exchanges Grid — 3 per row -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+    {exchanges.exchanges.map((exchange: any) => (
+      <a
+        href={exchange.link}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="group bg-white rounded-xl shadow-sm hover:shadow-lg transition-all duration-300 p-5 flex flex-col border border-gray-100 hover:border-[var(--color-brand-deep-blue)]"
+      >
+        <div class="flex items-center justify-between mb-3">
+          <!-- Logo -->
+          <div class="h-10 flex items-center">
+            <img
+              src={exchange.image}
+              alt={exchange.name}
+              class="max-h-10 max-w-[140px] object-contain"
+              loading="lazy"
+            />
+          </div>
+
+          <span class="inline-block ty-small text-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)]/10 px-2 py-0.5 rounded-full text-[10px] uppercase tracking-wide">
+            {exchange.type}
+          </span>
+        </div>
+
+        <!-- Description -->
+        <p class="ty-small text-[var(--color-brand-titan-gray)] leading-relaxed mb-3 flex-grow">
+          {exchange.description}
+        </p>
+
+        <!-- CTA link -->
+        <div class="flex items-center gap-1 text-[var(--color-brand-deep-blue)] group-hover:text-[var(--color-brand-swiss)] transition-colors ty-small font-bold mt-auto">
+          <span>{exchange.linkLabel}</span>
+          <img
+            src="/images/Arrow.svg"
+            loading="lazy"
+            alt=""
+            class="w-3 h-3 transform group-hover:translate-x-1 transition-transform"
+          />
+        </div>
+      </a>
+    ))}
+  </div>
+</div>

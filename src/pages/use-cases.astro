@@ -5,6 +5,7 @@ import { getLanguageFromURL, loadContent } from "../utils/i18n";
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const useCases = await loadContent("use-cases", currentLang);
+const exchanges = await loadContent("exchanges", currentLang);
 
 // Extract unique categories from use cases
 const categories = ["All", ...new Set(useCases.cases.map(c => c.category))];
@@ -111,6 +112,74 @@ const categories = ["All", ...new Set(useCases.cases.map(c => c.category))];
           </a>
         </template>
       </div>
+    </div>
+  </Section>
+
+  <Section
+    id="exchanges"
+    eyebrow={exchanges.eyebrow}
+    title={exchanges.title}
+    variant="accent"
+  >
+    <div class="max-w-4xl mx-auto mb-12 text-center">
+      <p class="ty-body-1 text-[var(--color-brand-titan-gray)] leading-relaxed">
+        {exchanges.intro}
+      </p>
+    </div>
+
+    <!-- Exchanges Grid -->
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto w-full">
+      {exchanges.exchanges.map((exchange: any) => (
+        <a
+          href={exchange.link}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="group bg-white rounded-2xl shadow-sm hover:shadow-xl transition-all duration-300 p-8 space-y-6 flex flex-col border border-gray-100 hover:border-[var(--color-brand-deep-blue)] relative overflow-hidden"
+        >
+          <!-- Background gradient on hover -->
+          <div class="absolute inset-0 bg-gradient-to-br from-[var(--color-brand-deep-blue)]/0 to-[var(--color-brand-swiss)]/0 group-hover:from-[var(--color-brand-deep-blue)]/5 group-hover:to-[var(--color-brand-swiss)]/5 transition-all duration-300"></div>
+
+          <!-- Content -->
+          <div class="relative flex flex-col h-full">
+            <!-- Logo container -->
+            <div class="flex-shrink-0 h-24 flex items-center justify-start mb-6">
+              <img
+                src={exchange.image}
+                alt={exchange.name}
+                class="max-h-20 max-w-[200px] object-contain filter brightness-100 group-hover:brightness-110 transition-all"
+                loading="lazy"
+              />
+            </div>
+
+            <!-- Type badge -->
+            <div class="mb-3">
+              <span class="inline-block ty-small text-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)]/10 px-3 py-1 rounded-full uppercase tracking-wide">
+                {exchange.type}
+              </span>
+            </div>
+
+            <!-- Text content -->
+            <div class="flex-grow">
+              <p class="ty-body-2 text-[var(--color-brand-titan-gray)] leading-relaxed">
+                {exchange.description}
+              </p>
+            </div>
+
+            <!-- Link label & arrow -->
+            <div class="mt-6 pt-4 border-t border-gray-200 flex items-center justify-between">
+              <span class="ty-regular font-bold text-[var(--color-brand-deep-blue)]">
+                {exchange.linkLabel}
+              </span>
+              <img
+                src="/images/Arrow.svg"
+                loading="lazy"
+                alt=""
+                class="w-4 h-4 transform group-hover:translate-x-1 transition-transform"
+              />
+            </div>
+          </div>
+        </a>
+      ))}
     </div>
   </Section>
 </Base>

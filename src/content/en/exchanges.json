@@ -1,0 +1,55 @@
+{
+	"eyebrow": "Where to Get Frankencoin",
+	"title": "Exchanges & On-Ramps",
+	"intro": "Frankencoin (ZCHF) is available on a range of platforms—from regulated Swiss on-ramps to decentralized exchanges. Whether you prefer a bank transfer or a direct swap, there is a convenient way to obtain ZCHF.",
+	"exchanges": [
+		{
+			"name": "Mt Pelerin",
+			"description": "Swiss-regulated on-ramp: buy ZCHF directly with a bank transfer via your personal IBAN. Fully compliant and beginner-friendly.",
+			"type": "On-Ramp",
+			"image": "/images/mt-pelerin-logo.png",
+			"link": "https://www.mtpelerin.com/buy-zchf-frankencoin",
+			"linkLabel": "Buy ZCHF"
+		},
+		{
+			"name": "DFX",
+			"description": "Swiss-based service for buying and selling ZCHF with bank transfers. Simple, compliant, and non-custodial—your keys, your coins.",
+			"type": "On-Ramp",
+			"image": "/images/DFX-Logos.svg",
+			"link": "https://dfx.swiss/app?type=buy&asset-out=ZCHF",
+			"linkLabel": "Buy ZCHF"
+		},
+		{
+			"name": "Curve",
+			"description": "Leading decentralized exchange optimized for stablecoins. Swap ZCHF with low slippage and deep liquidity on Ethereum.",
+			"type": "DEX",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://curve.fi/#/ethereum/swap?from=0xdac17f958d2ee523a2206206994597c13d831ec7&to=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Swap on Curve"
+		},
+		{
+			"name": "Uniswap",
+			"description": "The most widely used decentralized exchange. Trade ZCHF permissionlessly on Ethereum and other networks with full transparency.",
+			"type": "DEX",
+			"image": "/images/Uniswap_Logo_and_Wordmark-1-Compressify.io.webp",
+			"link": "https://app.uniswap.org/swap?outputCurrency=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Swap on Uniswap"
+		},
+		{
+			"name": "MEXC",
+			"description": "Global centralized exchange with ZCHF trading pairs. Register an account, deposit funds, and trade ZCHF with competitive fees.",
+			"type": "CEX",
+			"image": "/images/mexc.webp",
+			"link": "https://www.mexc.com/exchange/ZCHF_USDT",
+			"linkLabel": "Trade on MEXC"
+		},
+		{
+			"name": "CowSwap",
+			"description": "MEV-protected decentralized exchange. Batch auctions find you the best available price for your ZCHF trades automatically.",
+			"type": "DEX",
+			"image": "/images/Cow-Swap-logo.svg",
+			"link": "https://swap.cow.fi/#/1/swap/USDT/ZCHF",
+			"linkLabel": "Swap on CowSwap"
+		}
+	]
+}

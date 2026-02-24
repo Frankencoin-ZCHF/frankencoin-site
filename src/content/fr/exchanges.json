@@ -1,0 +1,55 @@
+{
+	"eyebrow": "Où obtenir Frankencoin",
+	"title": "Bourses & Points d'accès",
+	"intro": "Frankencoin (ZCHF) est disponible sur diverses plateformes – des points d'accès suisses réglementés aux bourses décentralisées. Que vous préfériez un virement bancaire ou un échange direct, il existe un moyen pratique d'obtenir des ZCHF.",
+	"exchanges": [
+		{
+			"name": "Mt Pelerin",
+			"description": "Point d'accès suisse réglementé : achetez des ZCHF directement par virement bancaire via votre IBAN personnel. Entièrement conforme et adapté aux débutants.",
+			"type": "On-Ramp",
+			"image": "/images/mt-pelerin-logo.png",
+			"link": "https://www.mtpelerin.com/buy-zchf-frankencoin",
+			"linkLabel": "Acheter ZCHF"
+		},
+		{
+			"name": "DFX",
+			"description": "Service suisse d'achat et de vente de ZCHF par virement bancaire. Simple, conforme et non dépositaire – vos clés, vos coins.",
+			"type": "On-Ramp",
+			"image": "/images/DFX-Logos.svg",
+			"link": "https://dfx.swiss/app?type=buy&asset-out=ZCHF",
+			"linkLabel": "Acheter ZCHF"
+		},
+		{
+			"name": "Curve",
+			"description": "Bourse décentralisée leader optimisée pour les stablecoins. Échangez des ZCHF avec un faible slippage et une liquidité profonde sur Ethereum.",
+			"type": "DEX",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://curve.fi/#/ethereum/swap?from=0xdac17f958d2ee523a2206206994597c13d831ec7&to=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Échanger sur Curve"
+		},
+		{
+			"name": "Uniswap",
+			"description": "La bourse décentralisée la plus utilisée. Négociez des ZCHF sans autorisation sur Ethereum et d'autres réseaux, en toute transparence.",
+			"type": "DEX",
+			"image": "/images/Uniswap_Logo_and_Wordmark-1-Compressify.io.webp",
+			"link": "https://app.uniswap.org/swap?outputCurrency=0xB58E61C3098d85632Df34EecfB899A1Ed80921cB",
+			"linkLabel": "Échanger sur Uniswap"
+		},
+		{
+			"name": "MEXC",
+			"description": "Bourse centralisée mondiale avec des paires de trading ZCHF. Créez un compte, déposez des fonds et négociez des ZCHF avec des frais compétitifs.",
+			"type": "CEX",
+			"image": "/images/mexc.webp",
+			"link": "https://www.mexc.com/exchange/ZCHF_USDT",
+			"linkLabel": "Trader sur MEXC"
+		},
+		{
+			"name": "CowSwap",
+			"description": "Bourse décentralisée protégée contre le MEV. Les enchères par lots trouvent automatiquement le meilleur prix pour vos trades ZCHF.",
+			"type": "DEX",
+			"image": "/images/Cow-Swap-logo.svg",
+			"link": "https://swap.cow.fi/#/1/swap/USDT/ZCHF",
+			"linkLabel": "Échanger sur CowSwap"
+		}
+	]
+}
