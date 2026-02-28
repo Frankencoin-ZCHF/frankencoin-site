@@ -1,6 +1,7 @@
 {
 	"_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
 	"articles": [
+		"https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730",
 		"https://www.tippinpoint.ch/artikel/78597/den_zins_des_stablecoins_entfesseln.html",
 		"https://www.finews.ch/news/finanzplatz/70983-stablecoin-frankencoin-plusplus-finanzprodukte-etp-treasury-liquiditaetsbewirtschaftung-mietkaution-finanzplatz-schweiz",
 		"https://www.finews.ch/news/finanzplatz/70924-frankencoin-association-advisory-board-stablecoin-andre-scherrer-cedric-waldburger-eric-sarasin-philip-hopf-rene-keller-blockchain",
@@ -26,6 +27,12 @@
 		"https://youtu.be/YF_a7A7lwoQ"
 	],
 	"articleMetadata": {
+		"https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730": {
+  "title": "Der digitale Franken kommt aus Deutschland. Schweizer Anbieter haben keine Chance",
+  "description": "Strenge Geldwäschereivorgaben verunmöglichen es Schweizer Firmen, einen Franken-Stablecoin zu lancieren. Nun bringt ein deutsches Unternehmen einen digitalen Franken auf den Markt – gestützt auf EU-Recht.",
+  "siteName": "NZZ",
+  "publishedDate": "Feb 27, 2026"
+},
 		"https://www.tippinpoint.ch/artikel/78597/den_zins_des_stablecoins_entfesseln.html": {
 			"title": "Den Zins des Stablecoins entfesseln",
 			"description": "Die Schweiz tritt mit Verspätung in den Stablecoin-Markt ein. Die hohen Renditen der Stablecoins fliessen an schlecht regulierte ausländische Firmen. Frankencoin und Plusplus AG wollen das ändern.",
