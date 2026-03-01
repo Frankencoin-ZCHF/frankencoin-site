@@ -386,7 +386,7 @@ const allItems = [...articlesWithMetadata, ...normalizedVideos].sort((a, b) => {
       <template x-for="page in totalPages" :key="page">
         <button
           @click="currentIndex = page - 1"
-          class="w-3 h-3 rounded-full transition-colors"
+          class="w-5 h-5 rounded-full transition-colors"
           :class="currentIndex === page - 1 ? 'bg-[var(--color-brand-deep-blue)]' : 'bg-gray-300'"
           :aria-label="`Go to page ${page}`"
         ></button>
