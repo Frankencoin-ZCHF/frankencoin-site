@@ -96,7 +96,7 @@ const asideBasis = isContentLeft ? "md:basis-1/5" : "md:basis-4/5";
 const parseMarkdownLinks = (text: string) => {
   return text.replace(
     /\[([^\]]+)\]\(([^)]+)\)/g,
-    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[var(--color-brand-swiss)] hover:underline">$1</a>'
+    '<a href="$2" target="_blank" rel="noopener noreferrer" class="text-[var(--color-blue-39)] underline hover:no-underline">$1</a>'
   );
 };
 ---
@@ -112,9 +112,9 @@ const parseMarkdownLinks = (text: string) => {
       <div class={`${textAlign}`}>
 
         <div class="flex flex-col gap-2 items-center mb-8">
-          {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title ">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
+          {eyebrow && <p class="ty-subtitle">{eyebrow.toUpperCase()}</p>}
+          {title && <h2 class="ty-large-title ">{title}</h2>}
+          {subtitle && <p class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
         </div>
         <slot />
       </div>
@@ -125,9 +125,9 @@ const parseMarkdownLinks = (text: string) => {
         <!-- Main Content -->
         <div class={`${mainBasis} space-y-6`}>
 
-          {eyebrow && <h3 class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
+          {eyebrow && <p class="ty-subtitle mb-0">{eyebrow.toUpperCase()}</p>}
+          {title && <h2 class="ty-large-title">{title}</h2>}
+          {subtitle && <p class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
           <slot />
         </div>
         
@@ -141,9 +141,9 @@ const parseMarkdownLinks = (text: string) => {
       <div class="space-y-8">
         <!-- Header centrado -->
         <div class="text-center space-y-4">
-          {eyebrow && <h3 class="ty-subtitle">{eyebrow.toUpperCase()}</h3>}
-          {title && <h1 class="ty-large-title">{title}</h1>}
-          {subtitle && <h2 class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
+          {eyebrow && <p class="ty-subtitle">{eyebrow.toUpperCase()}</p>}
+          {title && <h2 class="ty-large-title">{title}</h2>}
+          {subtitle && <p class="ty-body-1" set:html={parseMarkdownLinks(subtitle)}/>}
         </div>
         
         <!-- Aside Content -->
