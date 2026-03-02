@@ -11,7 +11,13 @@
 			"href": "https://github.com/Frankencoin-ZCHF/www/issues"
 		}
 	},
-	"categories": ["Tokenization", "On-and Offramp", "DEX", "Wallet"],
+	"categories": [
+		"Tokenization",
+		"On-and Offramp",
+		"DEX",
+		"Wallet",
+		"Custody"
+	],
 	"tabs": [
 		{
 			"href": "https://www.aktionariat.com/all-companies",
@@ -101,6 +107,16 @@
 			"category": "Wallet",
 			"description": "Frankencoin App is a self-custody wallet powered by DFX.swiss. It allows users to easily buy FPS, ZCHF or other cryptocurrencies via bank transfer, send or receive payments and much more in upcoming updates.",
 			"linkLabel": "frankencoin.app"
+		},
+		{
+			"href": "https://copper.co/",
+			"name": "Copper",
+			"image": "/images/CopperLogoDark.png",
+			"imageAlt": "Copper Logo",
+			"badge": "Custody",
+			"category": "Custody",
+			"description": "ZCHF is supported by Copper's institutional custody & collateral management infrastructure.",
+			"linkLabel": "copper.co"
 		}
 	]
 }
