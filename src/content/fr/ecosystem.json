@@ -11,7 +11,13 @@
 			"href": "https://github.com/Frankencoin-ZCHF/www/issues"
 		}
 	},
-	"categories": ["Tokenization", "On-and Offramp", "DEX", "Wallet"],
+	"categories": [
+		"Tokenization",
+		"On-and Offramp",
+		"DEX",
+		"Wallet",
+		"Custody"
+	],
 	"tabs": [
 		{
 			"href": "https://www.aktionariat.com/all-companies",
@@ -101,6 +107,16 @@
 			"category": "Wallet",
 			"description": "Frankencoin App est un portefeuille auto-gardé alimenté par DFX.swiss. Il permet aux utilisateurs d'acheter facilement des FPS, ZCHF ou d'autres cryptomonnaies par virement bancaire, d'envoyer ou de recevoir des paiements et bien plus encore dans les prochaines mises à jour.",
 			"linkLabel": "frankencoin.app"
+		},
+		{
+			"href": "https://copper.co/",
+			"name": "Copper",
+			"image": "/images/CopperLogoDark.png",
+			"imageAlt": "Copper Logo",
+			"badge": "Custody",
+			"category": "Custody",
+			"description": "ZCHF est pris en charge par l'infrastructure de conservation institutionnelle et de gestion des garanties de Copper.",
+			"linkLabel": "copper.co"
 		}
 	]
 }
