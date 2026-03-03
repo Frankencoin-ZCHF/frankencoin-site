@@ -90,6 +90,14 @@
 			"category": "Business",
 			"image": "/images/bitcoin-suisse.png",
 			"link": "https://www.bitcoinsuisse.com/"
+		},
+		{
+			"title": "Conservation Institutionnelle & Gestion des Garanties",
+			"partner": "Copper",
+			"description": "ZCHF est pris en charge par l'infrastructure de conservation institutionnelle et de gestion des garanties de Copper, permettant une détention sécurisée et un déploiement DeFi des liquidités en francs suisses.",
+			"category": "Business",
+			"image": "/images/CopperLogoDark.png",
+			"link": "https://copper.co/"
 		}
 	]
 }
