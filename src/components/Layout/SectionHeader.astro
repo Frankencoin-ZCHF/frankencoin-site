@@ -117,16 +117,16 @@ const ctas = cta ? (Array.isArray(cta) ? cta : [cta]) : [];
   }
   {
     eyebrow && (
-      <h3 class={`ty-subtitle text-${align}`}>
+      <p class={`ty-subtitle text-${align}`}>
         {eyebrow.toUpperCase()}
-      </h3>
+      </p>
     )
   }
-  <h1
+  <h2
     class={` text-[color:var(--color-brand-deep-blue)] m-0 ${titleSizes} text-${align} `}
   >
     {title}
-  </h1>
+  </h2>
   {
     subtitle && (
       <p
