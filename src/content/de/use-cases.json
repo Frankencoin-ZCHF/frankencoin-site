@@ -90,6 +90,14 @@
 			"category": "Business",
 			"image": "/images/bitcoin-suisse.png",
 			"link": "https://www.bitcoinsuisse.com/"
+		},
+		{
+			"title": "Institutionelle Verwahrung & Collateral Management",
+			"partner": "Copper",
+			"description": "ZCHF wird durch die institutionelle Custody- und Collateral-Management-Infrastruktur von Copper unterstützt – für sichere Verwahrung und DeFi-fähigen Einsatz von Schweizer-Franken-Liquidität.",
+			"category": "Business",
+			"image": "/images/CopperLogoDark.png",
+			"link": "https://copper.co/"
 		}
 	]
 }
