@@ -98,6 +98,14 @@
 			"category": "Business",
 			"image": "/images/CopperLogoDark.png",
 			"link": "https://copper.co/"
+		},
+		{
+			"title": "Decentralized Index Funds",
+			"partner": "Sagix Club Edelweiss",
+			"description": "ZCHF is a core component of the ixEDEL DTF on Reserve Protocol — a risk-parity on-chain fund combining gold, Bitcoin, ZCHF, and yield-bearing stablecoins to preserve purchasing power across all economic regimes.",
+			"category": "DeFi",
+			"image": "/images/sagix-ixedel.jpg",
+			"link": "https://app.reserve.org/ethereum/index-dtf/0xe4a10951f962e6cb93cb843a4ef05d2f99db1f94/overview"
 		}
 	]
 }
