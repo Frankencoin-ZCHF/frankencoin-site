@@ -117,6 +117,11 @@
             "label": "Veranstaltungen",
             "href": "https://luma.com/user/frankencoin",
             "external": true
+          },
+          {
+            "label": "Merch",
+            "href": "https://merch.frankencoin.com",
+            "external": true
           }
         ]
       }
