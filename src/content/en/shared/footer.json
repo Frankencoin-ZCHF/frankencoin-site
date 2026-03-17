@@ -74,6 +74,11 @@
             "external": true
           },
           {
+            "label": "MCP Server",
+            "href": "https://mcp.frankencoin.com",
+            "external": true
+          },
+          {
             "label": "Frankencoin Whitepaper",
             "href": "https://app.frankencoin.com/thesis-frankencoin.pdf",
             "external": true
