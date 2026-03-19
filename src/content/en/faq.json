@@ -35,7 +35,7 @@
 				},
 				{
 					"question": "What happens if the collateral loses value?",
-					"answer": "The system has multiple safety layers: individual position reserves, the [FPS reserve pool](/#foundation), and automated [liquidation mechanisms](https://docs.frankencoin.com/positions/liquidation). If collateral drops below safe levels, positions are liquidated to maintain over-collateralization."
+					"answer": "The system has multiple safety layers: individual position reserves, the [FPS reserve pool](/#foundation), and automated [liquidation mechanisms](https://docs.frankencoin.com/positions/auctions). If collateral drops below safe levels, positions are liquidated to maintain over-collateralization."
 				},
 				{
 					"question": "What are Frankencoin Pool Shares (FPS)?",
@@ -43,7 +43,7 @@
 				},
 				{
 					"question": "Can Frankencoin lose its peg to the Swiss franc?",
-					"answer": "While designed to track CHF 1:1, ZCHF can temporarily trade slightly above or below peg due to market dynamics. [Arbitrage mechanisms](https://docs.frankencoin.com/positions/minting) and economic incentives work to restore the peg. Long-term stability depends on adequate [collateralization](/#how-does-it-work)."
+					"answer": "While designed to track CHF 1:1, ZCHF can temporarily trade slightly above or below peg due to market dynamics. [Arbitrage mechanisms](https://docs.frankencoin.com/positions) and economic incentives work to restore the peg. Long-term stability depends on adequate [collateralization](/#how-does-it-work)."
 				}
 			]
 		},
@@ -60,7 +60,7 @@
 				},
 				{
 					"question": "Can I earn interest on my Frankencoin?",
-					"answer": "You can earn yield by [providing liquidity to DeFi protocols](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) like morpho or using the [Frankencoin savings module](https://https://app.frankencoin.com/savings). Returns vary based on market conditions and are not guaranteed. Rates reflect supply and demand for CHF liquidity in decentralized markets."
+					"answer": "You can earn yield by [providing liquidity to DeFi protocols](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) like morpho or using the [Frankencoin savings module](https://app.frankencoin.com/savings). Returns vary based on market conditions and are not guaranteed. Rates reflect supply and demand for CHF liquidity in decentralized markets."
 				}
 			]
 		},
@@ -81,7 +81,7 @@
 				},
 				{
 					"question": "Has Frankencoin been audited?",
-					"answer": "Yes, the smart contracts have been audited by multiple leading blockchain security firms including [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf), and [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). [Audit reports](/#trust-security) are publicly available."
+					"answer": "Yes, the smart contracts have been audited by multiple leading blockchain security firms including [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf), and [ChainSecurity](https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts). [Audit reports](/#trust-security) are publicly available."
 				}
 			]
 		}
