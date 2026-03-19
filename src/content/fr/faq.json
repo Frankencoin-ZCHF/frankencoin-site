@@ -35,7 +35,7 @@
 				},
 				{
 					"question": "Que se passe-t-il si les garanties perdent de la valeur ?",
-					"answer": "Le système dispose de plusieurs couches de sécurité : les réserves de positions individuelles, le [pool de réserve FPS](/#foundation) et les [mécanismes de liquidation](https://docs.frankencoin.com/positions/liquidation) automatisés. Si les garanties tombent en dessous de niveaux sûrs, les positions sont liquidées pour maintenir la sur-collatéralisation."
+					"answer": "Le système dispose de plusieurs couches de sécurité : les réserves de positions individuelles, le [pool de réserve FPS](/#foundation) et les [mécanismes de liquidation](https://docs.frankencoin.com/positions/auctions) automatisés. Si les garanties tombent en dessous de niveaux sûrs, les positions sont liquidées pour maintenir la sur-collatéralisation."
 				},
 				{
 					"question": "Que sont les Frankencoin Pool Shares (FPS) ?",
@@ -43,7 +43,7 @@
 				},
 				{
 					"question": "Frankencoin peut-il perdre son ancrage au franc suisse ?",
-					"answer": "Bien que conçu pour suivre le CHF 1:1, le ZCHF peut temporairement se négocier légèrement au-dessus ou en dessous de l'ancrage en raison de la dynamique du marché. Les [mécanismes d'arbitrage](https://docs.frankencoin.com/positions/minting) et les incitations économiques travaillent à restaurer l'ancrage. La stabilité à long terme dépend d'une [collatéralisation](/#how-does-it-work) adéquate."
+					"answer": "Bien que conçu pour suivre le CHF 1:1, le ZCHF peut temporairement se négocier légèrement au-dessus ou en dessous de l'ancrage en raison de la dynamique du marché. Les [mécanismes d'arbitrage](https://docs.frankencoin.com/positions) et les incitations économiques travaillent à restaurer l'ancrage. La stabilité à long terme dépend d'une [collatéralisation](/#how-does-it-work) adéquate."
 				}
 			]
 		},
@@ -60,7 +60,7 @@
 				},
 				{
 					"question": "Puis-je gagner des intérêts sur mes Frankencoin ?",
-					"answer": "Vous pouvez gagner un rendement en [fournissant de la liquidité aux protocoles DeFi](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) comme Morpho ou en utilisant le [module d'épargne Frankencoin](https://https://app.frankencoin.com/savings). Les rendements varient en fonction des conditions du marché et ne sont pas garantis. Les taux reflètent l'offre et la demande de liquidité CHF sur les marchés décentralisés."
+					"answer": "Vous pouvez gagner un rendement en [fournissant de la liquidité aux protocoles DeFi](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) comme Morpho ou en utilisant le [module d'épargne Frankencoin](https://app.frankencoin.com/savings). Les rendements varient en fonction des conditions du marché et ne sont pas garantis. Les taux reflètent l'offre et la demande de liquidité CHF sur les marchés décentralisés."
 				}
 			]
 		},
@@ -81,7 +81,7 @@
 				},
 				{
 					"question": "Frankencoin a-t-il été audité ?",
-					"answer": "Oui, les smart contracts ont été audités par plusieurs entreprises de sécurité blockchain de premier plan, notamment [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf) et [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). Les [rapports d'audit](/#trust-security) sont publiquement disponibles."
+					"answer": "Oui, les smart contracts ont été audités par plusieurs entreprises de sécurité blockchain de premier plan, notamment [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf) et [ChainSecurity](https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts). Les [rapports d'audit](/#trust-security) sont publiquement disponibles."
 				}
 			]
 		}

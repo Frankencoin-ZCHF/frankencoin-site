@@ -35,7 +35,7 @@
 				},
 				{
 					"question": "Was passiert, wenn die Collaterals an Wert verlieren?",
-					"answer": "Das System verfügt über mehrere Sicherheitsebenen: individuelle Positionsreserven, den [FPS-Reservepool](/#foundation) und automatisierte [Liquidationsmechanismen](https://docs.frankencoin.com/positions/liquidation). Wenn Sicherheiten unter sichere Niveaus fallen, werden Positionen liquidiert, um die Überbesicherung aufrechtzuerhalten."
+					"answer": "Das System verfügt über mehrere Sicherheitsebenen: individuelle Positionsreserven, den [FPS-Reservepool](/#foundation) und automatisierte [Liquidationsmechanismen](https://docs.frankencoin.com/positions/auctions). Wenn Sicherheiten unter sichere Niveaus fallen, werden Positionen liquidiert, um die Überbesicherung aufrechtzuerhalten."
 				},
 				{
 					"question": "Was sind Frankencoin Pool Shares (FPS)?",
@@ -43,7 +43,7 @@
 				},
 				{
 					"question": "Kann Frankencoin seine Bindung zum Schweizer Franken verlieren?",
-					"answer": "Obwohl ZCHF darauf ausgelegt ist, CHF 1:1 zu folgen, kann er aufgrund von Marktdynamiken vorübergehend leicht über oder unter der Bindung gehandelt werden. [Arbitrage-Mechanismen](https://docs.frankencoin.com/positions/minting) und wirtschaftliche Anreize wirken darauf hin, die Bindung wiederherzustellen. Die langfristige Stabilität hängt von ausreichender [Besicherung](/#how-does-it-work) ab."
+					"answer": "Obwohl ZCHF darauf ausgelegt ist, CHF 1:1 zu folgen, kann er aufgrund von Marktdynamiken vorübergehend leicht über oder unter der Bindung gehandelt werden. [Arbitrage-Mechanismen](https://docs.frankencoin.com/positions) und wirtschaftliche Anreize wirken darauf hin, die Bindung wiederherzustellen. Die langfristige Stabilität hängt von ausreichender [Besicherung](/#how-does-it-work) ab."
 				}
 			]
 		},
@@ -60,7 +60,7 @@
 				},
 				{
 					"question": "Kann ich Zinsen auf meine Frankencoin verdienen?",
-					"answer": "Sie können Rendite erzielen, indem Sie [Liquidität für DeFi-Protokolle bereitstellen](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) wie Morpho oder das [Frankencoin-Sparmodul](https://https://app.frankencoin.com/savings) nutzen. Die Renditen variieren je nach Marktbedingungen und sind nicht garantiert. Die Zinssätze spiegeln Angebot und Nachfrage nach CHF-Liquidität in dezentralen Märkten wider."
+					"answer": "Sie können Rendite erzielen, indem Sie [Liquidität für DeFi-Protokolle bereitstellen](https://app.morpho.org/ethereum/earn?assetIdsFilter=ecc8bd13-eab5-4c7b-97e1-ba23d58f8cd3&vaultV2Filter=false) wie Morpho oder das [Frankencoin-Sparmodul](https://app.frankencoin.com/savings) nutzen. Die Renditen variieren je nach Marktbedingungen und sind nicht garantiert. Die Zinssätze spiegeln Angebot und Nachfrage nach CHF-Liquidität in dezentralen Märkten wider."
 				}
 			]
 		},
@@ -81,7 +81,7 @@
 				},
 				{
 					"question": "Wurde Frankencoin auditiert?",
-					"answer": "Ja, die Smart Contracts wurden von mehreren führenden Blockchain-Sicherheitsfirmen geprüft, darunter [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf) und [ChainSecurity](https://chainsecurity.com/security-audit/frankencoin/). [Prüfberichte](/#trust-security) sind öffentlich verfügbar."
+					"answer": "Ja, die Smart Contracts wurden von mehreren führenden Blockchain-Sicherheitsfirmen geprüft, darunter [Code4rena](https://code4rena.com/reports/2023-04-frankencoin), [BlockBite](/AuditReport-Frankencoin.pdf) und [ChainSecurity](https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts). [Prüfberichte](/#trust-security) sind öffentlich verfügbar."
 				}
 			]
 		}
