@@ -7,6 +7,7 @@
 			"title": "Zahlungen im Einzelhandel",
 			"partner": "Spar Schweiz",
 			"description": "Bezahlen Sie direkt mit Frankencoin in Spar-Filialen in der ganzen Schweiz",
+			"longDescription": "Bezahlen Sie mit Frankencoin in über 100 Spar-Filialen in der ganzen Schweiz. Die Transaktionsgebühren sind zwei Drittel tiefer als bei Twint oder Kartenzahlung — eine der kostengünstigsten Zahlungsmethoden für Schweizer Einzelhändler und Konsumenten.",
 			"category": "Payments",
 			"image": "/images/spar.png",
 			"link": "https://presse.spar.ch/de/spar-schweiz/allgemein/neu%3A-jetzt-bei-spar-mit-krypto-waehrung-bezahlen/"
@@ -14,7 +15,8 @@
 		{
 			"title": "Banking-Integration",
 			"partner": "Mt Pelerin",
-			"description": "Verbinden Sie Frankencoin mit einer persönlichen IBAN – verknüpfen Sie traditionelle Banküberweisungen mit digitalen Zahlungen",
+			"description": "Verbinden Sie Frankencoin mit einer persönlichen IBAN — traditionelle Banküberweisungen mit digitalen Zahlungen verknüpfen",
+			"longDescription": "Verbinden Sie ZCHF mit einer persönlichen IBAN über Mt Pelerin, einen FINMA-regulierten Schweizer Finanzintermediär. Senden und empfangen Sie Schweizer Franken-Überweisungen direkt aus Ihrem Frankencoin-Wallet. Kaufen Sie ZCHF per Banküberweisung zu 0% Gebühren oder bezahlen Sie QR-Rechnungen mit Ihren digitalen Schweizer Franken.",
 			"category": "Payments",
 			"image": "/images/mt-pelerin-logo.png",
 			"link": "https://www.mtpelerin.com/buy-zchf-frankencoin"
@@ -22,7 +24,8 @@
 		{
 			"title": "Zinsen auf Spareinlagen verdienen",
 			"partner": "Frankencoin Protocol",
-			"description": "Legen Sie ZCHF im Spar-Tresor des Protokolls an und erzielen Sie marktbasierte Erträge auf Ihre Schweizer Franken-Guthaben",
+			"description": "Legen Sie ZCHF im Spar-Tresor des Protokolls an und erzielen Sie marktbasierte Erträge auf Ihre CHF-Guthaben",
+			"longDescription": "Legen Sie ZCHF im Sparmodul des Protokolls an und erzielen Sie marktbasierte Erträge auf Ihre Schweizer Franken-Guthaben. Weitere Ertragsmöglichkeiten bestehen über DeFi-Protokolle wie Morpho (Lending) und Curve (Liquiditätsbereitstellung).",
 			"category": "DeFi",
 			"image": "/images/Icon-Invest.svg",
 			"link": "https://app.frankencoin.com/savings"
@@ -30,7 +33,8 @@
 		{
 			"title": "Lohnbuchhaltung & HR-Administration",
 			"partner": "Quitt",
-			"description": "Komplette Mitarbeiterverwaltung inklusive Lohnbuchhaltung, Sozialversicherungen und Pensionskassen – vollständig in ZCHF abgewickelt",
+			"description": "Komplette Mitarbeiterverwaltung inklusive Lohnbuchhaltung, Sozialversicherungen und Pensionskassen — vollständig in ZCHF",
+			"longDescription": "Quitt bietet komplette Mitarbeiterverwaltung inklusive Lohnbuchhaltung, Sozialversicherungen und Pensionskassenabwicklung — vollständig in ZCHF. Arbeitgeber können Löhne in digitalen Schweizer Franken zahlen mit voller regulatorischer Compliance, einschliesslich aller obligatorischen Schweizer Sozialversicherungsbeiträge.",
 			"category": "Business",
 			"image": "/images/quitt-logo.svg",
 			"link": "https://www.quitt.ch/"
@@ -39,6 +43,7 @@
 			"title": "Treasury Management",
 			"partner": "Plusplus",
 			"description": "Professionelle Treasury-Lösungen inklusive Verwaltung von Mietsicherheitskautionen in ZCHF",
+			"longDescription": "Plusplus bietet professionelle Treasury-Lösungen für Unternehmen, einschliesslich Mietsicherheitskautionen in ZCHF. Unternehmen können Schweizer Franken-Liquidität on-chain mit voller Transparenz und Programmierbarkeit halten und verwalten.",
 			"category": "Business",
 			"image": "/images/logo_plusplus.avif",
 			"link": "https://www.plusplus.swiss/"
@@ -47,6 +52,7 @@
 			"title": "Digitale Wertpapiere",
 			"partner": "Aktionariat",
 			"description": "Handeln Sie tokenisierte Aktien und beteiligen Sie sich an Kapitalerhöhungen mit ZCHF als Abwicklungswährung",
+			"longDescription": "Handeln Sie tokenisierte Aktien auf Aktionariats Plattform mit ZCHF als Abwicklungswährung. Beteiligen Sie sich an Kapitalerhöhungen und dem Sekundärhandel von Schweizer Unternehmensaktien — alles abgewickelt in digitalen Schweizer Franken.",
 			"category": "Business",
 			"image": "/images/aktionariat-Compressify.io.webp",
 			"link": "https://www.aktionariat.com/"
@@ -54,7 +60,8 @@
 		{
 			"title": "Kartenzahlungen",
 			"partner": "GnosisPay",
-			"description": "Nutzen Sie Frankencoin für alltägliche Kartenzahlungen – Transaktionen werden im Hintergrund in ZCHF abgewickelt",
+			"description": "Nutzen Sie Frankencoin für alltägliche Kartenzahlungen — Transaktionen werden in ZCHF abgewickelt",
+			"longDescription": "Geben Sie ZCHF weltweit mit einer GnosisPay Visa-Debitkarte aus. Die Karte konvertiert ZCHF für Händlerzahlungen am Point of Sale, während Ihr Guthaben bis zur Ausgabe in Schweizer Franken verbleibt.",
 			"category": "Payments",
 			"image": "/images/gnosispay.png",
 			"link": "https://zeal.app/"
@@ -62,7 +69,8 @@
 		{
 			"title": "Krypto-Wallet & Kartenzahlungen",
 			"partner": "Zeal",
-			"description": "Digitale Wallet für weltweite ZCHF-Ausgaben mit Gnosis Pay-Karte – verdienen Sie Erträge und Cashback bei alltäglichen Einkäufen",
+			"description": "Digitale Wallet für weltweite ZCHF-Ausgaben mit Gnosis Pay-Karte — Erträge und Cashback bei alltäglichen Einkäufen",
+			"longDescription": "Zeal bietet eine digitale Wallet, die Ihr ZCHF-Guthaben mit einer Visa-Debitkarte verbindet. Bezahlen Sie überall, wo Visa akzeptiert wird, erhalten Sie Cashback auf alltägliche Einkäufe und verwalten Sie Ihre Schweizer Franken-Stablecoin-Bestände in einer einzigen App.",
 			"category": "Payments",
 			"image": "/images/zeal.png",
 			"link": "https://www.zeal.app/"
@@ -71,6 +79,7 @@
 			"title": "DeFi-Liquidität",
 			"partner": "Curve Finance",
 			"description": "Handeln Sie ZCHF mit geringer Slippage über Curves automatisiertes Market-Maker-Protokoll",
+			"longDescription": "Stellen Sie Liquidität bereit oder handeln Sie ZCHF-Paare auf Curve Finance mit geringer Slippage. Curve ist der primäre Handelsplatz für ZCHF-Liquidität in DeFi und bietet effiziente Stablecoin-Swaps zwischen ZCHF und anderen Assets.",
 			"category": "DeFi",
 			"image": "/images/full-curve-dao-logo.jpg",
 			"link": "https://curve.fi/"
@@ -79,6 +88,7 @@
 			"title": "Dezentrales Kreditwesen",
 			"partner": "Morpho",
 			"description": "Verleihen und leihen Sie ZCHF über anpassbare, überbesicherte Kreditmärkte auf Ethereum und Base",
+			"longDescription": "Verleihen und leihen Sie ZCHF über Morphos anpassbare Kreditmärkte auf Ethereum und Base. Erzielen Sie Erträge durch ZCHF-Bereitstellung oder leihen Sie gegen Ihre Krypto-Assets zu wettbewerbsfähigen, marktgesteuerten Zinssätzen.",
 			"category": "DeFi",
 			"image": "/images/morpho.png",
 			"link": "https://morpho.org/"
@@ -86,7 +96,8 @@
 		{
 			"title": "Krypto Verwahrung",
 			"partner": "Bitcoin Suisse",
-			"description": "Verwahren Sie ZCHF mit dem Schweizer Pionier für Krypto-Finanzdienstleistungen mit institutioneller Sicherheit",
+			"description": "Verwahren Sie ZCHF mit dem Schweizer Pionier für Krypto-Finanzdienstleistungen",
+			"longDescription": "Verwahren Sie ZCHF bei Bitcoin Suisse, dem Schweizer Pionier für Krypto-Finanzdienstleistungen, mit institutioneller Sicherheit und voller regulatorischer Compliance.",
 			"category": "Business",
 			"image": "/images/bitcoin-suisse.png",
 			"link": "https://www.bitcoinsuisse.com/"
@@ -94,7 +105,8 @@
 		{
 			"title": "Institutionelle Verwahrung & Collateral Management",
 			"partner": "Copper",
-			"description": "ZCHF wird durch die institutionelle Custody- und Collateral-Management-Infrastruktur von Copper unterstützt – für sichere Verwahrung und DeFi-fähigen Einsatz von Schweizer-Franken-Liquidität.",
+			"description": "ZCHF unterstützt durch Coppers institutionelle Custody- und Collateral-Management-Infrastruktur",
+			"longDescription": "Coppers institutionelle Custody ermöglicht sichere Verwahrung und DeFi-fähigen Einsatz von Schweizer-Franken-Liquidität. Institutionen können ZCHF als Teil ihres breiteren Digital-Asset-Portfolios mit Enterprise-Grade-Infrastruktur verwalten.",
 			"category": "Business",
 			"image": "/images/CopperLogoDark.png",
 			"link": "https://copper.co/"
@@ -102,7 +114,8 @@
 		{
 			"title": "Dezentrale Indexfonds",
 			"partner": "Sagix Club Edelweiss",
-			"description": "ZCHF ist Kernkomponente des ixEDEL DTF auf Reserve Protocol – ein risikoparitatischer On-Chain-Fonds aus Gold, Bitcoin, ZCHF und Rendite-Stablecoins für alle Marktregimes.",
+			"description": "ZCHF als Kernkomponente des ixEDEL DTF — risikoparitatischer On-Chain-Fonds auf Reserve Protocol",
+			"longDescription": "ZCHF ist Kernkomponente des ixEDEL DTF auf Reserve Protocol — ein risikoparitatischer On-Chain-Fonds aus Gold, Bitcoin, ZCHF und Rendite-Stablecoins, der Kaufkraft über alle Marktregimes hinweg erhalten soll.",
 			"category": "DeFi",
 			"image": "/images/sagix-ixedel.jpg",
 			"link": "https://app.reserve.org/ethereum/index-dtf/0xe4a10951f962e6cb93cb843a4ef05d2f99db1f94/overview"
