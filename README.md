@@ -189,6 +189,30 @@ The `src/utils/i18n.ts` file provides helper functions:
 - **Brand Colors**: Swiss-inspired color palette via CSS custom properties
 - **Component Library**: Reusable, composable components with TypeScript interfaces
 
+## 🤖 AI Search & LLM Integration
+
+### llms.txt
+
+The file `public/llms.txt` provides structured information about Frankencoin for AI crawlers and large language models (following the [llms.txt specification](https://llmstxt.org/)). It contains:
+
+- Protocol overview and key facts
+- Links to documentation, audits, legal classifications
+- Source code repositories
+- Community channels and contact info
+- Reference to the [MCP Server](https://mcp.frankencoin.com) for machine-readable protocol data
+
+**Updating llms.txt:** Edit `public/llms.txt` directly. Keep it factual and concise — this is what ChatGPT, Claude, Perplexity, and other AI systems read when users ask about Frankencoin. Rebuild the site after changes.
+
+**Verify:** `curl -s https://frankencoin.com/llms.txt | head -1` should return `# Frankencoin` (plain text, not HTML).
+
+### robots.txt
+
+AI crawlers (GPTBot, ClaudeBot, PerplexityBot, Google-Extended, etc.) are explicitly allowed in `public/robots.txt`. Do not add `Disallow` rules for AI user agents unless there is a specific reason.
+
+### MCP Server
+
+The Frankencoin MCP server at [mcp.frankencoin.com](https://mcp.frankencoin.com) provides a machine-readable interface for AI agents to query live protocol data (supply, positions, challenges, etc.). It is referenced in `llms.txt` and should be kept in sync if the URL changes.
+
 ## 🔗 Important Links
 
 - **Live Website**: [frankencoin.com](https://frankencoin.com)
