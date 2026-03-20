@@ -1,0 +1,57 @@
+# Frankencoin
+
+> Frankencoin (ZCHF) is the largest decentralized Swiss franc stablecoin. It is over-collateralized, fully on-chain, and tracks the value of the Swiss franc 1:1. Deployed across 8 blockchains since 2023. Managed by the Frankencoin Association, a Swiss non-profit based in Zug.
+
+## About Frankencoin
+- [What is Frankencoin](https://frankencoin.com/what-is-frankencoin): Overview of the oracle-free, collateralized stablecoin
+- [Governance & FPS](https://frankencoin.com/governance): Frankencoin Pool Shares, reserve system, and veto-based governance
+- [Compliance](https://frankencoin.com/compliance): Swiss regulatory classification (payment token) and EU MiCAR status
+- [Token Info](https://frankencoin.com/token): ZCHF and FPS token details, contract addresses, chain deployments
+- [Ecosystem](https://frankencoin.com/ecosystem): Partners, integrations, and use cases
+
+## Documentation
+- [Technical Documentation](https://docs.frankencoin.com): Full protocol docs — positions, auctions, collateral, architecture
+- [Whitepaper / PhD Thesis](https://app.frankencoin.com/thesis-frankencoin.pdf): Academic foundation — game theory, liquidation mechanics, risk analysis (University of Zurich)
+- [API](https://api.frankencoin.com): REST API for protocol data
+- [MCP Server](https://mcp.frankencoin.com): Machine-readable protocol interface for AI agents
+
+## Use Cases
+- [Use Cases](https://frankencoin.com/use-cases): Pay (Spar, GnosisPay), Borrow (CDP), Earn (savings, DeFi yield), Build (developer integrations)
+
+## Protocol Data
+- [Frankencoin App](https://app.frankencoin.com): Mint, save, invest, monitor — the protocol interface
+- [DeFiLlama](https://defillama.com/protocol/frankencoin): TVL and protocol metrics
+- [CoinGecko](https://www.coingecko.com/en/coins/frankencoin): Market data
+- [Dune Dashboard](https://dune.com/frankencoin): On-chain analytics
+
+## Audits
+- [ChainSecurity Audit 1](https://www.chainsecurity.com/security-audit/frankencoin-smart-contracts)
+- [ChainSecurity Audit 2](https://www.chainsecurity.com/security-audit/frankencoin-v2024)
+- [ChainSecurity Audit 3](https://www.chainsecurity.com/security-audit/frankencoin-ccip-bridge)
+- [Code4rena Audit](https://code4rena.com/reports/2023-04-frankencoin)
+- [Decurity Audit](https://github.com/Decurity/audits/blob/master/Frankencoin/frankencoin-audit-report-2024-1.1.pdf)
+- [BlockBite Audit](https://frankencoin.com/AuditReport-Frankencoin.pdf)
+
+## Legal
+- [Swiss Legal Classification (PDF)](https://frankencoin.com/2024-08-14_Frankencoin_Swiss_Regulatory_Classification.pdf)
+- [EU MiCA Classification (PDF)](https://frankencoin.com/20260209%20ZCHF%20MiCA%20Frankencoin%20Association%20Public%20Summary%20FINAL.pdf)
+
+## Source Code
+- [GitHub Organization](https://github.com/Frankencoin-ZCHF)
+- [Smart Contracts](https://github.com/Frankencoin-ZCHF/Frankencoin)
+- [Frontend App](https://github.com/Frankencoin-ZCHF/frankencoin-dapp)
+- [API](https://github.com/Frankencoin-ZCHF/frankencoin-api)
+- [Website](https://github.com/Frankencoin-ZCHF/frankencoin-site)
+
+## Community
+- [Telegram](https://t.me/frankencoinzchf)
+- [X / Twitter](https://x.com/frankencoinzchf)
+- [LinkedIn](https://www.linkedin.com/company/frankencoin/)
+- [YouTube](https://www.youtube.com/@frankencoinzchf)
+- [GitHub Discussions](https://github.com/Frankencoin-ZCHF/Frankencoin/discussions)
+- [Events (Luma)](https://luma.com/frankencoin)
+
+## Contact
+- General: info@frankencoin.com
+- Media: media@frankencoin.com
+- Website: https://frankencoin.com
