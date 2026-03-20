@@ -28,4 +28,4 @@ pnpm-debug.log*
 
 # Claude Code
 .claude/
-CLAUDE.md
+CLAUDE.mdpackage-lock.json
