@@ -76,14 +76,14 @@ const categories = ["All", ...new Set(useCases.cases.map((c: any) => c.category)
             ></span>
           </div>
 
-          <!-- Title -->
+          <!-- Partner (bold) -->
           <h4
             class="ty-regular font-bold text-[var(--color-brand-deep-blue)] group-hover:text-[var(--color-brand-swiss)] transition-colors line-clamp-2 mb-1"
-            x-text="useCase.title"
+            x-text="useCase.partner"
           ></h4>
 
-          <!-- Partner -->
-          <p class="ty-small text-[var(--color-brand-titan-gray)] mt-auto" x-text="useCase.partner"></p>
+          <!-- Short description -->
+          <p class="ty-small text-[var(--color-brand-titan-gray)] mt-auto line-clamp-3" x-text="useCase.description"></p>
         </a>
       </template>
 
