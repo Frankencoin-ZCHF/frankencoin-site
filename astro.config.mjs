@@ -15,7 +15,17 @@ export default defineConfig({
 		allowedHosts: ['frankencoin.com'],
 	},
 
-	integrations: [sitemap()],
+	integrations: [
+		sitemap({
+			i18n: {
+				defaultLocale: 'en',
+				locales: {
+					en: 'en',
+					de: 'de',
+				},
+			},
+		}),
+	],
 
 	vite: {
 		plugins: [tailwindcss()],

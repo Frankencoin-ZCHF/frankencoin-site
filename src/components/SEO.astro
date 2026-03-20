@@ -1,5 +1,5 @@
 ---
-import { getLanguageFromURL, loadSharedContent } from "../utils/i18n";
+import { getLanguageFromURL, loadSharedContent, stripLangFromPath } from "../utils/i18n";
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const site = await loadSharedContent("site", currentLang);
@@ -33,6 +33,13 @@ const fullImageUrl = image.startsWith("http")
 const robotsContent = noindex || nofollow
   ? `${noindex ? "noindex" : "index"}, ${nofollow ? "nofollow" : "follow"}`
   : "index, follow, max-image-preview:large, max-snippet:-1, max-video-preview:-1";
+
+// Hreflang tags
+const pathname = Astro.url.pathname;
+const basePath = stripLangFromPath(pathname) || '/';
+const siteUrl = 'https://frankencoin.com';
+const enUrl = `${siteUrl}${basePath}`;
+const deUrl = `${siteUrl}/de${basePath === '/' ? '/' : basePath}`;
 ---
 
 <!-- Primary Meta Tags -->
@@ -43,6 +50,11 @@ const robotsContent = noindex || nofollow
 <meta name="author" content={site.site.author} />
 <meta name="robots" content={robotsContent} />
 <link rel="canonical" href={canonical} />
+
+<!-- Hreflang Tags -->
+<link rel="alternate" hreflang="en" href={enUrl} />
+<link rel="alternate" hreflang="de" href={deUrl} />
+<link rel="alternate" hreflang="x-default" href={enUrl} />
 
 <!-- Open Graph / Facebook -->
 <meta property="og:type" content={type} />
