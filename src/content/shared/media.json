@@ -22,6 +22,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=Xp3kf3RORmc",
     "https://www.youtube.com/watch?v=GNYixPzeW3I",
     "https://www.youtube.com/watch?v=05lqIc8nvWY",
     "https://www.youtube.com/watch?v=SKBjuVndCZ8",
@@ -124,41 +125,54 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=Xp3kf3RORmc": {
+      "title": "Stablecoins & The Swiss Franc",
+      "description": "Johannes Kern, Managing Director of the Frankencoin Association, discusses stablecoins and the Swiss franc with WHVP.",
+      "author": "WHVP",
+      "publishedDate": "Mar 26, 2026",
+      "thumbnail": "/images/video-thumbnails/Xp3kf3RORmc.jpg"
+    },
     "https://www.youtube.com/watch?v=GNYixPzeW3I": {
       "title": "Decentralized Credit and Stablecoins, the Potential for Swiss Banking | Luzius Meisser",
       "description": "Luzius Meisser presents on decentralized credit and stablecoins, exploring the potential for Swiss banking at Crypto Valley Conference.",
       "author": "Crypto Valley",
-      "publishedDate": "Mar 8, 2026"
+      "publishedDate": "Mar 8, 2026",
+      "thumbnail": "/images/video-thumbnails/GNYixPzeW3I.jpg"
     },
     "https://www.youtube.com/watch?v=05lqIc8nvWY": {
       "title": "Frankencoin 2025 Recap Interview - with Managing Director Johannes Kern",
       "description": "Earlier this December, DAdvisoor sat down with Johannes Kern, the Managing Director of the Frankencoin Association, to talk about Frankencoin, the advancements made in 2025, and what's on the horizon for 2026.",
       "author": "Frankencoin",
-      "publishedDate": "Dec 31, 2025"
+      "publishedDate": "Dec 31, 2025",
+      "thumbnail": "/images/video-thumbnails/05lqIc8nvWY.jpg"
     },
     "https://www.youtube.com/watch?v=uvpNgTYQUXc": {
       "title": "Onchain FX: Opportunities & Challenges for the next phase of DeFi Stablecoins - Panel",
       "description": "This panel explores the evolution of onchain foreign exchange and stablecoins beyond the US dollar. The discussion dives deep into how local stablecoins are reshaping global finance.",
       "author": "Stable Summit",
-      "publishedDate": "Dec 1, 2025"
+      "publishedDate": "Dec 1, 2025",
+      "thumbnail": "/images/video-thumbnails/uvpNgTYQUXc.jpg"
     },
     "https://www.youtube.com/watch?v=SKBjuVndCZ8": {
       "title": "A Real Stable Stablecoin: The Cultural Roots of a Sound Currency",
       "description": "\"The Swiss franc dodged every shady financial trend for 150 years.\" - Johannes Kern, Managing Director, Frankencoin. Frankencoin is built on the Swiss franc, combining cultural heritage with modern blockchain technology.",
       "author": "Stable Summit",
-      "publishedDate": "Jul 15, 2025"
+      "publishedDate": "Jul 15, 2025",
+      "thumbnail": "/images/video-thumbnails/SKBjuVndCZ8.jpg"
     },
     "https://youtu.be/YF_a7A7lwoQ": {
       "title": "In welche Währung muss man jetzt \"Krypto\"-Gewinne umschichten (Interview mit Johannes Kern)",
       "description": "Interview with Johannes Kern about cryptocurrency gains and the importance of stable currencies in the current market environment.",
       "author": "Marc Steiner Investment Academy",
-      "publishedDate": "Jul 2, 2025"
+      "publishedDate": "Jul 2, 2025",
+      "thumbnail": "/images/video-thumbnails/YF_a7A7lwoQ.jpg"
     },
     "https://www.youtube.com/watch?v=otCYU2AduGY": {
       "title": "Bridging TradFi and DeFi: RWA-Backed Stables (Panel)",
       "description": "Panel discussion featuring Jacob Laufer (M^0), Johannes Kern (Frankencoin Association), and Jennifer Senha exploring the intersection of traditional finance and DeFi through real-world asset-backed stablecoins.",
       "author": "Stable Summit",
-      "publishedDate": "Mar 14, 2025"
+      "publishedDate": "Mar 14, 2025",
+      "thumbnail": "/images/video-thumbnails/otCYU2AduGY.jpg"
     }
   }
 }
