@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/",
     "https://cointelegraph.com/news/allunity-swiss-franc-stablecoin-chfau-mica",
     "https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730",
     "https://www.tippinpoint.ch/artikel/78597/den_zins_des_stablecoins_entfesseln.html",
@@ -110,6 +111,12 @@
     },
     "https://www.schweizeraktien.net/blog/2024/06/17/aktionariat-ein-neuer-handelsplatz-fuer-aktien-token-und-darin-integriert-der-frankencoin-63687/": {
       "publishedDate": "Jun 17, 2024"
+    },
+    "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/": {
+      "title": "Vitalik-Linked Wallet Buys ZCHF – Why Frankencoin Fits His Stablecoin Thesis",
+      "description": "A wallet linked to Vitalik Buterin has purchased ZCHF, aligning with his vision for decentralized, non-USD stablecoins. The article explores why Frankencoin fits Ethereum's co-founder's stablecoin thesis.",
+      "siteName": "CryptoAdventure",
+      "publishedDate": "Mar 31, 2026"
     },
     "https://cointelegraph.com/news/allunity-swiss-franc-stablecoin-chfau-mica": {
       "title": "AllUnity Launches Swiss Franc Stablecoin CHFAU",
