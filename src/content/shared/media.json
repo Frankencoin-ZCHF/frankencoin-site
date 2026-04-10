@@ -23,6 +23,8 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=HHD0cWCfBS4",
+    "https://www.youtube.com/watch?v=xASCsQotwZk",
     "https://www.youtube.com/watch?v=Xp3kf3RORmc",
     "https://www.youtube.com/watch?v=GNYixPzeW3I",
     "https://www.youtube.com/watch?v=05lqIc8nvWY",
@@ -181,6 +183,20 @@
       "author": "Stable Summit",
       "publishedDate": "Mar 14, 2025",
       "thumbnail": "/images/video-thumbnails/otCYU2AduGY.jpg"
+    },
+    "https://www.youtube.com/watch?v=HHD0cWCfBS4": {
+      "title": "Dr. Luzius Meisser, Frankencoin Association | The Macro Mechanics Behind Decentralized Credit",
+      "description": "Luzius Meisser explores how decentralized credit systems create money onchain, how DeFi stablecoins reshape capital allocation, and why freer financial infrastructure matters for long-term growth.",
+      "author": "Stable Summit",
+      "publishedDate": "Mar 28, 2026",
+      "thumbnail": "/images/video-thumbnails/HHD0cWCfBS4.jpg"
+    },
+    "https://www.youtube.com/watch?v=xASCsQotwZk": {
+      "title": "Panel | Institutional Use Cases and Adoption Limits of Non-USD Stablecoins",
+      "description": "Johannes Kern joins Stable Summit panelists to discuss where non-USD stablecoins fit in institutional treasury, settlement, and balance sheet workflows — and what still blocks broader adoption.",
+      "author": "Stable Summit",
+      "publishedDate": "Mar 27, 2026",
+      "thumbnail": "/images/video-thumbnails/xASCsQotwZk.jpg"
     }
   }
 }
