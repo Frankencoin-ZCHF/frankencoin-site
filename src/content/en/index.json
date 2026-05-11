@@ -321,10 +321,10 @@
 	},
 	"foundation": {
 		"title": "Theoretical Foundation",
-		"description": "The Frankencoin was conceived a part of [a PhD thesis](https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf) completed at the Department of Finance at the University of Zurich. Among other things, it covers the game theory behind the system's novel liquidation mechanism, quantifies the risk of Bitcoin as a collateral, and it formally analyses the veto-based governance system. The Frankencoin system can be seen as a Continuous Capital Corporation, a concept introduced in chapter three denoting a company that issues and redeems shares autonomously according to fixed rules that are optimal under a wide range of theoretical assumptions.",
+		"description": "The Frankencoin was conceived a part of [a PhD thesis](https://www.zora.uzh.ch/entities/publication/b1bff836-6852-457d-93e6-496807db37fa) completed at the Department of Finance at the University of Zurich. Among other things, it covers the game theory behind the system's novel liquidation mechanism, quantifies the risk of Bitcoin as a collateral, and it formally analyses the veto-based governance system. The Frankencoin system can be seen as a Continuous Capital Corporation, a concept introduced in chapter three denoting a company that issues and redeems shares autonomously according to fixed rules that are optimal under a wide range of theoretical assumptions.",
 		"image": "/images/frankencoin-foundation.webp",
 		"imageAlt": "Frankencoin Foundation",
-		"href": "https://www.zora.uzh.ch/id/eprint/259657/1/259657.pdf"
+		"href": "https://www.zora.uzh.ch/entities/publication/b1bff836-6852-457d-93e6-496807db37fa"
 	},
 	"in_the_media": {
 		"eyebrow": "Media Coverage",
