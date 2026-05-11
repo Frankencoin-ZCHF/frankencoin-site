@@ -11,7 +11,7 @@
 
 ## Documentation
 - [Technical Documentation](https://docs.frankencoin.com): Full protocol docs — positions, auctions, collateral, architecture
-- [Whitepaper / PhD Thesis](https://app.frankencoin.com/thesis-frankencoin.pdf): Academic foundation — game theory, liquidation mechanics, risk analysis (University of Zurich)
+- [Whitepaper / PhD Thesis](https://www.zora.uzh.ch/entities/publication/b1bff836-6852-457d-93e6-496807db37fa): Academic foundation — game theory, liquidation mechanics, risk analysis (University of Zurich)
 - [API](https://api.frankencoin.com): REST API for protocol data
 - [MCP Server](https://mcp.frankencoin.com): Machine-readable protocol interface for AI agents
 
