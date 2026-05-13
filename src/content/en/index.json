@@ -72,6 +72,11 @@
 	"core_features": {
 		"eyebrow": "Ways to Use Frankencoin",
 		"title": "Pay. Borrow. Earn. Build.",
+		"frontendsCallout": {
+			"title": "How to access the Frankencoin protocol",
+			"body": "Several independent frontends let you use Frankencoin — including one built by the Frankencoin Association.",
+			"ctaLabel": "Browse Frontends"
+		},
 		"features": [
 			{
 				"title": "Pay",

@@ -1,0 +1,30 @@
+{
+	"seo": {
+		"title": "Frankencoin Frontends — Unabhängige ZCHF-Oberflächen",
+		"description": "Frankencoin ist ein offenes Protokoll ohne offizielles Frontend. Hier finden Sie die unabhängigen Dapps zum Prägen, Sparen und Handeln mit ZCHF — jede betrieben von eigenen Maintainern, mit Quellcode und transparenter Infrastruktur."
+	},
+	"header": {
+		"title": "Frankencoin Frontends",
+		"subtitle": "Frankencoin ist ein offenes Protokoll. Jede und jeder kann ein Frontend dafür bauen und betreiben — ein offizielles gibt es nicht. Jede der unten aufgeführten Oberflächen wird unabhängig von ihren Betreibern unterhalten."
+	},
+	"warning": {
+		"eyebrow": "Wichtiger Hinweis",
+		"title": "Frontends werden von unabhängigen Dritten gebaut und ohne Gewährleistung bereitgestellt.",
+		"body": "Jedes Frontend wird unabhängig gebaut und gehostet. Nur als Information aufgeführt — nicht auditiert und ohne Gewährleistung. Nutzung auf eigenes Risiko; prüfen Sie den Quellcode, bevor Sie eine Wallet verbinden."
+	},
+	"addYours": {
+		"before": "Du betreibst dein eigenes Frontend? Füge es zur ",
+		"linkLabel": "frontends.json",
+		"after": " hinzu und eröffne einen Pull Request, um in dieser Liste zu erscheinen."
+	},
+	"labels": {
+		"creator": "Gebaut von",
+		"repo": "Quellcode",
+		"live": "Frontend öffnen",
+		"features": "Eigenschaften",
+		"openSource": "Open Source",
+		"ownDomain": "Eigene Domain",
+		"selfHostedApi": "Eigene API",
+		"selfHostedIndexer": "Eigener Indexer"
+	}
+}

@@ -1,0 +1,88 @@
+---
+import Section from "../components/Layout/Section.astro";
+import SectionHeader from "../components/Layout/SectionHeader.astro";
+import FlexStack from "../components/Layout/FlexStack.astro";
+import Base from "../layouts/Base.astro";
+import FrontendCard from "../components/Frontends/FrontendCard.astro";
+import FrontendsWarning from "../components/Frontends/FrontendsWarning.astro";
+import {
+  getLanguageFromURL,
+  loadContent,
+  loadGlobalSharedContent,
+} from "../utils/i18n";
+
+const currentLang = getLanguageFromURL(Astro.url.pathname);
+const content = await loadContent("frontends", currentLang);
+const data = await loadGlobalSharedContent<{ frontends: any[] }>("frontends");
+
+// Shuffle at build time so no frontend gets permanent top-billing.
+const frontends = [...data.frontends];
+for (let i = frontends.length - 1; i > 0; i--) {
+  const j = Math.floor(Math.random() * (i + 1));
+  [frontends[i], frontends[j]] = [frontends[j], frontends[i]];
+}
+---
+
+<Base
+  title={content.seo.title}
+  description={content.seo.description}
+>
+  <Section
+    variant="accent"
+    align="left"
+    pad="xs"
+    id="frontends-header"
+  >
+    <div class="flex flex-col gap-[var(--spacing-l)] max-w-4xl mx-auto">
+      <SectionHeader
+        title={content.header.title}
+        subtitle={content.header.subtitle}
+        maxWidth="2xl"
+        size="display"
+        align="center"
+        margin="none"
+        padding="md"
+      />
+      <FrontendsWarning
+        eyebrow={content.warning.eyebrow}
+        title={content.warning.title}
+        body={content.warning.body}
+      />
+    </div>
+  </Section>
+
+  <Section
+    variant="plain"
+    align="left"
+    pad="xs"
+    id="frontends-list"
+  >
+    <div class="max-w-4xl mx-auto">
+      <p class="ty-body-2 text-[var(--color-neutral-650)] mb-[var(--spacing-xl)] italic">
+        {content.addYours.before}
+        <a
+          href="https://github.com/Frankencoin-ZCHF/frankencoin-site/tree/main/src/content/shared/frontends.json"
+          target="_blank"
+          rel="noopener noreferrer"
+          class="not-italic text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] underline font-semibold"
+        >{content.addYours.linkLabel}</a>{content.addYours.after}
+      </p>
+      <FlexStack direction="col" gap="24px">
+        {
+          frontends.map((f) => (
+            <FrontendCard
+              name={f.name}
+              url={f.url}
+              creator={f.creator}
+              creatorUrl={f.creatorUrl}
+              repo={f.repo}
+              notes={f.notes}
+              features={f.features}
+              labels={content.labels}
+            />
+          ))
+        }
+      </FlexStack>
+    </div>
+  </Section>
+</Base>

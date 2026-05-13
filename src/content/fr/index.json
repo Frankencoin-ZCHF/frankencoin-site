@@ -73,6 +73,11 @@
 	"core_features": {
 		"eyebrow": "Cas d'utilisation",
 		"title": "Payer. Emprunter. Gagner. Construire.",
+		"frontendsCallout": {
+			"title": "Comment accéder au protocole Frankencoin",
+			"body": "Plusieurs interfaces indépendantes permettent d'utiliser Frankencoin — dont une construite par l'Association Frankencoin.",
+			"ctaLabel": "Voir les interfaces"
+		},
 		"features": [
 			{
 				"title": "Payer",

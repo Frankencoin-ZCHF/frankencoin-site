@@ -1,0 +1,30 @@
+{
+	"seo": {
+		"title": "Frankencoin Frontends — Interfaces ZCHF indépendantes",
+		"description": "Frankencoin est un protocole ouvert sans interface officielle. Découvrez les dapps indépendantes pour émettre, épargner et échanger le ZCHF — chacune exploitée par ses propres mainteneurs, avec code source et infrastructure transparents."
+	},
+	"header": {
+		"title": "Frankencoin Frontends",
+		"subtitle": "Frankencoin est un protocole ouvert. N'importe qui peut construire et héberger une interface — il n'y en a pas d'officielle. Chacune des interfaces listées ci-dessous est exploitée de manière indépendante par ses mainteneurs."
+	},
+	"warning": {
+		"eyebrow": "Avis important",
+		"title": "Les interfaces sont construites par des tiers indépendants et fournies sans garantie.",
+		"body": "Chaque interface est construite et hébergée de manière indépendante. Listée à titre informatif — non auditée et sans garantie. Utilisation à vos risques et périls ; vérifiez le code source avant de connecter un portefeuille."
+	},
+	"addYours": {
+		"before": "Vous hébergez votre propre interface ? Ajoutez-la à ",
+		"linkLabel": "frontends.json",
+		"after": " et ouvrez une pull request pour figurer dans cette liste."
+	},
+	"labels": {
+		"creator": "Réalisée par",
+		"repo": "Code source",
+		"live": "Ouvrir l'interface",
+		"features": "Caractéristiques",
+		"openSource": "Open source",
+		"ownDomain": "Domaine propre",
+		"selfHostedApi": "API auto-hébergée",
+		"selfHostedIndexer": "Indexeur auto-hébergé"
+	}
+}

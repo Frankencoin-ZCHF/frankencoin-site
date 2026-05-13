@@ -119,6 +119,10 @@
             "external": true
           },
           {
+            "label": "Interfaces",
+            "href": "/frontends"
+          },
+          {
             "label": "Événements à venir",
             "href": "https://luma.com/user/frankencoin",
             "external": true
