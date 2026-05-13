@@ -1,0 +1,157 @@
+---
+import Button from "../Button/Button.astro";
+
+type FeatureKey =
+  | "openSource"
+  | "ownDomain"
+  | "selfHostedApi"
+  | "selfHostedIndexer";
+
+interface Props {
+  name: string;
+  url: string;
+  creator: string;
+  creatorUrl: string;
+  repo: string;
+  notes: string;
+  features: Record<FeatureKey, boolean>;
+  labels: {
+    creator: string;
+    repo: string;
+    live: string;
+    features: string;
+    openSource: string;
+    ownDomain: string;
+    selfHostedApi: string;
+    selfHostedIndexer: string;
+  };
+}
+
+const {
+  name,
+  url,
+  creator,
+  creatorUrl,
+  repo,
+  notes,
+  features,
+  labels,
+} = Astro.props as Props;
+
+const displayUrl = url.replace(/^https?:\/\//, "").replace(/\/$/, "");
+
+const featureOrder: FeatureKey[] = [
+  "openSource",
+  "ownDomain",
+  "selfHostedApi",
+  "selfHostedIndexer",
+];
+---
+
+<article
+  class="rounded-xl shadow-sm hover:shadow-md bg-[var(--color-white)] border border-[var(--color-neutral-200)] transition flex flex-col gap-[var(--spacing-l)] p-[var(--spacing-xl)] md:p-[var(--spacing-xxl)]"
+>
+  <header class="flex flex-col lg:flex-row lg:items-start lg:justify-between gap-[var(--spacing-l)]">
+    <div class="flex flex-col gap-[var(--spacing-xs)] min-w-0">
+      <a
+        href={url}
+        target="_blank"
+        rel="noopener noreferrer"
+        class="ty-title-2 text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] font-bold break-all"
+      >
+        {displayUrl}
+      </a>
+      <p class="ty-body-2 text-[var(--color-neutral-650)]">
+        <span>{labels.creator}</span>
+        {" "}
+        <a
+          href={creatorUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] font-semibold"
+        >
+          {creator}
+        </a>
+      </p>
+    </div>
+
+    <div class="flex flex-wrap gap-[var(--spacing-s)] shrink-0">
+      <Button
+        href={url}
+        variant="primary"
+        rounded="full"
+        size="md"
+        external={true}
+      >
+        {labels.live}
+        <img
+          slot="icon-right"
+          src="/images/Arrow.svg"
+          loading="lazy"
+          alt=""
+          class="w-3 h-3 ml-1"
+        />
+      </Button>
+      <Button
+        href={repo}
+        variant="secondary"
+        rounded="full"
+        size="md"
+        external={true}
+      >
+        {labels.repo}
+        <img
+          slot="icon-right"
+          src="/images/Arrow.svg"
+          loading="lazy"
+          alt=""
+          class="w-3 h-3 ml-1"
+        />
+      </Button>
+    </div>
+  </header>
+
+  <p class="ty-body-1 text-[var(--color-neutral-700)] max-w-[68ch]">
+    {notes}
+  </p>
+
+  <ul class="flex flex-wrap gap-[var(--spacing-xs)] pt-[var(--spacing-s)] border-t border-[var(--color-neutral-200)]">
+    {
+      featureOrder.map((key) => {
+        const has = features[key];
+        const base =
+          "inline-flex items-center gap-1.5 rounded-full border px-3 py-1 ty-small font-medium";
+        const yes =
+          "border-[color-mix(in_oklab,var(--color-brand-swiss)_30%,transparent)] bg-[color-mix(in_oklab,var(--color-brand-swiss)_8%,transparent)] text-[var(--color-brand-deep-blue)]";
+        const no =
+          "border-[var(--color-neutral-300)] bg-transparent text-[var(--color-neutral-500)]";
+        return (
+          <li class={`${base} ${has ? yes : no}`}>
+            {has ? (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                class="h-3.5 w-3.5 shrink-0 text-[var(--color-brand-swiss)]"
+              >
+                <path d="M9 16.2l-3.5-3.6L4 14.1 9 19l11-11-1.5-1.5z" />
+              </svg>
+            ) : (
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="currentColor"
+                aria-hidden="true"
+                class="h-3.5 w-3.5 shrink-0 text-[var(--color-neutral-400)]"
+              >
+                <path d="M18.3 5.7L12 12l6.3 6.3-1.4 1.4L10.6 13.4 4.3 19.7l-1.4-1.4L9.2 12 2.9 5.7l1.4-1.4L10.6 10.6l6.3-6.3z" />
+              </svg>
+            )}
+            <span>{labels[key]}</span>
+          </li>
+        );
+      })
+    }
+  </ul>
+</article>

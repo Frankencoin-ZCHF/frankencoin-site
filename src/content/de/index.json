@@ -73,6 +73,11 @@
 	"core_features": {
 		"eyebrow": "Anwendungsmöglichkeiten",
 		"title": "Zahlen. Leihen. Verdienen. Bauen.",
+		"frontendsCallout": {
+			"title": "Zugang zum Frankencoin-Protokoll",
+			"body": "Mehrere unabhängige Frontends geben Zugang zu Frankencoin – darunter eines vom Frankencoin Verein.",
+			"ctaLabel": "Frontends ansehen"
+		},
 		"features": [
 			{
 				"title": "Zahlen",

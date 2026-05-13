@@ -1,0 +1,43 @@
+---
+interface Props {
+  eyebrow: string;
+  title: string;
+  body: string;
+}
+
+const { eyebrow, title, body } = Astro.props as Props;
+---
+
+<div
+  role="note"
+  aria-labelledby="frontends-warning-title"
+  class="rounded-xl border-2 border-[#dc2626] bg-[color-mix(in_oklab,#dc2626_8%,var(--color-white))] p-[var(--spacing-xl)] md:p-[var(--spacing-xxl)]"
+>
+  <div class="flex items-start gap-[var(--spacing-l)]">
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+      fill="currentColor"
+      aria-hidden="true"
+      class="h-8 w-8 shrink-0 text-[#dc2626] mt-1"
+    >
+      <path
+        d="M12 2L1 21h22L12 2zm0 5.3l8.4 14.5H3.6L12 7.3zM11 10v5h2v-5h-2zm0 6v2h2v-2h-2z"
+      />
+    </svg>
+    <div class="flex flex-col gap-[var(--spacing-s)]">
+      <p class="ty-subtitle text-[#dc2626] font-bold">
+        {eyebrow.toUpperCase()}
+      </p>
+      <h2
+        id="frontends-warning-title"
+        class="ty-title-3 text-[#7f1d1d] m-0 font-extrabold"
+      >
+        {title}
+      </h2>
+      <p class="ty-body-1 text-[var(--color-neutral-700)]">
+        {body}
+      </p>
+    </div>
+  </div>
+</div>

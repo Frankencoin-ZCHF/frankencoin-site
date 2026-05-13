@@ -1,0 +1,12 @@
+---
+import MainFrontends from '../frontends.astro';
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'de' } },
+    // { params: { lang: 'fr' } }, // French temporarily disabled
+  ];
+}
+---
+
+<MainFrontends />
