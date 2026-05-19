@@ -29,17 +29,17 @@
 			}
 		},
 		{
-			"name": "frankencoin.pages.dev",
-			"url": "https://frankencoin.pages.dev",
-			"creator": "dennaki",
-			"creatorUrl": "https://github.com/dennaki",
+			"name": "frankencoin.win",
+			"url": "https://frankencoin.win",
+			"creator": "DiumPay",
+			"creatorUrl": "https://github.com/DiumPay/zchf-app",
 			"repo": "https://github.com/DiumPay/zchf-app",
-			"notes": "Independent fork built by the DiumPay team, hosted on Cloudflare Pages. Includes a community German translation.",
+			"notes": "Independent open-source frontend by DiumPay. Multi-language support, fast and lightweight! Features included a non-custodial and no kyc cross-chain swap for ZCHF users.",
 			"features": {
 				"openSource": true,
 				"ownDomain": true,
-				"selfHostedApi": false,
-				"selfHostedIndexer": false
+				"selfHostedApi": true,
+				"selfHostedIndexer": true
 			}
 		},
 		{
