@@ -1,60 +1,74 @@
 {
-	"frontends": [
-		{
-			"name": "app.frankencoin.com",
-			"url": "https://app.frankencoin.com",
-			"creator": "Frankencoin Association",
-			"creatorUrl": "https://github.com/Frankencoin-ZCHF",
-			"repo": "https://github.com/Frankencoin-ZCHF/frankencoin-dapp",
-			"notes": "Frontend built by the Frankencoin Association. Connect a wallet to mint and repay positions, access savings, and trade FPS. Source code and indexer are public.",
-			"features": {
-				"openSource": true,
-				"ownDomain": true,
-				"selfHostedApi": true,
-				"selfHostedIndexer": true
-			}
-		},
-		{
-			"name": "zchf.app",
-			"url": "https://zchf.app",
-			"creator": "dnbjn",
-			"creatorUrl": "https://github.com/dnbjn",
-			"repo": "https://github.com/dnbjn/frankencoin-dapp",
-			"notes": "Self-hosted frontend, API, and Ponder indexer. Reworked UI with dark/light mode, added host information on the Earn page, and routes indexer access through a failover-enabled API. Deployed on Railway behind a Cloudflare Tunnel.",
-			"features": {
-				"openSource": true,
-				"ownDomain": true,
-				"selfHostedApi": true,
-				"selfHostedIndexer": true
-			}
-		},
-		{
-			"name": "frankencoin.pages.dev",
-			"url": "https://frankencoin.pages.dev",
-			"creator": "dennaki",
-			"creatorUrl": "https://github.com/dennaki",
-			"repo": "https://github.com/DiumPay/zchf-app",
-			"notes": "Independent fork built by the DiumPay team, hosted on Cloudflare Pages. Includes a community German translation.",
-			"features": {
-				"openSource": true,
-				"ownDomain": true,
-				"selfHostedApi": false,
-				"selfHostedIndexer": false
-			}
-		},
-		{
-			"name": "dasabami.com",
-			"url": "https://www.dasabami.com",
-			"creator": "socraticblock",
-			"creatorUrl": "https://github.com/socraticblock",
-			"repo": "https://github.com/socraticblock/frankencoin-dapp",
-			"notes": "Open-source fork by socraticblock, in development. Currently relies on the canonical API and indexer; the maintainer plans to self-host the Ponder indexer later.",
-			"features": {
-				"openSource": true,
-				"ownDomain": true,
-				"selfHostedApi": false,
-				"selfHostedIndexer": false
-			}
-		}
-	]
+  "frontends": [
+    {
+      "name": "app.frankencoin.com",
+      "url": "https://app.frankencoin.com",
+      "creator": "Frankencoin Association",
+      "creatorUrl": "https://github.com/Frankencoin-ZCHF",
+      "repo": "https://github.com/Frankencoin-ZCHF/frankencoin-dapp",
+      "notes": "Frontend built by the Frankencoin Association. Connect a wallet to mint and repay positions, access savings, and trade FPS. Source code and indexer are public.",
+      "features": {
+        "openSource": true,
+        "ownDomain": true,
+        "selfHostedApi": true,
+        "selfHostedIndexer": true
+      }
+    },
+    {
+      "name": "zchf.app",
+      "url": "https://zchf.app",
+      "creator": "dnbjn",
+      "creatorUrl": "https://github.com/dnbjn",
+      "repo": "https://github.com/dnbjn/frankencoin-dapp",
+      "notes": "Self-hosted frontend, API, and Ponder indexer. Reworked UI with dark/light mode, added host information on the Earn page, and routes indexer access through a failover-enabled API. Deployed on Railway behind a Cloudflare Tunnel.",
+      "features": {
+        "openSource": true,
+        "ownDomain": true,
+        "selfHostedApi": true,
+        "selfHostedIndexer": true
+      }
+    },
+    {
+      "name": "frankencoin.pages.dev",
+      "url": "https://frankencoin.pages.dev",
+      "creator": "dennaki",
+      "creatorUrl": "https://github.com/dennaki",
+      "repo": "https://github.com/DiumPay/zchf-app",
+      "notes": "Independent fork built by the DiumPay team, hosted on Cloudflare Pages. Includes a community German translation.",
+      "features": {
+        "openSource": true,
+        "ownDomain": true,
+        "selfHostedApi": false,
+        "selfHostedIndexer": false
+      }
+    },
+    {
+      "name": "dasabami.com",
+      "url": "https://www.dasabami.com",
+      "creator": "socraticblock",
+      "creatorUrl": "https://github.com/socraticblock",
+      "repo": "https://github.com/socraticblock/frankencoin-dapp",
+      "notes": "Open-source fork by socraticblock, in development. Currently relies on the canonical API and indexer; the maintainer plans to self-host the Ponder indexer later.",
+      "features": {
+        "openSource": true,
+        "ownDomain": true,
+        "selfHostedApi": false,
+        "selfHostedIndexer": false
+      }
+    },
+    {
+      "name": "frankenterminal.app",
+      "url": "https://frankenterminal.app",
+      "creator": "xdecentralix",
+      "creatorUrl": "https://github.com/xdecentralix",
+      "repo": "https://github.com/xdecentralix/frankenterminal-dapp",
+      "notes": "Independent open-source fork of the canonical dapp with a cypherpunk-terminal aesthetic (dark-mode only). Self-hosted frontend, API, and Ponder indexer, deployed on Railway.",
+      "features": {
+        "openSource": true,
+        "ownDomain": true,
+        "selfHostedApi": true,
+        "selfHostedIndexer": true
+      }
+    }
+  ]
 }
