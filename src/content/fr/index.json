@@ -319,6 +319,18 @@
 					"href": "/AuditReport-Frankencoin.pdf"
 				}
 			]
+		},
+		"ratings": {
+			"title": "Notations",
+			"independentlyRatedBy": "Noté indépendamment par",
+			"description": "un protocole d'évaluation des risques on-chain open-source sans affiliation à Frankencoin. Chaque score reflète une analyse transparente et automatisée des données publiques on-chain.",
+			"features": [
+				{ "title": "Indépendant", "description": "Les notations sont produites par Xerberus, un protocole open-source externe, et non par la Frankencoin DAO." },
+				{ "title": "Méthodologie Ouverte", "description": "Chaque calcul est public et documenté. Aucun algorithme boîte noire, aucun biais caché. Transparence intellectuelle totale." },
+				{ "title": "Sources Vérifiables", "description": "Parce que les mathématiques sont ouvertes, les données doivent l'être aussi. Xerberus extrait directement de la vérité on-chain pour alimenter ses modèles." }
+			],
+			"ratingLabel": "Note Xerberus",
+			"viewReportLabel": "Voir le rapport complet sur Xerberus"
 		}
 	},
 	"foundation": {
