@@ -319,6 +319,37 @@
 					"href": "/AuditReport-Frankencoin.pdf"
 				}
 			]
+		},
+		"ratings": {
+			"title": "Notations",
+			"independentlyRatedBy": "Noté indépendamment par",
+			"description": "un protocole d'évaluation des risques on-chain open-source sans affiliation à Frankencoin. Chaque score reflète une analyse transparente et automatisée des données publiques on-chain.",
+			"features": [
+				{ "title": "Indépendant", "description": "Les notations sont produites par Xerberus, un protocole open-source externe, et non par la Frankencoin DAO." },
+				{ "title": "Méthodologie Ouverte", "description": "Chaque calcul est public et documenté. Aucun algorithme boîte noire, aucun biais caché. Transparence intellectuelle totale." },
+				{ "title": "Sources Vérifiables", "description": "Parce que les mathématiques sont ouvertes, les données doivent l'être aussi. Xerberus extrait directement de la vérité on-chain pour alimenter ses modèles." }
+			],
+			"ratingLabel": "Note Xerberus",
+			"viewReportLabel": "Voir le rapport complet sur Xerberus"
+		},
+		"pharos": {
+			"title": "ZCHF Safety Score",
+			"ratedBy": "Noté indépendamment par",
+			"description": "une plateforme d'analyse de sécurité des stablecoins sans affiliation à Frankencoin. Chaque score couvre cinq dimensions on-chain : stabilité du peg, liquidité, résilience, décentralisation et risque de dépendance.",
+			"tagline": "Safety Score par Pharos",
+			"ratingLabel": "Note Pharos",
+			"methodologyLabel": "Méthodologie",
+			"updatedLabel": "Mis à jour",
+			"viewReportLabel": "Voir le rapport complet sur Pharos",
+			"dimensionsTitle": "Dimensions Pharos",
+			"dimensionsSubtitle": "Les composantes du Safety Score publiées pour ZCHF.",
+			"dimensions": {
+				"pegStability": "Stabilité du peg",
+				"liquidity": "Liquidité de sortie",
+				"resilience": "Résilience",
+				"decentralization": "Décentralisation",
+				"dependencyRisk": "Risque de dépendance"
+			}
 		}
 	},
 	"foundation": {
