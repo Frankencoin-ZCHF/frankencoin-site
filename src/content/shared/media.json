@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/",
     "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/",
     "https://cointelegraph.com/news/allunity-swiss-franc-stablecoin-chfau-mica",
     "https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730",
@@ -132,6 +133,12 @@
       "description": "Luzius Meisser, Erfinder des Frankencoins, über die restriktive Finma-Haltung zu Stablecoins, den Wettbewerb mit Allunity, die Schweizer Rechtsordnung und die Zukunft dezentraler Stablecoins.",
       "siteName": "finews.ch",
       "publishedDate": "Mar 17, 2026"
+    },
+    "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/": {
+      "title": "Exclusive: The Swiss Franc, Rebuilt for the Digital Age",
+      "description": "Johannes Kern, managing director at the Frankencoin Association, on why a Swiss franc stablecoin might just win.",
+      "siteName": "CrispyBull",
+      "publishedDate": "Jun 5, 2026"
     }
   },
   "videoMetadata": {
