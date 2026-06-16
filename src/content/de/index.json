@@ -289,6 +289,7 @@
 			"description": "Frankencoin und alle hinzugefügten Komponenten wurden von führenden Blockchain Security Firms geprüft. Die Audits umfassen Smart-Contract-Sicherheit, ökonomisches Design und die Gesamtintegrität des Systems, um eine robuste und sichere Plattform für Nutzer zu gewährleisten.",
 			"bugBounty": {
 				"label": "Bug-Bounty-Programm",
+				"description": "Melden Sie potenzielle Smart-Contract- oder Protokoll-Sicherheitslücken über das Compass Security Bug-Bounty-Programm.",
 				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
 			},
 			"partners": [

@@ -286,6 +286,7 @@
 			"description": "Audité par des security firms blockchain de premier plan pour garantir l'intégrité du protocole",
 			"bugBounty": {
 				"label": "Programme de bug bounty",
+				"description": "Signalez les vulnérabilités potentielles des smart contracts ou du protocole via le programme de bug bounty de Compass Security.",
 				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
 			},
 			"partners": [
