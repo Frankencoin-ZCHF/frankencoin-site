@@ -36,6 +36,14 @@
 			"linkLabel": "Échanger sur Uniswap"
 		},
 		{
+			"name": "Enso",
+			"description": "Routage de swaps basé sur les intents à travers la liquidité DeFi. Échangez USDC contre ZCHF via des chemins d’exécution optimisés sur Ethereum.",
+			"type": "Agrégateur DEX",
+			"image": "/images/enso-logo.png",
+			"link": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb",
+			"linkLabel": "Échanger sur Enso"
+		},
+		{
 			"name": "MEXC",
 			"description": "Bourse centralisée mondiale avec des paires de trading ZCHF. Créez un compte, déposez des fonds et négociez des ZCHF avec des frais compétitifs.",
 			"type": "CEX",
@@ -48,7 +56,7 @@
 			"description": "Bourse décentralisée protégée contre le MEV. Les enchères par lots trouvent automatiquement le meilleur prix pour vos trades ZCHF.",
 			"type": "DEX",
 			"image": "/images/Cow-Swap-logo.svg",
-			"link": "https://swap.cow.fi/#/1/swap/USDT/ZCHF",
+			"link": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb",
 			"linkLabel": "Échanger sur CowSwap"
 		}
 	]
