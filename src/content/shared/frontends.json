@@ -55,6 +55,20 @@
 				"selfHostedApi": false,
 				"selfHostedIndexer": false
 			}
+		},
+		{
+			"name": "frankenport.com",
+			"url": "https://frankenport.com",
+			"creator": "loomi-labs",
+			"creatorUrl": "https://github.com/loomi-labs",
+			"repo": "https://github.com/loomi-labs/frankencoin-dapp",
+			"notes": "Self-hosted frontend and API on Hetzner behind a Cloudflare proxy, using the canonical Ponder indexer. Elegant and clean design with a Swiss palette.",
+			"features": {
+				"openSource": true,
+				"ownDomain": true,
+				"selfHostedApi": true,
+				"selfHostedIndexer": false
+			}
 		}
 	]
 }
