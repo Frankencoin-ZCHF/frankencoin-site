@@ -36,6 +36,14 @@
 			"linkLabel": "Swap on Uniswap"
 		},
 		{
+			"name": "Enso",
+			"description": "Intent-based swap routing across DeFi liquidity. Swap USDC into ZCHF through optimized execution paths on Ethereum.",
+			"type": "DEX Aggregator",
+			"image": "/images/enso-logo.png",
+			"link": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb",
+			"linkLabel": "Swap on Enso"
+		},
+		{
 			"name": "MEXC",
 			"description": "Global centralized exchange with ZCHF trading pairs. Register an account, deposit funds, and trade ZCHF with competitive fees.",
 			"type": "CEX",
