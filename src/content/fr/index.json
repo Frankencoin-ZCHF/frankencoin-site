@@ -284,6 +284,10 @@
 		"audits": {
 			"title": "Security Audits",
 			"description": "Audité par des security firms blockchain de premier plan pour garantir l'intégrité du protocole",
+			"bugBounty": {
+				"label": "Programme de bug bounty",
+				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
+			},
 			"partners": [
 				{
 					"altText": "Code4rena",
