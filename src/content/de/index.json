@@ -287,6 +287,11 @@
 		"audits": {
 			"title": "Technical Audits",
 			"description": "Frankencoin und alle hinzugefügten Komponenten wurden von führenden Blockchain Security Firms geprüft. Die Audits umfassen Smart-Contract-Sicherheit, ökonomisches Design und die Gesamtintegrität des Systems, um eine robuste und sichere Plattform für Nutzer zu gewährleisten.",
+			"bugBounty": {
+				"label": "Bug-Bounty-Programm",
+				"description": "Zusätzlich zu den Audits bietet die Frankencoin Association Bounties für die Offenlegung von Bugs an, welche die Stabilität des Systems beeinträchtigen. Das Programm wird von Compass Security betreut; Details finden Sie hier:",
+				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
+			},
 			"partners": [
 				{
 					"altText": "Code4rena",

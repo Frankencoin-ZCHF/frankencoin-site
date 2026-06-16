@@ -284,6 +284,11 @@
 		"audits": {
 			"title": "Security Audits",
 			"description": "Audité par des security firms blockchain de premier plan pour garantir l'intégrité du protocole",
+			"bugBounty": {
+				"label": "Programme de bug bounty",
+				"description": "En plus des audits, la Frankencoin Association offre des primes pour la divulgation de bugs affectant la stabilité du système. Le programme est géré par Compass Security; les détails sont disponibles ici :",
+				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
+			},
 			"partners": [
 				{
 					"altText": "Code4rena",
