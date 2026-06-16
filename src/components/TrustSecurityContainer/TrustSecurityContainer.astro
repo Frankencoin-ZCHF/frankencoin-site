@@ -132,6 +132,9 @@ const pharosUpdatedAt = pharosRating?.updatedAt
     </div>
     {index.trust_security.audits.bugBounty && (
       <div class="mt-6">
+        <p class="ty-small text-[var(--color-brand-titan-gray)] max-w-2xl mb-2">
+          {index.trust_security.audits.bugBounty.description}
+        </p>
         <a
           href={index.trust_security.audits.bugBounty.href}
           target="_blank"
@@ -141,9 +144,6 @@ const pharosUpdatedAt = pharosRating?.updatedAt
           <span>{index.trust_security.audits.bugBounty.label}</span>
           <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
         </a>
-        <p class="ty-small text-[var(--color-brand-titan-gray)] mt-2 max-w-2xl">
-          {index.trust_security.audits.bugBounty.description}
-        </p>
       </div>
     )}
   </div>

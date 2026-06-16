@@ -289,7 +289,7 @@
 			"description": "The Frankencoin and each added component has been audited by leading blockchain security firms. The audits cover smart contract security, economic design, and overall system integrity to ensure a robust and secure platform for users.",
 			"bugBounty": {
 				"label": "Bug bounty programme",
-				"description": "Report potential smart contract or protocol security vulnerabilities through the Compass Security bug bounty programme.",
+				"description": "Apart from the audits, the Frankencoin Association is offering bounties for the disclosure of bugs affecting the stability of the system. The programme is handled by Compass Security and details can be found here:",
 				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
 			},
 			"partners": [
