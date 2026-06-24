@@ -24,6 +24,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=Onm3gOQCXlM",
     "https://www.youtube.com/watch?v=eg_sqXwIfQk",
     "https://www.youtube.com/watch?v=HHD0cWCfBS4",
     "https://www.youtube.com/watch?v=xASCsQotwZk",
@@ -143,6 +144,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=Onm3gOQCXlM": {
+      "title": "Die größte Veränderung unseres Geldsystems läuft bereits!",
+      "description": "Philip Hopf interviews Dr. Luzius Meisser about stablecoins, Tether, financial freedom, and Frankencoin as a decentralized Swiss franc stablecoin.",
+      "author": "HKCM",
+      "publishedDate": "May 31, 2026",
+      "thumbnail": "/images/video-thumbnails/Onm3gOQCXlM.jpg"
+    },
     "https://www.youtube.com/watch?v=eg_sqXwIfQk": {
       "title": "Johannes Kern, Frankencoin | The Other 3%, Why the World Needs a Stablecoin That Isn't the Dollar",
       "description": "Johannes Kern explains why the world needs credible non-USD stablecoins and how Frankencoin brings the Swiss franc onchain as a decentralized alternative.",
