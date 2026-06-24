@@ -24,6 +24,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=Vey3nY8oKQs",
     "https://www.youtube.com/watch?v=Onm3gOQCXlM",
     "https://www.youtube.com/watch?v=eg_sqXwIfQk",
     "https://www.youtube.com/watch?v=HHD0cWCfBS4",
@@ -144,6 +145,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=Vey3nY8oKQs": {
+      "title": "EU auf dem falschen Dampfer: Bitcoin-Guru über Finanzpolitik, Künstliche Intelligenz und die Schweiz",
+      "description": "Dr. Luzius Meisser discusses European financial policy, Bitcoin as digital gold, artificial intelligence, and Switzerland's position in a changing financial system.",
+      "author": "DIE WELTWOCHE",
+      "publishedDate": "May 17, 2026",
+      "thumbnail": "/images/video-thumbnails/Vey3nY8oKQs.jpg"
+    },
     "https://www.youtube.com/watch?v=Onm3gOQCXlM": {
       "title": "Die größte Veränderung unseres Geldsystems läuft bereits!",
       "description": "Philip Hopf interviews Dr. Luzius Meisser about stablecoins, Tether, financial freedom, and Frankencoin as a decentralized Swiss franc stablecoin.",
