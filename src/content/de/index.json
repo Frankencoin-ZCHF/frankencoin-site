@@ -269,8 +269,8 @@
 		"eyebrow": "Compliant & Secure",
 		"title": "Rechtliche Klassifizierung und Security Audits",
 		"regulatory": {
-			"title": "Rechtliche Klassifizierung",
-			"description": "Frankencoin (ZCHF) ist nach Schweizer Recht als Payment Token klassifiziert. Das System ist vollständig konform mit Schweizer und EU-Regulierungen und kann ohne Einschränkungen verwendet werden. In der Europäischen Union qualifiziert Frankencoin als Crypto-Asset gemäss MiCA, wobei die in den Titeln II, III und IV festgelegten Pflichten aufgrund seiner dezentralisierten Natur nicht gelten.",
+			"title": "Rechtliche Klassifizierung & MiCA-Compliance",
+			"description": "Frankencoin ist vollständig konform mit den Schweizer und EU-Regulierungen. Unabhängige Rechtsgutachten von LEXR bestätigen, dass ZCHF ohne Einschränkungen als Payment Token verwendet werden kann und dass die MiCA-Emittentenpflichten gemäss Titel II, III und IV aufgrund des dezentralen Designs von ZCHF und des fehlenden identifizierbaren Emittenten nicht gelten. Zusätzlich wurde ein MiCA-formatiges ZCHF White Paper veröffentlicht, das im ESMA Interim MiCA Register für Crypto-Assets ausser ARTs und EMTs erscheint.",
 			"learnMoreLabel": "Mehr über Frankencoin's Compliance erfahren",
 			"learnMoreHref": "/compliance",
 			"documents": [
@@ -279,8 +279,16 @@
 					"href": "/2024-08-14_Frankencoin_Swiss_Regulatory_Classification.pdf"
 				},
 				{
-					"label": "EU MiCA-Klassifizierung (PDF)",
+					"label": "EU MiCA-Rechtsgutachten (PDF)",
 					"href": "/20260209 ZCHF MiCA Frankencoin Association Public Summary FINAL.pdf"
+				},
+				{
+					"label": "ZCHF MiCA White Paper",
+					"href": "https://storage.googleapis.com/exponential-science-project1.appspot.com/IXBRL/ZCHF%20-%2029-05-2026/ZCHF-viewer.xhtml#f-fact_9"
+				},
+				{
+					"label": "ESMA Interim MiCA Register",
+					"href": "https://www.esma.europa.eu/esmas-activities/digital-finance-and-innovation/markets-crypto-assets-regulation-mica#InterimMiCARegister"
 				}
 			]
 		},
