@@ -4,21 +4,76 @@
 
 Contact: mailto: info@frankencoin.com
 
- 
-
 # For vulnerability reports please contact the Compass Security Bug Bounty Team
 
 Contact: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
 
 Policy: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
 
- 
-
 Expires: 2027-12-20T00:00:00.000Z
 
 Preferred-Languages: en, de
 
-
 # Note
 
 It was decided to allow integration of Frankencoin into external pages to support decentralization and cross-domain embedding. While aware of potential security risks (e.g., clickjacking), this model was chosen deliberately. Users are responsible for verifying transaction data, especially with non-open-source integrations.
+
+# Bugbounty Rewards
+
+| Property     | Value      |
+| ------------ | ---------- |
+| Last Updated | 18.06.2026 |
+| Max. Bounty  | CHF 10'000 |
+| Min. Bounty  | CHF 100    |
+| Avg. Bounty  | CHF 157    |
+| Last Payout  | 05.05.2026 |
+| Budget       | CHF 10'000 |
+
+[ZCHF is an ERC20 token pegged to the Swiss franc. Dig into the coin's smart contract security and get rewarded. +teaser+]()
+
+Frankencoin (ZCHF) is a collateralized, oracle-free stablecoin that tracks the value of the Swiss franc. The coins strengths are its decentralization and its versatility. It is an ERC20 token and available on 5 chains: Ethereum, Polygon, Arbitrum, Optimism, and Base. The Frankencoin protocol shall be the best it can be, and the security of Frankencoin is the absolute highest priority. Thus, it was audited by leading security firms and Frankencoin calls on the community to help find bugs or vulnerabilities.
+
+[File a Bug +btn-link+](https://bugbounty.hacking-lab.com/bugbounty)
+
+# Terms, Rules & Standards
+
+This program follows the [Platform Standards](https://bugbounty.compass-security.com/platform-standards.html) and the [Terms and Conditions](https://bugbounty.compass-security.com/t&c.html). Please review both documents before testing or submitting any reports. They define general rules of engagement, eligibility for bounty rewards, netiquette, confidentiality requirements, and further legal guidelines that apply to all participants.
+
+# Asset Lists
+
+**[High Risk] [Low CHF 100-160] [Medium CHF 160-1280] [High CHF 1280-5120] [Critical CHF 5120-10000]**
+
+- [CODE] Solidity Contracts in Production https://etherscan.io/token/0xB58E61C3098d85632Df34EecfB899A1Ed80921cB#code
+- [CODE] Solidity Contracts in Github https://github.com/Frankencoin-ZCHF/Frankencoin/blob/main/contracts/stablecoin/Frankencoin.sol
+
+**[Medium Risk] [Low CHF 100] [Medium CHF 100-640] [High CHF 640-2560] [Critical CHF 2560-5000]**
+
+- https://app.frankencoin.com/
+- https://api.frankencoin.com/
+- https://ponder.frankencoin.com/
+- [CODE] https://github.com/Frankencoin-ZCHF/frankencoin-dapp
+
+**[Low Risk] [Low CHF 100] [Medium CHF 100] [High CHF 100-256] [Critical CHF 256-500]**
+
+- https://frankencoin.com/
+- [CODE] https://github.com/Frankencoin-ZCHF/www
+
+# Excluded Items
+
+The bug bounty **exclusion list** comprises targets that are excluded from the program, and no rewards will be granted for reported vulnerabilities on these targets.
+
+- Bugs in Frankcoin contract code which is not deployed in production is out of scope. Repository for reference https://github.com/Frankencoin-ZCHF/FrankenCoin
+- Code forked from external repositories and forked files left untouched
+- Code intended for demo, testing purpose (non-production code)
+- Any 3rd Party-Services (M365, O365, Atlassian, Azure, Github etc.)
+
+# Acknowledgement
+
+The Frankencoin Association may give public acknowledgment to individuals who have identified significant vulnerabilities under the program and received bounties. On Frankencoin Association's
+acknowledge, Compass might also choose to acknowledge you on websites or printed materials, unless you specifically request your name to be excluded.
+
+# References
+
+- [Domain related security.txt](https://frankencoin.com/.well-known/security.txt)
+- [Platform Standards](https://bugbounty.compass-security.com/platform-standards.html)
+- [Terms & Conditions](https://bugbounty.compass-security.com/t&c.html)
