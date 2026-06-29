@@ -1,0 +1,24 @@
+# In case of security incidents please contact the
+
+# Frankencoin Association
+
+Contact: mailto: info@frankencoin.com
+
+ 
+
+# For vulnerability reports please contact the Compass Security Bug Bounty Team
+
+Contact: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
+
+Policy: https://bugbounty.compass-security.com/bug-bounties/frankencoin-bug-bounty
+
+ 
+
+Expires: 2027-12-20T00:00:00.000Z
+
+Preferred-Languages: en, de
+
+
+# Note
+
+It was decided to allow integration of Frankencoin into external pages to support decentralization and cross-domain embedding. While aware of potential security risks (e.g., clickjacking), this model was chosen deliberately. Users are responsible for verifying transaction data, especially with non-open-source integrations.
