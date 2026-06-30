@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz",
     "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/",
     "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/",
     "https://cointelegraph.com/news/allunity-swiss-franc-stablecoin-chfau-mica",
@@ -38,6 +39,13 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz": {
+      "title": "Frankencoin sichert sich Zugang zum EU-Markt",
+      "description": "Der an die Schweizer Währung gekoppelte Frankencoin (ZCHF) kann auch künftig an Kryptobörsen in der EU gelistet werden. Die Frankencoin Association hat für den Stablecoin das MiCA-Whitepaper im europäischen Register publiziert, kurz vor Ablauf der Übergangsfrist.",
+      "image": "https://www.finews.ch/images/news/2026/06/Johannes-Kern.jpg",
+      "siteName": "finews.ch",
+      "publishedDate": "Jun 30, 2026"
+    },
     "https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730": {
       "title": "Der digitale Franken kommt aus Deutschland. Schweizer Anbieter haben keine Chance",
       "description": "Strenge Geldwäschereivorgaben verunmöglichen es Schweizer Firmen, einen Franken-Stablecoin zu lancieren. Nun bringt ein deutsches Unternehmen einen digitalen Franken auf den Markt – gestützt auf EU-Recht.",
