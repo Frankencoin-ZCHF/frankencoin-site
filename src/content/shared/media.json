@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen",
     "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz",
     "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/",
     "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/",
@@ -39,6 +40,13 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen": {
+      "title": "Frankencoin will in Europa Terrain besetzen",
+      "description": "Der grösste Schweizer-Franken-Stablecoin breitet seine Flügel aus und will sich über regulierte Kryptobörsen verstärkt in Europa etablieren.",
+      "image": "https://www.moneytoday.ch/fileadmin/_processed_/9/0/csm_Johannes_Kern_Frankencoin_c01e4ae5b2.jpg",
+      "siteName": "MoneyToday",
+      "publishedDate": "Jul 1, 2026"
+    },
     "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz": {
       "title": "Frankencoin sichert sich Zugang zum EU-Markt",
       "description": "Der an die Schweizer Währung gekoppelte Frankencoin (ZCHF) kann auch künftig an Kryptobörsen in der EU gelistet werden. Die Frankencoin Association hat für den Stablecoin das MiCA-Whitepaper im europäischen Register publiziert, kurz vor Ablauf der Übergangsfrist.",
