@@ -26,6 +26,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s",
     "https://www.youtube.com/watch?v=Vey3nY8oKQs",
     "https://www.youtube.com/watch?v=Onm3gOQCXlM",
     "https://www.youtube.com/watch?v=eg_sqXwIfQk",
@@ -161,6 +162,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s": {
+      "title": "ETHConf Crypto Startup Showdown – Frankencoin Pitch",
+      "description": "Frankencoin's ETHConf Crypto Startup Showdown pitch, timestamped to the Frankencoin segment at 57:45.",
+      "author": "ETHGlobal",
+      "publishedDate": "Jul 5, 2026",
+      "thumbnail": "/images/video-thumbnails/99EkLfdEE58.jpg"
+    },
     "https://www.youtube.com/watch?v=Vey3nY8oKQs": {
       "title": "EU auf dem falschen Dampfer: Bitcoin-Guru über Finanzpolitik, Künstliche Intelligenz und die Schweiz",
       "description": "Dr. Luzius Meisser discusses European financial policy, Bitcoin as digital gold, artificial intelligence, and Switzerland's position in a changing financial system.",
