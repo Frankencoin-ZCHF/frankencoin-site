@@ -19,7 +19,7 @@
 			},
 			{
 				"label": "Obtenir des Frankencoin avec du Crypto",
-				"href": "https://swap.cow.fi/#/1/swap/USDT/ZCHF"
+				"href": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb"
 			}
 		]
 	},
@@ -96,7 +96,7 @@
 					},
 					{
 						"label": "Acheter ZCHF avec du Crypto",
-						"href": "https://swap.cow.fi/#/11/swap/USDT/ZCHF"
+						"href": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb"
 					}
 				]
 			},
@@ -284,6 +284,11 @@
 		"audits": {
 			"title": "Security Audits",
 			"description": "Audité par des security firms blockchain de premier plan pour garantir l'intégrité du protocole",
+			"bugBounty": {
+				"label": "Programme de bug bounty",
+				"description": "En plus des audits, la Frankencoin Association offre des primes pour la divulgation de bugs affectant la stabilité du système. Le programme est géré par Compass Security; les détails sont disponibles ici :",
+				"href": "https://bugbounty.compass-security.com/service-details.html?id=18"
+			},
 			"partners": [
 				{
 					"altText": "Code4rena",
@@ -319,6 +324,37 @@
 					"href": "/AuditReport-Frankencoin.pdf"
 				}
 			]
+		},
+		"ratings": {
+			"title": "Notations",
+			"independentlyRatedBy": "Noté indépendamment par",
+			"description": "un protocole d'évaluation des risques on-chain open-source sans affiliation à Frankencoin. Chaque score reflète une analyse transparente et automatisée des données publiques on-chain.",
+			"features": [
+				{ "title": "Indépendant", "description": "Les notations sont produites par Xerberus, un protocole open-source externe, et non par la Frankencoin DAO." },
+				{ "title": "Méthodologie Ouverte", "description": "Chaque calcul est public et documenté. Aucun algorithme boîte noire, aucun biais caché. Transparence intellectuelle totale." },
+				{ "title": "Sources Vérifiables", "description": "Parce que les mathématiques sont ouvertes, les données doivent l'être aussi. Xerberus extrait directement de la vérité on-chain pour alimenter ses modèles." }
+			],
+			"ratingLabel": "Note Xerberus",
+			"viewReportLabel": "Voir le rapport complet sur Xerberus"
+		},
+		"pharos": {
+			"title": "ZCHF Safety Score",
+			"ratedBy": "Noté indépendamment par",
+			"description": "une plateforme d'analyse de sécurité des stablecoins sans affiliation à Frankencoin. Chaque score couvre cinq dimensions on-chain : stabilité du peg, liquidité, résilience, décentralisation et risque de dépendance.",
+			"tagline": "Safety Score par Pharos",
+			"ratingLabel": "Note Pharos",
+			"methodologyLabel": "Méthodologie",
+			"updatedLabel": "Mis à jour",
+			"viewReportLabel": "Voir le rapport complet sur Pharos",
+			"dimensionsTitle": "Dimensions Pharos",
+			"dimensionsSubtitle": "Les composantes du Safety Score publiées pour ZCHF.",
+			"dimensions": {
+				"pegStability": "Stabilité du peg",
+				"liquidity": "Liquidité de sortie",
+				"resilience": "Résilience",
+				"decentralization": "Décentralisation",
+				"dependencyRisk": "Risque de dépendance"
+			}
 		}
 	},
 	"foundation": {

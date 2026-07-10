@@ -1,6 +1,9 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen",
+    "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz",
+    "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/",
     "https://cryptoadventure.com/vitalik-linked-wallet-buys-zchf-why-frankencoin-fits-his-stablecoin-thesis/",
     "https://cointelegraph.com/news/allunity-swiss-franc-stablecoin-chfau-mica",
     "https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730",
@@ -23,6 +26,10 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s",
+    "https://www.youtube.com/watch?v=Vey3nY8oKQs",
+    "https://www.youtube.com/watch?v=Onm3gOQCXlM",
+    "https://www.youtube.com/watch?v=eg_sqXwIfQk",
     "https://www.youtube.com/watch?v=HHD0cWCfBS4",
     "https://www.youtube.com/watch?v=xASCsQotwZk",
     "https://www.youtube.com/watch?v=Xp3kf3RORmc",
@@ -34,6 +41,20 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen": {
+      "title": "Frankencoin will in Europa Terrain besetzen",
+      "description": "Der grösste Schweizer-Franken-Stablecoin breitet seine Flügel aus und will sich über regulierte Kryptobörsen verstärkt in Europa etablieren.",
+      "image": "https://www.moneytoday.ch/fileadmin/_processed_/9/0/csm_Johannes_Kern_Frankencoin_c01e4ae5b2.jpg",
+      "siteName": "MoneyToday",
+      "publishedDate": "Jul 1, 2026"
+    },
+    "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz": {
+      "title": "Frankencoin sichert sich Zugang zum EU-Markt",
+      "description": "Der an die Schweizer Währung gekoppelte Frankencoin (ZCHF) kann auch künftig an Kryptobörsen in der EU gelistet werden. Die Frankencoin Association hat für den Stablecoin das MiCA-Whitepaper im europäischen Register publiziert, kurz vor Ablauf der Übergangsfrist.",
+      "image": "https://www.finews.ch/images/news/2026/06/Johannes-Kern.jpg",
+      "siteName": "finews.ch",
+      "publishedDate": "Jun 30, 2026"
+    },
     "https://www.nzz.ch/wirtschaft/der-digitale-franken-ist-da-aber-er-stammt-aus-deutschland-schweizer-anbieter-haben-keine-chance-ld.1926730": {
       "title": "Der digitale Franken kommt aus Deutschland. Schweizer Anbieter haben keine Chance",
       "description": "Strenge Geldwäschereivorgaben verunmöglichen es Schweizer Firmen, einen Franken-Stablecoin zu lancieren. Nun bringt ein deutsches Unternehmen einen digitalen Franken auf den Markt – gestützt auf EU-Recht.",
@@ -132,9 +153,43 @@
       "description": "Luzius Meisser, Erfinder des Frankencoins, über die restriktive Finma-Haltung zu Stablecoins, den Wettbewerb mit Allunity, die Schweizer Rechtsordnung und die Zukunft dezentraler Stablecoins.",
       "siteName": "finews.ch",
       "publishedDate": "Mar 17, 2026"
+    },
+    "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/": {
+      "title": "Exclusive: The Swiss Franc, Rebuilt for the Digital Age",
+      "description": "Johannes Kern, managing director at the Frankencoin Association, on why a Swiss franc stablecoin might just win.",
+      "siteName": "CrispyBull",
+      "publishedDate": "Jun 5, 2026"
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s": {
+      "title": "ETHConf Crypto Startup Showdown – Frankencoin Pitch",
+      "description": "Frankencoin's ETHConf Crypto Startup Showdown pitch, timestamped to the Frankencoin segment at 57:45.",
+      "author": "ETHGlobal",
+      "publishedDate": "Jul 5, 2026",
+      "thumbnail": "/images/video-thumbnails/99EkLfdEE58.jpg"
+    },
+    "https://www.youtube.com/watch?v=Vey3nY8oKQs": {
+      "title": "EU auf dem falschen Dampfer: Bitcoin-Guru über Finanzpolitik, Künstliche Intelligenz und die Schweiz",
+      "description": "Dr. Luzius Meisser discusses European financial policy, Bitcoin as digital gold, artificial intelligence, and Switzerland's position in a changing financial system.",
+      "author": "DIE WELTWOCHE",
+      "publishedDate": "May 17, 2026",
+      "thumbnail": "/images/video-thumbnails/Vey3nY8oKQs.jpg"
+    },
+    "https://www.youtube.com/watch?v=Onm3gOQCXlM": {
+      "title": "Die größte Veränderung unseres Geldsystems läuft bereits!",
+      "description": "Philip Hopf interviews Dr. Luzius Meisser about stablecoins, Tether, financial freedom, and Frankencoin as a decentralized Swiss franc stablecoin.",
+      "author": "HKCM",
+      "publishedDate": "May 31, 2026",
+      "thumbnail": "/images/video-thumbnails/Onm3gOQCXlM.jpg"
+    },
+    "https://www.youtube.com/watch?v=eg_sqXwIfQk": {
+      "title": "Johannes Kern, Frankencoin | The Other 3%, Why the World Needs a Stablecoin That Isn't the Dollar",
+      "description": "Johannes Kern explains why the world needs credible non-USD stablecoins and how Frankencoin brings the Swiss franc onchain as a decentralized alternative.",
+      "author": "Stable Summit",
+      "publishedDate": "Jun 11, 2026",
+      "thumbnail": "/images/video-thumbnails/eg_sqXwIfQk.jpg"
+    },
     "https://www.youtube.com/watch?v=Xp3kf3RORmc": {
       "title": "Stablecoins & The Swiss Franc",
       "description": "Johannes Kern, Managing Director of the Frankencoin Association, discusses stablecoins and the Swiss franc with WHVP.",
