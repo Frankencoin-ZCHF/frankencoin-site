@@ -28,6 +28,14 @@
 			"link": "https://app.frankencoin.com/savings"
 		},
 		{
+			"title": "Épargne automatisée",
+			"partner": "urble",
+			"description": "Épargnez automatiquement en ZCHF avec des plans flexibles et obtenez un rendement via Frankencoin.",
+			"category": "DeFi",
+			"image": "/images/urble-logo.png",
+			"link": "https://www.frankencoin.com/use-cases"
+		},
+		{
 			"title": "Gestion de la paie et administration RH",
 			"partner": "Quitt",
 			"description": "Administration complète des employés incluant la paie, la sécurité sociale et le traitement des pensions – entièrement réglé en ZCHF",

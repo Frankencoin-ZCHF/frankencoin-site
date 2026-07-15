@@ -31,6 +31,15 @@
 			"link": "https://app.frankencoin.com/savings"
 		},
 		{
+			"title": "Automatisiertes Sparen",
+			"partner": "urble",
+			"description": "Spare ZCHF automatisch mit flexiblen Sparplänen und erziele eine Rendite über Frankencoin.",
+			"longDescription": "urble ist eine Self-Custody-Spar-App, mit der Nutzer langfristig in ZCHF oder BTC sparen können — für ihre eigenen Ziele oder für Menschen, die ihnen wichtig sind. Erstelle flexible Sparpläne, zahle regelmässig ein und erhalte Zinsen auf deine ZCHF-Ersparnisse, während du jederzeit die Kontrolle über dein Geld behältst.",
+			"category": "DeFi",
+			"image": "/images/urble-logo.png",
+			"link": "https://www.frankencoin.com/de/use-cases"
+		},
+		{
 			"title": "Lohnbuchhaltung & HR-Administration",
 			"partner": "Quitt",
 			"description": "Komplette Mitarbeiterverwaltung inklusive Lohnbuchhaltung, Sozialversicherungen und Pensionskassen — vollständig in ZCHF",
