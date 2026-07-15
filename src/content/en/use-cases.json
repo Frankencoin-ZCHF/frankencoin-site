@@ -31,6 +31,15 @@
 			"link": "https://app.frankencoin.com/savings"
 		},
 		{
+			"title": "Automated Savings",
+			"partner": "urble",
+			"description": "Save ZCHF automatically with flexible savings plans and earn yield through Frankencoin.",
+			"longDescription": "urble is a self-custodial savings app that helps users build long-term savings in ZCHF and BTC — whether for their own goals or for someone they care about. Create flexible savings plans, contribute regularly, and earn interest on your ZCHF savings while staying in control of your money.",
+			"category": "DeFi",
+			"image": "/images/urble-logo.png",
+			"link": "https://www.frankencoin.com/use-cases"
+		},
+		{
 			"title": "Payroll & HR Administration",
 			"partner": "Quitt",
 			"description": "Complete employee administration including payroll, social security, and pension processing — fully settled in ZCHF",
