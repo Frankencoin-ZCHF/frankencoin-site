@@ -28,6 +28,7 @@
 - [Ecosystem](https://frankencoin.com/ecosystem): Partners, wallets, on/off-ramps, payments, DeFi, and tokenisation integrations.
 - [Use Cases](https://frankencoin.com/use-cases): Pay, borrow, earn, and build with ZCHF.
 - [Frontends](https://frankencoin.com/frontends): Independent user interfaces for the Frankencoin protocol.
+- [Insurance & Cover](https://frankencoin.com/insurance): Optional third-party depeg cover for ZCHF, underwritten by Nexus Mutual and available via OpenCover (pays out if ZCHF trades ≥10% below 1 CHF for 7 consecutive days).
 
 ## Machine-readable interfaces for AI agents and developers
 - [Frankencoin MCP Server](https://mcp.frankencoin.com): Public read-only MCP and REST server for live protocol data. Use this first for AI-agent answers that need current facts.
