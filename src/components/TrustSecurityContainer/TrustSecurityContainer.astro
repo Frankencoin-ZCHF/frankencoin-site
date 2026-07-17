@@ -98,6 +98,28 @@ const pharosUpdatedAt = pharosRating?.updatedAt
     </div>
   </div>
 
+  <!-- Depeg Cover Section -->
+  {index.trust_security.cover && (
+    <div class="space-y-4 rounded-xl border border-[var(--color-neutral-200)] bg-[var(--color-gray-10)] p-6 md:p-8">
+      <div class="flex items-center gap-3">
+        <div class="w-10 h-10 rounded-full bg-[var(--color-brand-deep-blue)] flex items-center justify-center text-white shrink-0">
+          <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" viewBox="0 0 24 24" fill="currentColor">
+            <path fill-rule="evenodd" d="M11.484 2.17a.75.75 0 011.032 0 11.209 11.209 0 007.877 3.08.75.75 0 01.722.515 12.74 12.74 0 01.635 3.985c0 5.942-4.064 10.933-9.563 12.348a.749.749 0 01-.374 0C6.314 20.683 2.25 15.692 2.25 9.75c0-1.39.223-2.73.635-3.985a.75.75 0 01.722-.516l.143.001c2.996 0 5.717-1.17 7.734-3.08z" clip-rule="evenodd" />
+          </svg>
+        </div>
+        <h3 class="ty-big-2 m-0">{index.trust_security.cover.title}</h3>
+      </div>
+      <p class="ty-body-1">{index.trust_security.cover.description}</p>
+      <a
+        href={getLocalizedPath(index.trust_security.cover.ctaHref, currentLang)}
+        class="inline-flex items-center gap-2 ty-regular font-bold text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] hover:underline"
+      >
+        <span>{index.trust_security.cover.ctaLabel}</span>
+        <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
+      </a>
+    </div>
+  )}
+
   <!-- Audits Section -->
   <div class="space-y-6">
     <h3 class="ty-big-2">{index.trust_security.audits.title}</h3>

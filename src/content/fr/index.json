@@ -21,7 +21,12 @@
 				"label": "Obtenir des Frankencoin avec du Crypto",
 				"href": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb"
 			}
-		]
+		],
+		"cover": {
+			"eyebrow": "Nouveau",
+			"label": "Protégez vos ZCHF avec une couverture de depeg onchain",
+			"href": "https://opencover.com/frankencoin"
+		}
 	},
 
 	"stats": [
@@ -280,6 +285,12 @@
 					"href": "/20260209 ZCHF MiCA Frankencoin Association Public Summary FINAL.pdf"
 				}
 			]
+		},
+		"cover": {
+			"title": "Couverture de depeg optionnelle",
+			"description": "Les détenteurs de ZCHF peuvent désormais se protéger contre une perte durable de la parité. Le Depeg Cover — souscrit par Nexus Mutual et disponible via OpenCover — verse une indemnité si le Frankencoin se négocie 10% ou plus en dessous de 1 CHF pendant sept jours consécutifs. Il s'agit d'un produit tiers optionnel, non proposé par la Frankencoin Association.",
+			"ctaLabel": "En savoir plus sur la couverture ZCHF",
+			"ctaHref": "/insurance"
 		},
 		"audits": {
 			"title": "Security Audits",
