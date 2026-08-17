@@ -26,6 +26,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=iVn_po_1-sY",
     "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s",
     "https://www.youtube.com/watch?v=Vey3nY8oKQs",
     "https://www.youtube.com/watch?v=Onm3gOQCXlM",
@@ -162,6 +163,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=iVn_po_1-sY": {
+      "title": "Episode #8 Frankencoin",
+      "description": "Johannes Kern joins Trading Strategy to discuss Frankencoin's optimistic governance, oracle-free collateralised debt model, protocol risk management and sustainable vaults.",
+      "author": "Trading Strategy",
+      "publishedDate": "Aug 12, 2026",
+      "thumbnail": "/images/video-thumbnails/iVn_po_1-sY.jpg"
+    },
     "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s": {
       "title": "ETHConf Crypto Startup Showdown – Frankencoin Pitch",
       "description": "Frankencoin's ETHConf Crypto Startup Showdown pitch, timestamped to the Frankencoin segment at 57:45.",
