@@ -13,6 +13,15 @@
 			"link": "https://presse.spar.ch/de/spar-schweiz/allgemein/neu%3A-jetzt-bei-spar-mit-krypto-waehrung-bezahlen/"
 		},
 		{
+			"title": "Krypto-Checkout",
+			"partner": "PrivCart",
+			"description": "ZCHF und weitere digitale Assets mit einer schlanken Integration und einer Pauschalgebühr von 1% im Online-Checkout akzeptieren",
+			"longDescription": "PrivCart ermöglicht Händlern, Krypto-Checkout in Shopify, WooCommerce, BigCommerce oder einen individuellen Webshop einzubinden. Kunden können mit ZCHF und weiteren unterstützten Assets bezahlen; Händler können ihr Guthaben an eine selbst kontrollierte Wallet auszahlen lassen. Händler bleiben für die Einhaltung des anwendbaren Rechts und ihrer eigenen Compliance-Pflichten verantwortlich.",
+			"category": "Payments",
+			"image": "/images/privcart-logo.webp",
+			"link": "https://privcart.com/"
+		},
+		{
 			"title": "Banking-Integration",
 			"partner": "Mt Pelerin",
 			"description": "Verbinden Sie Frankencoin mit einer persönlichen IBAN — traditionelle Banküberweisungen mit digitalen Zahlungen verknüpfen",
