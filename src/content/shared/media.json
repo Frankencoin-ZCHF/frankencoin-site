@@ -26,6 +26,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=2HOu1-F1jFk",
     "https://www.youtube.com/watch?v=iVn_po_1-sY",
     "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s",
     "https://www.youtube.com/watch?v=Vey3nY8oKQs",
@@ -163,6 +164,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=2HOu1-F1jFk": {
+      "title": "The oracle-free stablecoin: how Frankencoin holds a Swiss franc peg | Fireside with Frankencoin",
+      "description": "Johannes Kern explains how Frankencoin's decentralized, over-collateralized Swiss-franc stablecoin works, including its oracle-free auction-based liquidation model and path to payments, savings and self-custody.",
+      "author": "Range",
+      "publishedDate": "Aug 19, 2026",
+      "thumbnail": "/images/video-thumbnails/2HOu1-F1jFk.jpg"
+    },
     "https://www.youtube.com/watch?v=iVn_po_1-sY": {
       "title": "Episode #8 Frankencoin",
       "description": "Johannes Kern joins Trading Strategy to discuss Frankencoin's optimistic governance, oracle-free collateralised debt model, protocol risk management and sustainable vaults.",
