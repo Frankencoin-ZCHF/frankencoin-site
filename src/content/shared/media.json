@@ -26,6 +26,7 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=9-fBHEPSu7c",
     "https://www.youtube.com/watch?v=2HOu1-F1jFk",
     "https://www.youtube.com/watch?v=iVn_po_1-sY",
     "https://www.youtube.com/watch?v=99EkLfdEE58&t=3465s",
@@ -164,6 +165,13 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=9-fBHEPSu7c": {
+      "title": "The Benefits of Not Needing an Oracle for Introducing a New Collateral - with Paolo Di Stefano",
+      "description": "Paolo Di Stefano, Frankencoin's Director of Collateral Management, explains how the protocol evaluates and onboards new collateral without relying on price oracles.",
+      "author": "Frankencoin",
+      "publishedDate": "Aug 6, 2026",
+      "thumbnail": "/images/video-thumbnails/9-fBHEPSu7c.jpg"
+    },
     "https://www.youtube.com/watch?v=2HOu1-F1jFk": {
       "title": "The oracle-free stablecoin: how Frankencoin holds a Swiss franc peg | Fireside with Frankencoin",
       "description": "Johannes Kern explains how Frankencoin's decentralized, over-collateralized Swiss-franc stablecoin works, including its oracle-free auction-based liquidation model and path to payments, savings and self-custody.",
