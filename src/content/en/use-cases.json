@@ -94,15 +94,6 @@
 			"link": "https://www.zeal.app/"
 		},
 		{
-			"title": "DeFi Liquidity",
-			"partner": "Curve Finance",
-			"description": "Trade ZCHF with low slippage through Curve's automated market maker protocol",
-			"longDescription": "Provide liquidity or trade ZCHF pairs on Curve Finance with low slippage. Curve is the primary venue for ZCHF liquidity in DeFi, offering efficient stablecoin swaps between ZCHF and other assets.",
-			"category": "DeFi",
-			"image": "/images/full-curve-dao-logo.jpg",
-			"link": "https://curve.fi/"
-		},
-		{
 			"title": "Decentralized Lending",
 			"partner": "Morpho",
 			"description": "Lend and borrow ZCHF through customizable, overcollateralized lending markets on Ethereum and Base",
