@@ -94,15 +94,6 @@
 			"link": "https://www.zeal.app/"
 		},
 		{
-			"title": "DeFi-Liquidität",
-			"partner": "Curve Finance",
-			"description": "Handeln Sie ZCHF mit geringer Slippage über Curves automatisiertes Market-Maker-Protokoll",
-			"longDescription": "Stellen Sie Liquidität bereit oder handeln Sie ZCHF-Paare auf Curve Finance mit geringer Slippage. Curve ist der primäre Handelsplatz für ZCHF-Liquidität in DeFi und bietet effiziente Stablecoin-Swaps zwischen ZCHF und anderen Assets.",
-			"category": "DeFi",
-			"image": "/images/full-curve-dao-logo.jpg",
-			"link": "https://curve.fi/"
-		},
-		{
 			"title": "Dezentrales Kreditwesen",
 			"partner": "Morpho",
 			"description": "Verleihen und leihen Sie ZCHF über anpassbare, überbesicherte Kreditmärkte auf Ethereum und Base",

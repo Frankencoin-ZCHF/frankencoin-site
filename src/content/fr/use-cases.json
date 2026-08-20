@@ -85,14 +85,6 @@
 			"link": "https://www.zeal.app/"
 		},
 		{
-			"title": "Liquidité DeFi",
-			"partner": "Curve Finance",
-			"description": "Échangez des ZCHF avec un faible slippage via le protocole de teneur de marché automatisé de Curve",
-			"category": "DeFi",
-			"image": "/images/full-curve-dao-logo.jpg",
-			"link": "https://curve.fi/"
-		},
-		{
 			"title": "Prêts décentralisés",
 			"partner": "Morpho",
 			"description": "Prêtez et empruntez des ZCHF via des marchés de prêt personnalisables et sur-collatéralisés sur Ethereum et Base",
