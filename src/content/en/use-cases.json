@@ -112,6 +112,15 @@
 			"link": "https://morpho.org/"
 		},
 		{
+			"title": "Borrow crvUSD against svZCHF",
+			"partner": "Curve LlamaLend",
+			"description": "Use svZCHF as collateral to borrow crvUSD through Curve's isolated lending market on Ethereum",
+			"longDescription": "Deposit svZCHF as collateral and borrow crvUSD through Curve LlamaLend's isolated Ethereum market. Borrowing terms, interest rates and liquidation risk are determined by the market and can change over time.",
+			"category": "DeFi",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://www.curve.finance/lend/ethereum/markets/0xFd85e847cDd2549f213E276e4B57B0690169F043"
+		},
+		{
 			"title": "Crypto Custody",
 			"partner": "Bitcoin Suisse",
 			"description": "Custody ZCHF through Switzerland's pioneering crypto financial services provider",
