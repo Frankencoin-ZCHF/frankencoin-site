@@ -101,6 +101,15 @@
 			"link": "https://morpho.org/"
 		},
 		{
+			"title": "Emprunter des crvUSD contre des svZCHF",
+			"partner": "Curve LlamaLend",
+			"description": "Utilisez des svZCHF comme garantie pour emprunter des crvUSD via le marché de prêt isolé de Curve sur Ethereum",
+			"longDescription": "Déposez des svZCHF en garantie et empruntez des crvUSD via le marché Ethereum isolé de Curve LlamaLend. Les conditions, taux d'intérêt et risques de liquidation sont déterminés par le marché et peuvent évoluer.",
+			"category": "DeFi",
+			"image": "/images/full-curve-dao-logo.jpg",
+			"link": "https://www.curve.finance/lend/ethereum/markets/0xFd85e847cDd2549f213E276e4B57B0690169F043"
+		},
+		{
 			"title": "Trading & Custody Crypto",
 			"partner": "Bitcoin Suisse",
 			"description": "Négociez et conservez vos ZCHF via le pionnier suisse des services financiers crypto avec une sécurité institutionnelle",
