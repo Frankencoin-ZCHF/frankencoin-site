@@ -45,6 +45,16 @@ const token = await loadContent("token", currentLang);
   </Section>
 
   <Section
+    id="fcs"
+    title={token.fcs.title}
+    subtitle={token.fcs.subtitle}
+    pad="xxs"
+    margin="mt-8"
+  >
+    <ChainContainer tokens={[token.fcs.chain]} />
+  </Section>
+
+  <Section
     id="svzchf"
     title={token.svzchf.title}
     subtitle={token.svzchf.subtitle}
