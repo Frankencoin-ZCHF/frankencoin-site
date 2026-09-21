@@ -24,6 +24,7 @@ export default defineConfig({
 					de: 'de',
 				},
 			},
+			filter: (page) => !page.includes('/verify/'),
 		}),
 	],
 

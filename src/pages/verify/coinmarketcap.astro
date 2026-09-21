@@ -1,0 +1,54 @@
+---
+import Section from "../../components/Layout/Section.astro";
+import Base from "../../layouts/Base.astro";
+
+const requests = [
+  {
+    ticket: "1458866",
+    asset: "FCS (Frankencoin Shares) — Add cryptoasset",
+    contract: "0xDb861830D9Ae2d1fCF99fA0cfd3973de382B0B5b",
+    explorer: "https://etherscan.io/token/0xDb861830D9Ae2d1fCF99fA0cfd3973de382B0B5b",
+  },
+];
+---
+
+<Base
+  title="CoinMarketCap Listing Verification"
+  description="Verification of CoinMarketCap listing/update requests submitted by the Frankencoin Association."
+  noindex={true}
+  nofollow={true}
+>
+  <Section id="cmc-verification" variant="plain" align="center" pad="lg">
+    <div class="flex flex-col items-center justify-center min-h-[40vh] gap-6 max-w-2xl mx-auto text-center">
+      <h1 class="ty-large-title text-[var(--color-brand-deep-blue)]">
+        CoinMarketCap Listing Verification
+      </h1>
+      <p class="ty-body-1 text-[var(--color-neutral-600)]">
+        This page confirms that the CoinMarketCap request(s) below were submitted by the
+        Frankencoin Association, the organization behind frankencoin.com.
+      </p>
+
+      <div class="w-full flex flex-col gap-4 mt-4 text-left">
+        {requests.map((r) => (
+          <div class="border border-[var(--color-neutral-200)] rounded-lg p-4">
+            <p class="ty-regular font-bold text-[var(--color-brand-deep-blue)]">
+              Ticket #{r.ticket}
+            </p>
+            <p class="ty-body-2 text-[var(--color-neutral-700)] mt-1">{r.asset}</p>
+            <p class="ty-body-2 text-[var(--color-neutral-700)] mt-1 break-all">
+              Contract: {r.contract}
+            </p>
+            <a
+              href={r.explorer}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="ty-body-2 text-[var(--color-brand-swiss)] underline break-all"
+            >
+              {r.explorer}
+            </a>
+          </div>
+        ))}
+      </div>
+    </div>
+  </Section>
+</Base>

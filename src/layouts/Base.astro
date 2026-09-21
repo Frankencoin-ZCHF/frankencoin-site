@@ -10,9 +10,11 @@ interface Props {
   description?: string;
   image?: string;
   type?: "website" | "article";
+  noindex?: boolean;
+  nofollow?: boolean;
 }
 
-const { title, description, image, type } = Astro.props;
+const { title, description, image, type, noindex, nofollow } = Astro.props;
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const site = await loadSharedContent("site", currentLang);
 ---
@@ -27,7 +29,7 @@ const site = await loadSharedContent("site", currentLang);
     <meta name="theme-color" content="#0A2540" />
 
     <!-- SEO Component -->
-    <SEO title={title} description={description} image={image} type={type} />
+    <SEO title={title} description={description} image={image} type={type} noindex={noindex} nofollow={nofollow} />
 
     <!-- Favicons -->
     <link rel="icon" href="/favicon.ico" sizes="32x32" />
