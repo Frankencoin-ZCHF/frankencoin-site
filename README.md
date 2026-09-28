@@ -156,7 +156,7 @@ The `src/utils/i18n.ts` file provides helper functions:
 
 - **Homepage** (`/`): Hero section, live stats, what is Frankencoin, how it works, foundation/FPS overview, trust & security, media articles, videos, and FAQs
 - **Governance** (`/governance`): FPS information, governance model, how to acquire FPS, and participation details
-- **FCS** (`/fcs`, `/de/fcs`): Frankencoin Shares landing page with live price, reserve pool and protocol ROE read from Ethereum
+- **FCS** (`/fcs`, `/de/fcs`): Frankencoin Shares landing page with live price, reserve pool and protocol ROE from `api.frankencoin.com`
 - **Use Cases** (`/use-cases`): Real-world applications categorized by Payments, Business, and DeFi with partner showcases and filterable interface
 - **What is Frankencoin** (`/what-is-frankencoin`): Educational content about the stablecoin for non-technical audiences
 - **Token** (`/token`): ZCHF token information across different blockchain networks

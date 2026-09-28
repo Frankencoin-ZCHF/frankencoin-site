@@ -33,14 +33,15 @@ for (const [path, launchLabel] of [
     const html = pages.get(path);
     const hero = section(html, 'main-page-header');
     assert.match(html, /<h1\b[^>]*>Frankencoin — Swiss Franc Stablecoin \(ZCHF\)<\/h1>/);
-    assert.match(hero, /href="https:\/\/fcs\.frankencoin\.com"/);
+    const fcsPath = path === '/' ? '/fcs' : '/de/fcs';
+    assert.ok(hero.includes(`href="${fcsPath}"`), `hero links to ${fcsPath}`);
     assert.ok(hero.includes(launchLabel));
     assert.doesNotMatch(hero, /opencover\.com/);
     assert.match(section(html, 'trust-security'), /href="(?:\/de)?\/insurance"/);
     const footer = html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
     assert.ok(footer, 'Missing footer');
-    assert.match(footer, /href="https:\/\/fcs\.frankencoin\.com"/);
-    assert.match(footer, />\s*FCS App\s*</);
+    assert.ok(footer.includes(`href="${fcsPath}"`), `footer links to ${fcsPath}`);
+    assert.match(footer, />\s*Frankencoin Share Token \(FCS\)\s*</);
   });
 
   test(`${path} renders an accessible FCS section between introduction and uses`, () => {
@@ -54,7 +55,7 @@ for (const [path, launchLabel] of [
     assert.match(launch, /<h2\b[^>]*id="fcs-launch-title"/);
     const links = [...launch.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)];
     assert.deepEqual(links.map((link) => link[1]), [
-      'https://fcs.frankencoin.com',
+      en ? '/fcs' : '/de/fcs',
       'https://swap.cow.fi/#/1/swap/USDT/FCS',
       en ? '/governance' : '/de/governance',
     ]);
