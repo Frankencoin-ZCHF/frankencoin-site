@@ -12,9 +12,13 @@ interface Props {
   type?: "website" | "article";
   noindex?: boolean;
   nofollow?: boolean;
+  /** Replaces the header menu for this page (e.g. anchors to the page's own sections). */
+  navLinks?: { label: string; href: string }[];
+  /** Small print shown under the footer copyright (e.g. a page disclaimer). */
+  footerNote?: string;
 }
 
-const { title, description, image, type, noindex, nofollow } = Astro.props;
+const { title, description, image, type, noindex, nofollow, navLinks, footerNote } = Astro.props;
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const site = await loadSharedContent("site", currentLang);
 ---
@@ -100,16 +104,17 @@ const site = await loadSharedContent("site", currentLang);
       gtag("set", "developer_id.dZGVlNj", true);
       gtag("config", "G-RNM9S018ES");
     </script>
+    <slot name="head" />
   </head>
   <body
     class="min-h-dvh flex flex-col w-full bg-[var(--color-white)] text-[var(--color-neutral-800)]"
   >
-    <Header />
+    <Header links={navLinks} />
 
     <main class="w-full flex-1 flex flex-col">
       <slot />
     </main>
 
-    <Footer />
+    <Footer note={footerNote} />
   </body>
 </html>

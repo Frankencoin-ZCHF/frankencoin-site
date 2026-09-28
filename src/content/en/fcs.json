@@ -1,0 +1,136 @@
+{
+  "meta": {
+    "title": "FCS (Frankencoin Shares): own a share of the ZCHF reserve pool",
+    "description": "FCS is a share of the reserve pool behind ZCHF, the largest decentralized Swiss franc stablecoin. Live price, reserve pool and protocol ROE from Ethereum. Get it on Uniswap or Matcha."
+  },
+  "nav": [
+    { "label": "What is FCS", "href": "#what" },
+    { "label": "Why hold FCS", "href": "#why" },
+    { "label": "Where to get FCS", "href": "#buy" },
+    { "label": "What is ZCHF", "href": "#zchf" },
+    { "label": "FAQ", "href": "#faq" }
+  ],
+  "cta": { "uniswap": "Get on Uniswap", "matcha": "Get on Matcha" },
+  "hero": {
+    "brand": { "name": "FCS", "full": "Frankencoin Shares" },
+    "headline": "Own the economy of the digital Swiss franc.",
+    "sub": "FCS is a share of the reserve pool behind ZCHF, the largest decentralized Swiss franc stablecoin. The pool collects the fees and interest paid by everyone who mints ZCHF.",
+    "figures": {
+      "price": { "label": "FCS share price", "unit": "ZCHF" },
+      "pool": { "label": "Reserve pool", "unit": "ZCHF" },
+      "roe": { "label": "Return on reserve pool (protocol ROE)", "unit": "Last 12 months" }
+    },
+    "stamp": "Live from Ethereum · block {block} · {time} UTC",
+    "stampUnavailable": "Live figures are unavailable right now."
+  },
+  "ama": {
+    "eyebrow": "Live on X Spaces",
+    "title": "Frankencoin Share Token Launch AMA",
+    "cta": "Add to calendar",
+    "local": "Your time: {time}",
+    "close": "Close AMA reminder"
+  },
+  "what": {
+    "headline": "What is FCS?",
+    "cards": [
+      {
+        "title": "Equity",
+        "body": "ZCHF is minted against collateral. Minters pay interest and fees into the reserve pool. Savers are paid from it, and what remains adds to the value of FCS."
+      },
+      {
+        "title": "Governance",
+        "body": "FCS holders can veto new minters and new collateral positions. Votes grow with the amount held and the time held."
+      }
+    ]
+  },
+  "why": {
+    "headline": "Why hold FCS?",
+    "intro": "Own part of the on-chain Swiss franc economy. When the ecosystem grows, the capital in the pool grows, and so does the FCS price.",
+    "cards": [
+      {
+        "title": "Earnings",
+        "body": "Every new ZCHF pays its interest upfront, and every new position pays a fee. That income goes into the reserve pool."
+      },
+      {
+        "title": "No dilution",
+        "body": "No inflationary rewards. New FCS only exist when new capital is paid into the pool."
+      },
+      {
+        "title": "The price follows",
+        "body": "FCS is priced at three times the pool's capital per share. When the pool grows, so does the price."
+      },
+      {
+        "title": "Veto power",
+        "body": "1% of FCS voting power is enough to veto governance proposals, such as a new minter or collateral position."
+      }
+    ]
+  },
+  "buy": {
+    "headline": "Where to get FCS",
+    "uniswap": { "title": "Uniswap", "body": "Swap directly with ZCHF." },
+    "matcha": { "title": "Matcha", "body": "Swap with any token on Ethereum, using an aggregator." },
+    "contractCheck": "Always check the contract address",
+    "copy": "Copy contract address",
+    "copied": "Copied",
+    "proof": {
+      "title": "Audited, open-source, on-chain",
+      "audited": "Audited",
+      "openSource": "Open-source",
+      "onChain": "On-chain",
+      "audit": "FCS audit (ChainSecurity)",
+      "github": "Source code",
+      "docs": "Documentation",
+      "contract": "Contract on Etherscan",
+      "pool": "Uniswap pool",
+      "dune": "Dune dashboard"
+    }
+  },
+  "franc": {
+    "headline": "Why the Swiss franc",
+    "paragraphs": [
+      "Since 1971, when the dollar was cut loose from gold, it has lost about 80% of its value against the Swiss franc. That is not luck. It is how Switzerland is built.",
+      "Switzerland has no king and no single leader. Power is shared by a seven-member Federal Council, held close to citizens across 26 cantons, and checked by voters who can overturn laws directly. Change comes slowly, by design, and slow is what you want from money.",
+      "The franc carries the same discipline: an independent central bank, a constitutional debt brake since 2003, and a currency that was backed 40% by gold until 2000. When the world turns uncertain, money moves to the franc."
+    ],
+    "closing": "Frankencoin brings that franc on-chain. No bank needed.",
+    "flagAlt": "The Swiss flag, drawn in pixels"
+  },
+  "zchf": {
+    "headline": "What is ZCHF?",
+    "intro": "ZCHF is the digital Swiss franc. It is decentralized, immutable, and the most DeFi-integrated Swiss franc stablecoin.",
+    "coinAlt": "ZCHF coin logo",
+    "cards": [
+      { "title": "Tracks the Swiss franc", "body": "ZCHF is designed to keep its value in line with the Swiss franc." },
+      {
+        "title": "Overcollateralized",
+        "body": "Anyone can mint ZCHF by locking crypto collateral worth more than the ZCHF they create. If the collateral loses value, it can be liquidated."
+      },
+      {
+        "title": "No issuer, no oracles",
+        "body": "Its value does not depend on a centralized issuer. ZCHF runs on public smart contracts, without price oracles."
+      }
+    ],
+    "emphasis": "The more ZCHF is minted, the more fees and interest flow into the reserve pool that FCS holders own."
+  },
+  "faq": {
+    "headline": "FAQ",
+    "items": [
+      { "q": "What are the roles of FCS?", "a": "FCS is the equity and governance token of the Frankencoin protocol." },
+      {
+        "q": "What can FCS holders gain, and what can they lose?",
+        "a": "FCS holders own the upside and the downside of the Frankencoin economy. Profits make each FCS worth more. Losses make it worth less, and FCS can lose all value."
+      },
+      {
+        "q": "What is the risk?",
+        "a": "You own the upside and the downside. If a liquidation does not cover the ZCHF it backs, the pool pays the difference before anyone else: less capital in the pool, and a lower FCS price. FCS can lose all value."
+      },
+      { "q": "Do FCS holders get paid directly?", "a": "No. Nothing is distributed. New capital and earnings accrue to the pool." },
+      { "q": "Can FCS be sold at any time?", "a": "Yes. FCS trades on Uniswap and is available through DEX aggregators such as Matcha." },
+      {
+        "q": "Who runs Frankencoin?",
+        "a": "No one. Frankencoin is a decentralized protocol running on Ethereum. The Frankencoin Association maintains the website and documentation."
+      }
+    ]
+  },
+  "disclaimer": "FCS is a share in the equity reserve pool of a decentralized system with no issuer. It can lose all value. Not available where prohibited. Nothing on this page is an offer or investment advice."
+}
