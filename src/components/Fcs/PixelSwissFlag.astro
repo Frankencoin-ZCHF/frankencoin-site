@@ -1,0 +1,17 @@
+---
+/* Pixel Swiss flag (32-cell grid). Each cell carries its diagonal delay in --d for the reveal animation (fcs.css). */
+import { swissFlagCells } from "./pixelArt";
+
+interface Props {
+  size?: number;
+  label: string;
+  class?: string;
+}
+
+const { size = 384, label, class: className } = Astro.props;
+const cells = swissFlagCells();
+---
+
+<svg viewBox="0 0 32 32" width={size} height={size} class={className} shape-rendering="crispEdges" role="img" aria-label={label}>
+  {cells.map(({ x, y, fill, delay }) => <rect class="fcs-px" style={`--d:${delay}ms`} x={x} y={y} width="1" height="1" fill={fill} />)}
+</svg>
