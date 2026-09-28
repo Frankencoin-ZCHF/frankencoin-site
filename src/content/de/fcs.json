@@ -20,7 +20,7 @@
       "pool": { "label": "Reservepool", "unit": "ZCHF" },
       "roe": { "label": "Eigenkapitalrendite des Reservepools (Protokoll-ROE)", "unit": "Letzte 12 Monate" }
     },
-    "stamp": "Live von Ethereum · Block {block} · {time} UTC",
+    "stamp": "Aktualisiert {time} UTC · api.frankencoin.com",
     "stampUnavailable": "Die Live-Zahlen sind im Moment nicht verfügbar."
   },
   "ama": {

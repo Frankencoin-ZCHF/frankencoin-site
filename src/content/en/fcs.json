@@ -20,7 +20,7 @@
       "pool": { "label": "Reserve pool", "unit": "ZCHF" },
       "roe": { "label": "Return on reserve pool (protocol ROE)", "unit": "Last 12 months" }
     },
-    "stamp": "Live from Ethereum · block {block} · {time} UTC",
+    "stamp": "Updated {time} UTC · api.frankencoin.com",
     "stampUnavailable": "Live figures are unavailable right now."
   },
   "ama": {

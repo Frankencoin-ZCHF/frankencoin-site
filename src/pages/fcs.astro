@@ -2,7 +2,7 @@
 /*
  * FCS (Frankencoin Shares) landing page: /fcs and /de/fcs.
  * Copy: src/content/{en,de}/fcs.json (English copy is checked by `yarn lint:fcs`).
- * Live figures: src/utils/fcsStats.ts (server-side, 5-minute cache).
+ * Live figures: src/utils/fcsStats.ts (api.frankencoin.com, server-side, 5-minute cache).
  * Styles: src/styles/fcs.css.
  */
 import Base from "../layouts/Base.astro";
@@ -92,7 +92,7 @@ const figures = [
   { ...c.hero.figures.pool, value: formatAmount(stats.reservePool) },
   { ...c.hero.figures.roe, value: formatPct(stats.roe12m) },
 ];
-const stamp = formatStamp(c.hero.stamp, stats.block, stats.timestamp);
+const stamp = formatStamp(c.hero.stamp, stats.updatedAt);
 
 const whatIcons: IconName[] = ["pie", "ballot"];
 const whyIcons: IconName[] = ["coins", "lock", "bars", "shield"];
