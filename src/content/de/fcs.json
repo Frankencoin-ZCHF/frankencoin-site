@@ -23,6 +23,13 @@
     "stamp": "Live von Ethereum · Block {block} · {time} UTC",
     "stampUnavailable": "Die Live-Zahlen sind im Moment nicht verfügbar."
   },
+  "ama": {
+    "eyebrow": "Live auf X Spaces",
+    "title": "Frankencoin Share Token Launch AMA",
+    "cta": "Zum Kalender hinzufügen",
+    "local": "Ihre Zeit: {time}",
+    "close": "AMA-Erinnerung schliessen"
+  },
   "what": {
     "headline": "Was ist FCS?",
     "cards": [

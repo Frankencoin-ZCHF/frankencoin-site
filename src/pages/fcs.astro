@@ -20,6 +20,7 @@ type Copy = {
   meta: { title: string; description: string };
   nav: { label: string; href: string }[];
   cta: { uniswap: string; matcha: string };
+  ama: { eyebrow: string; title: string; cta: string; local: string; close: string };
   hero: {
     brand: { name: string; full: string };
     headline: string;
@@ -61,6 +62,27 @@ const links = {
   github: "https://github.com/Frankencoin-ZCHF",
   dune: "https://dune.com/frankencoin",
 };
+
+/*
+ * FCS launch AMA on X Spaces. Start time from the public Frankencoin calendar event
+ * (DTSTART 20261001T170000Z = Thu 1 Oct 2026, 19:00 Zurich time, CEST).
+ * The reminder is only rendered before the start; the page script also removes it at the start
+ * time, in case a cached page stays open.
+ */
+const AMA_START = "2026-10-01T17:00:00Z";
+const AMA_CALENDAR =
+  "https://calendar.google.com/calendar/event?action=TEMPLATE&tmeid=MnQyZW12MW1jbDQ4Y284bDk5ODFpNjlsbm0gY18wNTZmZmEwZGY2ZDIyNzNlNDU0ZWRjYjQ5ZTllNjkzYWY5ZGIyNjM1ODIzYzQzNDIzYjc1ZjZiMzlkMDg1N2RlQGc&tmsrc=c_056ffa0df6d2273e454edcb49e9e693af9db2635823c43423b75f6b39d0857de%40group.calendar.google.com";
+const showAma = Date.now() < Date.parse(AMA_START);
+const amaWhen = new Intl.DateTimeFormat(lang === "de" ? "de-CH" : "en-GB", {
+  weekday: "short",
+  day: "numeric",
+  month: "long",
+  year: "numeric",
+  hour: "2-digit",
+  minute: "2-digit",
+  timeZone: "Europe/Zurich",
+  timeZoneName: "short",
+}).format(new Date(AMA_START));
 
 const UNI = "/images/fcs/uniswap-pink.svg"; // Uniswap/brand-assets, Uniswap_icon_pink.svg
 const MATCHA = "/images/fcs/matcha.svg"; // matcha.xyz/favicon.svg
@@ -156,7 +178,7 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
 
       {/* Content layer: above all mountain layers, glides between the slow back and the near-static front ridge */}
       <div data-parallax-speed="30" class="relative z-40 flex-1 will-change-transform">
-        <div class="fcs-container pb-28 pt-[4vh] md:pb-16 md:pt-[7vh]">
+        <div class="fcs-container relative pb-28 pt-[4vh] md:pb-16 md:pt-[7vh]">
           {/* Brand line: FCS mark (64px = 2x its 32-cell grid), wordmark, full name */}
           <div class="flex items-center gap-4">
             <img src="/images/fcs/fcs.svg" alt="" width="64" height="64" class="size-16" />
@@ -199,6 +221,51 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
               {stamp ?? c.hero.stampUnavailable}
             </p>
           </div>
+
+          {/* AMA reminder: under the figures on smaller screens, floating bottom-right of the hero on wide ones */}
+          {
+            showAma && (
+              <aside
+                id="fcs-ama"
+                data-ama-start={AMA_START}
+                data-ama-local={c.ama.local}
+                aria-labelledby="fcs-ama-title"
+                class="relative mt-6 max-w-[46rem] rounded-2xl bg-white p-5 pr-12 shadow-2xl shadow-[var(--color-brand-deep-blue)]/15 ring-1 ring-[var(--color-neutral-200)] xl:absolute xl:bottom-16 xl:right-8 xl:mt-0 xl:w-[21rem]"
+              >
+                <button
+                  type="button"
+                  data-ama-close
+                  aria-label={c.ama.close}
+                  class="absolute right-3 top-3 inline-flex size-8 items-center justify-center rounded-full text-[var(--color-brand-titan-gray)] hover:bg-[var(--color-neutral-100)] hover:text-[var(--color-brand-deep-blue)]"
+                >
+                  <svg width="14" height="14" viewBox="0 0 14 14" aria-hidden="true"><path d="M3 3l8 8M11 3l-8 8" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" /></svg>
+                </button>
+                <p class="flex items-center gap-2 text-xs font-medium uppercase tracking-[0.14em] text-[var(--color-brand-swiss)]">
+                  <span aria-hidden="true" class="relative flex size-2">
+                    <span class="absolute inline-flex size-full rounded-full bg-[var(--color-brand-swiss)] opacity-60 motion-safe:animate-ping"></span>
+                    <span class="relative inline-flex size-2 rounded-full bg-[var(--color-brand-swiss)]"></span>
+                  </span>
+                  {c.ama.eyebrow}
+                </p>
+                <h2 id="fcs-ama-title" class="fcs-heading mt-2 text-[var(--color-brand-deep-blue)]">{c.ama.title}</h2>
+                <p class="mt-1 text-sm text-[var(--color-neutral-650)]">
+                  <time datetime={AMA_START}>{amaWhen}</time>
+                  <span data-ama-local-time class="block text-[var(--color-brand-titan-gray)]"></span>
+                </p>
+                <a
+                  href={AMA_CALENDAR}
+                  target="_blank"
+                  rel="noopener"
+                  data-event="cta_ama_calendar"
+                  data-location="hero-ama"
+                  class="fcs-btn fcs-btn-blue mt-4 !min-h-9 !px-4 !text-[15px]"
+                >
+                  <svg width="16" height="16" viewBox="0 0 24 24" aria-hidden="true" class="shrink-0"><rect x="3.5" y="5" width="17" height="15.5" rx="2.5" fill="none" stroke="currentColor" stroke-width="2" /><path d="M3.5 10h17M8 3v4M16 3v4M12 13v5M9.5 15.5h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" /></svg>
+                  {c.ama.cta}
+                </a>
+              </aside>
+            )
+          }
         </div>
       </div>
 
@@ -430,7 +497,8 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
    * 1. Scroll parallax for [data-parallax-speed] layers inside [data-parallax] (off with reduced motion).
    * 2. Outbound links: UTM passthrough from the page URL + a GA event (event name from data-event).
    * 3. Copy-to-clipboard for [data-copy].
-   * 4. Pixel flag reveal: lights up once when it scrolls into view.
+   * 4. AMA reminder: removed at the AMA start time or when dismissed.
+   * 5. Pixel flag reveal: lights up once when it scrolls into view.
    */
   type Gtag = (...args: unknown[]) => void;
   const w = window as unknown as { dataLayer?: unknown[]; gtag?: Gtag };
@@ -507,7 +575,49 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
     });
   }
 
-  // 4. Pixel flag reveal (hidden only once armed here, so it stays visible without JS or with reduced motion).
+  // 4. AMA reminder: gone at the start time or once dismissed; shows the visitor's local time if it differs.
+  const ama = document.getElementById("fcs-ama");
+  if (ama) {
+    const start = Date.parse(ama.dataset.amaStart ?? "");
+    const key = `fcs-ama-dismissed-${ama.dataset.amaStart}`;
+    let dismissed = false;
+    try {
+      dismissed = localStorage.getItem(key) === "1";
+    } catch {
+      /* storage unavailable: just show it */
+    }
+    const remaining = start - Date.now();
+    if (!(remaining > 0) || dismissed) {
+      ama.remove();
+    } else {
+      if (remaining < 2 ** 31) setTimeout(() => ama.remove(), remaining);
+      ama.querySelector("[data-ama-close]")?.addEventListener("click", () => {
+        ama.remove();
+        try {
+          localStorage.setItem(key, "1");
+        } catch {
+          /* ignore */
+        }
+      });
+      const zone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+      const out = ama.querySelector<HTMLElement>("[data-ama-local-time]");
+      if (out && zone && zone !== "Europe/Zurich") {
+        const fmt = (tz: string) =>
+          new Intl.DateTimeFormat(document.documentElement.lang || undefined, { hour: "2-digit", minute: "2-digit", timeZone: tz }).format(start);
+        if (fmt(zone) !== fmt("Europe/Zurich")) {
+          const local = new Intl.DateTimeFormat(document.documentElement.lang || undefined, {
+            weekday: "short",
+            hour: "2-digit",
+            minute: "2-digit",
+            timeZoneName: "short",
+          }).format(start);
+          out.textContent = (ama.dataset.amaLocal ?? "{time}").replace("{time}", local);
+        }
+      }
+    }
+  }
+
+  // 5. Pixel flag reveal (hidden only once armed here, so it stays visible without JS or with reduced motion).
   const flag = document.querySelector<HTMLElement>("[data-reveal]");
   if (flag && !reducedMotion) {
     const box = flag.getBoundingClientRect();
