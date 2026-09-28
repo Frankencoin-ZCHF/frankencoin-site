@@ -25,7 +25,7 @@
 		"announcement": {
 			"eyebrow": "Neu",
 			"label": "Frankencoin Share Token ist jetzt verfügbar",
-			"href": "https://fcs.frankencoin.com"
+			"href": "/fcs"
 		}
 	},
 
@@ -95,7 +95,7 @@
 		],
 		"cta": {
 			"label": "FCS entdecken",
-			"href": "https://fcs.frankencoin.com"
+			"href": "/fcs"
 		},
 		"swapCta": {
 			"label": "FCS auf CoW Swap handeln",

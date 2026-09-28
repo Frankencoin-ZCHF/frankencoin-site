@@ -17,6 +17,8 @@ interface Props {
 }
 
 const { content, lang } = Astro.props;
+const ctaExternal = content.cta.href.includes("://");
+const ctaHref = ctaExternal ? content.cta.href : getLocalizedPath(content.cta.href, lang);
 ---
 
 <section id="fcs-launch" aria-labelledby="fcs-launch-title" class="py-10 md:py-20">
@@ -40,7 +42,7 @@ const { content, lang } = Astro.props;
           ))}
         </dl>
         <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Button href={content.cta.href} variant="primary" rounded="full" external={true}>
+          <Button href={ctaHref} variant="primary" rounded="full" external={ctaExternal}>
             {content.cta.label}
           </Button>
           <Button href={content.swapCta.href} variant="secondary" rounded="full" external={true} withExternalIcon={true}>

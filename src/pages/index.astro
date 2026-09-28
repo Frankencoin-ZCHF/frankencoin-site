@@ -136,9 +136,8 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
 
         {index.hero.announcement && (
           <a
-            href={index.hero.announcement.href}
-            target="_blank"
-            rel="noopener noreferrer"
+            href={localizeHref(index.hero.announcement.href, "/fcs")}
+            {...(index.hero.announcement.href.includes("://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
             class="group inline-flex max-w-full items-center gap-3 rounded-full border-2 border-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)] px-6 py-4 shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[var(--color-blue-39)] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-blue-39)] sm:px-8"
           >
             <span class="rounded-full bg-[var(--color-brand-swiss)] px-3 py-1 ty-small font-bold uppercase tracking-wide text-[var(--color-white)]">{index.hero.announcement.eyebrow}</span>

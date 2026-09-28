@@ -20,15 +20,14 @@
       "pool": { "label": "Reserve pool", "unit": "ZCHF" },
       "roe": { "label": "Return on reserve pool (protocol ROE)", "unit": "Last 12 months" }
     },
-    "stamp": "Live from Ethereum · block {block} · {time} UTC",
+    "stamp": "Live from api.frankencoin.com · {time} UTC",
     "stampUnavailable": "Live figures are unavailable right now."
   },
   "ama": {
     "eyebrow": "Live on X Spaces",
-    "title": "Frankencoin Share Token Launch AMA",
+    "title": "Join the Frankencoin Share Token Launch AMA",
     "cta": "Add to calendar",
-    "local": "Your time: {time}",
-    "close": "Close AMA reminder"
+    "local": "Your time: {time}"
   },
   "what": {
     "headline": "What is FCS?",

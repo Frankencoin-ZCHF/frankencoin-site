@@ -15,8 +15,7 @@
 		"@tailwindcss/vite": "^4.1.13",
 		"alpinejs": "^3.14.9",
 		"astro": "^5.13.8",
-		"tailwindcss": "^4.1.13",
-		"viem": "^2.56.8"
+		"tailwindcss": "^4.1.13"
 	},
 	"devDependencies": {
 		"eslint": "^9.35.0",

@@ -20,15 +20,14 @@
       "pool": { "label": "Reservepool", "unit": "ZCHF" },
       "roe": { "label": "Eigenkapitalrendite des Reservepools (Protokoll-ROE)", "unit": "Letzte 12 Monate" }
     },
-    "stamp": "Live von Ethereum · Block {block} · {time} UTC",
+    "stamp": "Live von api.frankencoin.com · {time} UTC",
     "stampUnavailable": "Die Live-Zahlen sind im Moment nicht verfügbar."
   },
   "ama": {
     "eyebrow": "Live auf X Spaces",
     "title": "Frankencoin Share Token Launch AMA",
     "cta": "Zum Kalender hinzufügen",
-    "local": "Ihre Zeit: {time}",
-    "close": "AMA-Erinnerung schliessen"
+    "local": "Ihre Zeit: {time}"
   },
   "what": {
     "headline": "Was ist FCS?",
