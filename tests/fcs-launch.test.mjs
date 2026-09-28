@@ -37,6 +37,10 @@ for (const [path, launchLabel] of [
     assert.ok(hero.includes(launchLabel));
     assert.doesNotMatch(hero, /opencover\.com/);
     assert.match(section(html, 'trust-security'), /href="(?:\/de)?\/insurance"/);
+    const footer = html.match(/<footer\b[\s\S]*?<\/footer>/)?.[0];
+    assert.ok(footer, 'Missing footer');
+    assert.match(footer, /href="https:\/\/fcs\.frankencoin\.com"/);
+    assert.match(footer, />\s*FCS App\s*</);
   });
 
   test(`${path} renders an accessible FCS section between introduction and uses`, () => {
@@ -50,10 +54,13 @@ for (const [path, launchLabel] of [
     assert.match(launch, /<h2\b[^>]*id="fcs-launch-title"/);
     const links = [...launch.matchAll(/<a\b[^>]*href="([^"]+)"[^>]*>([\s\S]*?)<\/a>/g)];
     assert.deepEqual(links.map((link) => link[1]), [
-      'https://fcs.frankencoin.com', en ? '/governance' : '/de/governance',
+      'https://fcs.frankencoin.com',
+      'https://swap.cow.fi/#/1/swap/USDT/FCS',
+      en ? '/governance' : '/de/governance',
     ]);
     assert.ok(links[0][2].includes(en ? 'Explore FCS' : 'FCS entdecken'));
-    assert.ok(links[1][2].includes(en ? 'Learn about governance' : 'Mehr zur Governance'));
+    assert.ok(links[1][2].includes(en ? 'Trade FCS on CoW Swap' : 'FCS auf CoW Swap handeln'));
+    assert.ok(links[2][2].includes(en ? 'Learn about governance' : 'Mehr zur Governance'));
     assert.match(launch, en ? /canonical governance and share token/ : /massgebliche Governance- und Anteil-Token/);
     assert.match(launch, en ? /equity reserve/ : /Eigenkapitalreserve/);
     assert.match(launch, en ? /Time-weighted/ : /Zeitgewichtete/);

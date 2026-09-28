@@ -10,6 +10,7 @@ interface Props {
     description: string;
     features: { title: string; description: string }[];
     cta: { label: string; href: string };
+    swapCta: { label: string; href: string };
     governanceLabel: string;
   };
   lang: Language;
@@ -39,10 +40,13 @@ const { content, lang } = Astro.props;
           ))}
         </dl>
         <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
-          <Button href={content.cta.href} variant="primary" rounded="full">
+          <Button href={content.cta.href} variant="primary" rounded="full" external={true}>
             {content.cta.label}
           </Button>
-          <Button href={getLocalizedPath('/governance', lang)} variant="secondary" rounded="full">
+          <Button href={content.swapCta.href} variant="secondary" rounded="full" external={true} withExternalIcon={true}>
+            {content.swapCta.label}
+          </Button>
+          <Button href={getLocalizedPath('/governance', lang)} variant="ghost" rounded="full">
             {content.governanceLabel}
           </Button>
         </div>

@@ -39,6 +39,11 @@
         "title": "Tokens",
         "links": [
           {
+            "label": "FCS App",
+            "href": "https://fcs.frankencoin.com",
+            "external": true
+          },
+          {
             "label": "Token Info",
             "href": "/token"
           },

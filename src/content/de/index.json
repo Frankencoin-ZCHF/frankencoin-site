@@ -97,6 +97,10 @@
 			"label": "FCS entdecken",
 			"href": "https://fcs.frankencoin.com"
 		},
+		"swapCta": {
+			"label": "FCS auf CoW Swap handeln",
+			"href": "https://swap.cow.fi/#/1/swap/USDT/FCS"
+		},
 		"governanceLabel": "Mehr zur Governance"
 	},
 	"core_features": {
