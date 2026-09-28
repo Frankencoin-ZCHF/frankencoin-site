@@ -22,10 +22,10 @@
 				"href": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb"
 			}
 		],
-		"cover": {
+		"announcement": {
 			"eyebrow": "Neu",
-			"label": "Schützen Sie Ihre ZCHF mit Onchain-Depeg-Cover",
-			"href": "https://opencover.com/frankencoin"
+			"label": "Frankencoin Share Token ist jetzt verfügbar",
+			"href": "https://fcs.frankencoin.com"
 		}
 	},
 
@@ -74,6 +74,34 @@
 				"description": "Frankencoin ist auf 8 verschiedenen Blockchains verfügbar. Er ist der grösste und beliebteste Schweizer-Franken-Stablecoin und ermöglicht seit 2023 On-Chain-Transaktionen in Schweizer Franken ohne signifikante Abweichungen vom Peg."
 			}
 		]
+	},
+	"fcs_launch": {
+		"eyebrow": "Jetzt verfügbar",
+		"title": "Frankencoin Share Token (FCS)",
+		"description": "Der massgebliche Governance- und Anteil-Token von Frankencoin.",
+		"features": [
+			{
+				"title": "Beteiligung am Eigenkapital",
+				"description": "Beteiligen Sie sich an der Eigenkapitalreserve, die Einnahmen und Verluste des Protokolls trägt."
+			},
+			{
+				"title": "Zeitgewichtete Mitbestimmung",
+				"description": "Bauen Sie mit der Haltedauer Stimmrechte auf. Nutzen Sie diese selbst oder delegieren Sie sie."
+			},
+			{
+				"title": "FPS im Verhältnis 1:1 wrappen",
+				"description": "Wrappen Sie bestehende FPS eins zu eins in FCS. FPS bleibt der zugrunde liegende Equity-Token."
+			}
+		],
+		"cta": {
+			"label": "FCS entdecken",
+			"href": "https://fcs.frankencoin.com"
+		},
+		"swapCta": {
+			"label": "FCS auf CoW Swap handeln",
+			"href": "https://swap.cow.fi/#/1/swap/USDT/FCS"
+		},
+		"governanceLabel": "Mehr zur Governance"
 	},
 	"core_features": {
 		"eyebrow": "Anwendungsmöglichkeiten",
@@ -228,15 +256,15 @@
 				"description": [
 					{
 						"step": "10 Buy",
-						"content": "Andere Nutzer kaufen Frankencoin auf dem Markt,"
+						"content": "Nutzer können über FCS ZCHF investieren und damit die Eigenkapitalreserve des Systems stärken."
 					},
 					{
 						"step": "11 Contribute",
-						"content": "um zur Kapitalreserve des Systems beizutragen und dafür Frankencoin Pool Shares (FPS) zu erhalten."
+						"content": "Der FCS-Vertrag investiert in den zugrunde liegenden Equity-Token FPS und gibt pro FPS einen FCS aus."
 					},
 					{
 						"step": "12 Redeem",
-						"content": "Diese können später wieder eingelöst werden, wobei der Preis von der Profitabilität des Systems abhängt."
+						"content": "Die Rücknahme gegen ZCHF unterliegt den Berechtigungsregeln des Vertrags, der Preiskurve, den Gebühren und dem Rücknahmeabschlag."
 					}
 				]
 			}

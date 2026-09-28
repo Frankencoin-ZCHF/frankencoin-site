@@ -18,7 +18,7 @@
 				},
 				{
 					"question": "How is Frankencoin different from USDT or USDC?",
-					"answer": "USDT and USDC are centrally issued by companies and backed by fiat reserves held in bank accounts. Frankencoin is decentralized, backed by crypto collateral, and governed by a community of [FPS holders](/#foundation). No single entity can freeze your ZCHF."
+					"answer": "USDT and USDC are centrally issued by companies and backed by fiat reserves held in bank accounts. Frankencoin is decentralized, backed by crypto collateral, and governed by a community of [FCS holders](/governance). No single entity can freeze your ZCHF."
 				}
 			]
 		},
@@ -35,11 +35,11 @@
 				},
 				{
 					"question": "What happens if the collateral loses value?",
-					"answer": "The system has multiple safety layers: individual position reserves, the [FPS reserve pool](/#foundation), and automated [liquidation mechanisms](https://docs.frankencoin.com/positions/auctions). If collateral drops below safe levels, positions are liquidated to maintain over-collateralization."
+					"answer": "The system has multiple safety layers: individual position reserves, the [equity reserve](https://docs.frankencoin.com/reserve), and automated [liquidation mechanisms](https://docs.frankencoin.com/positions/auctions). If collateral drops below safe levels, positions are liquidated to maintain over-collateralization."
 				},
 				{
-					"question": "What are Frankencoin Pool Shares (FPS)?",
-					"answer": "FPS is the governance token that represents a share in the reserve pool. FPS holders provide backup capital and have voting rights in the system. FPS can be bought on exchanges or minted by contributing to the reserve pool. Learn more about [FPS](/governance) or [invest via the app](https://app.frankencoin.com/equity)."
+					"question": "How do FCS and FPS differ?",
+					"answer": "Frankencoin Share Token (FCS) is the canonical governance and share token, combining participation in the equity reserve with time-weighted voting and delegation. Each FCS wraps one Frankencoin Pool Share (FPS), the underlying Equity token. Existing FPS can be wrapped 1:1 into FCS. Learn about [FCS governance](/governance) and [FPS wrapping](https://docs.frankencoin.com/pool-shares/fcs-migration)."
 				},
 				{
 					"question": "Can Frankencoin lose its peg to the Swiss franc?",
