@@ -24,7 +24,7 @@
 		],
 		"announcement": {
 			"eyebrow": "Neu",
-			"label": "Frankencoin Share Token ist jetzt verfügbar",
+			"label": "Frankencoin Shares sind jetzt verfügbar",
 			"href": "/fcs"
 		}
 	},
@@ -77,7 +77,7 @@
 	},
 	"fcs_launch": {
 		"eyebrow": "Jetzt verfügbar",
-		"title": "Frankencoin Share Token (FCS)",
+		"title": "Frankencoin Shares (FCS)",
 		"description": "Der massgebliche Governance- und Anteil-Token von Frankencoin.",
 		"features": [
 			{

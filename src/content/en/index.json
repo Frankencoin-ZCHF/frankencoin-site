@@ -24,7 +24,7 @@
 		],
 		"announcement": {
 			"eyebrow": "New",
-			"label": "Frankencoin Share Token is live",
+			"label": "Frankencoin Shares are live",
 			"href": "/fcs"
 		}
 	},
@@ -76,7 +76,7 @@
 	},
 	"fcs_launch": {
 		"eyebrow": "Now live",
-		"title": "Frankencoin Share Token (FCS)",
+		"title": "Frankencoin Shares (FCS)",
 		"description": "The canonical governance and share token of Frankencoin.",
 		"features": [
 			{
