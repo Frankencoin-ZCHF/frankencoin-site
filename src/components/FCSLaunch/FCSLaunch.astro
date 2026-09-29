@@ -1,0 +1,58 @@
+---
+import Button from "../Button/Button.astro";
+import Container from "../Layout/Container.astro";
+import { getLocalizedPath, type Language } from "../../utils/i18n";
+
+interface Props {
+  content: {
+    eyebrow: string;
+    title: string;
+    description: string;
+    features: { title: string; description: string }[];
+    cta: { label: string; href: string };
+    swapCta: { label: string; href: string };
+    governanceLabel: string;
+  };
+  lang: Language;
+}
+
+const { content, lang } = Astro.props;
+const ctaExternal = content.cta.href.includes("://");
+const ctaHref = ctaExternal ? content.cta.href : getLocalizedPath(content.cta.href, lang);
+---
+
+<section id="fcs-launch" aria-labelledby="fcs-launch-title" class="py-10 md:py-20">
+  <Container width="wide">
+    <div class="overflow-hidden rounded-3xl border border-[var(--color-gray-20)] bg-[var(--color-gray-10)] lg:grid lg:grid-cols-2">
+      <div class="flex flex-col items-start gap-6 bg-[var(--color-brand-deep-blue)] p-6 text-[var(--color-white)] sm:p-10">
+        <div class="flex items-center gap-4">
+          <img src="/images/fcs.png" alt="" width="72" height="72" loading="lazy" decoding="async" class="h-18 w-18 rounded-full" />
+          <p class="ty-subtitle ty-white uppercase tracking-wide">{content.eyebrow}</p>
+        </div>
+        <h2 id="fcs-launch-title" class="ty-large-title ty-white">{content.title}</h2>
+        <p class="ty-body-1">{content.description}</p>
+      </div>
+      <div class="flex flex-col justify-center gap-8 p-6 sm:p-10">
+        <dl class="flex flex-col gap-6">
+          {content.features.map((feature) => (
+            <div>
+              <dt class="ty-title-3 font-bold text-[var(--color-brand-deep-blue)]">{feature.title}</dt>
+              <dd class="ty-body-2 mt-2 text-[var(--color-neutral-650)]">{feature.description}</dd>
+            </div>
+          ))}
+        </dl>
+        <div class="flex flex-col items-stretch gap-3 sm:flex-row sm:flex-wrap sm:items-center">
+          <Button href={ctaHref} variant="primary" rounded="full" external={ctaExternal}>
+            {content.cta.label}
+          </Button>
+          <Button href={content.swapCta.href} variant="secondary" rounded="full" external={true} withExternalIcon={true}>
+            {content.swapCta.label}
+          </Button>
+          <Button href={getLocalizedPath('/governance', lang)} variant="ghost" rounded="full">
+            {content.governanceLabel}
+          </Button>
+        </div>
+      </div>
+    </div>
+  </Container>
+</section>

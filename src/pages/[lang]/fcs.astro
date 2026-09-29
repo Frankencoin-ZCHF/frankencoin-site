@@ -1,0 +1,14 @@
+---
+import MainFcs from '../fcs.astro';
+
+export const prerender = false;
+
+export function getStaticPaths() {
+  return [
+    { params: { lang: 'de' } },
+    // { params: { lang: 'fr' } }, // French temporarily disabled
+  ];
+}
+---
+
+<MainFcs />

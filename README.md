@@ -156,6 +156,7 @@ The `src/utils/i18n.ts` file provides helper functions:
 
 - **Homepage** (`/`): Hero section, live stats, what is Frankencoin, how it works, foundation/FPS overview, trust & security, media articles, videos, and FAQs
 - **Governance** (`/governance`): FPS information, governance model, how to acquire FPS, and participation details
+- **FCS** (`/fcs`, `/de/fcs`): Frankencoin Shares landing page with live price, reserve pool and protocol ROE read from Ethereum
 - **Use Cases** (`/use-cases`): Real-world applications categorized by Payments, Business, and DeFi with partner showcases and filterable interface
 - **What is Frankencoin** (`/what-is-frankencoin`): Educational content about the stablecoin for non-technical audiences
 - **Token** (`/token`): ZCHF token information across different blockchain networks
@@ -469,6 +470,14 @@ To add a new CTA button:
   }
 }
 ```
+
+### Updating the FCS Page
+
+- Copy: `src/content/en/fcs.json`, `src/content/de/fcs.json` (French falls back to English)
+- Page: `src/pages/fcs.astro`, styles in `src/styles/fcs.css`, pixel art in `src/components/Fcs/`
+- Live figures: `src/utils/fcsStats.ts` reads FCS price and the reserve pool (`/ecosystem/fps/info`) and protocol ROE (`/analytics/dailyLog/json`) from `api.frankencoin.com`, cached for 5 minutes. Optional env: `FRANKENCOIN_API_URL`
+- Before committing copy changes, run `yarn lint:fcs`. It blocks banned claims and hardcoded market numbers (live numbers must come from chain reads)
+- Analytics: outbound clicks send GA events (`cta_get_fcs`, `cta_swap_matcha`, `verify_link`, `outbound_etherscan`, `copy_contract`) and pass `utm_*` parameters through to the destination
 
 ### Content Best Practices
 

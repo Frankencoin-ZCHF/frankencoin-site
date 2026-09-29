@@ -6,7 +6,8 @@
 		"dev": "astro dev",
 		"build": "astro build",
 		"preview": "astro preview",
-		"astro": "astro"
+		"astro": "astro",
+		"lint:fcs": "node scripts/lint-fcs-copy.mjs && node --test scripts/lint-fcs-copy.test.mjs"
 	},
 	"dependencies": {
 		"@astrojs/node": "^9.5.1",

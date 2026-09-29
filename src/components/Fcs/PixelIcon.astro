@@ -1,0 +1,18 @@
+---
+/* 8-bit icon (16-cell grid). Render at multiples of 16px. */
+import { ICONS, cellsFromRows, type IconName } from "./pixelArt";
+
+interface Props {
+  name: IconName;
+  size?: number;
+  class?: string;
+}
+
+const { name, size = 32, class: className } = Astro.props;
+const icon = ICONS[name];
+const cells = cellsFromRows([...icon.rows]);
+---
+
+<svg viewBox="0 0 16 16" width={size} height={size} class={className} shape-rendering="crispEdges" role="img" aria-label={icon.title}>
+  {cells.map(({ x, y, fill }) => <rect x={x} y={y} width="1" height="1" fill={fill} />)}
+</svg>

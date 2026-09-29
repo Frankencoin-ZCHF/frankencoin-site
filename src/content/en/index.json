@@ -22,10 +22,10 @@
 				"href": "https://happypath.enso.build/?tokenIn=0xa0b86991c6218b36c1d19d4e9eb0ce3606eb48&outChainId=1&chainId=1&tokenOut=0xb58e61c3098d85632df34eecfb899a1ed80921cb"
 			}
 		],
-		"cover": {
+		"announcement": {
 			"eyebrow": "New",
-			"label": "Protect your ZCHF with onchain depeg cover",
-			"href": "https://opencover.com/frankencoin"
+			"label": "Frankencoin Share Token is live",
+			"href": "/fcs"
 		}
 	},
 
@@ -73,6 +73,34 @@
 				"title": "Live and Established",
 				"description": "Frankencoin has been deployed on 8 different blockchains. It is the largest and most popular Swiss franc stablecoin, enabling on-chain transactions in Swiss francs since 2023 with no significant deviations from its peg."			}
 		]
+	},
+	"fcs_launch": {
+		"eyebrow": "Now live",
+		"title": "Frankencoin Share Token (FCS)",
+		"description": "The canonical governance and share token of Frankencoin.",
+		"features": [
+			{
+				"title": "Equity participation",
+				"description": "Participate in the system's equity reserve, which absorbs protocol income and losses."
+			},
+			{
+				"title": "Time-weighted governance",
+				"description": "Build voting power over time and participate directly or delegate your votes."
+			},
+			{
+				"title": "1:1 FPS wrapping",
+				"description": "Wrap existing FPS one-to-one into FCS. FPS remains the underlying Equity token."
+			}
+		],
+		"cta": {
+			"label": "Explore FCS",
+			"href": "/fcs"
+		},
+		"swapCta": {
+			"label": "Trade FCS on CoW Swap",
+			"href": "https://swap.cow.fi/#/1/swap/USDT/FCS"
+		},
+		"governanceLabel": "Learn about governance"
 	},
 	"core_features": {
 		"eyebrow": "Ways to Use Frankencoin",
@@ -227,15 +255,15 @@
 				"description": [
 					{
 						"step": "10 Buy",
-						"content": "Other users buy Frankencoins on the market,"
+						"content": "Users can invest ZCHF through FCS to support the system's equity reserve."
 					},
 					{
 						"step": "11 Contribute",
-						"content": "to contribute to the capital reserve of the system, getting Frankencoin Pool Shares (FPS) in return."
+						"content": "The FCS contract invests in the underlying Equity token, FPS, and issues one FCS per FPS."
 					},
 					{
 						"step": "12 Redeem",
-						"content": "When can be redeemed again later, with their price depending on the profitability of the system."
+						"content": "Redemption into ZCHF depends on the contract's eligibility rules, pricing curve, fees and redemption discount."
 					}
 				]
 			}

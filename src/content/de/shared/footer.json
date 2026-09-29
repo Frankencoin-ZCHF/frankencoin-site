@@ -13,7 +13,7 @@
             "href": "/use-cases"
           },
           {
-            "label": "Governance / FPS",
+            "label": "Governance / FCS",
             "href": "/governance"
           }
         ],
@@ -38,6 +38,10 @@
       {
         "title": "Tokens",
         "links": [
+          {
+            "label": "Frankencoin Share Token (FCS)",
+            "href": "/fcs"
+          },
           {
             "label": "Token-Informationen",
             "href": "/token"

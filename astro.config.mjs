@@ -25,6 +25,8 @@ export default defineConfig({
 				},
 			},
 			filter: (page) => !page.includes('/verify/'),
+			// Server-rendered pages are not discovered automatically.
+			customPages: ['https://frankencoin.com/fcs/', 'https://frankencoin.com/de/fcs/'],
 		}),
 	],
 

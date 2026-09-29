@@ -23,6 +23,7 @@
 - [Homepage](https://frankencoin.com/): Swiss franc stablecoin overview and current headline metrics.
 - [What is Frankencoin](https://frankencoin.com/what-is-frankencoin): Introductory explanation of ZCHF, collateralised minting, and the protocol model.
 - [Governance & FPS](https://frankencoin.com/governance): FPS, reserve economics, and veto-based governance.
+- [FCS – Frankencoin Shares](https://frankencoin.com/fcs): FCS, the tradable share of the reserve pool behind ZCHF: live price, reserve pool and protocol ROE from Ethereum, veto governance, where to get FCS, risks. German: https://frankencoin.com/de/fcs
 - [Compliance](https://frankencoin.com/compliance): Swiss FINMA classification, EU MiCA classification, legal opinions, and MiCA white paper links.
 - [Token Info](https://frankencoin.com/token): ZCHF, FPS, savings vault tokens, chain deployments, and contract addresses.
 - [Ecosystem](https://frankencoin.com/ecosystem): Partners, wallets, on/off-ramps, payments, DeFi, and tokenisation integrations.

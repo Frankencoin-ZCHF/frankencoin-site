@@ -5,9 +5,15 @@ import MobileMenu from "./MobileMenu.astro";
 import LanguageSwitcher from "../LanguageSwitcher/LanguageSwitcher.astro";
 import { getLanguageFromURL, loadSharedContent } from "../../utils/i18n";
 
+interface Props {
+  /** Replaces the default menu links (the logo still links home). */
+  links?: { label: string; href: string }[];
+}
+
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const nav = await loadSharedContent("nav", currentLang);
-const { brand, links, cta } = nav;
+const { brand, cta } = nav;
+const links = Astro.props.links ?? nav.links;
 
 // Helper function to add language prefix to internal links
 const prefixLanguage = (href: string) => {
@@ -103,7 +109,7 @@ const localizedLinks = links.map(link => ({ ...link, href: prefixLanguage(link.h
               d="M4 7h16M4 12h16M4 17h16"></path>
           </svg>
         </summary>
-        <MobileMenu />
+        <MobileMenu links={Astro.props.links} />
       </details>
     </div>
   </div>
