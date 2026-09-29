@@ -366,7 +366,7 @@
 		"pharos": {
 			"title": "ZCHF Safety Score",
 			"ratedBy": "Unabhängig bewertet von",
-			"description": "einer offenen Stablecoin-Sicherheitsanalytik-Plattform ohne Verbindung zu Frankencoin. Jede Bewertung umfasst fünf On-Chain-Dimensionen: Peg-Stabilität, Liquidität, Resilienz, Dezentralisierung und Abhängigkeitsrisiko.",
+			"description": "einer offenen Stablecoin-Sicherheitsanalytik-Plattform ohne Verbindung zu Frankencoin. Jede Bewertung umfasst drei On-Chain-Säulen: Besicherung, Exit-Liquidität und wirtschaftliche Kontrolle.",
 			"tagline": "Safety Score von Pharos",
 			"ratingLabel": "Pharos-Bewertung",
 			"methodologyLabel": "Methodik",
@@ -375,11 +375,9 @@
 			"dimensionsTitle": "Pharos-Dimensionen",
 			"dimensionsSubtitle": "Die für ZCHF veröffentlichten Safety-Score-Komponenten.",
 			"dimensions": {
-				"pegStability": "Peg-Stabilität",
-				"liquidity": "Exit-Liquidität",
-				"resilience": "Resilienz",
-				"decentralization": "Dezentralisierung",
-				"dependencyRisk": "Abhängigkeitsrisiko"
+				"backing": "Besicherung",
+				"exit": "Exit-Liquidität",
+				"control": "Wirtschaftliche Kontrolle"
 			}
 		}
 	},

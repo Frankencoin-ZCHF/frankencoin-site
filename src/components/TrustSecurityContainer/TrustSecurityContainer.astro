@@ -2,7 +2,7 @@
 import { getLanguageFromURL, loadContent, getLocalizedPath } from "../../utils/i18n";
 import { fetchXerberusRatings } from '../../utils/xerberus';
 import { fetchPharosRating } from '../../utils/pharos';
-import type { PharosDimensionKey } from '../../utils/pharos';
+import type { PharosPillarKey } from '../../utils/pharos';
 
 const currentLang = getLanguageFromURL(Astro.url.pathname);
 const index = await loadContent("index", currentLang);
@@ -26,12 +26,10 @@ function scoreColor(score: number | null): string {
 
 const pharosRating = await fetchPharosRating();
 
-const PHAROS_DIMS: { key: PharosDimensionKey; shortLabel: string }[] = [
-  { key: 'pegStability', shortLabel: 'Peg' },
-  { key: 'liquidity', shortLabel: 'Exit' },
-  { key: 'resilience', shortLabel: 'Resil.' },
-  { key: 'decentralization', shortLabel: 'Decent.' },
-  { key: 'dependencyRisk', shortLabel: 'Dep.' },
+const PHAROS_DIMS: { key: PharosPillarKey; shortLabel: string }[] = [
+  { key: 'backing', shortLabel: 'Backing' },
+  { key: 'exit', shortLabel: 'Exit' },
+  { key: 'control', shortLabel: 'Control' },
 ];
 
 const RN = PHAROS_DIMS.length, RC = 95, RR = 58, RL = 77;
@@ -47,10 +45,10 @@ const pharosAxes = PHAROS_DIMS.map(({ shortLabel }, i) => {
   return { axis, lx: lp.x, ly: lp.y + 4, shortLabel, anchor: lp.x < RC - 8 ? 'end' : lp.x > RC + 8 ? 'start' : 'middle' };
 });
 const pharosPolygon = pharosRating
-  ? Array.from({ length: RN }, (_, i) => { const p = rPt(i, RR * (pharosRating!.dimensions[PHAROS_DIMS[i].key]?.score ?? 0) / 100); return `${p.x},${p.y}`; }).join(' ')
+  ? Array.from({ length: RN }, (_, i) => { const p = rPt(i, RR * (pharosRating!.pillars[PHAROS_DIMS[i].key]?.score ?? 0) / 100); return `${p.x},${p.y}`; }).join(' ')
   : null;
 const pharosDots = pharosRating
-  ? PHAROS_DIMS.map(({ key }, i) => rPt(i, RR * (pharosRating!.dimensions[key]?.score ?? 0) / 100))
+  ? PHAROS_DIMS.map(({ key }, i) => rPt(i, RR * (pharosRating!.pillars[key]?.score ?? 0) / 100))
   : [];
 const pharosUpdatedAt = pharosRating?.updatedAt
   ? new Date(pharosRating.updatedAt * 1000).toLocaleDateString('en-US', { year: 'numeric', month: 'short', day: 'numeric', timeZone: 'UTC' })
@@ -312,7 +310,7 @@ const pharosUpdatedAt = pharosRating?.updatedAt
           <!-- Dimensions list -->
           <div class="space-y-1 min-w-0 overflow-hidden">
             {PHAROS_DIMS.map(({ key }) => {
-              const dim = pharosRating?.dimensions[key];
+              const dim = pharosRating?.pillars[key];
               return (
                 <div class="flex items-center justify-between gap-4 border-b border-[var(--color-neutral-200)] pb-2 min-h-[46px]">
                   <div class="min-w-0">

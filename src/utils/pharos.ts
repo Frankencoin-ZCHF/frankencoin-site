@@ -1,6 +1,6 @@
-export type PharosDimensionKey = "pegStability" | "liquidity" | "resilience" | "decentralization" | "dependencyRisk";
+export type PharosPillarKey = "backing" | "exit" | "control";
 
-export type PharosDimensionRating = {
+export type PharosPillarRating = {
 	grade: string;
 	score: number | null;
 	detail: string;
@@ -8,17 +8,15 @@ export type PharosDimensionRating = {
 
 export type PharosRating = {
 	id: string;
-	name: string;
-	symbol: string;
 	overallGrade: string;
 	overallScore: number | null;
 	methodologyVersion: string | null;
 	updatedAt: number | null;
-	dimensions: Record<PharosDimensionKey, PharosDimensionRating>;
+	pillars: Record<PharosPillarKey, PharosPillarRating>;
 };
 
 const STABLECOIN_ID = "zchf-frankencoin";
-const DIMENSION_KEYS: PharosDimensionKey[] = ["pegStability", "liquidity", "resilience", "decentralization", "dependencyRisk"];
+const PILLAR_KEYS: PharosPillarKey[] = ["backing", "exit", "control"];
 
 let _cache: { data: PharosRating; expiresAt: number } | null = null;
 
@@ -34,18 +32,27 @@ export async function fetchPharosRating(): Promise<PharosRating | null> {
 	try {
 		const controller = new AbortController();
 		const timeout = setTimeout(() => controller.abort(), 8000);
-		const res = await fetch(`${baseUrl.replace(/\/$/, '')}/api/report-cards`, {
+		// Pharos's safety-score model is versioned in the path (currently v9); unversioned
+		// /api/report-cards was retired and now 404s.
+		const res = await fetch(`${baseUrl.replace(/\/$/, '')}/api/report-cards/v9`, {
 			headers: { 'X-API-Key': apiKey, accept: 'application/json' },
 			signal: controller.signal,
 		});
 		clearTimeout(timeout);
-		if (!res.ok) return null;
+		if (!res.ok) {
+			console.error(`[pharos] report-cards request failed: ${res.status} ${res.statusText}`);
+			return null;
+		}
 		const body = await res.json() as unknown;
 		const rating = parsePharosRating(body);
-		if (!rating) return null;
+		if (!rating) {
+			console.error('[pharos] report-cards response did not match the expected shape');
+			return null;
+		}
 		_cache = { data: rating, expiresAt: now + 60 * 60 * 1000 }; // 1h TTL
 		return rating;
-	} catch {
+	} catch (err) {
+		console.error('[pharos] failed to fetch report-cards', err);
 		return null;
 	}
 }
@@ -62,29 +69,59 @@ function numOrNull(v: unknown): number | null {
 	return typeof v === 'number' && isFinite(v) ? v : null;
 }
 
+function capitalize(s: string): string {
+	return s.charAt(0).toUpperCase() + s.slice(1);
+}
+
+// Pharos publishes a numeric score per pillar but no per-pillar letter grade, so we
+// derive one using the same bands implied by their published overall score->grade pairs.
+function scoreToGrade(score: number): string {
+	if (score >= 90) return 'A+';
+	if (score >= 83) return 'A';
+	if (score >= 80) return 'A-';
+	if (score >= 75) return 'B+';
+	if (score >= 70) return 'B';
+	if (score >= 65) return 'B-';
+	if (score >= 60) return 'C+';
+	if (score >= 55) return 'C';
+	if (score >= 50) return 'C-';
+	if (score >= 40) return 'D';
+	return 'F';
+}
+
+function pillarDetail(pillar: Record<string, unknown>): string {
+	const evidence = strOrNull(pillar.evidenceLevel);
+	const freshness = strOrNull(pillar.freshness);
+	const parts: string[] = [];
+	if (evidence) parts.push(`${capitalize(evidence)} evidence`);
+	if (freshness && freshness !== 'unknown') parts.push(`${capitalize(freshness)} data`);
+	return parts.length ? parts.join(' · ') : 'Detail unavailable';
+}
+
 function parsePharosRating(body: unknown): PharosRating | null {
 	if (!isRecord(body) || !Array.isArray(body.cards)) return null;
 	const card = body.cards.find((c: unknown) => isRecord(c) && c.id === STABLECOIN_ID);
-	if (!isRecord(card) || !isRecord(card.dimensions)) return null;
+	if (!isRecord(card) || !isRecord(card.pillars)) return null;
 
-	const dimensions = DIMENSION_KEYS.reduce((acc, key) => {
-		const d = (card.dimensions as Record<string, unknown>)[key];
-		acc[key] = isRecord(d)
-			? { grade: strOrNull(d.grade) ?? 'NR', score: numOrNull(d.score), detail: strOrNull(d.detail) ?? 'Dimension unavailable' }
+	const pillars = PILLAR_KEYS.reduce((acc, key) => {
+		const p = (card.pillars as Record<string, unknown>)[key];
+		const rawScore = isRecord(p) ? numOrNull(p.score) : null;
+		const score = rawScore != null ? Math.round(rawScore) : null;
+		acc[key] = isRecord(p) && score != null
+			? { grade: scoreToGrade(score), score, detail: pillarDetail(p) }
 			: { grade: 'NR', score: null, detail: 'Dimension unavailable' };
 		return acc;
-	}, {} as Record<PharosDimensionKey, PharosDimensionRating>);
+	}, {} as Record<PharosPillarKey, PharosPillarRating>);
 
 	const methodology = isRecord(body.methodology) ? body.methodology : null;
+	const overallScore = numOrNull(card.score);
 
 	return {
 		id: STABLECOIN_ID,
-		name: strOrNull(card.name) ?? 'Frankencoin',
-		symbol: strOrNull(card.symbol) ?? 'ZCHF',
-		overallGrade: strOrNull(card.overallGrade) ?? 'NR',
-		overallScore: numOrNull(card.overallScore),
+		overallGrade: strOrNull(card.grade) ?? (overallScore != null ? scoreToGrade(overallScore) : 'NR'),
+		overallScore,
 		methodologyVersion: methodology ? strOrNull(methodology.version) : null,
 		updatedAt: numOrNull(body.updatedAt),
-		dimensions,
+		pillars,
 	};
 }
