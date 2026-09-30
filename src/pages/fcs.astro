@@ -19,7 +19,7 @@ type Card = { title: string; body: string };
 type Copy = {
   meta: { title: string; description: string };
   nav: { label: string; href: string }[];
-  cta: { enso: string; uniswap: string; matcha: string };
+  cta: { enso: string; uniswap: string };
   ama: { eyebrow: string; title: string; cta: string; local: string };
   hero: {
     brand: { name: string; full: string };
@@ -35,7 +35,6 @@ type Copy = {
     headline: string;
     enso: { title: string; body: string };
     uniswap: { title: string; body: string };
-    matcha: { title: string; body: string };
     contractCheck: string;
     copy: string;
     copied: string;
@@ -56,8 +55,6 @@ const links = {
   enso: `https://happypath.enso.build/?tokenIn=0xdac17f958d2ee523a2206206994597c13d831ec7&outChainId=1&chainId=1&tokenOut=${FCS_ADDRESS.toLowerCase()}`,
   /** Uniswap with FCS as output; the router finds the path from any input token. */
   uniswap: `https://app.uniswap.org/swap?chain=mainnet&outputCurrency=${FCS_ADDRESS}`,
-  /** Matcha (0x aggregator) buying FCS, selling USDT by default. Link supplied by the Frankencoin team. */
-  matcha: `https://matcha.xyz/?buyAddress=${FCS_ADDRESS.toLowerCase()}&buyChain=1&sellAddress=0xdac17f958d2ee523a2206206994597c13d831ec7&sellChain=1`,
   pool: "https://app.uniswap.org/explore/pools/ethereum/0xcD795ae77A7318A396D6645bAf0562d8a0312323",
   contract: `https://etherscan.io/address/${FCS_ADDRESS.toLowerCase()}`,
   audit: "https://reports.chainsecurity.com/Frankencoin/ChainSecurity_Frankencoin_FPS2_Audit.pdf",
@@ -90,7 +87,6 @@ const amaWhen = new Intl.DateTimeFormat(lang === "de" ? "de-CH" : "en-GB", {
 const ENSO = "/images/enso-logo.png";
 const ENSO_WHITE = "/images/fcs/enso-white.svg"; // Enso brand toolkit, enso-logo-white.svg, for the blue buttons
 const UNI = "/images/fcs/uniswap-pink.svg"; // Uniswap/brand-assets, Uniswap_icon_pink.svg
-const MATCHA = "/images/fcs/matcha.svg"; // matcha.xyz/favicon.svg
 
 const figures = [
   { ...c.hero.figures.price, value: formatAmount(stats.fcsPrice, 2) },
@@ -105,7 +101,6 @@ const whyIcons: IconName[] = ["coins", "lock", "bars", "shield"];
 const buyOptions = [
   { k: "enso", card: c.buy.enso, action: c.cta.enso, logo: ENSO, btnLogo: ENSO_WHITE, href: links.enso, event: "cta_swap_enso", btn: "fcs-btn-blue" },
   { k: "uniswap", card: c.buy.uniswap, action: c.cta.uniswap, logo: UNI, href: links.uniswap, event: "cta_get_fcs", btn: "fcs-btn-dark" },
-  { k: "matcha", card: c.buy.matcha, action: c.cta.matcha, logo: MATCHA, href: links.matcha, event: "cta_swap_matcha", btn: "fcs-btn-dark" },
 ];
 
 const proof = [
@@ -204,11 +199,6 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
             <a href={links.uniswap} target="_blank" rel="noopener" data-event="cta_get_fcs" data-location="hero" class="fcs-btn fcs-btn-ghost">
               <img src={UNI} alt="" width="18" height="18" class="size-[18px] shrink-0" />
               {c.cta.uniswap}
-              <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="shrink-0"><path d="M4 2h6v6M10 2L3 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
-            </a>
-            <a href={links.matcha} target="_blank" rel="noopener" data-event="cta_swap_matcha" data-location="hero" class="fcs-btn fcs-btn-ghost">
-              <img src={MATCHA} alt="" width="18" height="18" class="size-[18px] shrink-0" />
-              {c.cta.matcha}
               <svg width="12" height="12" viewBox="0 0 12 12" aria-hidden="true" class="shrink-0"><path d="M4 2h6v6M10 2L3 9" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"></path></svg>
             </a>
           </div>
@@ -337,7 +327,7 @@ Astro.response.headers.set("Cache-Control", "public, max-age=300, s-maxage=300")
     <section id="buy" aria-labelledby="buy-h" class="fcs-section-y bg-white">
       <div class="fcs-container">
         <h2 id="buy-h" class="fcs-title max-w-3xl text-balance">{c.buy.headline}</h2>
-        <div class="mt-8 grid gap-4 md:mt-10 md:grid-cols-3">
+        <div class="mt-8 grid gap-4 md:mt-10 md:grid-cols-2">
           {
             buyOptions.map((o) => (
               <div class="flex flex-col rounded-xl bg-white p-6 ring-1 ring-[var(--color-neutral-200)] md:p-8">

@@ -137,7 +137,7 @@ Main Ethereum FCS address:
 - FCS is priced at three times the pool's capital per share (FCS.ask()). There are no inflationary rewards; new FCS only exist when new capital is paid into the pool. Nothing is distributed to holders.
 - Governance: holders with at least 1% of voting power can veto new minters and new collateral positions. Voting power grows with the amount held and the holding time.
 - Risk: FCS holders carry the upside and the downside. If a liquidation does not cover the ZCHF it backs, the pool pays the difference first. FCS can lose all value.
-- FCS trades on Uniswap (FCS/ZCHF) and is available through DEX aggregators such as Matcha.
+- FCS trades on Uniswap (FCS/ZCHF) and is available through DEX aggregators such as Enso.
 - Page: https://frankencoin.com/fcs (German: https://frankencoin.com/de/fcs). Live figures: use the MCP/API, do not hardcode.
 
 ## Savings

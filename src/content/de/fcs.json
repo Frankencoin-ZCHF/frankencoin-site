@@ -1,7 +1,7 @@
 {
   "meta": {
     "title": "FCS (Frankencoin Shares): Anteil am Reservepool von ZCHF",
-    "description": "FCS ist ein Anteil am Reservepool hinter ZCHF, dem grössten dezentralen Schweizer-Franken-Stablecoin. Live-Preis, Reservepool und Protokoll-ROE direkt von Ethereum. Erhältlich auf Enso, Uniswap oder Matcha."
+    "description": "FCS ist ein Anteil am Reservepool hinter ZCHF, dem grössten dezentralen Schweizer-Franken-Stablecoin. Live-Preis, Reservepool und Protokoll-ROE direkt von Ethereum. Erhältlich auf Enso oder Uniswap."
   },
   "nav": [
     { "label": "Was ist FCS", "href": "#what" },
@@ -10,7 +10,7 @@
     { "label": "Was ist ZCHF", "href": "#zchf" },
     { "label": "FAQ", "href": "#faq" }
   ],
-  "cta": { "enso": "Auf Enso kaufen", "uniswap": "Auf Uniswap kaufen", "matcha": "Auf Matcha kaufen" },
+  "cta": { "enso": "Auf Enso kaufen", "uniswap": "Auf Uniswap kaufen" },
   "hero": {
     "brand": { "name": "FCS", "full": "Frankencoin Shares" },
     "headline": "Beteiligen Sie sich an der Wirtschaft des digitalen Schweizer Frankens.",
@@ -68,7 +68,6 @@
     "headline": "Wo gibt es FCS",
     "enso": { "title": "Enso", "body": "Von USDT oder jedem anderen Token auf Ethereum tauschen." },
     "uniswap": { "title": "Uniswap", "body": "Direkt gegen ZCHF tauschen." },
-    "matcha": { "title": "Matcha", "body": "Mit jedem Token auf Ethereum tauschen, über einen Aggregator." },
     "contractCheck": "Prüfen Sie immer die Vertragsadresse",
     "copy": "Vertragsadresse kopieren",
     "copied": "Kopiert",
@@ -125,7 +124,7 @@
         "a": "Sie tragen die Chancen und die Risiken. Deckt eine Liquidation die damit besicherten ZCHF nicht, zahlt der Pool die Differenz vor allen anderen: weniger Kapital im Pool und ein tieferer FCS-Preis. FCS kann seinen gesamten Wert verlieren."
       },
       { "q": "Werden FCS-Inhaber direkt bezahlt?", "a": "Nein. Es wird nichts ausgeschüttet. Neues Kapital und Einnahmen fliessen in den Pool." },
-      { "q": "Kann FCS jederzeit verkauft werden?", "a": "Ja. FCS wird auf Uniswap gehandelt und ist über DEX-Aggregatoren wie Enso und Matcha erhältlich." },
+      { "q": "Kann FCS jederzeit verkauft werden?", "a": "Ja. FCS wird auf Uniswap gehandelt und ist über DEX-Aggregatoren wie Enso erhältlich." },
       {
         "q": "Wer betreibt Frankencoin?",
         "a": "Niemand. Frankencoin ist ein dezentrales Protokoll auf Ethereum. Die Frankencoin Association pflegt die Website und die Dokumentation."

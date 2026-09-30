@@ -477,7 +477,7 @@ To add a new CTA button:
 - Page: `src/pages/fcs.astro`, styles in `src/styles/fcs.css`, pixel art in `src/components/Fcs/`
 - Live figures: `src/utils/fcsStats.ts` reads FCS price and the reserve pool (`/ecosystem/fps/info`) and protocol ROE (`/analytics/dailyLog/json`) from `api.frankencoin.com`, cached for 5 minutes. Optional env: `FRANKENCOIN_API_URL`
 - Before committing copy changes, run `yarn lint:fcs`. It blocks banned claims and hardcoded market numbers (live numbers must come from chain reads)
-- Analytics: outbound clicks send GA events (`cta_get_fcs`, `cta_swap_matcha`, `verify_link`, `outbound_etherscan`, `copy_contract`) and pass `utm_*` parameters through to the destination
+- Analytics: outbound clicks send GA events (`cta_get_fcs`, `cta_swap_enso`, `verify_link`, `outbound_etherscan`, `copy_contract`) and pass `utm_*` parameters through to the destination
 
 ### Content Best Practices
 
