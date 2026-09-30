@@ -19,6 +19,8 @@ interface Props {
     }>;
     href?: string;
     image?: string;
+    /** Shown next to the image, for logos without a wordmark */
+    name?: string;
   }>;
 }
 
@@ -85,7 +87,8 @@ const contractUrl = `${explorerBaseUrl}/${contract}`;
             target="_blank"
             class="flex items-center justify-center w-full h-[58px] rounded border border-[#eff0f3] bg-[#f7f7f9] px-3 py-2 gap-2 transition-all duration-200 hover:border-[#dfe0e6] hover:shadow-[0_1px_2px_#00000008,0_6px_8px_#0000001a]"
           >
-            <img src={action.image} alt={action.label} class="h-6" />
+            <img src={action.image} alt={action.name ? "" : action.label} class="h-6" />
+            {action.name && <span class="font-bold text-[#0E0F2D]">{action.name}</span>}
           </a>
         )}
       </div>
