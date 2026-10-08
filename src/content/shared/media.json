@@ -1,6 +1,8 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.finews.ch/news/finanzplatz/73899-frankencoin-listing-kraken-kryptoboerse",
+    "https://www.tippinpoint.ch/kraken-nimmt-schweizer-stablecoin-ins-angebot-auf/",
     "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen",
     "https://www.finews.ch/news/finanzplatz/72735-frankencoin-association-stablecoin-johannes-kern-mica-whitepaper-kryptoboerse-eu-zchf-schweizer-franken-finanzplatz-schweiz",
     "https://crispybull.com/frankencoin-johannes-kern-swiss-franc-stablecoin/",
@@ -46,6 +48,20 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.finews.ch/news/finanzplatz/73899-frankencoin-listing-kraken-kryptoboerse": {
+      "title": "Frankencoin wird an internationalen Kryptobörse gelistet",
+      "description": "Die Kryptobörse Kraken nimmt Frankencoin (ZCHF) in ihr Handelsangebot auf. Mit dem Listing erhält der dezentrale Schweizer-Franken-Stablecoin Zugang zu einer internationalen Kryptobörse.",
+      "image": "https://www.finews.ch/images/news/2026/10/frankencoin.jpg",
+      "siteName": "finews.ch",
+      "publishedDate": "Oct 8, 2026"
+    },
+    "https://www.tippinpoint.ch/kraken-nimmt-schweizer-stablecoin-ins-angebot-auf/": {
+      "title": "Kraken nimmt Schweizer Stablecoin ins Angebot auf",
+      "description": "Die Kryptoplattform Kraken nimmt den Frankencoin (ZCHF) in ihr Handelsangebot auf. Damit wird die Kryptowährung erstmals über eine grosse internationale Kryptobörse zugänglich.",
+      "image": "https://storage.ghost.io/c/11/7a/117a3396-8af6-43a4-8dc5-f891a0cee13d/content/images/2026/10/Coin_Franken_2606173_090615.webp",
+      "siteName": "tippinpoint.ch",
+      "publishedDate": "Oct 8, 2026"
+    },
     "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen": {
       "title": "Frankencoin will in Europa Terrain besetzen",
       "description": "Der grösste Schweizer-Franken-Stablecoin breitet seine Flügel aus und will sich über regulierte Kryptobörsen verstärkt in Europa etablieren.",
