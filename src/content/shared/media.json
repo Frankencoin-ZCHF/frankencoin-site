@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.moneytoday.ch/news/internationale-kryptoboerse-listet-ab-sofort-frankencoin",
     "https://www.finews.ch/news/finanzplatz/73899-frankencoin-listing-kraken-kryptoboerse",
     "https://www.tippinpoint.ch/kraken-nimmt-schweizer-stablecoin-ins-angebot-auf/",
     "https://www.moneytoday.ch/news/frankencoin-will-in-europa-terrain-besetzen",
@@ -48,6 +49,13 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.moneytoday.ch/news/internationale-kryptoboerse-listet-ab-sofort-frankencoin": {
+      "title": "Internationale Kryptobörse listet ab sofort Frankencoin",
+      "description": "Der Frankencoin gehört neu zum Handelsangebot von Kraken – ein wichtiger Schritt zu grösserer Reichweite für den Schweizer Stablecoin.",
+      "image": "https://www.moneytoday.ch/fileadmin/_processed_/d/b/csm_Frankcoin_Kraken_1df9c5d268.jpg",
+      "siteName": "MoneyToday",
+      "publishedDate": "Oct 9, 2026"
+    },
     "https://www.finews.ch/news/finanzplatz/73899-frankencoin-listing-kraken-kryptoboerse": {
       "title": "Frankencoin wird an internationalen Kryptobörse gelistet",
       "description": "Die Kryptobörse Kraken nimmt Frankencoin (ZCHF) in ihr Handelsangebot auf. Mit dem Listing erhält der dezentrale Schweizer-Franken-Stablecoin Zugang zu einer internationalen Kryptobörse.",
