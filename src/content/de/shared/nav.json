@@ -1,14 +1,38 @@
 {
-  "brand": { "name": "Frankencoin", "href": "/" },
+  "brand": {
+    "name": "Frankencoin",
+    "href": "/"
+  },
   "links": [
-    { "label": "Über Frankencoin", "href": "/#what-is" },
-    { "label": "Anwendungen", "href": "/#core-features" },
-    { "label": "Wie's funktioniert", "href": "/#how-does-it-work" },
-    { "label": "Compliance", "href": "/#trust-security" },
-    { "label": "Medien", "href": "/#in-the-media" },
-    { "label": "FAQs", "href": "/#faq" }
+    {
+      "label": "Sparen & Investieren",
+      "href": "/save-invest"
+    },
+    {
+      "label": "Leihen",
+      "href": "https://app.frankencoin.com/mint"
+    },
+    {
+      "label": "Partner",
+      "href": "/partners"
+    },
+    {
+      "label": "Entwickler",
+      "href": "/developers"
+    },
+    {
+      "label": "FCS",
+      "href": "/fcs"
+    },
+    {
+      "label": "Über",
+      "href": "/what-is-frankencoin"
+    }
   ],
-  "cta": { "label": "App öffnen", "href": "https://app.frankencoin.com/" },
+  "cta": {
+    "label": "Jetzt starten",
+    "href": "/start"
+  },
   "socials": [
     {
       "name": "Telegram",
@@ -26,7 +50,7 @@
       "width": 30,
       "height": 30
     },
-      {
+    {
       "name": "LinkedIn",
       "href": "https://www.linkedin.com/company/frankencoin/",
       "light_icon": "/images/Social-icons-2_1.svg",
@@ -50,5 +74,9 @@
       "width": 30,
       "height": 30
     }
-  ]
+  ],
+  "appCta": {
+    "label": "App",
+    "href": "https://app.frankencoin.com/"
+  }
 }

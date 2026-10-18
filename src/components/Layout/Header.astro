@@ -81,9 +81,14 @@ const localizedLinks = links.map(link => ({ ...link, href: prefixLanguage(link.h
         <LanguageSwitcher />
       </div>
 
-      <!-- CTA (desktop only) -->
-      <div class="hidden lg:block">
-        <Button href={nav.cta.href} variant="primary" rounded="full" size="md" external={true}>
+      <!-- CTA (desktop only): primary "Start now" + quiet app link -->
+      <div class="hidden lg:flex items-center gap-[var(--spacing-m)]">
+        {nav.appCta && (
+          <a href={nav.appCta.href} target="_blank" rel="noopener noreferrer" class="ty-body-2 font-semibold text-[var(--color-neutral-600)] hover:text-[var(--color-brand-swiss)]">
+            {nav.appCta.label} ↗
+          </a>
+        )}
+        <Button href={prefixLanguage(nav.cta.href)} variant="primary" rounded="full" size="md" external={nav.cta.href.startsWith("http")}>
           {nav.cta.label}
         </Button>
       </div>

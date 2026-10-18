@@ -21,6 +21,12 @@ import MediaCarousel from "../components/MediaCarousel/MediaCarousel.astro";
 import UseCasesGrid from "../components/UseCasesGrid/UseCasesGrid.astro";
 import ExchangesGrid from "../components/ExchangesGrid/ExchangesGrid.astro";
 import FCSLaunch from "../components/FCSLaunch/FCSLaunch.astro";
+import Calculator from "../components/Calculator/Calculator.astro";
+import AudienceDoors from "../components/AudienceDoors/AudienceDoors.astro";
+import TrustStrip from "../components/TrustStrip/TrustStrip.astro";
+import StickyCTA from "../components/StickyCTA/StickyCTA.astro";
+import { getCalcData } from "../utils/calcStats";
+import { formatPct } from "../utils/fcsStats";
 
 export const prerender = false;
 
@@ -37,7 +43,8 @@ async function getFrankencoinInfo() {
   }
 }
 
-const frankencoinInfo = await getFrankencoinInfo();
+const [frankencoinInfo, calc] = await Promise.all([getFrankencoinInfo(), getCalcData()]);
+const rateLabel = formatPct(calc.current.rate, 2);
 
 type StatMeta = { label?: string; unit?: string; href?: string; value?: string };
 
@@ -50,6 +57,7 @@ function formatAmount(n: number) {
   return n.toFixed(0).replace(/\d{1,3}(?=(\d{3})+(?!\d))/g, "$&'");
 }
 
+const s0 = findStat("savingsRate");
 const s1 = findStat("totalSupply");
 const s2 = findStat("totalValueLocked");
 const s4 = findStat("compliance");
@@ -66,6 +74,12 @@ function localizeHref(href: string | undefined, fallback: string): string {
 
 const stats: Option[] = frankencoinInfo
   ? [
+      {
+        label: s0.label ?? "Savings rate",
+        value: rateLabel,
+        unit: s0.unit,
+        href: localizeHref(s0.href, "/save-invest"),
+      },
       {
         label: s1.label ?? "Money circulating",
         value: formatAmount(frankencoinInfo.token?.supply ?? 0),
@@ -86,6 +100,8 @@ const stats: Option[] = frankencoinInfo
     ]
   : [];
 
+const doors = index.doors.items.map((d: any) => ({ ...d, stat: d.stat && { ...d.stat, value: d.stat.value.replace("{rate}", rateLabel) } }));
+
 Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300');
 ---
 
@@ -101,7 +117,7 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
     pad="xxs"
     imgUrl={index.hero.image}
   >
-    <div class="min-h-screen flex flex-col justify-center gap-24 pt-20 pb-4">
+    <div data-hero class="min-h-[70vh] md:min-h-screen flex flex-col justify-center gap-14 md:gap-20 pt-6 md:pt-20 pb-4">
       <SectionHeader
         title={index.hero.title}
         subtitle={index.hero.subtitle}
@@ -109,135 +125,72 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
         size="display"
         align="left"
         padding="xl"
-        cta={{
-          label: index.hero.cta.label,
-          href: index.hero.cta.href,
-          variant: "primary",
-        }}
-        ctaHideOnLarge={true}
+        cta={[
+          { label: index.hero.cta.label, href: localizeHref(index.hero.cta.href, "/start"), variant: "primary" },
+          { label: index.hero.cta_buttons[1].label, href: index.hero.cta_buttons[1].href, variant: "secondary", external: true },
+        ]}
       />
 
-      <div class="flex flex-col items-center gap-8">
+      <div class="flex flex-col items-center gap-6">
         <BadgeContainer options={stats} />
 
-        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 sm:gap-8">
-          {index.hero.cta_buttons.map((button) => (
-            <a
-              href={button.href}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="flex items-center gap-2 text-[var(--color-brand-deep-blue)] ty-body-1 font-semibold hover:text-[var(--color-brand-swiss)] transition-colors"
-            >
-              <span>{button.label}</span>
-              <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3 pointer-events-none" />
-            </a>
-          ))}
-        </div>
+        <a
+          href={index.hero.cta_buttons[0].href}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="flex items-center gap-2 text-[var(--color-brand-deep-blue)] ty-body-2 font-semibold hover:text-[var(--color-brand-swiss)] transition-colors"
+        >
+          <span>{index.hero.cta_buttons[0].label}</span>
+          <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3 pointer-events-none" />
+        </a>
 
         {index.hero.announcement && (
           <a
             href={localizeHref(index.hero.announcement.href, "/fcs")}
-            {...(index.hero.announcement.href.includes("://") ? { target: "_blank", rel: "noopener noreferrer" } : {})}
-            class="group inline-flex max-w-full items-center gap-3 rounded-full border-2 border-[var(--color-brand-deep-blue)] bg-[var(--color-brand-deep-blue)] px-6 py-4 shadow-lg transition-all hover:-translate-y-0.5 hover:bg-[var(--color-blue-39)] hover:shadow-xl focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[var(--color-blue-39)] sm:px-8"
+            class="group inline-flex max-w-full items-center gap-3 rounded-full border border-[var(--color-brand-deep-blue)] px-5 py-2.5 transition-all hover:-translate-y-0.5 hover:shadow-md"
           >
-            <span class="rounded-full bg-[var(--color-brand-swiss)] px-3 py-1 ty-small font-bold uppercase tracking-wide text-[var(--color-white)]">{index.hero.announcement.eyebrow}</span>
-            <span class="ty-body-1 font-bold text-[var(--color-white)]">{index.hero.announcement.label}</span>
-            <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-4 h-4 shrink-0 invert pointer-events-none motion-safe:group-hover:translate-x-0.5 transition-transform" />
+            <span class="rounded-full bg-[var(--color-brand-swiss)] px-2.5 py-0.5 ty-2xs font-bold uppercase tracking-wide text-[var(--color-white)]">{index.hero.announcement.eyebrow}</span>
+            <span class="ty-body-3 font-bold text-[var(--color-brand-deep-blue)]">{index.hero.announcement.label}</span>
+            <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3 shrink-0 pointer-events-none motion-safe:group-hover:translate-x-0.5 transition-transform" />
           </a>
         )}
       </div>
     </div>
   </Section>
 
+  <Section id="doors" eyebrow={index.doors.eyebrow} title={index.doors.title} pad="xs" align="center" margin="mt-8">
+    <div class="text-left"><AudienceDoors doors={doors} /></div>
+  </Section>
+
+  <Section id="calculator" variant="accent" pad="xs">
+    <div class="max-w-5xl mx-auto"><Calculator /></div>
+  </Section>
+
   <Section
-    id="what-is"
-    eyebrow={index.what_is.eyebrow}
-    title={index.what_is.title}
-    subtitle={index.what_is.subtitle}
+    id="how-does-it-work"
+    eyebrow={index.how_simple.eyebrow}
+    title={index.how_simple.title}
+    subtitle={index.how_simple.subtitle}
     pad="xs"
-    margin="lg:mt-20 mt-32"
+    align="center"
   >
-    <ExplanationCardsContainer cards={index.what_is.explanation} />
+    <div class="text-left"><ExplanationCardsContainer cards={index.how_simple.cards} /></div>
+    <div class="mt-10 flex flex-wrap justify-center gap-x-8 gap-y-3 ty-body-2 font-bold">
+      <a href={getLocalizedPath('/what-is-frankencoin', currentLang)} class="text-[var(--color-blue-39)] hover:text-[var(--color-brand-swiss)]">{index.what_is.title} →</a>
+      <a href={getLocalizedPath('/use-cases', currentLang)} class="text-[var(--color-blue-39)] hover:text-[var(--color-brand-swiss)]">{index.core_features.more_link.label} →</a>
+      <a href={getLocalizedPath('/frontends', currentLang)} class="text-[var(--color-blue-39)] hover:text-[var(--color-brand-swiss)]">{index.core_features.frontendsCallout.ctaLabel} →</a>
+    </div>
   </Section>
 
   <FCSLaunch content={index.fcs_launch} lang={currentLang} />
 
-  <Section
-    id="core-features"
-    eyebrow={index.core_features.eyebrow}
-    title={index.core_features.title}
-    pad="xs"
-  >
-    <FeaturesContainer features={index.core_features.features} />
-    <aside
-      class="mt-8 rounded-xl border border-[color-mix(in_oklab,var(--color-brand-deep-blue)_25%,transparent)] bg-[color-mix(in_oklab,var(--color-brand-deep-blue)_4%,var(--color-white))] p-[var(--spacing-xl)] md:p-[var(--spacing-xxl)] flex flex-col md:flex-row md:items-center md:justify-between gap-[var(--spacing-l)]"
-    >
-      <div class="flex flex-col gap-[var(--spacing-xs)] max-w-2xl">
-        <h3 class="ty-title-3 text-[var(--color-brand-deep-blue)] m-0 font-bold">
-          {index.core_features.frontendsCallout.title}
-        </h3>
-        <p class="ty-body-1 text-[var(--color-neutral-700)]">
-          {index.core_features.frontendsCallout.body}
-        </p>
-      </div>
-      <a
-        href={getLocalizedPath('/frontends', currentLang)}
-        class="inline-flex items-center gap-2 text-[var(--color-brand-deep-blue)] hover:text-[var(--color-brand-swiss)] font-bold ty-body-1 shrink-0 whitespace-nowrap"
-      >
-        <span>{index.core_features.frontendsCallout.ctaLabel}</span>
-        <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
-      </a>
-    </aside>
-    <div class="mt-12">
-      <UseCasesGrid />
-    </div>
-    <div class="mt-16">
-      <ExchangesGrid />
-    </div>
+  <Section id="trust-security" eyebrow={index.trust_strip.eyebrow} title={index.trust_strip.title} pad="xs" align="center">
+    <div class="text-left"><TrustStrip items={index.trust_strip.items} /></div>
+    <a href={localizeHref(index.trust_strip.more.href, "/compliance")} class="inline-flex items-center gap-2 mt-6 ty-body-2 font-bold text-[var(--color-blue-39)] hover:text-[var(--color-brand-swiss)]">
+      {index.trust_strip.more.label}
+      <img src="/images/Arrow.svg" loading="lazy" alt="" class="w-3 h-3" />
+    </a>
   </Section>
-  <Section
-    id="how-does-it-work"
-    title={index.how_it_works.title}
-    subtitle={index.how_it_works.subtitle}
-    eyebrow={index.how_it_works.eyebrow}
-  >
-    <div id="how-does-it-work"></div>
-    <div class="flex md:flex-row flex-col gap-40px items-stretch gap-8 mb-16">
-      <TabMenu tabs={index.how_it_works.steps} />
-    </div>
-    <ExplanationCardsContainer cards={index.how_does_it_work.explanation} />
-  </Section>
-    
-    <Section
-    id="foundation"
-    layout="split"
-    title={index.foundation.title}
-    subtitle={index.foundation.description}
-    contentPosition="left"
-    variant="accent"
-  >
-    <div
-      class="flex md:flex-row flex-col gap-10px items-stretch gap-8"
-      slot="aside"
-    >
-      <img src={index.foundation.image} alt={index.foundation.imageAlt} />
-    </div>
-    <FoundationContainer />
-  </Section>
-
-
-
-
-  <Section
-    id="trust-security"
-    eyebrow={index.trust_security.eyebrow}
-    title={index.trust_security.title}
-    width="full"
-  >
-    <TrustSecurityContainer />
-  </Section>
-
-
 
   <Section
     id="in-the-media"
@@ -245,6 +198,7 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
     title={index.in_the_media.title}
     subtitle={index.in_the_media.subtitle}
     variant="accent"
+    pad="xs"
   >
     <MediaCarousel articles={media.articles} videos={media.videos} />
   </Section>
@@ -254,7 +208,10 @@ Astro.response.headers.set('Cache-Control', 'public, max-age=300, s-maxage=300')
     title={faq.title}
     layout="split"
     headerPosition="items-start"
+    pad="xs"
   >
     <FAQContainer faqs={faq} slot="aside" />
   </Section>
+
+  <StickyCTA label={index.sticky.label} sub={index.sticky.sub} href={index.sticky.href} />
 </Base>

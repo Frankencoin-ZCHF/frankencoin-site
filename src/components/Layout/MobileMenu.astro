@@ -58,9 +58,14 @@ const localizedLinks = (Astro.props.links ?? nav.links).map(link => ({ ...link, 
     <hr class="text-[var(--color-neutral-300)]" />
     <div class="mt-4 flex flex-col gap-4">
       <LanguageSwitcher />
-      <Button href={nav.cta.href} variant="primary" rounded="full" size="md" external={true}>
-        {index.hero.cta.label}
+      <Button href={prefixLanguage(nav.cta.href)} variant="primary" rounded="full" size="md" external={nav.cta.href.startsWith("http")}>
+        {nav.cta.label}
       </Button>
+      {nav.appCta && (
+        <Button href={nav.appCta.href} variant="secondary" rounded="full" size="md" external={true}>
+          {nav.appCta.label}
+        </Button>
+      )}
     </div>
   </nav>
 </div>
