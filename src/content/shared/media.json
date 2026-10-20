@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://drive.google.com/file/d/15Vmha0vSnlxsjrFMCIGfBcWPw9lW7b-W/view",
     "https://www.thenextvertical.com/can-the-swiss-franc-go-on-chain-interview-with-johannes-kern-managing-director-at-frankencoin-association/",
     "https://www.moneytoday.ch/news/internationale-kryptoboerse-listet-ab-sofort-frankencoin",
     "https://www.finews.ch/news/finanzplatz/73899-frankencoin-listing-kraken-kryptoboerse",
@@ -50,6 +51,13 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://drive.google.com/file/d/15Vmha0vSnlxsjrFMCIGfBcWPw9lW7b-W/view": {
+      "title": "Im Treasury angekommen",
+      "description": "Matthias Nadler, CTO bei Plusplus AG, erläutert, wie Unternehmen Stablecoins im Treasury-Management einsetzen können. Beitrag auf Seite 3 der Verlagsbeilage «Krypto» zur Finanz und Wirtschaft Nr. 81.",
+      "image": "/images/media/fuw-im-treasury-angekommen-20261017.webp",
+      "siteName": "Finanz und Wirtschaft – Verlagsbeilage «Krypto»",
+      "publishedDate": "Oct 17, 2026"
+    },
     "https://www.thenextvertical.com/can-the-swiss-franc-go-on-chain-interview-with-johannes-kern-managing-director-at-frankencoin-association/": {
       "title": "Can the Swiss Franc Go On-Chain?",
       "description": "Johannes Kern turns the usual institutional-crypto debate around: instead of asking how crypto can fit into traditional finance, he argues that decentralized systems should be compelling enough for traditional finance to adopt them.",
