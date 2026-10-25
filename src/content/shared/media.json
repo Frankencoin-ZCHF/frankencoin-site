@@ -1,6 +1,7 @@
 {
   "_comment": "This file contains media content (articles and videos) and manual metadata overrides. Open Graph data is fetched by default for articles. Only add manual overrides when you need to override specific fields.",
   "articles": [
+    "https://www.allnews.ch/content/produits/un-stablecoin-en-francs-suisses-arrive-sur-kraken",
     "https://drive.google.com/file/d/15Vmha0vSnlxsjrFMCIGfBcWPw9lW7b-W/view",
     "https://www.thenextvertical.com/can-the-swiss-franc-go-on-chain-interview-with-johannes-kern-managing-director-at-frankencoin-association/",
     "https://www.moneytoday.ch/news/internationale-kryptoboerse-listet-ab-sofort-frankencoin",
@@ -51,6 +52,13 @@
     "https://youtu.be/YF_a7A7lwoQ"
   ],
   "articleMetadata": {
+    "https://www.allnews.ch/content/produits/un-stablecoin-en-francs-suisses-arrive-sur-kraken": {
+      "title": "Un stablecoin en francs suisses arrive sur Kraken",
+      "description": "«L’infrastructure financière de demain ne doit pas se construire uniquement en dollars», explique Johannes Kern, directeur général de la Frankencoin Association. «Un franc suisse numérique doit en faire partie.»",
+      "image": "https://www.allnews.ch/sites/default/files/styles/large/public/Johannes_Kern.jpg?h=ac301170&itok=ZVYwpIDK",
+      "siteName": "Allnews",
+      "publishedDate": "Oct 8, 2026"
+    },
     "https://drive.google.com/file/d/15Vmha0vSnlxsjrFMCIGfBcWPw9lW7b-W/view": {
       "title": "Im Treasury angekommen",
       "description": "Matthias Nadler, CTO bei Plusplus AG, erläutert, wie Unternehmen Stablecoins im Treasury-Management einsetzen können. Beitrag auf Seite 3 der Verlagsbeilage «Krypto» zur Finanz und Wirtschaft Nr. 81.",
