@@ -32,6 +32,8 @@
     "https://www.finews.ch/news/finanzplatz/71537-luzius-meisser-stablecoin-frankencoin-sbf-krypto-finig-allunity-finma-sif-bundesrat-micar-tether-bitcoin-finanzsystem-geldschoepfung-smartcontracts-dezentral-staking-lending-gold"
   ],
   "videos": [
+    "https://www.youtube.com/watch?v=564k9sNoM_c",
+    "https://www.youtube.com/watch?v=gDuZ6baS98g",
     "https://www.youtube.com/watch?v=qpSljn2UCBA",
     "https://www.youtube.com/watch?v=ExuQRdgLfLY",
     "https://www.youtube.com/watch?v=9-fBHEPSu7c",
@@ -215,6 +217,20 @@
     }
   },
   "videoMetadata": {
+    "https://www.youtube.com/watch?v=564k9sNoM_c": {
+      "title": "Johannes Kern, Frankencoin | Optimistic Governance: Build an Actually Decentralized Stablecoin",
+      "description": "What does it take for a decentralized stablecoin’s governance to resist capture by a small number of voters? In this talk, Johannes Kern (Frankencoin Association) examines how optimistic governance is designed to keep a decentralized stablecoin resilient and accountable.",
+      "author": "Stablecoin Summit",
+      "publishedDate": "Oct 16, 2026",
+      "thumbnail": "/images/video-thumbnails/564k9sNoM_c.jpg"
+    },
+    "https://www.youtube.com/watch?v=gDuZ6baS98g": {
+      "title": "How to Borrow Onchain Against Illiquid RWAs Without Oracles — Paolo DI Stefano | Frankencoin",
+      "description": "Paolo DI Stefano discusses borrowing onchain against illiquid real-world assets without oracles using Frankencoin.",
+      "author": "ETH Belgrade",
+      "publishedDate": "Oct 4, 2026",
+      "thumbnail": "/images/video-thumbnails/gDuZ6baS98g.jpg"
+    },
     "https://www.youtube.com/watch?v=qpSljn2UCBA": {
       "title": "Frankencoin - présentation et épargne",
       "description": "Frankencoin est un stablecoin répliquant la valeur du Franc Suisse sous le ticker ZCHF.",
