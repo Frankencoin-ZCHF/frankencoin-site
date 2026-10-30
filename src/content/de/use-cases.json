@@ -4,6 +4,15 @@
 	"intro": "Frankencoin wird bereits von Unternehmen und Privatpersonen in der ganzen Schweiz für alltägliche Zahlungen, Finanzgeschäfte und dezentrale Finanzdienstleistungen eingesetzt. Entdecken Sie, wie ZCHF traditionelle Schweizer Franken mit der digitalen Wirtschaft verbindet.",
 	"cases": [
 		{
+			"title": "Schweizer IBAN & Kartenzahlungen",
+			"partner": "ether.fi",
+			"description": "Nutzen Sie ZCHF mit persönlicher Schweizer IBAN, Kartenzahlungen und USDC-Krediten.",
+			"longDescription": "Nutzen Sie ZCHF direkt auf ether.fi. Überweisen Sie CHF über eine persönliche Schweizer IBAN und erhalten Sie innerhalb von 1–2 Werktagen ZCHF. Ihr ZCHF-Guthaben zählt zum verfügbaren Guthaben Ihrer Karte. Leihen Sie USDC gegen ZCHF, ohne Ihre Franken zu verkaufen, oder überweisen Sie CHF auf ein Schweizer Bankkonto auf Ihren eigenen Namen. Es gelten die Bedingungen und Zulassungsvoraussetzungen von ether.fi.",
+			"category": "Payments",
+			"image": "/images/etherfi-logo.png",
+			"link": "https://www.ether.fi/app/cash/bank/method/ch_chf_local"
+		},
+		{
 			"title": "Zahlungen im Einzelhandel",
 			"partner": "Spar Schweiz",
 			"description": "Bezahlen Sie direkt mit Frankencoin in Spar-Filialen in der ganzen Schweiz",
